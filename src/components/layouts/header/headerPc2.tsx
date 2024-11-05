@@ -2,9 +2,10 @@ import * as React from 'react'
 import { useState, useEffect } from 'react'
 import { PATH } from '@common/domain'
 import useClasses from '@utils/useClasses'
-import logoWhite from '@images/common/logoN-white.png'
-import { Box } from '@mui/material'
+import logoBlack from '@images/common/logoN-black2.png'
+import Menu from 'antd'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import {Box} from "@mui/material";
 
 let currentPath = ''
 
@@ -35,8 +36,8 @@ const HeaderPc2 = () => {
 		navigate(params)
 	}
 	const useStyles = (theme: any) => ({
-		customStyleOnTab: Object.assign({ color: '#fff' }, defaultTab),
-		customStyleOnTab2: Object.assign({ color: 'rgb(255,255,255)' }, defaultTab),
+		customStyleOnTab: Object.assign({ color: '#000000' }, defaultTab),
+		customStyleOnTab2: Object.assign({ color: 'rgb(0,0,0)' }, defaultTab),
 		activeTab: Object.assign({ color: '#5094e9', fontWeight: 'bold', border: 0, right: 0 }, defaultTab),
 		subActiveTab: Object.assign({ color: '#5094e9', fontWeight: 'bold', border: 0, right: 0 }, defaultTab),
 		sX: {
@@ -62,92 +63,60 @@ const HeaderPc2 = () => {
 		}
 	})
 
+	const menuLst = ["서비스", "솔루션", "산업", "성공사례", "회사소개","홍보","채용"];
+	const [hide, setHide]:any = useState({
+		menu1: false,
+		menu2: false,
+		menu3: false,
+		menu4: false,
+		menu5: false,
+	});
+	const mouseEvent = (menuName:string, bool:boolean) => {
+		const change:any = { ...hide };
+		change[menuName] = bool;
+		setHide(change);
+	};
+
 	const classes = useClasses(useStyles)
-
-	const Menu = (props: { title: string; menu: string }) => {
-		return (
-			<li
-				onClick={() => {
-					handleClick(props.menu)
-				}}
-			>
-				<p>{props.title}</p>
-			</li>
-		)
-	}
-
 	return (
 		<header>
 			{/* 메인메뉴 */}
-			<div id="headerTopWrap" className="top header2" style={{ backgroundColor: 'rgba(255,255,255,0)' }}>
-				<div className="logoBox">
-					<Link to={PATH.MAIN}>
-						<img style={classes.img} src={logoWhite} alt="로고" />
-					</Link>
-				</div>
+			<div id="headerTopWrap" className="top header2" style={{ backgroundColor: 'rgba(255,255,255,0.37)' }}>
 				<Box sx={classes.activeTab}>
-					<ul className="menu">
-						<li>
-							<Link to={menuPath[0]}>회사소개</Link>
-							<ul className="submenu submenu1">
-								<div></div>
-								<Menu title="회사소개" menu={PATH.COMPANY00} />
-								{/*<Menu title="조직도" menu={PATH.COMPANY01} />*/}
-								<Menu title="오시는길" menu={PATH.COMPANY04} />
-							</ul>
-						</li>
-						<li>
-							<Link to={menuPath[1]}>사업분야</Link>
-							<ul className="submenu submenu2">
-								<div></div>
+					<nav className="nav">
+						<ul className="navContainer">
+							<li>
+								<div className="logoBox">
+									<Link to={PATH.MAIN}>
+										<img style={classes.img} src={logoBlack} alt="로고" />
+									</Link>
+								</div>
+							</li>
+							{menuLst.map((v, idx) => (
 								<li
-									onClick={()=>navigate(`/business?index=${0}`)}
+									key={idx}
+									className="navContent"
 								>
-									<p>{"SI(시스템통합)"}</p>
+									<p>{v}</p>
 								</li>
-								<li
-									onClick={()=>navigate(`/business?index=${1}`)}
+							))}
+						</ul>
+						<div className="detailMenu">
+							<ul></ul>
+							{menuLst.map((v, idx) => (
+								<ul
+									key={idx}
+									onMouseOver={() => mouseEvent(v, true)}
+									onMouseOut={() => mouseEvent(v, false)}
 								>
-									<p>{"Solution"}</p>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<Link to={menuPath[5]}>면허/특허</Link>
-							<ul className="submenu submenu3">
-								<div></div>
-								<Menu title="면허현황" menu={PATH.RESEARCH00} />
-								<Menu title="특허현황" menu={PATH.RESEARCH01} />
-								{/*<Menu title="산업재산권 현황" menu={PATH.RESEARCH02} />*/}
-							</ul>
-						</li>
-						<li>
-							<Link to={menuPath[2]}>홍보센터</Link>
-							<ul className="submenu submenu4">
-								<div></div>
-								<Menu title="NEWS" menu={PATH.PRCENTER00} />
-								<Menu title="FAQ" menu={PATH.PRCENTER01} />
-								<Menu title="PR 자료" menu={PATH.PRCENTER02} />
-							</ul>
-						</li>
-						<li>
-							<Link to={menuPath[3]}>인재채용</Link>
-							<ul className="submenu submenu5">
-								<div></div>
-								<Menu title="채용안내" menu={PATH.RECRUIT00} />
-								<Menu title="복리후생" menu={PATH.RECRUIT03} />
-								<Menu title="채용공고" menu={PATH.RECRUIT01} />
-							</ul>
-						</li>
-						<li>
-							<Link to={menuPath[4]}>고객지원</Link>
-							<ul className="submenu submenu6">
-								<div></div>
-								{/* <Menu title="A/S접수" menu={PATH.CUSTOMER00} /> */}
-								<Menu title="자료실" menu={PATH.CUSTOMER01} />
-							</ul>
-						</li>
-					</ul>
+									<li>{`메뉴${idx + 1}-${1}`}</li>
+									<li>{`메뉴${idx + 1}-${2}`}</li>
+									<li>{`메뉴${idx + 1}-${3}`}</li>
+									<li>{`메뉴${idx + 1}-${4}`}</li>
+								</ul>
+							))}
+						</div>
+					</nav>
 				</Box>
 			</div>
 		</header>
