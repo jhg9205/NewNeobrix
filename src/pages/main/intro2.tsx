@@ -2,7 +2,7 @@ import {Button, Card, Divider, Grid} from '@mui/material'
 import * as React from 'react'
 import { useNavigate } from 'react-router-dom'
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Autoplay, Pagination} from "swiper";
+import {Autoplay, Navigation, Pagination} from "swiper";
 import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 import {useRef} from "react";
@@ -46,7 +46,7 @@ export const Intro2 = () => {
 					slidesPerView={5}
 					spaceBetween={30}
 					centeredSlides={true}
-					autoplay={{delay:1000}}
+					autoplay={{delay:2000}}
 					onSwiper={(swiper)=>{
 						swiperRef.current = swiper;
 					}}
@@ -150,6 +150,29 @@ export const Intro2 = () => {
 							</div>
 						</Button>
 					</SwiperSlide>
+				</Swiper>
+			</div>
+			<div id='intro2-main4'>
+				<Swiper
+					loop={true}
+					slidesPerView={9}
+					spaceBetween={30}
+					centeredSlides={true}
+					autoplay={{delay:1000}}
+					navigation={{ prevEl: '.prev-swiper', nextEl: '.next-swiper' }}
+					modules={[Navigation,Autoplay]}
+					className="mySwiper">
+					<SwiperSlide>Slide 1</SwiperSlide>
+					<SwiperSlide>Slide 2</SwiperSlide>
+					<SwiperSlide>Slide 3</SwiperSlide>
+					<SwiperSlide>Slide 4</SwiperSlide>
+					<SwiperSlide>Slide 5</SwiperSlide>
+					<SwiperSlide>Slide 6</SwiperSlide>
+					<SwiperSlide>Slide 7</SwiperSlide>
+					<SwiperSlide>Slide 8</SwiperSlide>
+					<SwiperSlide>Slide 9</SwiperSlide>
+					<button className="prev-swiper swiper-button-prev swiper-btn" style={{padding:'0 100px'}}></button>
+					<button className="next-swiper swiper-button-next swiper-btn" style={{padding:'0 100px'}}></button>
 				</Swiper>
 			</div>
 		</div>
