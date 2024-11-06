@@ -72,7 +72,7 @@ export const Intro2 = () => {
 							<div
 								className='intro2-card-button'
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
-								<p>SI(시스템통합)</p>
+								<p>프로젝트1</p>
 								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
 								<div className='intro2-card-arrow'>
 									<ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
@@ -86,7 +86,7 @@ export const Intro2 = () => {
 							<div
 								className='intro2-card-button'
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
-								<p>SI(시스템통합)</p>
+								<p>프로젝트2</p>
 								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
 								<div className='intro2-card-arrow'>
 									<ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
@@ -100,7 +100,7 @@ export const Intro2 = () => {
 							<div
 								className='intro2-card-button'
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
-								<p>SI(시스템통합)</p>
+								<p>프로젝트3</p>
 								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
 								<div className='intro2-card-arrow'>
 									<ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
@@ -114,7 +114,7 @@ export const Intro2 = () => {
 							<div
 								className='intro2-card-button'
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
-								<p>SI(시스템통합)</p>
+								<p>프로젝트4</p>
 								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
 								<div className='intro2-card-arrow'>
 									<ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
@@ -128,7 +128,7 @@ export const Intro2 = () => {
 							<div
 								className='intro2-card-button'
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
-								<p>SI(시스템통합)</p>
+								<p>프로젝트5</p>
 								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
 								<div className='intro2-card-arrow'>
 									<ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
@@ -142,7 +142,7 @@ export const Intro2 = () => {
 							<div
 								className='intro2-card-button'
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
-								<p>SI(시스템통합)</p>
+								<p>프로젝트6</p>
 								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
 								<div className='intro2-card-arrow'>
 									<ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
@@ -162,15 +162,15 @@ export const Intro2 = () => {
 					navigation={{ prevEl: '.prev-swiper', nextEl: '.next-swiper' }}
 					modules={[Navigation,Autoplay]}
 					className="mySwiper">
-					<SwiperSlide>Slide 1</SwiperSlide>
-					<SwiperSlide>Slide 2</SwiperSlide>
-					<SwiperSlide>Slide 3</SwiperSlide>
-					<SwiperSlide>Slide 4</SwiperSlide>
-					<SwiperSlide>Slide 5</SwiperSlide>
-					<SwiperSlide>Slide 6</SwiperSlide>
-					<SwiperSlide>Slide 7</SwiperSlide>
-					<SwiperSlide>Slide 8</SwiperSlide>
-					<SwiperSlide>Slide 9</SwiperSlide>
+					<SwiperSlide>협력사로고1</SwiperSlide>
+					<SwiperSlide>협력사로고2</SwiperSlide>
+					<SwiperSlide>협력사로고3</SwiperSlide>
+					<SwiperSlide>협력사로고4</SwiperSlide>
+					<SwiperSlide>협력사로고5</SwiperSlide>
+					<SwiperSlide>협력사로고6</SwiperSlide>
+					<SwiperSlide>협력사로고7</SwiperSlide>
+					<SwiperSlide>협력사로고8</SwiperSlide>
+					<SwiperSlide>협력사로고9</SwiperSlide>
 					<button className="prev-swiper swiper-button-prev swiper-btn" style={{padding:'0 100px'}}></button>
 					<button className="next-swiper swiper-button-next swiper-btn" style={{padding:'0 100px'}}></button>
 				</Swiper>
