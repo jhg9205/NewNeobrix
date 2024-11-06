@@ -103,14 +103,14 @@ export const Intro = () => {
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:'translateY(-10px)'
+                                    transform:'translateY(+90px)'
                                 }}
                             >
                                 <p>CONTENT1</p>
                             </motion.div>
                         </>
                     </Transition>
-                    <Transition threshold={10} direction={'up'} time={500}>
+                    <Transition threshold={9} direction={'up'} time={500}>
                         <>
                             <motion.div
                                 className="card"
@@ -121,14 +121,14 @@ export const Intro = () => {
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:'translateY(-10px)'
+                                    transform:'translateY(+90px)'
                                 }}
                             >
                                 <p>CONTENT1</p>
                             </motion.div>
                         </>
                     </Transition>
-                    <Transition threshold={13.5} direction={'up'} time={500}>
+                    <Transition threshold={11} direction={'up'} time={500}>
                         <>
                             <motion.div
                                 className="card"
@@ -139,7 +139,7 @@ export const Intro = () => {
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:'translateY(-10px)'
+                                    transform:'translateY(+190px)'
                                 }}
                             >
                                 <p>CONTENT1</p>
