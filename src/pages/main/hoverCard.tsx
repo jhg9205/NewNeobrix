@@ -2,7 +2,6 @@ import {Grid} from "@mui/material";
 import TrackChangesIcon from '@mui/icons-material/TrackChanges';
 import AirplayIcon from '@mui/icons-material/Airplay';
 import MobileFriendlyIcon from '@mui/icons-material/MobileFriendly';
-import BiotechIcon from '@mui/icons-material/Biotech';
 const HoverCard = () => {
     return (
         <div>

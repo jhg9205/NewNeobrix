@@ -47,7 +47,7 @@ export const Intro = () => {
                 id='intro-container'
                 style={{
                     width:`${scrollYProgress*10+20}%`,
-                    height:'1000px',
+                    height:'100%',
                     borderRadius: '30px',
                     background: 'linear-gradient(to bottom, #74f8c2, #00e2d3, #00c9de, #00addf, #0090d2, #3f8ed0, #5a8bcd, #6e89c9, #99a4d6, #bec1e3, #e0dff1, #ffffff)'
                 }}

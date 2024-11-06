@@ -16,10 +16,8 @@ const Main = () => {
 			<section className="intro">
 				<Intro />
 			</section>
-			<section className="intro-video">
-				<video muted autoPlay loop>
-					<source src={videoD} type="video/mp4"/>
-				</video>
+			<section>
+				<Intro2/>
 			</section>
 			{/*<section>*/}
 			{/*	<HoverCard/>*/}

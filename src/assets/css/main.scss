@@ -4,7 +4,7 @@
 .intro {
 	width: 100%;
     justify-content: center;
-    height:4000px;
+    height:2000px;
     display: flex;
 	#intro-container {
 		text-align: center;
@@ -28,8 +28,6 @@
     width: 400px;
     height: 574px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     position:relative;
     background: white;
     border-radius: 40px;
@@ -44,6 +42,7 @@
     }
     p{
       width: auto;
+      text-align: left;
       color: #fff;
       font-weight: 700;
       font-size: 44px;
@@ -262,7 +261,27 @@
   }
 }
 
-.intro2 {
+.intro2{
+  width: 100%;
+  height: 1000px;
+  #intro2-main{
+    margin: 30px 200px;
+    display: flex;
+  }
+  #intro2-main1{
+    float: left;
+    p{
+      font-size: 84px;
+      font-weight: 800;
+      line-height: 94px;
+    }
+  }
+  #intro2-maion2{
+    float: right;
+  }
+}
+
+.intro3{
   background-color: white;
   height: 100%;
   width: 100%;
