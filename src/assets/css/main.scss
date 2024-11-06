@@ -269,15 +269,33 @@
     display: flex;
   }
   #intro2-main1{
-    float: left;
+    width: 50%;
     p{
       font-size: 84px;
       font-weight: 800;
       line-height: 94px;
     }
   }
-  #intro2-maion2{
-    float: right;
+  #intro2-main2{
+    width: 50%;
+    position: relative;
+    div{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  #intro2-main3{
+    margin-top: 100px;
+    .intro2-card-button{
+      border: 1px solid gray;
+      border-radius: 20px;
+      height: 100%;
+      box-shadow: 0px 5px 5px 0px rgba(142, 142, 142, 0.8);
+    }
+    .intro2-card-button:hover{
+      background: linear-gradient(321deg, rgba(116,248,194,1) 0%, rgba(0,173,223,1) 100%);
+    }
   }
 }
 
