@@ -174,16 +174,16 @@ body {
 	.nav .detailMenu {
 		display: flex;
 		overflow: hidden;
-		background-color: rgba(255, 255, 255, 0.46);
+		background-color: rgba(255, 255, 255, 0.89);
 		align-items: center;
 		justify-content: center;
 		padding: 0;
+		border : 1px solid gray;
 	}
 
 	.nav .detailMenu ul {
-		width: 180px;
+		width: 185px;
 		justify-content: space-around;
-		padding: 0;
 	}
 
 	.nav .detailMenu ul li {
@@ -215,7 +215,7 @@ body {
 	color: #ffffff !important;
 	font-weight: bold;
 	padding: 45px;
-	background-color: rgba(0, 0, 0, 0.15);
+	background-color: rgba(164, 164, 164, 0.15);
 	border: none;
 	@include mobile{
 		padding:30px;
@@ -240,6 +240,7 @@ body {
 	height: 100vh;
 	margin-left: auto;
 	margin-right: auto;
+	display: flex;
 	@include mobile {
 		padding-top: 0 !important;
 	}
@@ -254,26 +255,29 @@ body {
 		width: 100%;
 		text-align: left;
 		font-weight: bold;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 	#slider3 {
-		background-image: url('../images/common/bg_main02.jpg');
+		background-image: url('../images/main/main_bg3.png');
 	}
 
 	#slider2 {
-		background-image: linear-gradient(to right, rgba(63, 63, 63, 0.74), rgba(255, 255, 255, 0)), url('../images/common/bg_main08.jpg');
+		background-image: url('../images/main/main_bg2.png');
 	}
 
 	#slider1 {
-		background-image: linear-gradient(to right, rgba(63, 63, 63, 0.74), rgba(255, 255, 255, 0)), url('../images/common/bg_main07.jpg');
+		background-image: url('src/assets/images/main/main_bg3.png');
 	}
 	.slider-text-pc {
 		//padding-top: 10%;
 		//padding-left: 40%;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		/*position: absolute;*/
+		/*left: 50%;*/
 		text-align: center;
+		margin: 0 auto;
 		.in-div{
 			display: flex;
 			justify-content: center;
@@ -281,10 +285,6 @@ body {
 		}
 		@include mobile {
 			padding-top: 30%;
-		}
-		span,
-		p {
-			text-shadow: 4px 2px 2px black;
 		}
 		span {
 			font-size: 15px;
@@ -299,6 +299,29 @@ body {
 		.last-p {
 			font-size: 15px;
 			font-weight: normal;
+		}
+		.swiper-main-text{
+			background: linear-gradient(-10deg, #00A6ED 29.34%, #00B780 56.73%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			font-weight: 700;
+			font-size: 84px;
+			line-height: 104px;
+		}
+		.swiper-main-black{
+			font-weight: 700;
+			font-size: 84px;
+			line-height: 104px;
+			color: black;
+		}
+		.swiper-main-mini{
+			font-weight: 400;
+			font-size: 30px;
+			line-height: 42px;
+			letter-spacing: -0.04em;
+			color: #111;
+			opacity: 1;
 		}
 	}
 }

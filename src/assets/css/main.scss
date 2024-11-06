@@ -2,11 +2,14 @@
 
 /*메인 intro*/
 .intro {
-	background-color: #f5f5f9;
 	width: 100%;
+    justify-content: center;
+    height:4000px;
+    display: flex;
 	div {
-		width: 100%;
 		text-align: center;
+        display: flex;
+        justify-content: center;
 		/* padding-bottom: 50px; */
 	}
 	.sub_intro_warp {
@@ -23,6 +26,28 @@
 	#introP2 {
 		font-size: 20px;
 	}
+  .card {
+    margin-top: 20px;
+    font-size: 164px;
+    width: 300px;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 20px;
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075),
+    0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075),
+    0 0 16px hsl(0deg 0% 0% / 0.075);
+    transform-origin: 10% 60%;
+    p{
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+
 }
 
 /* 메인 intro 이미지애니메이션 효과 */

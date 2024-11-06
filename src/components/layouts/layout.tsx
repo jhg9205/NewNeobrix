@@ -4,10 +4,12 @@ import Header from './header'
 import '@css/layout.scss'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import {motion} from "framer-motion"
 
 import { RootState } from '@modules/reducer'
 import { useSelector } from 'react-redux'
 import { useState, useEffect, useRef } from 'react'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import Popup from '@components/ui/popup'
 import { Swiper, SwiperSlide, useSwiperSlide } from 'swiper/react'
@@ -18,8 +20,6 @@ import 'swiper/swiper-bundle.css'
 import HeaderTop from './header/headerTop'
 import { Button, Fab, Fade, Slide } from '@mui/material'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
-import Transition from '@components/ui/transition/transition'
-import TransitionFade from '@components/ui/transition/transitionFade'
 import * as React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Analytics } from "@vercel/analytics/react"
@@ -55,41 +55,174 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 			setScroll(false)
 		}
 	}
+
 	//swiper 후 slide
-	const SwiperEvent = () => {
+	const SwiperEvent1 = () => {
 		const swiper = useSwiperSlide()
 
 		return swiper.isActive ? (
-			/*<Transition threshold={-1} direction={'up'} time={3000}>
-				<TransitionFade threshold={-1}>*/
+			<motion.div
+				initial={{ opacity: 0, y: 100 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: false }}
+				transition={{
+					ease: "easeInOut",
+					duration: 2,
+					y: { duration: 5 },
+				}}
+			>
+				<div>
 					<div className="slider-text-pc">
-						<p>The beginning and success of</p>
-						<p>Digital Transformation.</p>
-						{/*<div className="in-div" style={{height:'10px',width:'30%', backgroundColor:'#fdd947'}}></div>*/}
-						<p className="last-p">SYSTEM INTERGRATION BUSSINESS</p>
-						<p className="last-p">WEB DEVELOPMENT</p>
-						<p className="last-p">SERVICE PLATFORM</p>
+						<p className="swiper-main-text">No1. B2B Platform</p>
+						<p className="swiper-main-black">Service Provider</p>
+						<p className="swiper-main-mini"
+						   style={{
+							   marginTop:'68px'
+						   }}
+						>최고의 B2B 플랫폼 서비스 사업자,</p>
+						<p className="swiper-main-mini">Neobrix가 만들어나가는 새로운 경험과 혁신의 미래로.</p>
 						<Button
 							id="recruitFile"
 							variant="contained"
 							sx={{
 								width: '150px',
 								height: '50px',
-								borderRadius: '10px',
+								borderRadius: '30px',
 								margin: '20px 0px 30px 0',
-								fontSize: '17px',
-								fontWeight: 'bold',
-								backgroundColor:'#1976d2'
+								marginTop: '64px',
+								padding: '15px 24px 15px 32px',
 							}}
 							onClick={() => {
 								navigate('/company')
 							}}
 						>
-							About us
+							<span
+								style={{
+									fontWeight: '500',
+									fontSize: '16px',
+									lineHeight: '18px'
+								}}
+							>더보기</span>
+							<ArrowForwardIcon/>
 						</Button>
 					</div>
-/*				</TransitionFade>
-			</Transition>*/
+				</div>
+			</motion.div>
+		) : (
+			<></>
+		)
+	}
+
+	//swiper 후 slide
+	const SwiperEvent2 = () => {
+		const swiper = useSwiperSlide()
+
+		return swiper.isActive ? (
+				<motion.div
+					initial={{ opacity: 0, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: false }}
+					transition={{
+						ease: "easeInOut",
+						duration: 2,
+						y: { duration: 5 },
+					}}
+				>
+					<div>
+						<div className="slider-text-pc">
+							<p className="swiper-main-text">디지털 트랜스포메이션의 시작,</p>
+							<p className="swiper-main-black">전문가와 함께 하는 종합 IT 서비스.</p>
+							<p className="swiper-main-mini"
+							   style={{
+								   marginTop:'68px'
+							   }}
+							>대규모 시스템 구축 및 운영은 풍부한 경험과 노하우를 보유한 Neobrix와 함께.</p>
+							<p className="swiper-main-mini">맞춤형 종합 IT 서비스로 시작하는 디지털 트랜스포메이션.</p>
+							<Button
+								id="recruitFile"
+								variant="contained"
+								sx={{
+									width: '150px',
+									height: '50px',
+									borderRadius: '30px',
+									margin: '20px 0px 30px 0',
+									marginTop: '64px',
+									padding: '15px 24px 15px 32px',
+								}}
+								onClick={() => {
+									navigate('/company')
+								}}
+							>
+							<span
+								style={{
+									fontWeight: '500',
+									fontSize: '16px',
+									lineHeight: '18px'
+								}}
+							>더보기</span>
+								<ArrowForwardIcon/>
+							</Button>
+						</div>
+					</div>
+				</motion.div>
+		) : (
+			<></>
+		)
+	}
+
+	const SwiperEvent3 = () => {
+		const swiper = useSwiperSlide()
+
+		return swiper.isActive ? (
+			<motion.div
+				initial={{ opacity: 0, y: 100 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: false }}
+				transition={{
+					ease: "easeInOut",
+					duration: 2,
+					y: { duration: 5 },
+				}}
+			>
+				<div>
+					<div className="slider-text-pc">
+						{/*<div className="in-div" style={{height:'10px',width:'30%', backgroundColor:'#fdd947'}}></div>*/}
+						<p className="swiper-main-text"
+						>통합, 연결, 생성, 확장</p>
+						<p className="swiper-main-black">무한한 유스트라 클라우드의 세계</p>
+						<p className="swiper-main-mini"
+							style={{
+								marginTop:'68px'
+							}}
+						>당신이 필요로 하는 클라우드의 모든 것이 여기에</p>
+						<p className="swiper-main-mini">Neobrix의 클라우드 서비스 브랜드</p>
+						<Button
+							id="recruitFile"
+							variant="contained"
+							sx={{
+								width: '150px',
+								height: '50px',
+								borderRadius: '30px',
+								margin: '20px 0px 30px 0',
+								marginTop: '64px',
+								padding: '15px 24px 15px 32px',
+							}}
+							onClick={() => {
+								navigate('/company')
+							}}
+						>
+							<span
+								style={{
+									fontWeight: '500',
+									fontSize: '16px',
+									lineHeight: '18px'
+								}}
+							>더보기</span>
+							<ArrowForwardIcon/>
+						</Button>
+					</div>
+				</div>
+			</motion.div>
 		) : (
 			<></>
 		)
@@ -116,12 +249,17 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 					>
 						<SwiperSlide>
 							<div id="slider1" className="slider-img">
-								<SwiperEvent />
+								<SwiperEvent1 />
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
 							<div id="slider2" className="slider-img">
-								<SwiperEvent />
+								<SwiperEvent2 />
+							</div>
+						</SwiperSlide>
+						<SwiperSlide>
+							<div id="slider3" className="slider-img">
+								<SwiperEvent3 />
 							</div>
 						</SwiperSlide>
 						<button className="prev-swiper swiper-button-prev swiper-btn"></button>

@@ -8,12 +8,13 @@ import videoD from '@images/main/FatSneakyIberiannase.mp4';
 import HoverCard from "@pages/main/hoverCard";
 import Skill from "@pages/main/skill";
 import Social from "@pages/main/social";
+import {Intro} from "@pages/main/intro";
 
 const Main = () => {
 	return (
 		<Layout main={true}>
-			<section className="intro2">
-				<Intro2 />
+			<section className="intro">
+				<Intro />
 			</section>
 			<section className="intro-video">
 				<video muted autoPlay loop>
