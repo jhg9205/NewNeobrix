@@ -109,7 +109,6 @@ body {
 		min-height: 60px !important;
 	}
 	.logoBox{
-		margin-left: 20%;
 		@include tablet{
 			margin-left:5%;
 		}
@@ -145,7 +144,7 @@ body {
 
 	.nav .navContainer li {
 		cursor: pointer;
-		width: 185px;
+		width: 150px;
 		height: 30px;
 		list-style-type: none;
 		font-size: 19px;
@@ -182,7 +181,7 @@ body {
 	}
 
 	.nav .detailMenu ul {
-		width: 185px;
+		width: 150px;
 		justify-content: space-around;
 	}
 
@@ -212,10 +211,10 @@ body {
 }
 
 .swiper-btn {
-	color: #ffffff !important;
+	color: #454545 !important;
 	font-weight: bold;
 	padding: 45px;
-	background-color: rgba(164, 164, 164, 0.15);
+	background-color: rgba(63, 63, 63, 0);
 	border: none;
 	@include mobile{
 		padding:30px;
