@@ -269,7 +269,7 @@ body {
 	}
 
 	#slider1 {
-		background-image: url('src/assets/images/main/main_bg3.png');
+		background-image: url('../images/main/main_bg1.png');
 	}
 	.slider-text-pc {
 		//padding-top: 10%;
@@ -304,7 +304,6 @@ body {
 			background: linear-gradient(-10deg, #00A6ED 29.34%, #00B780 56.73%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
-			background-clip: text;
 			font-weight: 700;
 			font-size: 84px;
 			line-height: 104px;

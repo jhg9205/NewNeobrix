@@ -91,6 +91,7 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 								margin: '20px 0px 30px 0',
 								marginTop: '64px',
 								padding: '15px 24px 15px 32px',
+								backgroundColor:'#74f8c2'
 							}}
 							onClick={() => {
 								navigate('/company')
@@ -148,6 +149,7 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 									margin: '20px 0px 30px 0',
 									marginTop: '64px',
 									padding: '15px 24px 15px 32px',
+									backgroundColor:'#74f8c2'
 								}}
 								onClick={() => {
 									navigate('/company')
@@ -206,6 +208,7 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 								margin: '20px 0px 30px 0',
 								marginTop: '64px',
 								padding: '15px 24px 15px 32px',
+								backgroundColor:'#74f8c2'
 							}}
 							onClick={() => {
 								navigate('/company')
@@ -279,7 +282,7 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 				<Footer />
 			</div>
 			<HeaderTop {...props}>
-				<Fab size="small" aria-label="scroll back to top">
+				<Fab size="large" aria-label="scroll back to top">
 					<KeyboardArrowUpIcon />
 				</Fab>
 			</HeaderTop>
