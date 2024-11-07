@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import {useEffect, useState} from "react";
 import * as React from "react";
+import Transition from "@components/ui/transition/transition";
+import {Button} from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export const Intro3 = () => {
     const [scrollYProgress, setScrollYProgress] = useState(7);
@@ -31,14 +34,14 @@ export const Intro3 = () => {
                     width:`${scrollYProgress*10+20}%`,
                     height:'100%',
                     borderRadius: '30px',
-                    background: 'linear-gradient(to bottom, #74f8c2, #00e2d3, #00c9de, #00addf, #0090d2, #3f8ed0, #5a8bcd, #6e89c9, #99a4d6, #bec1e3, #e0dff1, #ffffff)'
+                    background: 'linear-gradient(180deg, rgba(255,255,255,1) 30%, rgba(0,144,210,1) 100%)'
                 }}
             >
                 <motion.div
                     style={{
                         float:'left', margin:'100px 0 0 250px',
                         width: '402px',
-                        color: '#fff',
+                        color: '#000000',
                         fontWeight: '500',
                         fontSize: '60px',
                         lineHeight: '78px',
@@ -58,6 +61,96 @@ export const Intro3 = () => {
                     <p>인재를</p>
                     <p>찾습니다.</p>
                 </motion.div>
+
+                <div style={{width:'900px', float:'right', margin:'100px 250px 0 0'}}>
+                    <Transition threshold={25} direction={'right'} time={500}>
+                        <>
+                            <motion.div
+                                className="card"
+                                id="card10"
+                                style={{
+                                    float:'left',
+                                    height:'400px'
+                                }}
+                                whileHover={{
+                                    boxShadow : '0px 0px 10px #666',
+                                    transform:'translateY(-10px)'
+                                }}
+                            >
+                                <Button
+                                    style={{cursor:'pointer',height:'100%', width:'100%'}}>
+                                    <div
+                                        className='intro-card-button'
+                                        style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+                                        <p>IT Service</p>
+                                        <span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
+                                        <div className='intro-card-arrow'>
+                                            <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
+                                        </div>
+                                    </div>
+                                </Button>
+                            </motion.div>
+                        </>
+                    </Transition>
+                    <Transition threshold={25} direction={'left'} time={500}>
+                        <>
+                            <motion.div
+                                className="card"
+                                id="card10"
+                                style={{
+                                    float:'right'
+                                }}
+                                whileHover={{
+                                    boxShadow : '0px 0px 10px #666',
+                                    transform:'translateY(-10px)'
+                                }}
+                            >
+                                <Button
+                                    style={{cursor:'pointer',height:'100%', width:'100%'}}>
+                                    <div
+                                        className='intro-card-button'
+                                        style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+                                        <p>IT Service</p>
+                                        <span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
+                                        <div className='intro-card-arrow'>
+                                            <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
+                                        </div>
+                                    </div>
+                                </Button>
+                            </motion.div>
+                        </>
+                    </Transition>
+                    <Transition threshold={28} direction={'up'} time={500}>
+                        <>
+                            <motion.div
+                                className="card"
+                                id="card10"
+                                style={{
+                                    float:'left',
+                                    height:'400px',
+                                    transform:'translateY(50px)'
+                                }}
+                                whileHover={{
+                                    boxShadow : '0px 0px 10px #666',
+                                    transform:'translateY(-10px)'
+                                }}
+                            >
+                                <Button
+                                    style={{cursor:'pointer',height:'100%', width:'100%'}}>
+                                    <div
+                                        className='intro-card-button'
+                                        style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+                                        <p>IT Service</p>
+                                        <span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
+                                        <div className='intro-card-arrow'>
+                                            <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
+                                        </div>
+                                    </div>
+                                </Button>
+                            </motion.div>
+                        </>
+                    </Transition>
+                </div>
             </motion.div>
         </div>
     )

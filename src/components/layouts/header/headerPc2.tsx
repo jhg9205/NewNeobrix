@@ -111,27 +111,27 @@ const HeaderPc2 = () => {
 							<ul></ul>
 							<ul>
 								{subMenuList1.map((v, idx) => (
-									<li>{v}</li>
+									<li key={idx}>{v}</li>
 								))}
 							</ul>
 							<ul>
 								{subMenuList2.map((v, idx) => (
-									<li>{v}</li>
+									<li key={idx}>{v}</li>
 								))}
 							</ul>
 							<ul>
 								{subMenuList3.map((v, idx) => (
-									<li>{v}</li>
+									<li key={idx}>{v}</li>
 								))}
 							</ul>
 							<ul>
 								{subMenuList4.map((v, idx) => (
-									<li>{v}</li>
+									<li key={idx}>{v}</li>
 								))}
 							</ul>
 							<ul>
 								{subMenuList5.map((v, idx) => (
-									<li>{v}</li>
+									<li key={idx}>{v}</li>
 								))}
 							</ul>
 						</div>

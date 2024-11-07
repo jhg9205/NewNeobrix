@@ -101,11 +101,67 @@
 .intro3{
     width: 100%;
     justify-content: center;
-    height:1500px;
+    height:1000px;
     display: flex;
   #intro-container {
     text-align: center;
     /* padding-bottom: 50px; */
+  }
+  .card {
+    width: 400px;
+    height: 850px;
+    display: flex;
+    position:relative;
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075),
+    0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075),
+    0 0 16px hsl(0deg 0% 0% / 0.075);
+    transform-origin: 10% 60%;
+    color: white;
+    .intro-card-button{
+      position:absolute;
+      bottom:0;
+    }
+    p{
+      width: auto;
+      text-align: left;
+      color: #fff;
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 42px;
+      transition-duration: 500ms;
+    }
+    span{
+      display: inline-block;
+      text-align: left;
+      margin-top: 13px;
+      line-height: 140%;
+      color: #fff;
+      font-weight: 400;
+      font-size: 24px;
+      transition-duration: 500ms;
+    }
+    .intro-card-arrow{
+      opacity: 0;
+      text-align: left;
+      margin-top: 20px;
+    }
+  }
+  .card:hover{
+    p{
+      transform: translateY(-20px);
+      transition-duration: 500ms;
+    }
+    span{
+      transform: translateY(-20px);
+      transition-duration: 500ms;
+    }
+    .intro-card-arrow{
+      opacity: 1;
+      transform: translateY(-20px);
+      transition-duration: 500ms;
+    }
   }
 }
 
