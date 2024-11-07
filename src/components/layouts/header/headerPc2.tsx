@@ -63,7 +63,13 @@ const HeaderPc2 = () => {
 		}
 	})
 
-	const menuLst = ["서비스", "솔루션", "산업", "성공사례", "회사소개","홍보","채용"];
+	const menuLst = ["기업소개", "사업영역", "인재채용", "홍보", "문의하기"];
+	const subMenuList1 = ["인사말","비젼","면허 및 특허","오시는 길"];
+	const subMenuList2 = ["사업영역"];
+	const subMenuList3 = ["인재상","인사제도","채용전형"];
+	const subMenuList4 = ["회사소식","CI","FAQ"];
+	const subMenuList5 = ["문의하기"];
+
 	const [hide, setHide]:any = useState({
 		menu1: false,
 		menu2: false,
@@ -103,18 +109,31 @@ const HeaderPc2 = () => {
 						</ul>
 						<div className="detailMenu">
 							<ul></ul>
-							{menuLst.map((v, idx) => (
-								<ul
-									key={idx}
-									onMouseOver={() => mouseEvent(v, true)}
-									onMouseOut={() => mouseEvent(v, false)}
-								>
-									<li>{`메뉴${idx + 1}-${1}`}</li>
-									<li>{`메뉴${idx + 1}-${2}`}</li>
-									<li>{`메뉴${idx + 1}-${3}`}</li>
-									<li>{`메뉴${idx + 1}-${4}`}</li>
-								</ul>
-							))}
+							<ul>
+								{subMenuList1.map((v, idx) => (
+									<li>{v}</li>
+								))}
+							</ul>
+							<ul>
+								{subMenuList2.map((v, idx) => (
+									<li>{v}</li>
+								))}
+							</ul>
+							<ul>
+								{subMenuList3.map((v, idx) => (
+									<li>{v}</li>
+								))}
+							</ul>
+							<ul>
+								{subMenuList4.map((v, idx) => (
+									<li>{v}</li>
+								))}
+							</ul>
+							<ul>
+								{subMenuList5.map((v, idx) => (
+									<li>{v}</li>
+								))}
+							</ul>
 						</div>
 					</nav>
 				</Box>

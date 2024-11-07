@@ -9,12 +9,16 @@ import HoverCard from "@pages/main/hoverCard";
 import Skill from "@pages/main/skill";
 import Social from "@pages/main/social";
 import {Intro} from "@pages/main/intro";
+import {Intro3} from "@pages/main/intro3";
 
 const Main = () => {
 	return (
 		<Layout main={true}>
-			<section className="intro">
+			<section>
 				<Intro />
+			</section>
+			<section>
+				<Intro3/>
 			</section>
 			<section>
 				<Intro2/>

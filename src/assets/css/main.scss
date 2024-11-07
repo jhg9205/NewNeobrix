@@ -4,7 +4,7 @@
 .intro {
 	width: 100%;
     justify-content: center;
-    height:2000px;
+    height:1500px;
     display: flex;
 	#intro-container {
 		text-align: center;
@@ -95,6 +95,17 @@
   #card4{
     background: url('../images/main/service-item-4.png') no-repeat top center;
     background-size: cover;
+  }
+}
+
+.intro3{
+    width: 100%;
+    justify-content: center;
+    height:1500px;
+    display: flex;
+  #intro-container {
+    text-align: center;
+    /* padding-bottom: 50px; */
   }
 }
 
@@ -302,7 +313,7 @@
   }
 }
 
-.intro3{
+.intro4{
   background-color: white;
   height: 100%;
   width: 100%;

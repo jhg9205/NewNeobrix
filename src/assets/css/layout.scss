@@ -122,7 +122,8 @@ body {
 	}
 
 	.nav:hover {
-		height: 200px;
+		height: 100%;
+		transition-duration: 1s;
 	}
 
 	.nav .navContainer {
@@ -174,15 +175,15 @@ body {
 		display: flex;
 		overflow: hidden;
 		background-color: rgba(255, 255, 255, 0.89);
-		align-items: center;
 		justify-content: center;
-		padding: 0;
+		padding: 20px 0;
 		border : 1px solid gray;
+		font-size: 17px !important;
+		position: relative;
 	}
 
 	.nav .detailMenu ul {
 		width: 150px;
-		justify-content: space-around;
 	}
 
 	.nav .detailMenu ul li {
