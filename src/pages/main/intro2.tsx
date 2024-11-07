@@ -16,12 +16,9 @@ export const Intro2 = () => {
 		<div className='intro2'>
 			<div id='intro2-main'>
 				<div id='intro2-main1'>
-					<p>
-						DIGITAL
-					</p>
-					<p>
-						TRANSFORMATION
-					</p>
+					<p>NEOBRIX</p>
+					<p>DIGITAL TRANSFORMATION</p>
+					<p>CUSTOMER</p>
 				</div>
 				<div id='intro2-main2'>
 					<div>

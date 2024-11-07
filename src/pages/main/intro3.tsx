@@ -6,17 +6,20 @@ import {Button} from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export const Intro3 = () => {
-    const [scrollYProgress, setScrollYProgress] = useState(7);
+    const [scrollYProgress, setScrollYProgress] = useState(0);
 
     const handleScroll = () => {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-        if(scrollTop > 500){
-            setScrollYProgress(500);
-        }else{
-            setScrollYProgress(scrollTop/100+5);
+        if(scrollTop < 3500){
+            setScrollYProgress(0);
+        }else if(scrollTop == 3600){
+            setScrollYProgress(5);
+        }else if(scrollTop == 3700){
+            setScrollYProgress(10);
+        }else if(scrollTop == 3800){
+            setScrollYProgress(15);
         }
-
     };
 
 
@@ -31,7 +34,7 @@ export const Intro3 = () => {
             <motion.div
                 id='intro-container'
                 style={{
-                    width:`${scrollYProgress*10+20}%`,
+                    width:`100%`,
                     height:'100%',
                     borderRadius: '30px',
                     background: 'linear-gradient(180deg, rgba(255,255,255,1) 30%, rgba(0,144,210,1) 100%)'
@@ -96,7 +99,7 @@ export const Intro3 = () => {
                         <>
                             <motion.div
                                 className="card"
-                                id="card10"
+                                id="card11"
                                 style={{
                                     float:'right'
                                 }}
@@ -105,18 +108,6 @@ export const Intro3 = () => {
                                     transform:'translateY(-10px)'
                                 }}
                             >
-                                <Button
-                                    style={{cursor:'pointer',height:'100%', width:'100%'}}>
-                                    <div
-                                        className='intro-card-button'
-                                        style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
-                                        <p>IT Service</p>
-                                        <span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
-                                        <div className='intro-card-arrow'>
-                                            <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
-                                        </div>
-                                    </div>
-                                </Button>
                             </motion.div>
                         </>
                     </Transition>
@@ -124,7 +115,7 @@ export const Intro3 = () => {
                         <>
                             <motion.div
                                 className="card"
-                                id="card10"
+                                id="card12"
                                 style={{
                                     float:'left',
                                     height:'400px',
@@ -132,7 +123,7 @@ export const Intro3 = () => {
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:'translateY(-10px)'
+                                    transform:'translateY(+40px)'
                                 }}
                             >
                                 <Button

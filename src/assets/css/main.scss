@@ -163,6 +163,10 @@
       transition-duration: 500ms;
     }
   }
+  #card11{
+    background: url("../images/menu/recruit.jpg") no-repeat white;
+    background-size: contain;
+  }
 }
 
 /* 메인 intro 이미지애니메이션 효과 */
@@ -332,7 +336,7 @@
   width: 100%;
   height: 1000px;
   #intro2-main{
-    margin: 30px 200px;
+    margin: 100px 200px 30px 200px;
     display: flex;
   }
   #intro2-main1{
