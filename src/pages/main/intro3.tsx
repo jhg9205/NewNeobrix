@@ -50,13 +50,13 @@ export const Intro3 = () => {
                         lineHeight: '78px',
                         textAlign:'left'
                     }}
-                    initial={{ opacity: 0, y: 200}}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 50,x:-50}}
+                    whileInView={{ opacity: 1, y: 0, x:0 }}
                     viewport={{ once: false }}
                     transition={{
                         ease: "easeInOut",
-                        duration: 2,
-                        y: { duration: 2 },
+                        duration: 0.5,
+                        y: { duration: 0.5 },
                     }}
                 >
                     <p>NeoBrix와</p>
@@ -66,7 +66,7 @@ export const Intro3 = () => {
                 </motion.div>
 
                 <div style={{width:'900px', float:'right', margin:'100px 250px 0 0'}}>
-                    <Transition threshold={25} direction={'right'} time={500}>
+                    <Transition threshold={25} direction={'up'} time={500}>
                         <>
                             <motion.div
                                 className="card"

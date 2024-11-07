@@ -9,6 +9,15 @@ import {useRef} from "react";
 import { Swiper as SwiperType } from "swiper/types";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { motion } from 'framer-motion';
+import shLogo from "@images/main/shLogo.png"
+import landLogo from "@images/main/lhLogo.png"
+import natureLogo from "@images/main/natureLogo.png"
+import trianLogo from "@images/main/trianLogo.png"
+import ligLogo from "@images/main/ligLogo.png"
+import sgaLogo from "@images/main/sgaLogo.png"
+import airportLogo from "@images/main/airportLogo.jpg"
+import rawLogo from "@images/main/rawLogo.png"
+import dataLogo from "@images/main/dataLogo.png"
 
 export const Intro2 = () => {
 	const navigate = useNavigate()
@@ -17,13 +26,13 @@ export const Intro2 = () => {
 		<div className='intro2'>
 			<div id='intro2-main'>
 				<motion.div
-					initial={{ opacity: 0, y: 200}}
-					whileInView={{ opacity: 1, y: 0 }}
+					initial={{ opacity: 0, y: 100, x:-100}}
+					whileInView={{ opacity: 1, y: 0, x:0 }}
 					viewport={{ once: false }}
 					transition={{
 						ease: "easeInOut",
-						duration: 2,
-						y: { duration: 2 },
+						duration: 1,
+						y: { duration: 1 },
 					}}
 				>
 					<div id='intro2-main1'>
@@ -33,13 +42,13 @@ export const Intro2 = () => {
 					</div>
 				</motion.div>
 					<motion.div
-						initial={{ opacity: 0, y: 200}}
-						whileInView={{ opacity: 1, y: 0 }}
+						initial={{ opacity: 0, y: 100,x:100}}
+						whileInView={{ opacity: 1, y: 0,x:0 }}
 						viewport={{ once: false }}
 						transition={{
 							ease: "easeInOut",
-							duration: 2,
-							y: { duration: 2 },
+							duration: 1,
+							y: { duration: 1 },
 						}}
 						id='intro2-main2'
 					>
@@ -60,6 +69,16 @@ export const Intro2 = () => {
 					</motion.div>
 			</div>
 			<div id='intro2-main3'>
+				<motion.div
+					initial={{ opacity: 0, y: 200}}
+					whileInView={{ opacity: 1, y: 0}}
+					viewport={{ once: false }}
+					transition={{
+						ease: "easeInOut",
+						duration: 2,
+						y: { duration: 2 },
+					}}
+				>
 				<Swiper
 					loop={true}
 					slidesPerView={5}
@@ -170,26 +189,27 @@ export const Intro2 = () => {
 						</Button>
 					</SwiperSlide>
 				</Swiper>
+				</motion.div>
 			</div>
 			<div id='intro2-main4'>
 				<Swiper
 					loop={true}
 					slidesPerView={9}
-					spaceBetween={30}
+					spaceBetween={100}
 					centeredSlides={true}
 					autoplay={{delay:1000}}
 					navigation={{ prevEl: '.prev-swiper', nextEl: '.next-swiper' }}
 					modules={[Navigation,Autoplay]}
 					className="mySwiper">
-					<SwiperSlide>협력사로고1</SwiperSlide>
-					<SwiperSlide>협력사로고2</SwiperSlide>
-					<SwiperSlide>협력사로고3</SwiperSlide>
-					<SwiperSlide>협력사로고4</SwiperSlide>
-					<SwiperSlide>협력사로고5</SwiperSlide>
-					<SwiperSlide>협력사로고6</SwiperSlide>
-					<SwiperSlide>협력사로고7</SwiperSlide>
-					<SwiperSlide>협력사로고8</SwiperSlide>
-					<SwiperSlide>협력사로고9</SwiperSlide>
+					<SwiperSlide><img src={shLogo}/></SwiperSlide>
+					<SwiperSlide><img src={landLogo}/></SwiperSlide>
+					<SwiperSlide><img src={natureLogo}/></SwiperSlide>
+					<SwiperSlide><img src={trianLogo}/></SwiperSlide>
+					<SwiperSlide><img src={ligLogo}/></SwiperSlide>
+					<SwiperSlide><img src={sgaLogo}/></SwiperSlide>
+					<SwiperSlide><img src={airportLogo}/></SwiperSlide>
+					<SwiperSlide><img src={rawLogo}/></SwiperSlide>
+					<SwiperSlide><img src={dataLogo}/></SwiperSlide>
 					<button className="prev-swiper swiper-button-prev swiper-btn" style={{padding:'0 100px'}}></button>
 					<button className="next-swiper swiper-button-next swiper-btn" style={{padding:'0 100px'}}></button>
 				</Swiper>
