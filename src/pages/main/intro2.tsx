@@ -8,6 +8,7 @@ import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOu
 import {useRef} from "react";
 import { Swiper as SwiperType } from "swiper/types";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { motion } from 'framer-motion';
 
 export const Intro2 = () => {
 	const navigate = useNavigate()
@@ -15,27 +16,48 @@ export const Intro2 = () => {
 	return (
 		<div className='intro2'>
 			<div id='intro2-main'>
-				<div id='intro2-main1'>
-					<p>NEOBRIX</p>
-					<p>DIGITAL TRANSFORMATION</p>
-					<p>CUSTOMER</p>
-				</div>
-				<div id='intro2-main2'>
-					<div>
-						<ArrowCircleLeftOutlinedIcon className='left-arrow'
-													 onClick={() => {
-														 swiperRef.current?.slidePrev()
-													 }}
-													 style={{fontSize:'60px', cursor:'pointer'}}
-						/>
-						<ArrowCircleRightOutlinedIcon className='right-arrow'
-													  onClick={() => {
-														  swiperRef.current?.slideNext()
-													  }}
-													  style={{fontSize:'60px', cursor:'pointer'}}
-						/>
+				<motion.div
+					initial={{ opacity: 0, y: 200}}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: false }}
+					transition={{
+						ease: "easeInOut",
+						duration: 2,
+						y: { duration: 2 },
+					}}
+				>
+					<div id='intro2-main1'>
+						<p>NEOBRIX</p>
+						<p>DIGITAL TRANSFORMATION</p>
+						<p>CUSTOMER</p>
 					</div>
-				</div>
+				</motion.div>
+					<motion.div
+						initial={{ opacity: 0, y: 200}}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: false }}
+						transition={{
+							ease: "easeInOut",
+							duration: 2,
+							y: { duration: 2 },
+						}}
+						id='intro2-main2'
+					>
+						<div>
+							<ArrowCircleLeftOutlinedIcon className='left-arrow'
+														 onClick={() => {
+															 swiperRef.current?.slidePrev()
+														 }}
+														 style={{fontSize:'60px', cursor:'pointer'}}
+							/>
+							<ArrowCircleRightOutlinedIcon className='right-arrow'
+														  onClick={() => {
+															  swiperRef.current?.slideNext()
+														  }}
+														  style={{fontSize:'60px', cursor:'pointer'}}
+							/>
+						</div>
+					</motion.div>
 			</div>
 			<div id='intro2-main3'>
 				<Swiper
