@@ -363,9 +363,92 @@
       border-radius: 20px;
       height: 100%;
       box-shadow: 0px 5px 5px 0px rgba(142, 142, 142, 0.8);
+      color: black;
+      text-align: left;
+      p{
+        font-size: 20px;
+      }
+      span{
+        font-size: 15px;
+        color: #6d6d6d;
+      }
+      hr{
+        background-color: #b5b5b5;
+        margin: 0 0 20px 0;
+      }
+      svg{
+        color: white;
+      }
+      .intro2-card-arrow{
+        bottom: 20px;
+        position: absolute;
+        right: 40px;
+      }
     }
     .intro2-card-button:hover{
+      transition-duration: 0.3s;
       background: linear-gradient(321deg, rgba(116,248,194,1) 0%, rgba(0,173,223,1) 100%);
+      color: white;
+      span{
+        transition-duration: 0.3s;
+        color: #ececec;
+      }
+      hr{
+        background-color: white;
+      }
+      #intro2-card-logo1{
+        transition-duration: 0.3s;
+        background: url("../images/main/shLogoWhite.png") no-repeat;
+        background-size: contain;
+      }
+      #intro2-card-logo2{
+        transition-duration: 0.3s;
+        background: url("../images/main/kwaterLogoWhite.png") no-repeat;
+        background-size: contain;
+      }
+      #intro2-card-logo3{
+        transition-duration: 0.3s;
+        background: url("../images/main/natureLogoWhite.png") no-repeat;
+        background-size: contain;
+      }
+      #intro2-card-logo4{
+        transition-duration: 0.3s;
+        background: url("../images/main/rawLogoWhite.png") no-repeat;
+        background-size: contain;
+      }
+    }
+    .intro2-card-logo{
+      height: 70px;
+      width: 100%;
+      margin-top: 70px;
+    }
+    #intro2-card-logo1{
+      background: url("../images/main/shLogo.png") no-repeat;
+      background-size: contain;
+    }
+    #intro2-card-logo2{
+      background: url("../images/main/kwaterLogo.png") no-repeat;
+      background-size: contain;
+    }
+    #intro2-card-logo3{
+      background: url("../images/main/natureLogo.png") no-repeat;
+      background-size: contain;
+    }
+    #intro2-card-logo4{
+      background: url("../images/main/rawLogo.png") no-repeat;
+      background-size: contain;
+    }
+    #intro2-card-logo5{
+      /*background: url("../images/main/shLogo.png") no-repeat;*/
+      background-size: contain;
+    }
+    #intro2-card-logo6{
+      /*background: url("../images/main/shLogo.png") no-repeat;*/
+      background-size: contain;
+    }
+    #intro2-card-logo7{
+      /*background: url("../images/main/shLogo.png") no-repeat;*/
+      background-size: contain;
     }
   }
   #intro2-main4{

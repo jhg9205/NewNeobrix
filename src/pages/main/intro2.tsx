@@ -18,6 +18,8 @@ import sgaLogo from "@images/main/sgaLogo.png"
 import airportLogo from "@images/main/airportLogo.jpg"
 import rawLogo from "@images/main/rawLogo.png"
 import dataLogo from "@images/main/dataLogo.png"
+import kwaterLogo from "@images/main/kwaterLogo.png"
+import energyLogo from "@images/main/energyLogo.png"
 
 export const Intro2 = () => {
 	const navigate = useNavigate()
@@ -96,10 +98,12 @@ export const Intro2 = () => {
 							<div
 								className='intro2-card-button'
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
-								<p>SI(시스템통합)</p>
-								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
+								<div className='intro2-card-logo' id='intro2-card-logo1' style={{width:'100%'}}></div>
+								<Divider/>
+								<p>전사자원통합관리시스템 구축</p>
+								<span>#주택매입 #보상 #건축물안전관리</span>
 								<div className='intro2-card-arrow'>
-									<ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
+									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
 								</div>
 							</div>
 						</Button>
@@ -110,10 +114,12 @@ export const Intro2 = () => {
 							<div
 								className='intro2-card-button'
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+								<div className='intro2-card-logo' id='intro2-card-logo2' style={{width:'100%'}}></div>
+								<Divider/>
 								<p>프로젝트1</p>
 								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
 								<div className='intro2-card-arrow'>
-									<ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
+									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
 								</div>
 							</div>
 						</Button>
@@ -124,10 +130,12 @@ export const Intro2 = () => {
 							<div
 								className='intro2-card-button'
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+								<div className='intro2-card-logo' id='intro2-card-logo3' style={{width:'100%'}}></div>
+								<Divider/>
 								<p>프로젝트2</p>
 								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
 								<div className='intro2-card-arrow'>
-									<ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
+									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
 								</div>
 							</div>
 						</Button>
@@ -138,10 +146,12 @@ export const Intro2 = () => {
 							<div
 								className='intro2-card-button'
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+								<div className='intro2-card-logo' id='intro2-card-logo4' style={{width:'100%'}}></div>
+								<Divider/>
 								<p>프로젝트3</p>
 								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
 								<div className='intro2-card-arrow'>
-									<ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
+									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
 								</div>
 							</div>
 						</Button>
@@ -152,10 +162,12 @@ export const Intro2 = () => {
 							<div
 								className='intro2-card-button'
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+								<div className='intro2-card-logo' id='intro2-card-logo5' style={{width:'100%'}}></div>
+								<Divider/>
 								<p>프로젝트4</p>
 								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
 								<div className='intro2-card-arrow'>
-									<ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
+									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
 								</div>
 							</div>
 						</Button>
@@ -166,10 +178,12 @@ export const Intro2 = () => {
 							<div
 								className='intro2-card-button'
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+								<div className='intro2-card-logo' id='intro2-card-logo6' style={{width:'100%'}}></div>
+								<Divider/>
 								<p>프로젝트5</p>
 								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
 								<div className='intro2-card-arrow'>
-									<ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
+									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
 								</div>
 							</div>
 						</Button>
@@ -180,10 +194,12 @@ export const Intro2 = () => {
 							<div
 								className='intro2-card-button'
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+								<div className='intro2-card-logo' id='intro2-card-logo7' style={{width:'100%'}}></div>
+								<Divider/>
 								<p>프로젝트6</p>
 								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
 								<div className='intro2-card-arrow'>
-									<ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
+									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
 								</div>
 							</div>
 						</Button>
@@ -210,6 +226,8 @@ export const Intro2 = () => {
 					<SwiperSlide><img src={airportLogo}/></SwiperSlide>
 					<SwiperSlide><img src={rawLogo}/></SwiperSlide>
 					<SwiperSlide><img src={dataLogo}/></SwiperSlide>
+					<SwiperSlide><img src={kwaterLogo}/></SwiperSlide>
+					<SwiperSlide><img src={energyLogo}/></SwiperSlide>
 					<button className="prev-swiper swiper-button-prev swiper-btn" style={{padding:'0 100px'}}></button>
 					<button className="next-swiper swiper-button-next swiper-btn" style={{padding:'0 100px'}}></button>
 				</Swiper>

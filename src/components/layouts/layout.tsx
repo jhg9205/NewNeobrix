@@ -73,14 +73,15 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 			>
 				<div>
 					<div className="slider-text-pc">
-						<p className="swiper-main-text">No1. B2B Platform</p>
-						<p className="swiper-main-black">Service Provider</p>
+						<p className="swiper-main-text">IT 및 업무 전문가와 함께 하는</p>
+						<p className="swiper-main-black">디지털 트랜스포메이션</p>
 						<p className="swiper-main-mini"
 						   style={{
 							   marginTop:'68px'
 						   }}
-						>최고의 B2B 플랫폼 서비스 사업자,</p>
-						<p className="swiper-main-mini">Neobrix가 만들어나가는 새로운 경험과 혁신의 미래로.</p>
+						>환경, 국토, 교육 분야</p>
+						<p className="swiper-main-mini">Neo BRIX의 풍부한 경험과 노하우를 보유한 직원들과 함께</p>
+						<p className="swiper-main-mini">맞춤형 IT서비스로 디지털 트랜스포메이션 성공을</p>
 						<Button
 							id="recruitFile"
 							variant="contained"
@@ -131,14 +132,15 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 				>
 					<div>
 						<div className="slider-text-pc">
-							<p className="swiper-main-text">디지털 트랜스포메이션의 시작,</p>
-							<p className="swiper-main-black">전문가와 함께 하는 종합 IT 서비스.</p>
+							<p className="swiper-main-text">통합-연결-관리-생성-분석-AI</p>
+							<p className="swiper-main-black">무한한 Data Mining 세계로</p>
 							<p className="swiper-main-mini"
 							   style={{
 								   marginTop:'68px'
 							   }}
-							>대규모 시스템 구축 및 운영은 풍부한 경험과 노하우를 보유한 Neobrix와 함께.</p>
-							<p className="swiper-main-mini">맞춤형 종합 IT 서비스로 시작하는 디지털 트랜스포메이션.</p>
+							>Neo BRIX의 Big Data 및 AI 플랫폼은</p>
+							<p className="swiper-main-mini">고객이 필요로 하는</p>
+							<p className="swiper-main-mini">Data Mining 서비스를 제공합니다.</p>
 							<Button
 								id="recruitFile"
 								variant="contained"
@@ -190,14 +192,15 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 					<div className="slider-text-pc">
 						{/*<div className="in-div" style={{height:'10px',width:'30%', backgroundColor:'#fdd947'}}></div>*/}
 						<p className="swiper-main-text"
-						>통합, 연결, 생성, 확장</p>
-						<p className="swiper-main-black">무한한 유스트라 클라우드의 세계</p>
+						>내 손안에 IT솔루션</p>
+						<p className="swiper-main-black">Smarts Mobile</p>
 						<p className="swiper-main-mini"
 							style={{
 								marginTop:'68px'
 							}}
-						>당신이 필요로 하는 클라우드의 모든 것이 여기에</p>
-						<p className="swiper-main-mini">Neobrix의 클라우드 서비스 브랜드</p>
+						>Neo BRIX의 Mobile플랫폼은 GIS(지리정보)와</p>
+						<p className="swiper-main-mini">결합하여 스마트한 현장 업무환경을 위한</p>
+						<p className="swiper-main-mini">컨설팅부터 구축, 운영까지</p>
 						<Button
 							id="recruitFile"
 							variant="contained"
