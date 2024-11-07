@@ -359,7 +359,7 @@
   #intro2-main3{
     margin-top: 100px;
     .intro2-card-button{
-      border: 1px solid gray;
+      border: 0.5px solid #e8e8e8;
       border-radius: 20px;
       height: 100%;
       box-shadow: 0px 5px 5px 0px rgba(142, 142, 142, 0.8);
@@ -456,7 +456,6 @@
     background: white;
     align-content: center;
     justify-content: center;
-    display: flex;
     div{
       margin: 20px;
     }
@@ -470,6 +469,46 @@
 }
 
 .intro4{
+  height: 420px;
+  width: 100%;
+  border-radius: 0px;
+  transition: 0.1s;
+  background: linear-gradient(145.31deg, #00A6ED 1.05%, #00B780 99.46%);
+  min-width: 75%;
+  margin-top: 253px;
+  padding: 112px 0 102px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  p{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 26px;
+  }
+  span{
+    display: block;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 160%;
+    width: 400px;
+    margin:28px auto;
+  }
+  .button-text{
+    background: linear-gradient(-10deg, #00A6ED 29.34%, #00B780 56.73%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 104px;
+  }
+  button:hover{
+    background-color: white;
+  }
+}
+
+
+
+.intro5{
   background-color: white;
   height: 100%;
   width: 100%;

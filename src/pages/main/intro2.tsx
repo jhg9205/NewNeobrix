@@ -208,29 +208,40 @@ export const Intro2 = () => {
 				</motion.div>
 			</div>
 			<div id='intro2-main4'>
-				<Swiper
-					loop={true}
-					slidesPerView={9}
-					spaceBetween={100}
-					centeredSlides={true}
-					autoplay={{delay:1000}}
-					navigation={{ prevEl: '.prev-swiper', nextEl: '.next-swiper' }}
-					modules={[Navigation,Autoplay]}
-					className="mySwiper">
-					<SwiperSlide><img src={shLogo}/></SwiperSlide>
-					<SwiperSlide><img src={landLogo}/></SwiperSlide>
-					<SwiperSlide><img src={natureLogo}/></SwiperSlide>
-					<SwiperSlide><img src={trianLogo}/></SwiperSlide>
-					<SwiperSlide><img src={ligLogo}/></SwiperSlide>
-					<SwiperSlide><img src={sgaLogo}/></SwiperSlide>
-					<SwiperSlide><img src={airportLogo}/></SwiperSlide>
-					<SwiperSlide><img src={rawLogo}/></SwiperSlide>
-					<SwiperSlide><img src={dataLogo}/></SwiperSlide>
-					<SwiperSlide><img src={kwaterLogo}/></SwiperSlide>
-					<SwiperSlide><img src={energyLogo}/></SwiperSlide>
-					<button className="prev-swiper swiper-button-prev swiper-btn" style={{padding:'0 100px'}}></button>
-					<button className="next-swiper swiper-button-next swiper-btn" style={{padding:'0 100px'}}></button>
-				</Swiper>
+				<motion.div
+					initial={{ opacity: 0, y: 200}}
+					whileInView={{ opacity: 1, y: 0}}
+					viewport={{ once: false }}
+					transition={{
+						ease: "easeInOut",
+						duration: 0.5,
+						y: { duration: 0.5 },
+					}}
+				>
+					<Swiper
+						loop={true}
+						slidesPerView={9}
+						spaceBetween={100}
+						centeredSlides={true}
+						autoplay={{delay:1000}}
+						navigation={{ prevEl: '.prev-swiper', nextEl: '.next-swiper' }}
+						modules={[Navigation,Autoplay]}
+						className="mySwiper">
+						<SwiperSlide><img src={shLogo}/></SwiperSlide>
+						<SwiperSlide><img src={landLogo}/></SwiperSlide>
+						<SwiperSlide><img src={natureLogo}/></SwiperSlide>
+						<SwiperSlide><img src={trianLogo}/></SwiperSlide>
+						<SwiperSlide><img src={ligLogo}/></SwiperSlide>
+						<SwiperSlide><img src={sgaLogo}/></SwiperSlide>
+						<SwiperSlide><img src={airportLogo}/></SwiperSlide>
+						<SwiperSlide><img src={rawLogo}/></SwiperSlide>
+						<SwiperSlide><img src={dataLogo}/></SwiperSlide>
+						<SwiperSlide><img src={kwaterLogo}/></SwiperSlide>
+						<SwiperSlide><img src={energyLogo}/></SwiperSlide>
+						<button className="prev-swiper swiper-button-prev swiper-btn" style={{padding:'0 100px'}}></button>
+						<button className="next-swiper swiper-button-next swiper-btn" style={{padding:'0 100px'}}></button>
+					</Swiper>
+				</motion.div>
 			</div>
 		</div>
 	)
