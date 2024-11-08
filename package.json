@@ -21,7 +21,7 @@
 		"@emotion/styled": "^11.10.5",
 		"@mui/icons-material": "^5.10.16",
 		"@mui/lab": "^5.0.0-alpha.112",
-		"@mui/material": "^5.11.0",
+		"@mui/material": "^6.1.6",
 		"@mui/styled-engine-sc": "^5.8.0",
 		"@toast-ui/editor": "^3.2.2",
 		"@types/antd": "^1.0.4",

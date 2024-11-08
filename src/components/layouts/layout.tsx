@@ -10,6 +10,7 @@ import { RootState } from '@modules/reducer'
 import { useSelector } from 'react-redux'
 import { useState, useEffect, useRef } from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 
 import Popup from '@components/ui/popup'
 import { Swiper, SwiperSlide, useSwiperSlide } from 'swiper/react'
@@ -18,12 +19,17 @@ import 'swiper/css'
 import 'swiper/swiper-bundle.css'
 
 import HeaderTop from './header/headerTop'
-import { Button, Fab, Fade, Slide } from '@mui/material'
+import { Button, Fab, Fade, Slide, Box, Backdrop, SpeedDial, SpeedDialAction, SpeedDialIcon } from '@mui/material'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import * as React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Analytics } from "@vercel/analytics/react"
+import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 
+const actions = [
+	{ icon: <ConnectWithoutContactIcon />, name: '문의하기' }
+];
 
 const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 	const navigate = useNavigate()
@@ -32,7 +38,14 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 	const el: React.ReactNode = useSelector((state: RootState) => state.layOutReducer.children)
 
 	let [scroll, setScroll] = useState(false)
-
+	const [open, setOpen] = useState(false);
+	const handleOpen = () => setOpen(true);
+	const handleClose = () => setOpen(false);
+	const trigger = useScrollTrigger({
+		target: window,
+		disableHysteresis: true,
+		threshold: 100
+	})
 	useEffect(() => {
 		indexView.current?.scrollIntoView({
 			behavior: 'smooth',
@@ -289,6 +302,32 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 					<KeyboardArrowUpIcon />
 				</Fab>
 			</HeaderTop>
+			<Fade in={trigger}>
+				<Box sx={{ height: 330, position: 'fixed', bottom: 80, right: 15, flexGrow: 1 }}>
+					<SpeedDial
+						ariaLabel="SpeedDial tooltip example"
+						sx={{ position: 'absolute', bottom: 16, right: 16 }}
+						icon={<SpeedDialIcon />}
+						onClose={handleClose}
+						onOpen={handleOpen}
+						open={open}
+					>
+						{actions.map((action) => (
+							<SpeedDialAction
+								key={action.name}
+								icon={action.icon}
+								tooltipTitle={
+								<span
+									style={{padding:'30px', color:'blue', fontWeight:'400'}}
+								>{action.name}</span>
+								}
+								tooltipOpen
+								onClick={handleClose}
+							/>
+						))}
+					</SpeedDial>
+				</Box>
+			</Fade>
 			<Popup id="popupWrap" open={isPopup} styleType={0}>
 				<>{el}</>
 			</Popup>
