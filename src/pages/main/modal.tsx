@@ -59,18 +59,6 @@ const FullScreenDialog = (props:{callOpen:boolean}) => {
                         </Button>
                     </Toolbar>
                 </AppBar>
-                <List>
-                    <ListItem button>
-                        <ListItemText primary="Phone ringtone" secondary="Titania" />
-                    </ListItem>
-                    <Divider />
-                    <ListItem button>
-                        <ListItemText
-                            primary="Default notification ringtone"
-                            secondary="Tethys"
-                        />
-                    </ListItem>
-                </List>
             </Dialog>
         </div>
     );
