@@ -5,17 +5,25 @@ import {useEffect, useState} from "react";
 import Transition from '@components/ui/transition/transition'
 import {Button} from "@mui/material";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import {getViewSize} from "@utils/functions";
 
 export const Intro = () => {
         const [scrollYProgress, setScrollYProgress] = useState(7);
-
+        const size = getViewSize()
         const handleScroll = () => {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-            if(scrollTop > 500){
-                setScrollYProgress(500);
-            }else{
-                setScrollYProgress(scrollTop/100+5);
+            if(size == 'lg'){
+                if(scrollTop > 500){
+                    setScrollYProgress(100);
+                }else{
+                    setScrollYProgress(scrollTop/100+5);
+                }
+            }else if(size =='sm'){
+                if(scrollTop > 300){
+                    setScrollYProgress(100);
+                }else{
+                    setScrollYProgress(scrollTop/100+5);
+                }
             }
 
         };
@@ -47,22 +55,14 @@ export const Intro = () => {
             <motion.div
                 id='intro-container'
                 style={{
-                    width:`${scrollYProgress*10+20}%`,
+                    width:scrollYProgress != 100 ?`${scrollYProgress*10+20}%`:`100%`,
                     height:'100%',
                     borderRadius: '30px',
                     background: 'linear-gradient(to bottom, #74f8c2, #00e2d3, #00c9de, #00addf, #0090d2, #3f8ed0, #5a8bcd, #6e89c9, #99a4d6, #bec1e3, #e0dff1, #ffffff)'
                 }}
             >
                 <motion.div
-                        style={{
-                            float:'left', margin:'100px 0 0 250px',
-                            width: '402px',
-                            color: '#fff',
-                            fontWeight: '500',
-                            fontSize: '60px',
-                            lineHeight: '78px',
-                            textAlign:'left'
-                        }}
+                    className='intro-text'
                         initial={{ opacity: 0, y: 50, x:-50}}
                         whileInView={{ opacity: 1, y: 0, x:0 }}
                         viewport={{ once: false }}
@@ -77,18 +77,19 @@ export const Intro = () => {
                         <p>위한</p>
                         <p>고객의 선택</p>
                     </motion.div>
-                <div style={{width:'900px', float:'right', margin:'100px 250px 0 0'}}>
-                    <Transition threshold={3} direction={'up'} time={500}>
+                <div className='intro-content'>
+                    <Transition threshold={size=='lg'?3:2} direction={'up'} time={500}>
                         <>
                             <motion.div
                                 className="card"
                                 id="card1"
                                 style={{
-                                    float:'left'
+                                    float:size == 'lg'?'left':'right',
+                                    transform : size == 'lg'?'none':'translateY(-220px)'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:'translateY(-10px)'
+                                    transform:size == 'lg'?'translateY(-10px)':'translateY(-230px)'
                                 }}
                             >
                                 <Button
@@ -106,18 +107,18 @@ export const Intro = () => {
                             </motion.div>
                         </>
                     </Transition>
-                    <Transition threshold={5} direction={'up'} time={500}>
+                    <Transition threshold={size=='lg'?5:3} direction={'up'} time={500}>
                         <>
                             <motion.div
                                 className="card"
                                 id="card2"
                                 style={{
-                                    float:'right',
-                                    transform:'translateY(100px)'
+                                    float:size == 'lg'?'right':'left',
+                                    transform : size == 'lg'?'translateY(100px)':'none'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:'translateY(+90px)'
+                                    transform:size == 'lg'?'translateY(90px)':'translateY(-10px)'
                                 }}
                             >
                             <Button
@@ -135,18 +136,18 @@ export const Intro = () => {
                             </motion.div>
                         </>
                     </Transition>
-                    <Transition threshold={9} direction={'up'} time={500}>
+                    <Transition threshold={size=='lg'?8:5} direction={'up'} time={500}>
                         <>
                             <motion.div
                                 className="card"
                                 id="card3"
                                 style={{
-                                    float:'left',
-                                    transform:'translateY(100px)'
+                                    float:size == 'lg'?'left':'right',
+                                    transform : size == 'lg'?'translateY(100px)':'translateY(-100px)'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:'translateY(+90px)'
+                                    transform:size == 'lg'?'translateY(90px)':'translateY(-110px)'
                                 }}
                             >
                                 <Button
@@ -164,18 +165,18 @@ export const Intro = () => {
                             </motion.div>
                         </>
                     </Transition>
-                    <Transition threshold={11} direction={'up'} time={500}>
+                    <Transition threshold={size=='lg'?11:6} direction={'up'} time={500}>
                         <>
                             <motion.div
                                 className="card"
                                 id="card4"
                                 style={{
-                                    float:'right',
-                                    transform:'translateY(200px)'
+                                    float:size == 'lg'?'right':'left',
+                                    transform : size == 'lg'?'translateY(200px)':'translateY(100px)'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:'translateY(+190px)'
+                                    transform:size == 'lg'?'translateY(190px)':'translateY(90px)'
                                 }}
                             >
                                 <Button
@@ -193,18 +194,18 @@ export const Intro = () => {
                             </motion.div>
                         </>
                     </Transition>
-                    <Transition threshold={15} direction={'up'} time={500}>
+                    <Transition threshold={size=='lg'?15:8} direction={'up'} time={500}>
                         <>
                             <motion.div
                                 className="card"
                                 id="card4"
                                 style={{
-                                    float:'left',
-                                    transform:'translateY(200px)'
+                                    float:size == 'lg'?'left':'right',
+                                    transform : size == 'lg'?'translateY(200px)':'translateY(0px)'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:'translateY(+190px)'
+                                    transform:size == 'lg'?'translateY(190px)':'translateY(-10px)'
                                 }}
                             >
                                 <Button
@@ -222,18 +223,18 @@ export const Intro = () => {
                             </motion.div>
                         </>
                     </Transition>
-                    <Transition threshold={17} direction={'up'} time={500}>
+                    <Transition threshold={size=='lg'?17:9} direction={'up'} time={500}>
                         <>
                             <motion.div
                                 className="card"
                                 id="card4"
                                 style={{
-                                    float:'right',
-                                    transform:'translateY(300px)'
+                                    float:size == 'lg'?'right':'left',
+                                    transform : size == 'lg'?'translateY(300px)':'translateY(200px)'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:'translateY(+290px)'
+                                    transform:size == 'lg'?'translateY(290px)':'translateY(190px)'
                                 }}
                             >
                                 <Button

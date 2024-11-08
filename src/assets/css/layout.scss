@@ -178,7 +178,7 @@ body {
 		background-color: rgba(255, 255, 255, 0.89);
 		justify-content: center;
 		padding: 20px 0;
-		border : 1px solid gray;
+		border : 1px solid #c7c7c7;
 		font-size: 17px !important;
 		position: relative;
 	}
@@ -244,13 +244,13 @@ body {
 	display: flex;
 	@include mobile {
 		padding-top: 0 !important;
+		height: 60%;
 	}
 	@include tablet {
 		padding-top: 0 !important;
 	}
 	.slider-img {
 		background-size: cover;
-		background-position: center;
 		color: white;
 		height: 100%;
 		width: 100%;
@@ -260,6 +260,9 @@ body {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		@include mobile {
+			height: 500px !important;
+		}
 	}
 	#slider3 {
 		background-image: url('../images/main/main_bg3.png');
@@ -308,12 +311,20 @@ body {
 			font-weight: 700;
 			font-size: 84px;
 			line-height: 104px;
+			@include mobile {
+				font-size: 35px;
+				line-height: 44px;
+			}
 		}
 		.swiper-main-black{
 			font-weight: 700;
 			font-size: 84px;
 			line-height: 104px;
 			color: black;
+			@include mobile {
+				font-size: 35px;
+				line-height: 44px;
+			}
 		}
 		.swiper-main-mini{
 			font-weight: 400;
@@ -322,45 +333,68 @@ body {
 			letter-spacing: -0.04em;
 			color: #111;
 			opacity: 1;
+			@include mobile {
+				font-size: 20px;
+				line-height: 24px;
+			}
 		}
 	}
 }
 
 footer {
 	bottom: 0;
-	background-color: #3c3c3c;
+	height: 644px;
 	text-align: center;
-	color: #b5b5b5;
-	padding: 20px;
+	color: #000000;
+	.footer-main{
+		display: flex;
+		overflow: hidden;
+		background-color: rgba(255, 255, 255, 0.89);
+		justify-content: center;
+		padding: 20px 0;
+		font-size: 17px;
+		position: relative;
+		ul{
+			width: 150px;
+			li:first-child{
+				font-weight: 500;
+				font-size: 17px;
+			}
+			li {
+				text-align: left;
+				font-size: 15px;
+				list-style-type: none;
+				margin-bottom: 10px;
+				color: rgb(0, 0, 0);
+				font-weight: 200;
+			}
+			li:hover{
+				color: #1976d2;
+			}
+			li:first-child:hover{
+				color: black;
+			}
+		}
+	}
 	.footLine {
 		width: 100%;
-		border-top-width: 1px;
+		border-top-width: 0.1px;
 		border-style: solid;
-		border-color: #4d4d4d;
+		border-color: rgba(77, 77, 77, 0.27);
 		display: flex;
 		margin: 30px 0 30px 0;
 	}
-	#footerLogo {
-		margin: 10px;
-	}
-
-	#footTab {
-		width: 40%;
-		margin: 20px auto 40px auto;
-	}
-	.MuiTabs-indicator {
-		display: none;
-	}
-	.mobile {
-		img {
-			width: 150px;
+	.footer-sub{
+		width: 100%;
+		border-top: 1px solid #DBDBDB;
+		background: #F6F6F6;
+		display: flex;
+		margin: 0 auto;
+		ul{
+			margin: 0 auto;
+			display: inline-block;
+			padding: 30px 0 80px;
 		}
-		ul {
-			font-size: 12px;
-		}
-	}
-	.pc li {
-		padding-bottom: 10px;
 	}
 }
 

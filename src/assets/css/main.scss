@@ -9,6 +9,34 @@
 	#intro-container {
 		text-align: center;
 		/* padding-bottom: 50px; */
+      .intro-text{
+        float:left;
+        margin:100px 0 0 250px;
+        width: 402px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 78px;
+        text-align:left;
+        @include mobile {
+          margin: 50px 0 0 50px;
+          width: 200px;
+          font-size: 20px;
+          line-height: 20px;
+          float: none;
+        }
+      }
+      .intro-content{
+        width:900px;
+        float:right;
+        margin:100px 250px 0 0;
+        @include mobile{
+          width: 500px;
+          float: none;
+          margin:100px 0;
+          padding: 30px;
+        }
+      }
 	}
 	.sub_intro_warp {
 		padding: 0 15% 210px;
@@ -36,6 +64,10 @@
     0 0 16px hsl(0deg 0% 0% / 0.075);
     transform-origin: 10% 60%;
     color: white;
+    @include mobile{
+      width: 200px;
+      height: 400px;
+    }
     .intro-card-button{
       position:absolute;
       bottom:0;

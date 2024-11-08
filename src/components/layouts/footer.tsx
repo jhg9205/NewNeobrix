@@ -26,16 +26,41 @@ const Footer = () => {
 
 	return (
 		<footer>
-			<div id="footerLogo">
-				<Hidden smUp>
-					<SubFooter size="mobile" />
-				</Hidden>
-				<Hidden smDown lgUp>
-					<SubFooter size="tablet" />
-				</Hidden>
-				<Hidden lgDown>
-					<SubFooter size="pc" />
-				</Hidden>
+			<div>
+				<div className='footer-main'>
+					<ul>
+						<li>기업소개</li>
+						<li>인사말</li>
+						<li>비전</li>
+						<li>면허 및 특허</li>
+						<li>오시는 길</li>
+					</ul>
+					<ul>
+						<li>사업영역</li>
+					</ul>
+					<ul>
+						<li>인재채용</li>
+						<li>인재상</li>
+						<li>인사제도</li>
+						<li>채용전형</li>
+					</ul>
+					<ul>
+						<li>홍보</li>
+						<li>회사소식</li>
+						<li>CI</li>
+						<li>FAQ</li>
+					</ul>
+					<ul>
+						<li>문의하기</li>
+					</ul>
+				</div>
+				<div className='footer-sub'>
+					<ul>
+						<li>서울특별시 송파구 백제고분로7길 16-9 ,4층 401호(잠실동, 한신빌딩)</li>
+						<li>TEL : 02-423-7860 // FAX : 0580-903-7860</li>
+						<li>Copyright 2024 NEOBRIX. All rights reserved.</li>
+					</ul>
+				</div>
 			</div>
 		</footer>
 	)
