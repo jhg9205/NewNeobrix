@@ -95,8 +95,7 @@ export const Intro = () => {
                                 <Button
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
-                                        className='intro-card-button'
-                                        style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+                                        className='intro-card-button'>
                                     <p>IT Service</p>
                                     <span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
                                     <div className='intro-card-arrow'>
@@ -124,8 +123,7 @@ export const Intro = () => {
                             <Button
                                 style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                 <div
-                                    className='intro-card-button'
-                                    style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+                                    className='intro-card-button'>
                                     <p>Data Mining Vision</p>
                                     <span>HPE Ezmeral Big-Data 플랫폼 (HPE EZMERAL Data Fabric)</span>
                                     <div className='intro-card-arrow'>
@@ -153,8 +151,7 @@ export const Intro = () => {
                                 <Button
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
-                                        className='intro-card-button'
-                                        style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+                                        className='intro-card-button'>
                                     <p>Mobile in my hand</p>
                                     <span>HPE Ezmeral AI 플랫폼 (HPE EZMERAL ML OPS Platform)</span>
                                     <div className='intro-card-arrow'>
@@ -182,9 +179,15 @@ export const Intro = () => {
                                 <Button
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
-                                        className='intro-card-button'
-                                        style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
-                                    <p>Land/Facility Management</p>
+                                        className='intro-card-button'>
+                                        {size=='lg'?
+                                            <p>Land/Facility Management</p>:
+                                            <>
+                                                <p>Land/</p>
+                                                <p>Facility</p>
+                                                <p>Management</p>
+                                            </>
+                                        }
                                     <span>중대재해 발생 시 법적대응에 활용할 수 있는 솔루션</span>
                                     <div className='intro-card-arrow'>
                                         <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
@@ -211,8 +214,7 @@ export const Intro = () => {
                                 <Button
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
-                                        className='intro-card-button'
-                                        style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+                                        className='intro-card-button'>
                                         <p>Environment</p>
                                         <span>중대재해 발생 시 법적대응에 활용할 수 있는 솔루션</span>
                                         <div className='intro-card-arrow'>
@@ -240,8 +242,7 @@ export const Intro = () => {
                                 <Button
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
-                                        className='intro-card-button'
-                                        style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+                                        className='intro-card-button'>
                                         <p>Education</p>
                                         <span>중대재해 발생 시 법적대응에 활용할 수 있는 솔루션</span>
                                         <div className='intro-card-arrow'>

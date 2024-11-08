@@ -71,6 +71,13 @@
     .intro-card-button{
       position:absolute;
       bottom:0;
+      vertical-align: bottom;
+      display: table-cell;
+      padding: 0 40px;
+      width: 100%;
+      @include mobile{
+        padding: 0 10px;
+      }
     }
     p{
       width: auto;
@@ -80,6 +87,10 @@
       font-size: 44px;
       line-height: 42px;
       transition-duration: 500ms;
+      @include mobile{
+        font-size: 25px;
+        line-height: 30px;
+      }
     }
     span{
       display: inline-block;
@@ -90,6 +101,10 @@
       font-weight: 400;
       font-size: 24px;
       transition-duration: 500ms;
+      @include mobile{
+        font-size: 15px;
+        line-height: 120%;
+      }
     }
     .intro-card-arrow{
       opacity: 0;
