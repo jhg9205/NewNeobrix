@@ -256,7 +256,7 @@ export const Intro = () => {
                 </div>
             </motion.div>
         </div>
-        <div style={{height:'800px'}}>
+        <div style={{height:size=='lg'?'800px':'200px'}}>
 
         </div>
         </>

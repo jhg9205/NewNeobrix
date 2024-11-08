@@ -4,10 +4,11 @@ import * as React from "react";
 import Transition from "@components/ui/transition/transition";
 import {Button} from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import {getViewSize} from "@utils/functions";
 
 export const Intro3 = () => {
     const [scrollYProgress, setScrollYProgress] = useState(0);
-
+    const size = getViewSize()
     const handleScroll = () => {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
@@ -41,15 +42,7 @@ export const Intro3 = () => {
                 }}
             >
                 <motion.div
-                    style={{
-                        float:'left', margin:'100px 0 0 250px',
-                        width: '402px',
-                        color: '#000000',
-                        fontWeight: '500',
-                        fontSize: '60px',
-                        lineHeight: '78px',
-                        textAlign:'left'
-                    }}
+                    className='intro-text'
                     initial={{ opacity: 0, y: 50,x:-50}}
                     whileInView={{ opacity: 1, y: 0, x:0 }}
                     viewport={{ once: false }}
@@ -65,26 +58,26 @@ export const Intro3 = () => {
                     <p>찾습니다.</p>
                 </motion.div>
 
-                <div style={{width:'900px', float:'right', margin:'100px 250px 0 0'}}>
-                    <Transition threshold={25} direction={'up'} time={500}>
+                <div className='intro-content'>
+                    <Transition threshold={size=='lg'?25:15} direction={'up'} time={500}>
                         <>
                             <motion.div
                                 className="card"
                                 id="card10"
                                 style={{
-                                    float:'left',
-                                    height:'400px'
+                                    float:size == 'lg'?'left':'right',
+                                    height:size == 'lg'?'400px':'300px',
+                                    transform:size == 'lg'?'none':'translateY(-220px)'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:'translateY(-10px)'
+                                    transform:size == 'lg'?'translateY(-10px)':'translateY(-230px)'
                                 }}
                             >
                                 <Button
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
-                                        className='intro-card-button'
-                                        style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+                                        className='intro-card-button'>
                                         <p>IT Service</p>
                                         <span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
                                         <div className='intro-card-arrow'>
@@ -95,42 +88,42 @@ export const Intro3 = () => {
                             </motion.div>
                         </>
                     </Transition>
-                    <Transition threshold={25} direction={'left'} time={500}>
+                    <Transition threshold={size=='lg'?25:17} direction={size=='lg'?'left':'right'} time={500}>
                         <>
                             <motion.div
                                 className="card"
                                 id="card11"
                                 style={{
-                                    float:'right'
+                                    float:size == 'lg'?'right':'left',
+                                    transform : size == 'lg'?'none':'translateY(-50px)'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:'translateY(-10px)'
+                                    transform:size == 'lg'?'translateY(-10px)':'translateY(-40px)'
                                 }}
                             >
                             </motion.div>
                         </>
                     </Transition>
-                    <Transition threshold={28} direction={'up'} time={500}>
+                    <Transition threshold={size=='lg'?28:19} direction={'up'} time={500}>
                         <>
                             <motion.div
                                 className="card"
                                 id="card12"
                                 style={{
-                                    float:'left',
-                                    height:'400px',
-                                    transform:'translateY(50px)'
+                                    float:size == 'lg'?'left':'right',
+                                    height:size == 'lg'?'400px':'300px',
+                                    transform:size == 'lg'?'translateY(50px)':'translateY(-150px)'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:'translateY(+40px)'
+                                    transform:size == 'lg'?'translateY(40px)':'translateY(-160px)'
                                 }}
                             >
                                 <Button
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
-                                        className='intro-card-button'
-                                        style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
+                                        className='intro-card-button'>
                                         <p>IT Service</p>
                                         <span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
                                         <div className='intro-card-arrow'>
