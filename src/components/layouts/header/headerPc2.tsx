@@ -64,11 +64,27 @@ const HeaderPc2 = () => {
 	})
 
 	const menuLst = ["기업소개", "사업영역", "인재채용", "홍보", "문의하기"];
-	const subMenuList1 = ["인사말","비젼","면허 및 특허","오시는 길"];
-	const subMenuList2 = ["사업영역"];
-	const subMenuList3 = ["인재상","인사제도","채용전형"];
-	const subMenuList4 = ["회사소식","CI","FAQ"];
-	const subMenuList5 = ["문의하기"];
+	const subMenuList1 = [
+		{"title":"인사말",		"link":"/business"},
+		{"title":"비젼",		"link":"/business"},
+		{"title":"면허 및 특허",	"link":"/business"},
+		{"title":"오시는길",		"link":"/business"}];
+	const subMenuList2 = [
+		{"title":"사업영역",		"link":"/"}
+	];
+	const subMenuList3 = [
+		{"title":"인재상",		"link":"/business"},
+		{"title":"인사제도",		"link":"/business"},
+		{"title":"채용전형",		"link":"/business"}
+	];
+	const subMenuList4 = [
+		{"title":"회사소식",		"link":"/"},
+		{"title":"CI",			"link":"/"},
+		{"title":"FAQ",			"link":"/"}
+	];
+	const subMenuList5 = [
+		{"title":"문의하기",		"link":"/"}
+	];
 
 	const [hide, setHide]:any = useState({
 		menu1: false,
@@ -111,27 +127,47 @@ const HeaderPc2 = () => {
 							<ul></ul>
 							<ul>
 								{subMenuList1.map((v, idx) => (
-									<li key={idx}>{v}</li>
+									<li key={idx}>
+										<Link to={v.link}>
+											{v.title}
+										</Link>
+									</li>
 								))}
 							</ul>
 							<ul>
 								{subMenuList2.map((v, idx) => (
-									<li key={idx}>{v}</li>
+									<li key={idx}>
+										<Link to={v.link}>
+											{v.title}
+										</Link>
+									</li>
 								))}
 							</ul>
 							<ul>
 								{subMenuList3.map((v, idx) => (
-									<li key={idx}>{v}</li>
+									<li key={idx}>
+										<Link to={v.link}>
+											{v.title}
+										</Link>
+									</li>
 								))}
 							</ul>
 							<ul>
 								{subMenuList4.map((v, idx) => (
-									<li key={idx}>{v}</li>
+									<li key={idx}>
+										<Link to={v.link}>
+											{v.title}
+										</Link>
+									</li>
 								))}
 							</ul>
 							<ul>
 								{subMenuList5.map((v, idx) => (
-									<li key={idx}>{v}</li>
+									<li key={idx}>
+										<Link to={v.link}>
+											{v.title}
+										</Link>
+									</li>
 								))}
 							</ul>
 						</div>
