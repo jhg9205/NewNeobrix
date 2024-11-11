@@ -58,12 +58,9 @@ const Menu1 = () => {
 								}}
 							>
 								<div>
-									<p>dd</p>
-									<p>dd</p>
-									<p>dd</p>
-									<p>dd</p>
-									<p>dd</p>
-									<p>dd</p>
+									<p className='white-text'>What we offer for</p>
+									<p className='gra-text'>new normal era:</p>
+									<p className='small-text'>Neobrix</p>
 								</div>
 							</motion.div>
 						</div>
@@ -78,16 +75,13 @@ const Menu1 = () => {
 								transition={{
 									ease: "easeInOut",
 									duration: 2,
-									y: { duration: 5 },
+									y: { duration: 3 },
 								}}
 							>
 								<div>
-									<p>dd</p>
-									<p>dd</p>
-									<p>dd</p>
-									<p>dd</p>
-									<p>dd</p>
-									<p>dd</p>
+									<p className='white-text'>What we offer for</p>
+									<p className='gra-text'>new normal era:</p>
+									<p className='small-text'>Neobrix</p>
 								</div>
 							</motion.div>
 						</div>
