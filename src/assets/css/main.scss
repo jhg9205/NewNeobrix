@@ -444,6 +444,9 @@
   }
   #intro2-main3{
     margin-top: 100px;
+    .swiper{
+      z-index: 0;
+    }
     .intro2-card-button{
       border: 0.5px solid #e8e8e8;
       border-radius: 20px;
@@ -544,6 +547,7 @@
     justify-content: center;
     div{
       margin: 20px;
+      z-index: 0;
     }
     img{
       //width: 100px;

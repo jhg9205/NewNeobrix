@@ -62,7 +62,7 @@ export const Intro4 = () => {
             >
 							<span
                                 className='button-text'
-                            >전문가에게 문의하기</span>
+                            >NeoBRIX 전문가 만남</span>
                 <ArrowForwardIcon/>
             </Button>
         </motion.div>
