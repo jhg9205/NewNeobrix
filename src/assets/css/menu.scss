@@ -97,6 +97,32 @@
 }
 // 회사소개메뉴 관련
 #companyLayout {
+	.company-slide{
+		height: 800px;
+		.slider-img{
+			background-size: cover;
+			color: white;
+			height: 100%;
+			width: 100%;
+			text-align: left;
+			font-weight: bold;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			@include mobile {
+				height: 500px !important;
+			}
+		}
+		#slider1{
+			background: url('../images/menu/company-main1.png') center no-repeat;
+			background-size: cover;
+		}
+		#slider2{
+			background: url('../images/menu/company-main2.png') center no-repeat;
+			background-size: cover;
+		}
+	}
 	.menu_title_contain {
 		text-align: center;
 	}

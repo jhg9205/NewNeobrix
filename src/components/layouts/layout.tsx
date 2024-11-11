@@ -61,10 +61,10 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 		const top = document.querySelector('.container .top') as HTMLDivElement
 
 		if (window.scrollY > 50) {
-			top.style.backgroundColor = 'rgba(255, 255, 255, 0.37)'
+			top.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'
 			setScroll(true)
 		} else {
-			top.style.backgroundColor = 'rgba(255, 255, 255, 0.37)'
+			top.style.backgroundColor = 'rgba(255, 255, 255, 0.9)'
 			setScroll(false)
 		}
 	}

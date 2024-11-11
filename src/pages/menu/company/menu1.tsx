@@ -2,14 +2,17 @@ import Layout from '@components/layouts/layout'
 import FadeImg from '@components/ui/effect/fadeImg'
 import Transition from '@components/ui/transition/transition'
 
-import subTileImg from '@images/menu/bg-company.png'
-import subTileMobile from '@images/menu/bg-company-m.png'
+import main1 from '@images/menu/company-main1.png'
+import main2 from '@images/menu/company-main2.png'
 import introImg from '@images/common/img-intro2.png'
 import React from 'react'
 import { Fade, Grid } from '@mui/material'
 import MenuListbar from './menuListbar'
 import { PATH } from '@common/domain'
 import Organize from '@images/common/organize.jpg'
+import {Autoplay, EffectFade, Navigation, Pagination} from "swiper";
+import {Swiper, SwiperSlide} from "swiper/react";
+import { motion } from 'framer-motion'
 
 const Menu1 = () => {
 	const [ceo, setCeo] = React.useState(false)
@@ -26,36 +29,71 @@ const Menu1 = () => {
 
 	const menulist = MenuListbar(PATH.COMPANY00)
 
-	const subTileTrans = (
-		<Transition threshold={-1} direction={'up'} isEndListener={true} callFunc={callEndFunc} time={1500}>
-			<div className="menu_title_p_warp">
-				<section>
-					<p className="menu_title_p1">
-						About <span>NEOBRIX</span>
-					</p>
-					<p className="menu_title_p2">Sustainable Operation & Robust Framework.</p>
-				</section>
-			</div>
-		</Transition>
-	)
+	return  (
+		<Layout>
+			<div id="companyLayout">
+				<Swiper
+					className='company-slide'
+					loop={true}
+					modules={[Navigation, Pagination, Autoplay, EffectFade]}
+					spaceBetween={1}
+					effect="slide"
+					speed={1000}
+					slidesPerView={1}
+					navigation={{ prevEl: '.prev-swiper', nextEl: '.next-swiper' }}
+					pagination={{ clickable: true }}
+					autoplay={{ delay: 3000, disableOnInteraction: false }}
+				>
+					<SwiperSlide>
+						<div id="slider1" className="slider-img">
 
-	return !ceo ? (
-		<Layout>
-			<div id="companyLayout">
-				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
-				{menulist}
+							<motion.div
+								initial={{ opacity: 0, y: 100 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: false }}
+								transition={{
+									ease: "easeInOut",
+									duration: 2,
+									y: { duration: 5 },
+								}}
+							>
+								<div>
+									<p>dd</p>
+									<p>dd</p>
+									<p>dd</p>
+									<p>dd</p>
+									<p>dd</p>
+									<p>dd</p>
+								</div>
+							</motion.div>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide>
+						<div id="slider2" className="slider-img">
+
+							<motion.div
+								initial={{ opacity: 0, y: 100 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: false }}
+								transition={{
+									ease: "easeInOut",
+									duration: 2,
+									y: { duration: 5 },
+								}}
+							>
+								<div>
+									<p>dd</p>
+									<p>dd</p>
+									<p>dd</p>
+									<p>dd</p>
+									<p>dd</p>
+									<p>dd</p>
+								</div>
+							</motion.div>
+						</div>
+					</SwiperSlide>
+				</Swiper>
 				<div className="menu_title_contain" style={style}>
-					{subTileTrans}
-				</div>
-			</div>
-		</Layout>
-	) : (
-		<Layout>
-			<div id="companyLayout">
-				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
-				{menulist}
-				<div className="menu_title_contain" style={style}>
-					{subTileTrans}
 					<div className="contain">
 						<Transition threshold={-1} direction={'up'}>
 							<Grid container spacing={0}>

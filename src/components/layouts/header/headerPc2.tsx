@@ -65,7 +65,7 @@ const HeaderPc2 = () => {
 
 	const menuLst = ["기업소개", "사업영역", "인재채용", "홍보", "문의하기"];
 	const subMenuList1 = [
-		{"title":"인사말",		"link":"/business"},
+		{"title":"인사말",		"link":"/company"},
 		{"title":"비젼",		"link":"/business"},
 		{"title":"면허 및 특허",	"link":"/business"},
 		{"title":"오시는길",		"link":"/business"}];
@@ -103,7 +103,7 @@ const HeaderPc2 = () => {
 	return (
 		<header>
 			{/* 메인메뉴 */}
-			<div id="headerTopWrap" className="top header2" style={{ backgroundColor: 'rgba(255,255,255,0.37)' }}>
+			<div id="headerTopWrap" className="top header2" style={{ backgroundColor: 'rgba(255,255,255,0.9)' }}>
 				<Box sx={classes.activeTab}>
 					<nav className="nav">
 						<ul className="navContainer">
