@@ -318,6 +318,27 @@
 	}
 }
 
+.menu-header{
+	.download-div{
+		position: relative;
+		margin-top: 50px;
+		svg{
+			font-size: 30px;
+			vertical-align:middle;
+		}
+		.download{
+			vertical-align:middle;
+			font-size: 20px;
+			font-weight: 600;
+		}
+		display:inline-block;
+	}
+	.download-div:hover{
+		color: #007aff;
+		cursor: pointer;
+	}
+}
+
 #fadeImg {
 	@include maxTablet {
 		position: relative;
