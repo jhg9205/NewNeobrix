@@ -26,7 +26,7 @@ const MenuListbar = (type: string) => {
 			>
 				<Tab value={PATH.COMPANY00} label="회사소개" />
 				{/*<Tab value={PATH.COMPANY01} label="조직도" />*/}
-				<Tab value={PATH.COMPANY04} label="오시는길" />
+				<Tab value={PATH.COMPANY03} label="오시는길" />
 			</Tabs>
 		</div>
 	)

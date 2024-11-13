@@ -28,7 +28,7 @@ const HeaderDrawer = ({ toggleDrawer }: any) => {
 	const [pr, setPr] = React.useState(false)
 	const [employ, setEmploy] = React.useState(false)
 	const [help, setHelp] = React.useState(false)
-	const companyLink = [PATH.COMPANY00, PATH.COMPANY04]
+	const companyLink = [PATH.COMPANY00, PATH.COMPANY03]
 	const businessLink = [PATH.BUSINESS00, PATH.BUSINESS01]
 	const researchLink = [PATH.RESEARCH00, PATH.RESEARCH01]
 	const prCenterLink = [PATH.PRCENTER00, PATH.PRCENTER01, PATH.PRCENTER02]

@@ -8,6 +8,7 @@ import { Location } from '@pages/main/location'
 import React from 'react'
 import { PATH } from '@common/domain'
 import MenuListbar from './menuListbar'
+import {Divider} from "@mui/material";
 
 const Menu4 = () => {
 	const [location, setLocation] = React.useState(false)
@@ -37,6 +38,15 @@ const Menu4 = () => {
 
 	return (
 		<Layout>
+			<div>
+				<div>
+					오시는길
+				</div>
+				<div>
+					네오브릭스 오시는 길
+				</div>
+				<Divider/>
+			</div>
 			<div id="locationLayout">
 				<div className="menu_title_contain" style={style}>
 					{subTileTrans}
