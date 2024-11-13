@@ -46,9 +46,8 @@ export const enum PATH {
 
 COMPANY00 = '/company',
 	COMPANY01 = '/company/vision',
-	COMPANY02 = '/company/certificate',
-	COMPANY03 = '/company/patent',
-	COMPANY04 = '/company/location',
+	COMPANY02 = '/company/research',
+	COMPANY03 = '/company/location',
 
 	BUSINESS00 = '/business',
 	BUSINESS01 = '/business/history',

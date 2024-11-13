@@ -13,14 +13,12 @@ import Error from '@pages/error'
 import PrivateRoute from './private'
 import Intro from '@pages/menu/company/menu1'
 import Vision from '@pages/menu/company/menu2'
-import Certificate from '@pages/menu/company/menu3'
-import Patent from '@pages/menu/company/menu4'
-import Location from '@pages/menu/company/menu5'
+import Research from '@pages/menu/company/menu3'
+import Location from '@pages/menu/company/menu4'
 
 import Business from '@pages/menu/business/menu1'
 import History from '@pages/menu/business/menu2'
 
-import Research from '@pages/menu/research/menu1'
 import History2 from '@pages/menu/research/menu2'
 import List from '@pages/menu/research/menu3'
 import ResearchDetail from '@pages/menu/research/detail'
@@ -48,9 +46,8 @@ const Router = () => {
 
 				<Route path={PATH.COMPANY00} element={<Intro />} />
 				<Route path={PATH.COMPANY01} element={<Vision />} />
-				<Route path={PATH.COMPANY02} element={<Certificate />} />
-				<Route path={PATH.COMPANY03} element={<Patent />} />
-				<Route path={PATH.COMPANY04} element={<Location />} />
+				<Route path={PATH.COMPANY02} element={<Research />} />
+				<Route path={PATH.COMPANY03} element={<Location />} />
 
 				<Route path={PATH.BUSINESS00} element={<Business />} />
 				<Route path={PATH.BUSINESS01} element={<History />} />

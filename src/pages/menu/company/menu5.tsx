@@ -11,7 +11,7 @@ import MenuListbar from './menuListbar'
 
 const Menu5 = () => {
 	const [location, setLocation] = React.useState(false)
-	const menulist = MenuListbar(PATH.COMPANY04)
+	const menulist = MenuListbar(PATH.COMPANY03)
 
 	const style = {
 		width: '100%',
