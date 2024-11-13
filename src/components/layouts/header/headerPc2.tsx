@@ -66,7 +66,7 @@ const HeaderPc2 = () => {
 	const menuLst = ["기업소개", "사업영역", "인재채용", "홍보", "문의하기"];
 	const subMenuList1 = [
 		{"title":"인사말",		"link":"/company"},
-		{"title":"비젼",		"link":"/business"},
+		{"title":"비젼",		"link":"/company/vision"},
 		{"title":"면허 및 특허",	"link":"/business"},
 		{"title":"오시는길",		"link":"/business"}];
 	const subMenuList2 = [

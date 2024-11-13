@@ -45,7 +45,7 @@ export const enum PATH {
 	// STATISTIC = '/Debrix/statistic'
 
 COMPANY00 = '/company',
-	COMPANY01 = '/company/organization',
+	COMPANY01 = '/company/vision',
 	COMPANY02 = '/company/certificate',
 	COMPANY03 = '/company/patent',
 	COMPANY04 = '/company/location',

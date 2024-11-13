@@ -12,7 +12,7 @@ import Error from '@pages/error'
 
 import PrivateRoute from './private'
 import Intro from '@pages/menu/company/menu1'
-import Organization from '@pages/menu/company/menu2'
+import Vision from '@pages/menu/company/menu2'
 import Certificate from '@pages/menu/company/menu3'
 import Patent from '@pages/menu/company/menu4'
 import Location from '@pages/menu/company/menu5'
@@ -47,7 +47,7 @@ const Router = () => {
 				<Route path={PATH.MAIN} element={<Main />} />
 
 				<Route path={PATH.COMPANY00} element={<Intro />} />
-				<Route path={PATH.COMPANY01} element={<Organization />} />
+				<Route path={PATH.COMPANY01} element={<Vision />} />
 				<Route path={PATH.COMPANY02} element={<Certificate />} />
 				<Route path={PATH.COMPANY03} element={<Patent />} />
 				<Route path={PATH.COMPANY04} element={<Location />} />
