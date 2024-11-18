@@ -19,7 +19,7 @@ import REQ12 from '@images/menu/REQ12.png'
 import React, {useState} from 'react'
 import MenuListbar from './menuListbar'
 import { PATH } from '@common/domain'
-import {Box, Fab, Fade, ImageList, ImageListItem, ImageListItemBar} from "@mui/material";
+import {Box, Divider, Fab, Fade, ImageList, ImageListItem, ImageListItemBar} from "@mui/material";
 import {useDispatch} from "react-redux";
 import {getViewSize} from "@utils/functions";
 import {setPopupShow} from "@modules/reducer/layout";
@@ -29,6 +29,8 @@ import Slide from "@mui/material/Slide";
 import RES1 from "@images/menu/RES1.png";
 import RES2 from "@images/menu/RES2.png";
 import RES3 from "@images/menu/RES3.png";
+import HomeIcon from "@mui/icons-material/Home";
+import {useNavigate} from "react-router-dom";
 const title = [
 	'사업자등록증',
 	'소프트웨어사업자확인서',
@@ -44,11 +46,7 @@ const title = [
 ]
 const Menu3 = () => {
 	const [patent, setPatent] = React.useState(false)
-	const [open, setOpen] = React.useState(false);
-	const [titleCon, setTitleCon] = useState("")
-	const [temp, setTemp] = useState(0);
 	const dispatch = useDispatch()
-	const menulist = MenuListbar(PATH.RESEARCH00)
 	const viewType = getViewSize()
 
 	const style = {
@@ -59,28 +57,8 @@ const Menu3 = () => {
 	const callEndFunc = () => {
 		setPatent(true)
 	}
-	const handleClickOpen = (num:number) => {
-		setTemp(num)
-		setTitleCon(title[num])
-		setOpen(true)
-	};
-	const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-		const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector('#modal_bar')
-		if (anchor) {
-			anchor.scrollIntoView({
-				block: 'center',
-				behavior: 'smooth'
-			})
-		}
-	}
-	const handleClose = () => {
-		setOpen(false);
-	};
-	const trigger = useScrollTrigger({
-		disableHysteresis: true,
-		threshold: 100
-	})
 
+	const navigate = useNavigate()
 	const itemData1 = [
 		{
 			key: '0',
@@ -178,6 +156,20 @@ const Menu3 = () => {
 	}
 	return (
 		<Layout>
+			<div className='menu-header'>
+				<div style={{fontSize:'60px', fontWeight:'600'}}>
+					면허 및 특허
+				</div>
+				<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
+					<span>면허 및 특허</span>
+				</div>
+			</div>
+			<Divider/>
+			<div className='menu-flow'>
+				<HomeIcon onClick={()=>{navigate('/')}}/>
+				<p>&gt; 기업소개 &gt; </p><span>면허 및 특허</span>
+			</div>
+			<Divider/>
 			<div id="patentLayout">
 				<div className="menu_title_contain" style={style}>
 					<Transition threshold={-1} direction={'up'} isEndListener={true} callFunc={callEndFunc} time={1500}>

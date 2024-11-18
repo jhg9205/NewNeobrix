@@ -319,6 +319,7 @@
 }
 
 .menu-header{
+	padding: 150px 300px 0 300px;
 	.download-div{
 		position: relative;
 		margin-top: 50px;
@@ -335,6 +336,23 @@
 	}
 	.download-div:hover{
 		color: #007aff;
+		cursor: pointer;
+	}
+}
+
+.menu-flow{
+	height: 50px;
+	padding-left: 300px;
+	display: flex;
+	align-items: center;
+	p,span{
+		font-size: 17px;
+	}
+	span{
+		color:#1f88e5;
+		font-weight: 600;
+	}
+	svg{
 		cursor: pointer;
 	}
 }
