@@ -4,6 +4,7 @@ import Transition from '@components/ui/transition/transition'
 
 import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 import introImg from '@images/common/img-intro2.png'
+import logoBlack from '@images/common/logoN-black2.png'
 import React from 'react'
 import {Button, Fade, Grid} from '@mui/material'
 import {Autoplay, EffectFade, Navigation, Pagination} from "swiper";
@@ -204,7 +205,9 @@ const Menu1 = () => {
 							</div>
 						</Grid>
 						<Grid item lg={6}>
-
+							<div className='ci-logoBox'>
+								<img src={logoBlack}/>
+							</div>
 						</Grid>
 					</Grid>
 				</div>
