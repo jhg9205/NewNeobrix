@@ -379,7 +379,10 @@
 	.menu_title_contain {
 		text-align: center;
 	}
-
+	.menu_title_p_fixed_warp{
+		padding: 0;
+		margin-bottom: 50px;
+	}
 	.contain {
 		padding: 70px 0px;
 		// background: url('../images/main/pofo_bg.jpg') no-repeat;
@@ -401,6 +404,16 @@
 				max-width: 100%;
 				height: auto;
 			}
+		}
+	}
+	.intro-dream, .intro-value{
+		padding:0 300px;
+		margin: 100px 0;
+		p{
+			text-align: center;
+		}
+		img{
+			width:100%;
 		}
 	}
 }
