@@ -28,9 +28,9 @@ import QA from '@pages/menu/prcenter/menu2'
 import PR from '@pages/menu/prcenter/menu3'
 import PrCenterDetail from '@pages/menu/prcenter/detail'
 
-import Info from '@pages/menu/recruit/menu1'
-import Ment from '@pages/menu/recruit/menu2'
-import Welfare from '@pages/menu/recruit/menu3'
+import Talent from '@pages/menu/recruit/menu1'
+import Hr from '@pages/menu/recruit/menu3'
+import Recruit from '@pages/menu/recruit/menu2'
 import RecruitDetail from '@pages/menu/recruit/detail'
 
 import AS from '@pages/menu/customer/menu1'
@@ -62,10 +62,10 @@ const Router = () => {
 				<Route path={PATH.PRCENTER02} element={<PR />} />
 				<Route path={PATH.PRCENTER03} element={<PrCenterDetail />} />
 
-				<Route path={PATH.RECRUIT00} element={<Info />} />
-				<Route path={PATH.RECRUIT01} element={<Ment />} />
-				<Route path={PATH.RECRUIT03} element={<Welfare />} />
-				<Route path={PATH.RECRUIT02} element={<RecruitDetail />} />
+				<Route path={PATH.RECRUIT00} element={<Talent />} />
+				<Route path={PATH.RECRUIT01} element={<Hr />} />
+				<Route path={PATH.RECRUIT02} element={<Recruit />} />
+				<Route path={PATH.RECRUIT03} element={<RecruitDetail />} />
 
 				<Route path={PATH.CUSTOMER00} element={<AS />} />
 				<Route path={PATH.CUSTOMER01} element={<Util />} />

@@ -11,12 +11,9 @@ import { Button } from '@mui/material'
 import { alert } from '@utils/alert'
 import { ALERT } from '@common/const'
 import { $FileDownLoad } from '@utils/request'
-import file from '@data/download/recruitFile.doc'
 
 const Menu1 = () => {
 	const [check, setCheck] = React.useState(false)
-	const menulist = MenuListbar(PATH.RECRUIT00)
-
 	const style: {} = {
 		width: '100%',
 		minHeight: '800px',
@@ -50,21 +47,10 @@ const Menu1 = () => {
 		</Transition>
 	)
 
-	return !check ? (
+	return (
 		<Layout>
 			<div id="listLayout">
 				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
-				{menulist}
-				<div className="menu_title_contain" style={style}>
-					{subTitleTrans}
-				</div>
-			</div>
-		</Layout>
-	) : (
-		<Layout>
-			<div id="listLayout">
-				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
-				{menulist}
 				<div className="menu_title_contain" style={style}>
 					{subTitleTrans}
 					{/*컨텐츠 div*/}

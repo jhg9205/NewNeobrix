@@ -73,9 +73,9 @@ const HeaderPc2 = () => {
 		{"title":"사업영역",		"link":"/"}
 	];
 	const subMenuList3 = [
-		{"title":"인재상",		"link":"/business"},
-		{"title":"인사제도",		"link":"/business"},
-		{"title":"채용전형",		"link":"/business"}
+		{"title":"인재상",		"link":"/talent"},
+		{"title":"인사제도",		"link":"/hr"},
+		{"title":"채용전형",		"link":"/recruit"}
 	];
 	const subMenuList4 = [
 		{"title":"회사소식",		"link":"/"},
