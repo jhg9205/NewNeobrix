@@ -92,7 +92,7 @@ export const Location = (props: { isMenu?: boolean }) => {
 						<div ref={mapElement} id="map" />
 					</TransitionFade>
 				</Transition>
-				<Transition threshold={threshold[2]} direction={'up'}>
+				<Transition threshold={threshold[1]} direction={'up'}>
 					<TransitionFade threshold={threshold[2]}>
 						<Grid container spacing={{ xs: 1, md: 1, lg: 5 }} direction="row" justifyContent="center" alignItems="center">
 							<Grid item xs={12} md={4} lg={4} sx={{ borderRadius: '0' }}>

@@ -362,6 +362,7 @@ footer {
 			li:first-child{
 				font-weight: 500;
 				font-size: 17px;
+				cursor: text;
 			}
 			li {
 				text-align: left;
@@ -370,6 +371,7 @@ footer {
 				margin-bottom: 10px;
 				color: rgb(0, 0, 0);
 				font-weight: 200;
+				cursor: pointer;
 			}
 			li:hover{
 				color: #1976d2;
