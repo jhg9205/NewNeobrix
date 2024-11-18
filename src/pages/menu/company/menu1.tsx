@@ -6,9 +6,6 @@ import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 import introImg from '@images/common/img-intro2.png'
 import React from 'react'
 import {Button, Fade, Grid} from '@mui/material'
-import MenuListbar from './menuListbar'
-import { PATH } from '@common/domain'
-import Organize from '@images/common/organize.jpg'
 import {Autoplay, EffectFade, Navigation, Pagination} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import { motion } from 'framer-motion'
@@ -17,22 +14,21 @@ import {ALERT} from "@common/const";
 import {$FileDownLoad} from "@utils/request";
 
 const Menu1 = () => {
-	const [ceo, setCeo] = React.useState(false)
-
 	const style = {
 		width: '100%',
 		minHeight: '600px',
 		minWidth: '100%'
 	}
 
-	const callEndFunc = () => {
-		setCeo(true)
-	}
-	const handleClick = (event: React.MouseEvent) => {
+	const handleClick = (event: React.MouseEvent, cName:String) => {
 
-		let file = '/download/NEOBRIX.pdf'
-		let name = 'NEOBRIX_회사소개서'
-		let type = 'pdf'
+		let file = cName == 'download-div'?'/download/NEOBRIX.pdf':
+					cName == 'ci-download1'?'/download/ci.png':
+							'/download/ci.ai'
+		let name = cName == 'download-div'?'NEOBRIX_회사소개서':'NEOBRIX_logo'
+		let type = cName == 'download-div'?'pdf':
+					cName == 'ci-download1'?'png':
+							'ai'
 		alert.confirm({
 			type: ALERT.CONFIRM,
 			text: `'${name}' 를\n 저장 하시겠습니까?\n\n`,
@@ -42,7 +38,6 @@ const Menu1 = () => {
 			}
 		})
 	}
-	const menulist = MenuListbar(PATH.COMPANY00)
 
 	return  (
 		<Layout>
@@ -128,7 +123,7 @@ const Menu1 = () => {
 												</p>
 											</div>
 
-											<div onClick={handleClick} className='download-div'>
+											<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='download-div'>
 												<SystemUpdateAltIcon/>
 												<span className='download'>회사소개서 다운로드</span>
 											</div>
@@ -184,6 +179,34 @@ const Menu1 = () => {
 							감사합니다.
 						</p>
 					</div>
+				</div>
+				<div className='ci'>
+					<Grid container spacing={0}>
+						<Grid item lg={6}>
+							<div className='ci-main'>
+								<p>Corporate</p>
+								<p>Identity</p>
+							</div>
+							<div className='ci-sub'>
+								<p>NeoBrix의 심볼마크의 검정 컬러는 믿음을 상징합니다.</p>
+								<p>로고에 NeoBrix의 N이 녹아들어 있으며 위 아래 도형을 연결해주는 역할로서</p>
+								<p>B2B, B2C를 연결해주는 Bridge를 의미합니다.</p>
+							</div>
+							<div className='ci-logo'>
+								<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='ci-download1'>
+									<SystemUpdateAltIcon/>
+									<span className='download'>CI 다운로드 (PNG)</span>
+								</div>
+								<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='ci-download2'>
+									<SystemUpdateAltIcon/>
+									<span className='download'>CI 다운로드 (ai)</span>
+								</div>
+							</div>
+						</Grid>
+						<Grid item lg={6}>
+
+						</Grid>
+					</Grid>
 				</div>
 			</div>
 		</Layout>
