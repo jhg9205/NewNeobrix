@@ -1,19 +1,19 @@
 import Layout from '@components/layouts/layout'
-import FadeImg from '@components/ui/effect/fadeImg'
-import Transition from '@components/ui/transition/transition'
-import subTileImg from '@images/menu/bg-recruit.png'
-import subTileMobile from '@images/menu/bg-recruit-m.png'
+import talent1 from '@images/menu/talent1.png'
+import talent2 from '@images/menu/talent2.png'
+import talent3 from '@images/menu/talent3.png'
 import React from 'react'
-import MenuListbar from './menuListbar'
-import { PATH } from '@common/domain'
-import recruit from '@images/menu/recruit.jpg'
-import { Button } from '@mui/material'
+import {Button, Divider} from '@mui/material'
 import { alert } from '@utils/alert'
 import { ALERT } from '@common/const'
 import { $FileDownLoad } from '@utils/request'
+import HomeIcon from "@mui/icons-material/Home";
+import {useNavigate} from "react-router-dom";
+import Transition from "@components/ui/transition/transition";
 
 const Menu1 = () => {
 	const [check, setCheck] = React.useState(false)
+	const navigate = useNavigate()
 	const style: {} = {
 		width: '100%',
 		minHeight: '800px',
@@ -34,28 +34,31 @@ const Menu1 = () => {
 		})
 	}
 
-	const subTitleTrans = (
-		<Transition threshold={-1} direction={'up'} isEndListener={true} callFunc={callEndFunc} time={1500}>
-			<div className="menu_title_p_fixed_warp">
-				<section>
-					<p className="menu_title_p1">
-						채<span>용안내</span>
-					</p>
-					<p className="menu_title_p2">진취적이고 활기찬 인재를 모집합니다.</p>
-				</section>
-			</div>
-		</Transition>
-	)
 
 	return (
 		<Layout>
+			<div style={{padding:'150px 300px 0 300px'}} className='menu-header'>
+				<div style={{fontSize:'60px', fontWeight:'600'}}>
+					인재상
+				</div>
+				<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
+					<span>네오브릭스 인재상</span>
+				</div>
+			</div>
+			<Divider/>
+			<div className='menu-flow'>
+				<HomeIcon onClick={()=>{navigate('/')}}/>
+				<p>&gt; 인재채용 &gt; </p><span>인재상</span>
+			</div>
+			<Divider/>
 			<div id="listLayout">
-				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
+
+				<Transition threshold={-1} direction={'up'} isEndListener={true} callFunc={callEndFunc} time={1500}>
 				<div className="menu_title_contain" style={style}>
-					{subTitleTrans}
 					{/*컨텐츠 div*/}
 					<div className="contain" style={{ display: 'grid', overflow: 'hidden' }}>
-						<img src={recruit} alt="recruit" className="recruit-img" />
+						<img src={talent2} alt="recruit" className="recruit-img" style={{margin:'0 auto'}}/>
+						<img src={talent3} alt="recruit" className="recruit-img" />
 						<Button
 							id="recruitFile"
 							onClick={handleClick}
@@ -66,6 +69,7 @@ const Menu1 = () => {
 						</Button>
 					</div>
 				</div>
+				</Transition>
 			</div>
 		</Layout>
 	)
