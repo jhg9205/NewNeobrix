@@ -23,7 +23,7 @@ const Menu2 = () => {
 					비전 및 이념
 				</div>
 				<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-					<span>비전 및 핵심가치</span>
+					<span>네오브릭스 비전 및 핵심가치</span>
 				</div>
 			</div>
 			<Divider/>

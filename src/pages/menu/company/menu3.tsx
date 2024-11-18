@@ -161,7 +161,7 @@ const Menu3 = () => {
 					면허 및 특허
 				</div>
 				<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-					<span>면허 및 특허</span>
+					<span>네오브릭스 면허 및 특허</span>
 				</div>
 			</div>
 			<Divider/>

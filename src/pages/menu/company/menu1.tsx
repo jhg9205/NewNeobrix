@@ -100,7 +100,7 @@ const Menu1 = () => {
 				</Swiper>
 				<div className="menu_title_contain" style={style}>
 					<div className="contain">
-						<Transition threshold={-1} direction={'up'}>
+						<Transition threshold={3} direction={'up'}>
 							<Grid container spacing={0}>
 								<Grid item lg={6} md={12}>
 									<Fade in={true} timeout={1500}>
@@ -140,6 +140,7 @@ const Menu1 = () => {
 						</Transition>
 					</div>
 				</div>
+				<Transition threshold={6} direction={'up'}>
 				<div className='greeting'>
 					<div className='greeting-main'>
 						Greetings
@@ -181,6 +182,8 @@ const Menu1 = () => {
 						</p>
 					</div>
 				</div>
+				</Transition>
+				<Transition threshold={12} direction={'up'}>
 				<div className='ci'>
 					<Grid container spacing={0}>
 						<Grid item lg={6}>
@@ -211,6 +214,7 @@ const Menu1 = () => {
 						</Grid>
 					</Grid>
 				</div>
+				</Transition>
 			</div>
 		</Layout>
 	)
