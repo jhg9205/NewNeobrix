@@ -242,7 +242,7 @@
 					text-align: center;
 				}
 			}
-			.download-div{
+			.download-div1{
 				position: relative;
 				float: left;
 				margin-top: 50px;
@@ -256,7 +256,26 @@
 					font-weight: 600;
 				}
 			}
-			.download-div:hover{
+			.download-div1:hover{
+				color: #007aff;
+				cursor: pointer;
+			}
+			.download-div2{
+				position: relative;
+				float: left;
+				margin-top: 50px;
+				margin-left: 50px;
+				svg{
+					font-size: 30px;
+					vertical-align:middle;
+				}
+				.download{
+					vertical-align:middle;
+					font-size: 20px;
+					font-weight: 600;
+				}
+			}
+			.download-div2:hover{
 				color: #007aff;
 				cursor: pointer;
 			}

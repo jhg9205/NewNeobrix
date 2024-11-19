@@ -94,6 +94,25 @@
 			],
 			"date": "2024-07-08",
 			"note": ""
+		},
+		{
+			"seq": 6,
+			"title": "NEOBRIX 브로셔 제작",
+			"subHeader": "November 19, 2024",
+			"component": "img",
+			"img": "/imgs/Poster.jpg",
+			"alt": "알트",
+			"body1": [
+				{"content": "#포스터"},
+				{"content": "#브로셔"}
+			],
+			"body2": [
+				{"content": "외부 활동을 위한 브로셔가 제작되었습니다."},
+				{"content": "NeoBrix의 소개 용도로 사용할 목적으로 제작되었으며"},
+				{"content": "기업소개=>인사말 메뉴를 통해 다운로드 받으실 수 있습니다."}
+			],
+			"date": "2024-07-08",
+			"note": ""
 		}
 	],
 	"faq": [

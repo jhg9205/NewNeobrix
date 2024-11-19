@@ -23,12 +23,16 @@ const Menu1 = () => {
 
 	const handleClick = (event: React.MouseEvent, cName:String) => {
 
-		let file = cName == 'download-div'?'/download/NEOBRIX.pdf':
+		let file = cName == 'download-div1'?'/download/NEOBRIX.pdf':
 					cName == 'ci-download1'?'/download/ci.png':
-							'/download/ci.ai'
-		let name = cName == 'download-div'?'NEOBRIX_회사소개서':'NEOBRIX_logo'
-		let type = cName == 'download-div'?'pdf':
+					cName == 'download-div2'?'/downliad/Poster.pdf'
+						:'/download/ci.ai'
+		let name = cName == 'download-div1'?'NEOBRIX_회사소개서':
+			cName == 'download-div2'? 'NEOBRIX_브로셔'
+						:'NEOBRIX_logo'
+		let type = cName == 'download-div1'?'pdf':
 					cName == 'ci-download1'?'png':
+					cName == 'download-div2'?'pdf':
 							'ai'
 		alert.confirm({
 			type: ALERT.CONFIRM,
@@ -133,9 +137,13 @@ const Menu1 = () => {
 												</p>
 											</div>
 
-											<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='download-div'>
+											<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='download-div1'>
 												<SystemUpdateAltIcon/>
 												<span className='download'>회사소개서 다운로드</span>
+											</div>
+											<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='download-div2'>
+												<SystemUpdateAltIcon/>
+												<span className='download'>브로셔 다운로드</span>
 											</div>
 										</div>
 									</Fade>
