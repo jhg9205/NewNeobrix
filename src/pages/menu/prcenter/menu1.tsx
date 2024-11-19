@@ -23,7 +23,6 @@ interface ExpandMoreProps extends IconButtonProps {
 	expand: boolean;
 }
 const Menu1 = () => {
-	const [expanded, setExpanded] = React.useState(false);
 	const navigate = useNavigate();
 	const style: {} = {
 		padding:'100px 250px',
@@ -31,6 +30,44 @@ const Menu1 = () => {
 		display:'flex',
 		height:'100%'
 	}
+
+
+	return (
+		<Layout>
+			<div className='menu-header'>
+				<div style={{fontSize:'60px', fontWeight:'600'}}>
+					회사소식
+				</div>
+				<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
+					<span></span>
+				</div>
+			</div>
+			<Divider/>
+			<div className='menu-flow'>
+				<HomeIcon onClick={()=>{navigate('/')}}/>
+				<p>&gt; 홍보 &gt; </p><span>회사소식</span>
+			</div>
+			<Divider/>
+			<div>
+				<div className="menu_title_contain" style={style}>
+					<Grid container>
+					{data.news.map((data,index)=>(
+						<Grid key={index} item lg={4}>
+							<NewsCard data={data}/>
+						</Grid>
+					))}
+
+					</Grid>
+				</div>
+			</div>
+		</Layout>
+	)
+}
+
+export default Menu1
+const NewsCard = (props:{data:any}) => {
+
+	const [expanded, setExpanded] = React.useState(false);
 	const handleExpandClick = () => {
 		setExpanded(!expanded);
 	};
@@ -57,98 +94,67 @@ const Menu1 = () => {
 			},
 		],
 	}));
-
-
 	return (
-		<Layout>
-			<div className='menu-header'>
-				<div style={{fontSize:'60px', fontWeight:'600'}}>
-					회사소식
-				</div>
-				<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-					<span></span>
-				</div>
-			</div>
-			<Divider/>
-			<div className='menu-flow'>
-				<HomeIcon onClick={()=>{navigate('/')}}/>
-				<p>&gt; 홍보 &gt; </p><span>회사소식</span>
-			</div>
-			<Divider/>
-			<div>
-				<div className="menu_title_contain" style={style}>
-					<Grid container>
-					{data.news.map((data,index)=>(
-						<Grid key={index} item lg={4}>
-						<Card sx={{
-							maxWidth: 500,
-							width:400,
-							margin:'0 30px 30px 0',
-							border:'1px solid rgba(237, 237, 237, 0.63)',
-							borderRadius:'20px',
-							cursor:'pointer'
-						}}>
-							<CardHeader
-								avatar={
-									<img src={logo} style={{width:'40px'}}/>
-								}
-								action={
-									<IconButton aria-label="settings">
-										<MoreVertIcon />
-									</IconButton>
-								}
-								title={data.title}
-								subheader={data.subHeader}
-							/>
-							<CardMedia
-								component="img"
-								height="300"
-								image={data.img}
-								alt={data.alt}
-								style={{border:'1px solid rgba(237, 237, 237, 0.63)'}}
-							/>
-							<CardContent style={{display:'flex'}}>
-								{data.body1.map((text,index)=>(
-									<div style={{
-										backgroundColor:'#e3e3e3',
-										borderRadius:'20px',
-										padding:'5px 10px',
-										margin:'0 10px 0 0'
-									}} key={index}>{text.content}</div>
-								))}
-							</CardContent>
-							<CardActions disableSpacing>
-								<IconButton aria-label="add to favorites">
-									<FavoriteIcon />
-								</IconButton>
-								<IconButton aria-label="share">
-									<ShareIcon />
-								</IconButton>
-								<ExpandMore
-									expand={expanded}
-									onClick={handleExpandClick}
-									aria-expanded={expanded}
-									aria-label="show more"
-								>
-									<ExpandMoreIcon />
-								</ExpandMore>
-							</CardActions>
-							<Collapse in={expanded} timeout="auto" unmountOnExit>
-								<CardContent>
-									{data.body2.map((text,index)=>(
-										<Typography key={index} sx={{ marginBottom: 2 }}>{text.content}</Typography>
-									))}
-								</CardContent>
-							</Collapse>
-						</Card>
-						</Grid>
+		<Card sx={{
+			maxWidth: 500,
+			width:400,
+			margin:'0 30px 30px 0',
+			border:'1px solid rgba(237, 237, 237, 0.63)',
+			borderRadius:'20px',
+			cursor:'pointer'
+		}}>
+			<CardHeader
+				avatar={
+					<img src={logo} style={{width:'40px'}}/>
+				}
+				action={
+					<IconButton aria-label="settings">
+						<MoreVertIcon />
+					</IconButton>
+				}
+				title={props.data.title}
+				subheader={props.data.subHeader}
+			/>
+			<CardMedia
+				component="img"
+				height="300"
+				image={props.data.img}
+				alt={props.data.alt}
+				style={{border:'1px solid rgba(237, 237, 237, 0.63)'}}
+			/>
+			<CardContent style={{display:'flex'}}>
+				{props.data.body1.map((text:{content:String},index:number)=>(
+					<div style={{
+						backgroundColor:'#e3e3e3',
+						borderRadius:'20px',
+						padding:'5px 10px',
+						margin:'0 10px 0 0'
+					}} key={index}>{text.content}</div>
+				))}
+			</CardContent>
+			<CardActions disableSpacing>
+				<IconButton aria-label="add to favorites">
+					<FavoriteIcon />
+				</IconButton>
+				<IconButton aria-label="share">
+					<ShareIcon />
+				</IconButton>
+				<ExpandMore
+					expand={expanded}
+					onClick={handleExpandClick}
+					aria-expanded={expanded}
+					aria-label="show more"
+				>
+					<ExpandMoreIcon />
+				</ExpandMore>
+			</CardActions>
+			<Collapse in={expanded} timeout="auto" unmountOnExit>
+				<CardContent>
+					{props.data.body2.map((text:{content:String},index:number)=>(
+						<Typography key={index} sx={{ marginBottom: 2 }}>{text.content}</Typography>
 					))}
-
-					</Grid>
-				</div>
-			</div>
-		</Layout>
+				</CardContent>
+			</Collapse>
+		</Card>
 	)
 }
-
-export default Menu1
