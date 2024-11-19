@@ -47,6 +47,7 @@ const Menu2 = () => {
 					<img src={dream}/>
 				</div>
 				</Transition>
+				<Divider/>
 				<div className='intro-value'>
 					<div className="menu_title_p_fixed_warp">
 						<section>

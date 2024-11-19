@@ -197,6 +197,7 @@ const Menu3 = () => {
 						</Transition>
 					</div>
 				</div>
+				<Divider/>
 				<div className="menu_title_contain" style={style}>
 					<Transition threshold={-1} direction={'up'} isEndListener={true} callFunc={callEndFunc} time={1500}>
 						<div className="menu_title_p_fixed_warp">

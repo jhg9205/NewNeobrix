@@ -42,7 +42,7 @@ const Menu1 = () => {
 					인재상
 				</div>
 				<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-					<span>네오브릭스 인재상</span>
+					<span>네오브릭스가 추구하는 인재</span>
 				</div>
 			</div>
 			<Divider/>
