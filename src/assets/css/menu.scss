@@ -1008,7 +1008,7 @@
 		font-weight: 600;
 	}
 	.role-sub-text{
-		font-size: 30px;
+		font-size: 25px;
 		text-align: left;
 		font-weight: 400;
 	}
@@ -1272,7 +1272,10 @@
 		}
 	}
 }
-
+.MuiCardHeader-title{
+	font-size: 18px !important;
+	font-weight: 600 !important;
+}
 //특허및 수상실정
 #patentLayout {
 	.menu_title_contain {

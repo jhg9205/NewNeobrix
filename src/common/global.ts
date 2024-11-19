@@ -24,11 +24,6 @@ export const getTableData: KeyValueObjType = {
 		dataList: ctData['util'],
 		path: PATH.CUSTOMER01
 	},
-	['news']: {
-		menuName: 'NEWS',
-		dataList: pcData['news'],
-		path: PATH.PRCENTER00
-	},
 	['faq']: {
 		menuName: 'FAQ',
 		dataList: pcData['faq'],
