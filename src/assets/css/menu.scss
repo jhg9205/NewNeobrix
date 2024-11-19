@@ -319,7 +319,7 @@
 }
 
 .menu-header{
-	padding: 150px 300px 0 300px;
+	padding: 150px 300px 0 250px;
 	.download-div{
 		position: relative;
 		margin-top: 50px;
@@ -342,7 +342,7 @@
 
 .menu-flow{
 	height: 50px;
-	padding-left: 300px;
+	padding-left: 250px;
 	display: flex;
 	align-items: center;
 	p,span{
@@ -1016,6 +1016,7 @@
 		font-size: 20px;
 		text-align: left;
 		font-weight: 200;
+		margin-bottom: 20px;
 	}
 	.hr-sub{
 		font-size: 30px;
@@ -1032,6 +1033,10 @@
 		font-size: 18px;
 		color: #747474;
 		padding:0 0 0 30px;
+	}
+	.recruit-main-img{
+		text-align: left;
+		margin-left:30px;
 	}
 }
 .menu-header2{

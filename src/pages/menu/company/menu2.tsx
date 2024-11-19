@@ -18,7 +18,7 @@ const Menu2 = () => {
 
 	return (
 		<Layout>
-			<div style={{padding:'150px 300px 0 300px'}} className='menu-header'>
+			<div className='menu-header'>
 				<div style={{fontSize:'60px', fontWeight:'600'}}>
 					비전 및 이념
 				</div>

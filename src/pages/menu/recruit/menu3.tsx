@@ -17,6 +17,8 @@ import recruit6 from '@images/menu/recruit1.jpg'
 import recruit7 from '@images/menu/recruit0.jpg'
 import recruit8 from '@images/menu/recruit8.png'
 import recruit9 from '@images/menu/recruit5.jpg'
+import recruitMain from '@images/menu/recruit-main.png'
+import recruitMain2 from '@images/menu/recruit-main2.png'
 import { fontStyle } from 'html2canvas/dist/types/css/property-descriptors/font-style'
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
@@ -67,7 +69,7 @@ const Menu3 = () => {
 
 	return (
 		<Layout>
-			<div style={{padding:'150px 300px 0 300px'}} className='menu-header'>
+			<div className='menu-header'>
 				<div style={{fontSize:'60px', fontWeight:'600'}}>
 					인사제도
 				</div>
@@ -88,10 +90,10 @@ const Menu3 = () => {
 					<p className='hr-text'>Neo BRIX는 데이터 사이언스팀, 디지털 트랜스포메이션팀, 모바일 컨버젼팀 등으로 이루어져 팀단위 발전을 통해 기술 및 비지니스 전문
 					역량을 갖춘 인재를 육성합니다.</p>
 					<Grid container style={{ padding: '50px 0', width: '70%', margin: '0 auto' }}>
-						<Grid item lg={4} style={{marginBottom:'50px'}}>
-							d
+						<Grid item lg={3.5} style={{marginBottom:'50px', textAlign:'left'}}>
+							<img src={recruitMain} className='recruit-main-img'/>
 						</Grid>
-						<Grid item lg={8} style={{marginBottom:'50px'}}>
+						<Grid item lg={8.5} style={{marginBottom:'50px'}}>
 							<p className='role-main-text'>인사제도 기본방향</p>
 							<p className='role-sub-text'>성과/능력주의</p>
 							<p className='role-text'>성과와 잠재 능력에 대해 보상과 승급 등이 보장됨</p>
@@ -100,10 +102,10 @@ const Menu3 = () => {
 							<p className='role-sub-text'>공정/객관적인 제도 운영</p>
 							<p className='role-text'>목표 수립 및 합의하는 과정을 포함해 공정성을 최대한 확보</p>
 						</Grid>
-						<Grid item lg={4}>
-							d
+						<Grid item lg={3.5} style={{textAlign:'left'}}>
+							<img src={recruitMain2} className='recruit-main-img'/>
 						</Grid>
-						<Grid item lg={8}>
+						<Grid item lg={8.5}>
 							<p className='role-main-text'>보상제도</p>
 							<p className='role-sub-text'>기본급</p>
 							<p className='role-text'>연봉제 형태로 매년 평가에 의해 조정된 연봉을 12등분하여 매월 지급</p>
