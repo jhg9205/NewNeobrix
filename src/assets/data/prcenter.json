@@ -59,7 +59,7 @@
 		},
 		{
 			"seq": 4,
-			"title": "HPE EZMERAL ML OPS Platform",
+			"title": "HPE EZMERAL ML Platform",
 			"subHeader": "November 19, 2024",
 			"component": "img",
 			"img": "/imgs/news4.png",
@@ -67,6 +67,25 @@
 			"body1": [
 				{"content": "#HPE EZMERAL"},
 				{"content": "#AI분석플랫폼"},
+				{"content": "#솔루션"}
+			],
+			"body2": [
+				{"content": "콘텐츠"},
+				{"content": "콘텐츠"}
+			],
+			"date": "2024-07-08",
+			"note": ""
+		},
+		{
+			"seq": 5,
+			"title": "스마트 안전 보건관리 솔루션 출시",
+			"subHeader": "November 19, 2024",
+			"component": "img",
+			"img": "/imgs/news5.png",
+			"alt": "알트",
+			"body1": [
+				{"content": "#중대재해"},
+				{"content": "#현장제어"},
 				{"content": "#솔루션"}
 			],
 			"body2": [

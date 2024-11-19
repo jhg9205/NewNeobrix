@@ -1,6 +1,5 @@
 import Layout from '@components/layouts/layout'
 import FadeImg from '@components/ui/effect/fadeImg'
-import Transition from '@components/ui/transition/transition'
 import REQ1_2 from '@images/menu/REQ1_2.png'
 import REQ2_1 from '@images/menu/REQ2_1.png'
 import { motion } from "framer-motion";

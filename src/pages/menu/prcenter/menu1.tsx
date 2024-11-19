@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Layout from '@components/layouts/layout'
 import logo from '@images/common/logoN-head.png'
 import React from 'react'
@@ -53,7 +54,18 @@ const Menu1 = () => {
 					<Grid container>
 					{data.news.map((data,index)=>(
 						<Grid key={index} item lg={4}>
-							<NewsCard data={data}/>
+							<motion.div
+								initial={{ opacity: 0, y: 100 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: false }}
+								transition={{
+									ease: "easeInOut",
+									duration: 1,
+									y: { duration: 1 },
+								}}
+							>
+								<NewsCard data={data}/>
+							</motion.div>
 						</Grid>
 					))}
 
@@ -95,7 +107,7 @@ const NewsCard = (props:{data:any}) => {
 		],
 	}));
 	return (
-		<Card sx={{
+		<Card className='news-card' sx={{
 			maxWidth: 500,
 			width:400,
 			margin:'0 30px 30px 0',

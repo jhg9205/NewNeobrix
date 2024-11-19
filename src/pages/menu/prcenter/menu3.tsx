@@ -6,25 +6,40 @@ import subTileMobile from '@images/menu/bg-prcenter-m.png'
 import React from 'react'
 import MenuListbar from './menuListbar'
 import { PATH } from '@common/domain'
-import { Card, CardActionArea, CardContent, CardMedia, Typography, Fade } from '@mui/material'
-import util01 from '@images/main/fileMain.jpg'
-import companyProfilePdf from '@data/download/DEBRIX.pdf'
-import { $FileDownLoad } from '@utils/request'
-import { alert } from '@utils/alert'
-import { ALERT } from '@common/const'
+import {
+	AccordionSummary,
+	AccordionDetails, Pagination
+} from '@mui/material'
+import TableContainer from "@mui/material/TableContainer";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableRow from "@mui/material/TableRow";
+import TableCell from "@mui/material/TableCell";
+import Accordion from "@mui/material/Accordion";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import qa from "@data/prcenter.json";
 
 
 const Menu3 = () => {
 	const [check, setCheck] = React.useState(false)
-	const menulist = MenuListbar(PATH.PRCENTER02)
+	const [page, setPage] = React.useState(0)
+	const [rowsPerPage, setRowsPerPage] = React.useState(15)
+	const [expanded, setExpanded] = React.useState<string | false>('')
 
+	const menulist = MenuListbar(PATH.PRCENTER01)
+	const data = qa.faq
 	const style: {} = {
 		width: '100%',
-		minHeight: '800px',
+		minHeight: '1000px',
 		textAlign: 'center'
 	}
+
 	const callEndFunc = () => {
 		setCheck(true)
+	}
+	const handleChange = (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
+		setExpanded(newExpanded ? panel : false)
 	}
 
 	const subTitleTrans = (
@@ -32,36 +47,13 @@ const Menu3 = () => {
 			<div className="menu_title_p_fixed_warp">
 				<section>
 					<p className="menu_title_p1">
-						P<span>R 자료</span>
+						F<span>AQ</span>
 					</p>
-					<p className="menu_title_p2">다양한 홍보자료를 다운받으실 수 있습니다.</p>
+					<p className="menu_title_p2">자주 문의하는 질문 유형입니다.</p>
 				</section>
 			</div>
 		</Transition>
 	)
-
-	const handleClick = (event: React.MouseEvent) => {
-		const id = event.currentTarget.id
-		let file = ''
-		let name = ''
-		let type = ''
-
-		//회사소개서 PDF
-		if (id == 'cardCompanyProfile') {
-			file = '/download/NEOBRIX.pdf'
-			name = 'NEOBRIX_회사소개서'
-			type = 'pdf'
-		}
-
-		alert.confirm({
-			type: ALERT.CONFIRM,
-			text: `'${name}' 를\n 저장 하시겠습니까?\n\n`,
-			confirmText: '확인',
-			confirmCall: () => {
-				$FileDownLoad(file, name, type)
-			}
-		})
-	}
 
 	return !check ? (
 		<Layout>
@@ -75,24 +67,69 @@ const Menu3 = () => {
 		</Layout>
 	) : (
 		<Layout>
-			<div id="prcenterLayout">
+			<div id="listLayout">
 				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
 				{menulist}
 				<div className="menu_title_contain" style={style}>
 					{subTitleTrans}
+					{/*컨텐츠 div*/}
 					<div className="contain">
-						<Fade in={true} timeout={1500}>
-							<Card id="cardCompanyProfile" sx={{ maxWidth: 345 }} onClick={handleClick}>
-								<CardActionArea>
-									<CardMedia component="img" height="auto" image={util01} alt="회사소개서" />
-									<CardContent sx={{backgroundColor:'#1976d2'}}>
-										<Typography gutterBottom variant="h5" component="div">
-											네오브릭스 - 회사소개서
-										</Typography>
-									</CardContent>
-								</CardActionArea>
-							</Card>
-						</Fade>
+						<TableContainer component={Paper} sx={{ width: '80%', margin: '0 auto' }}>
+							<Table aria-label="simple table" id="accodionTable">
+								<TableBody>
+									{(rowsPerPage > 0 ? data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) : data).map(
+										(rowData: any, index: number) => (
+											<TableRow id="tbBodyRowGlobalList" key={index}>
+												<TableCell className="accodion">
+													<Accordion
+														style={{ boxShadow: 'none' }}
+														expanded={expanded === `panel${index + 1}`}
+														onChange={handleChange(`panel${index + 1}`)}
+													>
+														<AccordionSummary
+															expandIcon={<ExpandMoreIcon style={{ fontSize: '2.5rem' }} />}
+															aria-controls={`panel${index + 1}a-content`}
+															id={`panel${index + 1}a-header`}
+														>
+															<span style={{ color: '#d3d3d3' }}>Q.</span>
+															<p style={{ padding: '10px 0' }}>{rowData.title}</p>
+														</AccordionSummary>
+														<AccordionDetails
+															style={{ display: 'flex', height: '100%', borderTop: '1px solid black', padding: '20px' }}
+														>
+															<div style={{ textAlign: 'center' }}>
+																<p style={{ fontSize: '30px', fontWeight: '500', padding: '20px' }}>A.</p>
+															</div>
+															<div>
+																{rowData.content.map((content: { img: string; text: string }, index: number) => (
+																	<div key={index}>
+																		<p style={{ fontSize: '18px', padding: '5px 0', textAlign: 'left' }}>{content.text}</p>
+																		{content.img != '' ? (
+																			<img src={content.img} loading="lazy" style={{ width: '80%' }} alt="pr" />
+																		) : (
+																			<></>
+																		)}
+																	</div>
+																))}
+															</div>
+														</AccordionDetails>
+													</Accordion>
+												</TableCell>
+											</TableRow>
+										)
+									)}
+								</TableBody>
+							</Table>
+							<Pagination
+								count={parseInt((data.length / 15).toString()) + 1}
+								color="primary"
+								onChange={(event, value) => setPage(value - 1)}
+								page={page + 1}
+								sx={{ display: 'flex' }}
+								showFirstButton
+								showLastButton
+							/>
+						</TableContainer>
 					</div>
 				</div>
 			</div>

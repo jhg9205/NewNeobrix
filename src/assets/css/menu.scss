@@ -1276,6 +1276,9 @@
 	font-size: 18px !important;
 	font-weight: 600 !important;
 }
+.news-card:hover{
+	box-shadow: 5px 5px 20px rgba(102, 102, 102, 0.3);
+}
 //특허및 수상실정
 #patentLayout {
 	.menu_title_contain {

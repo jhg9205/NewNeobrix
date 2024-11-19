@@ -1,132 +1,103 @@
 import Layout from '@components/layouts/layout'
-import FadeImg from '@components/ui/effect/fadeImg'
-import Transition from '@components/ui/transition/transition'
-import subTileImg from '@images/menu/bg-prcenter.png'
-import subTileMobile from '@images/menu/bg-prcenter-m.png'
 import React from 'react'
-import MenuListbar from './menuListbar'
-import { PATH } from '@common/domain'
-import qa from '@data/prcenter.json'
-import Accordion from '@mui/material/Accordion'
-import { AccordionDetails, AccordionSummary, Pagination, TableHead } from '@mui/material'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-import Paper from '@mui/material/Paper'
-import Table from '@mui/material/Table'
-import TableRow from '@mui/material/TableRow'
-import TableCell from '@mui/material/TableCell'
-import TableBody from '@mui/material/TableBody'
-import TableContainer from '@mui/material/TableContainer'
+import {Divider, Grid} from '@mui/material'
+import HomeIcon from "@mui/icons-material/Home";
+import {useNavigate} from "react-router-dom";
+import {motion} from "framer-motion";
+import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt";
+import logoBlack from "@images/common/logoN-black2.png";
+import {alert} from "@utils/alert";
+import {ALERT} from "@common/const";
+import {$FileDownLoad} from "@utils/request";
 
 const Menu2 = () => {
-	const [check, setCheck] = React.useState(false)
-	const [page, setPage] = React.useState(0)
-	const [rowsPerPage, setRowsPerPage] = React.useState(15)
-	const [expanded, setExpanded] = React.useState<string | false>('')
-
-	const menulist = MenuListbar(PATH.PRCENTER01)
-	const data = qa.faq
+	const navigate = useNavigate();
 	const style: {} = {
 		width: '100%',
-		minHeight: '1000px',
-		textAlign: 'center'
+		minHeight: '600px',
+		textAlign: 'left',
+		padding:'50px'
 	}
 
-	const callEndFunc = () => {
-		setCheck(true)
-	}
-	const handleChange = (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
-		setExpanded(newExpanded ? panel : false)
+	const handleClick = (event: React.MouseEvent, cName:String) => {
+
+		let file = cName == 'download-div'?'/download/NEOBRIX.pdf':
+			cName == 'ci-download1'?'/download/ci.png':
+				'/download/ci.ai'
+		let name = cName == 'download-div'?'NEOBRIX_회사소개서':'NEOBRIX_logo'
+		let type = cName == 'download-div'?'pdf':
+			cName == 'ci-download1'?'png':
+				'ai'
+		alert.confirm({
+			type: ALERT.CONFIRM,
+			text: `'${name}' 를\n 저장 하시겠습니까?\n\n`,
+			confirmText: '확인',
+			confirmCall: () => {
+				$FileDownLoad(file, name, type)
+			}
+		})
 	}
 
-	const subTitleTrans = (
-		<Transition threshold={-1} direction={'up'} isEndListener={true} callFunc={callEndFunc} time={1500}>
-			<div className="menu_title_p_fixed_warp">
-				<section>
-					<p className="menu_title_p1">
-						F<span>AQ</span>
-					</p>
-					<p className="menu_title_p2">자주 문의하는 질문 유형입니다.</p>
-				</section>
-			</div>
-		</Transition>
-	)
-
-	return !check ? (
+	return (
 		<Layout>
-			<div id="listLayout">
-				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
-				{menulist}
-				<div className="menu_title_contain" style={style}>
-					{subTitleTrans}
-				</div>
-			</div>
-		</Layout>
-	) : (
-		<Layout>
-			<div id="listLayout">
-				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
-				{menulist}
-				<div className="menu_title_contain" style={style}>
-					{subTitleTrans}
-					{/*컨텐츠 div*/}
-					<div className="contain">
-						<TableContainer component={Paper} sx={{ width: '80%', margin: '0 auto' }}>
-							<Table aria-label="simple table" id="accodionTable">
-								<TableBody>
-									{(rowsPerPage > 0 ? data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) : data).map(
-										(rowData: any, index: number) => (
-											<TableRow id="tbBodyRowGlobalList" key={index}>
-												<TableCell className="accodion">
-													<Accordion
-														style={{ boxShadow: 'none' }}
-														expanded={expanded === `panel${index + 1}`}
-														onChange={handleChange(`panel${index + 1}`)}
-													>
-														<AccordionSummary
-															expandIcon={<ExpandMoreIcon style={{ fontSize: '2.5rem' }} />}
-															aria-controls={`panel${index + 1}a-content`}
-															id={`panel${index + 1}a-header`}
-														>
-															<span style={{ color: '#d3d3d3' }}>Q.</span>
-															<p style={{ padding: '10px 0' }}>{rowData.title}</p>
-														</AccordionSummary>
-														<AccordionDetails
-															style={{ display: 'flex', height: '100%', borderTop: '1px solid black', padding: '20px' }}
-														>
-															<div style={{ textAlign: 'center' }}>
-																<p style={{ fontSize: '30px', fontWeight: '500', padding: '20px' }}>A.</p>
-															</div>
-															<div>
-																{rowData.content.map((content: { img: string; text: string }, index: number) => (
-																	<div key={index}>
-																		<p style={{ fontSize: '18px', padding: '5px 0', textAlign: 'left' }}>{content.text}</p>
-																		{content.img != '' ? (
-																			<img src={content.img} loading="lazy" style={{ width: '80%' }} alt="pr" />
-																		) : (
-																			<></>
-																		)}
-																	</div>
-																))}
-															</div>
-														</AccordionDetails>
-													</Accordion>
-												</TableCell>
-											</TableRow>
-										)
-									)}
-								</TableBody>
-							</Table>
-							<Pagination
-								count={parseInt((data.length / 15).toString()) + 1}
-								color="primary"
-								onChange={(event, value) => setPage(value - 1)}
-								page={page + 1}
-								sx={{ display: 'flex' }}
-								showFirstButton
-								showLastButton
-							/>
-						</TableContainer>
+			<div id="companyLayout">
+				<div className='menu-header'>
+					<div style={{fontSize:'60px', fontWeight:'600'}}>
+						CI
 					</div>
+					<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
+						<span>네오브릭스 CI</span>
+					</div>
+				</div>
+				<Divider/>
+				<div className='menu-flow'>
+					<HomeIcon onClick={()=>{navigate('/')}}/>
+					<p>&gt; 홍보 &gt; </p><span>CI</span>
+				</div>
+				<Divider/>
+				<div className="menu_title_contain" style={style}>
+					{/*컨텐츠 div*/}
+						<motion.div
+							initial={{ opacity: 0, y: 100 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: false }}
+							transition={{
+								ease: "easeInOut",
+								duration: 1,
+								y: { duration: 1 },
+							}}
+						>
+							<div className='ci'>
+								<Grid container spacing={0}>
+									<Grid item lg={6}>
+										<div className='ci-main'>
+											<p>Corporate</p>
+											<p>Identity</p>
+										</div>
+										<div className='ci-sub'>
+											<p>NeoBrix의 심볼마크의 검정 컬러는 믿음을 상징합니다.</p>
+											<p>로고에 NeoBrix의 N이 녹아들어 있으며 위 아래 도형을 연결해주는 역할로서</p>
+											<p>B2B, B2C를 연결해주는 Bridge를 의미합니다.</p>
+										</div>
+										<div className='ci-logo'>
+											<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='ci-download1'>
+												<SystemUpdateAltIcon/>
+												<span className='download'>CI 다운로드 (PNG)</span>
+											</div>
+											<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='ci-download2'>
+												<SystemUpdateAltIcon/>
+												<span className='download'>CI 다운로드 (ai)</span>
+											</div>
+										</div>
+									</Grid>
+									<Grid item lg={6}>
+										<div className='ci-logoBox'>
+											<img src={logoBlack}/>
+										</div>
+									</Grid>
+								</Grid>
+							</div>
+						</motion.div>
 				</div>
 			</div>
 		</Layout>
