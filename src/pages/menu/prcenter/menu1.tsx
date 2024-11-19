@@ -19,6 +19,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import {Divider, Grid} from "@mui/material"
 import HomeIcon from "@mui/icons-material/Home"
+import {VITE_APP_IMGS} from "@common/const";
 
 interface ExpandMoreProps extends IconButtonProps {
 	expand: boolean;
@@ -130,7 +131,7 @@ const NewsCard = (props:{data:any}) => {
 			<CardMedia
 				component="img"
 				height="300"
-				image={props.data.img}
+				image={VITE_APP_IMGS+props.data.img}
 				alt={props.data.alt}
 				style={{border:'1px solid rgba(237, 237, 237, 0.63)'}}
 			/>
