@@ -1,6 +1,6 @@
 import Layout from '@components/layouts/layout'
+import { motion } from "framer-motion";
 import FadeImg from '@components/ui/effect/fadeImg'
-import Transition from '@components/ui/transition/transition'
 import subTileImg from '@images/menu/bg-recruit.png'
 import subTileMobile from '@images/menu/bg-recruit-m.png'
 import React from 'react'
@@ -23,7 +23,17 @@ const Menu2 = () => {
 	}
 
 	const subTitleTrans = (
-		<Transition threshold={-1} direction={'up'} isEndListener={true} callFunc={callEndFunc} time={1500}>
+		<motion.div
+			className='intro-text'
+			initial={{ opacity: 0, y: 50}}
+			whileInView={{ opacity: 1, y: 0}}
+			viewport={{ once: false }}
+			transition={{
+				ease: "easeInOut",
+				duration: 0.5,
+				y: { duration: 0.5 },
+			}}
+		>
 			<div className="menu_title_p_fixed_warp">
 				<section>
 					<p className="menu_title_p1">
@@ -32,7 +42,7 @@ const Menu2 = () => {
 					<p className="menu_title_p2">네오브릭스와 함께 할 인재를 모집합니다.</p>
 				</section>
 			</div>
-		</Transition>
+		</motion.div>
 	)
 
 	return (
@@ -42,9 +52,21 @@ const Menu2 = () => {
 				<div className="menu_title_contain" style={style}>
 					{subTitleTrans}
 					{/*컨텐츠 div*/}
+					<motion.div
+						className='intro-text'
+						initial={{ opacity: 0, y: 50}}
+						whileInView={{ opacity: 1, y: 0}}
+						viewport={{ once: false }}
+						transition={{
+							ease: "easeInOut",
+							duration: 0.5,
+							y: { duration: 0.5 },
+						}}
+					>
 					<div className="contain">
 						<CustomTable data={ment} menu={'ment'} />
 					</div>
+					</motion.div>
 				</div>
 			</div>
 		</Layout>
