@@ -15,6 +15,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import qa from "@data/prcenter.json";
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
+import {VITE_APP_IMGS} from "@common/const";
 
 
 const Menu3 = () => {
@@ -86,7 +87,7 @@ const Menu3 = () => {
 																	<div key={index}>
 																		<p style={{ fontSize: '18px', padding: '5px 0', textAlign: 'left' }}>{content.text}</p>
 																		{content.img != '' ? (
-																			<img src={content.img} loading="lazy" style={{ width: '80%' }} alt="pr" />
+																			<img src={VITE_APP_IMGS+content.img} loading="lazy" style={{ width: '80%' }} alt="pr" />
 																		) : (
 																			<></>
 																		)}
