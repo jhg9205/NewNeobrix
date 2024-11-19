@@ -179,6 +179,7 @@ const Menu3 = () => {
 										duration: 0.5,
 										y: { duration: 0.5 },
 									}}
+									style={{height: '100%'}}
 								>
 									<Card variant="outlined" style={{ height: '100%' }}>
 										<div className="welfare-img">
