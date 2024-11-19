@@ -6,7 +6,7 @@ const FadeImg = (props: IFadeImg) => {
 	let type: string
 	let style: {}
 	if (!props.isContent) {
-		style = { width: '100%', height: '350px' }
+		style = { width: '100%', height: '400px' }
 		if (getViewSize() == 'lg') {
 			type = props.pc
 		} else {

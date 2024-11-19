@@ -35,21 +35,10 @@ const Menu2 = () => {
 		</Transition>
 	)
 
-	return !check ? (
+	return (
 		<Layout>
 			<div id="listLayout">
 				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
-				{menulist}
-				<div className="menu_title_contain" style={style}>
-					{subTitleTrans}
-				</div>
-			</div>
-		</Layout>
-	) : (
-		<Layout>
-			<div id="listLayout">
-				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
-				{menulist}
 				<div className="menu_title_contain" style={style}>
 					{subTitleTrans}
 					{/*컨텐츠 div*/}
