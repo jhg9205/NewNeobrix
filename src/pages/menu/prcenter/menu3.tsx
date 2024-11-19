@@ -1,14 +1,8 @@
 import Layout from '@components/layouts/layout'
-import FadeImg from '@components/ui/effect/fadeImg'
-import Transition from '@components/ui/transition/transition'
-import subTileImg from '@images/menu/bg-prcenter.png'
-import subTileMobile from '@images/menu/bg-prcenter-m.png'
 import React from 'react'
-import MenuListbar from './menuListbar'
-import { PATH } from '@common/domain'
 import {
 	AccordionSummary,
-	AccordionDetails, Pagination
+	AccordionDetails, Pagination, Divider
 } from '@mui/material'
 import TableContainer from "@mui/material/TableContainer";
 import Paper from "@mui/material/Paper";
@@ -19,15 +13,16 @@ import TableCell from "@mui/material/TableCell";
 import Accordion from "@mui/material/Accordion";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import qa from "@data/prcenter.json";
+import HomeIcon from "@mui/icons-material/Home";
+import {useNavigate} from "react-router-dom";
 
 
 const Menu3 = () => {
-	const [check, setCheck] = React.useState(false)
 	const [page, setPage] = React.useState(0)
 	const [rowsPerPage, setRowsPerPage] = React.useState(15)
 	const [expanded, setExpanded] = React.useState<string | false>('')
+	const navigate = useNavigate();
 
-	const menulist = MenuListbar(PATH.PRCENTER01)
 	const data = qa.faq
 	const style: {} = {
 		width: '100%',
@@ -35,43 +30,29 @@ const Menu3 = () => {
 		textAlign: 'center'
 	}
 
-	const callEndFunc = () => {
-		setCheck(true)
-	}
 	const handleChange = (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
 		setExpanded(newExpanded ? panel : false)
 	}
 
-	const subTitleTrans = (
-		<Transition threshold={-1} direction={'up'} isEndListener={true} callFunc={callEndFunc} time={1500}>
-			<div className="menu_title_p_fixed_warp">
-				<section>
-					<p className="menu_title_p1">
-						F<span>AQ</span>
-					</p>
-					<p className="menu_title_p2">자주 문의하는 질문 유형입니다.</p>
-				</section>
-			</div>
-		</Transition>
-	)
 
-	return !check ? (
-		<Layout>
-			<div id="prcenterLayout">
-				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
-				{menulist}
-				<div className="menu_title_contain" style={style}>
-					{subTitleTrans}
-				</div>
-			</div>
-		</Layout>
-	) : (
+	return (
 		<Layout>
 			<div id="listLayout">
-				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
-				{menulist}
+				<div className='menu-header'>
+					<div style={{fontSize:'60px', fontWeight:'600'}}>
+						FAQ
+					</div>
+					<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
+						<span>자주 물어보는 질문</span>
+					</div>
+				</div>
+				<Divider/>
+				<div className='menu-flow'>
+					<HomeIcon onClick={()=>{navigate('/')}}/>
+					<p>&gt; 홍보 &gt; </p><span>FAQ</span>
+				</div>
+				<Divider/>
 				<div className="menu_title_contain" style={style}>
-					{subTitleTrans}
 					{/*컨텐츠 div*/}
 					<div className="contain">
 						<TableContainer component={Paper} sx={{ width: '80%', margin: '0 auto' }}>
