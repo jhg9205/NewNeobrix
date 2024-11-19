@@ -24,7 +24,7 @@ import List from '@pages/menu/research/menu3'
 import ResearchDetail from '@pages/menu/research/detail'
 
 import News from '@pages/menu/prcenter/menu1'
-import QA from '@pages/menu/prcenter/menu2'
+import FAQ from '@pages/menu/prcenter/menu2'
 import PR from '@pages/menu/prcenter/menu3'
 import PrCenterDetail from '@pages/menu/prcenter/detail'
 
@@ -58,7 +58,7 @@ const Router = () => {
 				<Route path={PATH.RESEARCH03} element={<ResearchDetail />} />
 
 				<Route path={PATH.PRCENTER00} element={<News />} />
-				<Route path={PATH.PRCENTER01} element={<QA />} />
+				<Route path={PATH.PRCENTER01} element={<FAQ />} />
 				<Route path={PATH.PRCENTER02} element={<PR />} />
 				<Route path={PATH.PRCENTER03} element={<PrCenterDetail />} />
 

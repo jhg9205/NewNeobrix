@@ -57,9 +57,9 @@ COMPANY00 = '/company',
 	RESEARCH02 = '/research/list',
 	RESEARCH03 = '/research/detail/:menu/:index',
 
-	PRCENTER00 = '/prcenter',
-	PRCENTER01 = '/prcenter/faq',
-	PRCENTER02 = '/prcenter/pr',
+	PRCENTER00 = '/news',
+	PRCENTER01 = '/faq',
+	PRCENTER02 = '/ci',
 	PRCENTER03 = '/prcenter/detail/:menu/:index',
 
 	RECRUIT00 = '/talent',

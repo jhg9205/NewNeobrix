@@ -78,9 +78,9 @@ const HeaderPc2 = () => {
 		{"title":"채용전형",		"link":"/recruit"}
 	];
 	const subMenuList4 = [
-		{"title":"회사소식",		"link":"/"},
-		{"title":"CI",			"link":"/"},
-		{"title":"FAQ",			"link":"/"}
+		{"title":"회사소식",		"link":"/news"},
+		{"title":"CI",			"link":"/ci"},
+		{"title":"FAQ",			"link":"/faq"}
 	];
 	const subMenuList5 = [
 		{"title":"문의하기",		"link":"/"}
