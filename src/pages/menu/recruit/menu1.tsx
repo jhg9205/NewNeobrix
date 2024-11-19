@@ -1,5 +1,5 @@
 import Layout from '@components/layouts/layout'
-import talent1 from '@images/menu/talent1.png'
+import { motion } from "framer-motion";
 import talent2 from '@images/menu/talent2.png'
 import talent3 from '@images/menu/talent3.png'
 import React from 'react'
@@ -52,12 +52,22 @@ const Menu1 = () => {
 			</div>
 			<Divider/>
 			<div id="listLayout">
-
-				<Transition threshold={-1} direction={'up'} isEndListener={true} callFunc={callEndFunc} time={1500}>
 				<div className="menu_title_contain" style={style}>
 					{/*컨텐츠 div*/}
 					<div className="contain" style={{ display: 'grid', overflow: 'hidden' }}>
-						<img src={talent2} alt="recruit" className="recruit-img" style={{margin:'0 auto'}}/>
+						<motion.div
+							className='intro-text'
+							initial={{ opacity: 0, y: 50}}
+							whileInView={{ opacity: 1, y: 0}}
+							viewport={{ once: false }}
+							transition={{
+								ease: "easeInOut",
+								duration: 0.5,
+								y: { duration: 0.5 },
+							}}
+						>
+							<img src={talent2} alt="recruit" className="recruit-img" style={{margin:'0 auto'}}/>
+						</motion.div>
 						<img src={talent3} alt="recruit" className="recruit-img" />
 						<Button
 							id="recruitFile"
@@ -69,7 +79,6 @@ const Menu1 = () => {
 						</Button>
 					</div>
 				</div>
-				</Transition>
 			</div>
 		</Layout>
 	)

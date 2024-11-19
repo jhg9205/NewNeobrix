@@ -5,7 +5,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import {useNavigate} from "react-router-dom";
 import dream from '@images/menu/intro-dream.png'
 import vission from '@images/menu/intro-vission.png'
-import Transition from "@components/ui/transition/transition";
+import { motion } from "framer-motion";
 
 
 const Menu2 = () => {
@@ -33,8 +33,16 @@ const Menu2 = () => {
 			</div>
 			<Divider/>
 			<div id="organizationLayout">
-
-				<Transition threshold={-1} direction={'up'} isEndListener={true} callFunc={callEndFunc} time={1500}>
+				<motion.div
+					initial={{ opacity: 0, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: false }}
+					transition={{
+						ease: "easeInOut",
+						duration: 1,
+						y: { duration: 1 },
+					}}
+				>
 				<div className='intro-dream'>
 						<div className="menu_title_p_fixed_warp">
 							<section>
@@ -46,8 +54,18 @@ const Menu2 = () => {
 						</div>
 					<img src={dream}/>
 				</div>
-				</Transition>
+				</motion.div>
 				<Divider/>
+				<motion.div
+					initial={{ opacity: 0, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: false }}
+					transition={{
+						ease: "easeInOut",
+						duration: 1,
+						y: { duration: 1 },
+					}}
+				>
 				<div className='intro-value'>
 					<div className="menu_title_p_fixed_warp">
 						<section>
@@ -59,6 +77,7 @@ const Menu2 = () => {
 					</div>
 					<img src={vission}/>
 				</div>
+				</motion.div>
 			</div>
 		</Layout>
 	)

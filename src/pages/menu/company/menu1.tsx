@@ -65,7 +65,7 @@ const Menu1 = () => {
 								transition={{
 									ease: "easeInOut",
 									duration: 2,
-									y: { duration: 5 },
+									y: { duration: 3 },
 								}}
 							>
 								<div>
@@ -100,7 +100,16 @@ const Menu1 = () => {
 				</Swiper>
 				<div className="menu_title_contain" style={style}>
 					<div className="contain">
-						<Transition threshold={3} direction={'up'}>
+						<motion.div
+							initial={{ opacity: 0, y: 100 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: false }}
+							transition={{
+								ease: "easeInOut",
+								duration: 1,
+								y: { duration: 1 },
+							}}
+						>
 							<Grid container spacing={0}>
 								<Grid item lg={6} md={12}>
 									<Fade in={true} timeout={1500}>
@@ -137,10 +146,19 @@ const Menu1 = () => {
 									</div>
 								</Grid>
 							</Grid>
-						</Transition>
+						</motion.div>
 					</div>
 				</div>
-				<Transition threshold={6} direction={'up'}>
+				<motion.div
+					initial={{ opacity: 0, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: false }}
+					transition={{
+						ease: "easeInOut",
+						duration: 1,
+						y: { duration: 1 },
+					}}
+				>
 				<div className='greeting'>
 					<div className='greeting-main'>
 						Greetings
@@ -182,8 +200,17 @@ const Menu1 = () => {
 						</p>
 					</div>
 				</div>
-				</Transition>
-				<Transition threshold={12} direction={'up'}>
+				</motion.div>
+				<motion.div
+					initial={{ opacity: 0, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: false }}
+					transition={{
+						ease: "easeInOut",
+						duration: 1,
+						y: { duration: 1 },
+					}}
+				>
 				<div className='ci'>
 					<Grid container spacing={0}>
 						<Grid item lg={6}>
@@ -214,7 +241,7 @@ const Menu1 = () => {
 						</Grid>
 					</Grid>
 				</div>
-				</Transition>
+				</motion.div>
 			</div>
 		</Layout>
 	)

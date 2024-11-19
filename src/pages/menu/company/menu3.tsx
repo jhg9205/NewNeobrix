@@ -1,11 +1,9 @@
 import Layout from '@components/layouts/layout'
 import FadeImg from '@components/ui/effect/fadeImg'
 import Transition from '@components/ui/transition/transition'
-import subTileMobile from '@images/menu/bg-research-m.png'
-import REQ1_1 from '@images/menu/REQ1_1.png'
 import REQ1_2 from '@images/menu/REQ1_2.png'
 import REQ2_1 from '@images/menu/REQ2_1.png'
-import REQ2_2 from '@images/menu/REQ2_2.png'
+import { motion } from "framer-motion";
 import REQ3 from '@images/menu/REQ3.png'
 import REQ5 from '@images/menu/REQ5.png'
 import REQ6 from '@images/menu/REQ6.png'
@@ -172,7 +170,16 @@ const Menu3 = () => {
 			<Divider/>
 			<div id="patentLayout">
 				<div className="menu_title_contain" style={style}>
-					<Transition threshold={-1} direction={'up'} isEndListener={true} callFunc={callEndFunc} time={1500}>
+					<motion.div
+						initial={{ opacity: 0, y: 100 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: false }}
+						transition={{
+							ease: "easeInOut",
+							duration: 1,
+							y: { duration: 1 },
+						}}
+					>
 						<div className="menu_title_p_fixed_warp">
 							<section>
 								<p className="menu_title_p1">
@@ -181,25 +188,44 @@ const Menu3 = () => {
 								<p className="menu_title_p2">Sustainable Operation & Robust Framework.</p>
 							</section>
 						</div>
-					</Transition>
+					</motion.div>
 					<div className="contain">
-						<Transition threshold={-1} direction={'up'}>
 							<div className="imagelist_warp">
 								<ImageList cols={3} gap={20}>
 									{itemData1.map(item => (
-										<ImageListItem key={item.key} style={{ border: '1px sold #ccc', cursor: 'pointer' }} onClick={onImageClick}>
+										<motion.div
+											initial={{ opacity: 0, y: 100 }}
+											whileInView={{ opacity: 1, y: 0 }}
+											viewport={{ once: false }}
+											transition={{
+												ease: "easeInOut",
+												duration: 1,
+												y: { duration: 1 },
+											}}
+											key={item.key}
+										>
+										<ImageListItem style={{ border: '1px sold #ccc', cursor: 'pointer' }} onClick={onImageClick}>
 											<FadeImg id="patentImgList" pc={`${item.img}`} delay={1500} isContent={true} />
 											<ImageListItemBar title={item.title} position="bottom" />
 										</ImageListItem>
+										</motion.div>
 									))}
 								</ImageList>
 							</div>
-						</Transition>
 					</div>
 				</div>
 				<Divider/>
 				<div className="menu_title_contain" style={style}>
-					<Transition threshold={-1} direction={'up'} isEndListener={true} callFunc={callEndFunc} time={1500}>
+					<motion.div
+						initial={{ opacity: 0, y: 100 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: false }}
+						transition={{
+							ease: "easeInOut",
+							duration: 1,
+							y: { duration: 1 },
+						}}
+					>
 						<div className="menu_title_p_fixed_warp">
 							<section>
 								<p className="menu_title_p1">
@@ -208,20 +234,30 @@ const Menu3 = () => {
 								<p className="menu_title_p2">Sustainable Operation & Robust Framework.</p>
 							</section>
 						</div>
-					</Transition>
+					</motion.div>
 					<div className="contain">
-						<Transition threshold={-1} direction={'up'}>
 							<div className="imagelist_warp">
 								<ImageList cols={3} gap={20}>
 									{itemData2.map(item => (
-										<ImageListItem key={item.key} style={{ border: '1px sold #ccc', cursor: 'pointer' }} onClick={onImageClick}>
+										<motion.div
+											initial={{ opacity: 0, y: 100 }}
+											whileInView={{ opacity: 1, y: 0 }}
+											viewport={{ once: false }}
+											transition={{
+												ease: "easeInOut",
+												duration: 1,
+												y: { duration: 1 },
+											}}
+											key={item.key}
+										>
+										<ImageListItem style={{ border: '1px sold #ccc', cursor: 'pointer' }} onClick={onImageClick}>
 											<FadeImg id="patentImgList" pc={`${item.img}`} delay={1500} isContent={true} />
 											<ImageListItemBar title={item.title} position="bottom" />
 										</ImageListItem>
+										</motion.div>
 									))}
 								</ImageList>
 							</div>
-						</Transition>
 					</div>
 				</div>
 			</div>
