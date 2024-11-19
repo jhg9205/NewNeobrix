@@ -15,6 +15,8 @@ import recruit4 from '@images/menu/recruit4.jpg'
 import recruit5 from '@images/menu/recruit5.jpg'
 import recruit6 from '@images/menu/recruit1.jpg'
 import recruit7 from '@images/menu/recruit0.jpg'
+import recruit8 from '@images/menu/recruit8.png'
+import recruit9 from '@images/menu/recruit5.jpg'
 import { fontStyle } from 'html2canvas/dist/types/css/property-descriptors/font-style'
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
@@ -34,9 +36,11 @@ const Menu3 = () => {
 		},
 		{ title: '자격증 수당 제공', content: '신규 자격증(기사, 산업기사) 취득시 축하금을 제공합니다.' },
 		{ title: '파견 상주비 지원', content: '3개월 이상 지방 파견시 숙소 보증금, 숙소 월세, 공과금 및 파견지원비를 지급합니다.' },
-		{ title: '지인추천제', content: '신규입사자로 지인을 추천할 경우 1년 만근 시 소정의 포상금을 지급합니다.' }
+		{ title: '지인추천제', content: '신규입사자로 지인을 추천할 경우 1년 만근 시 소정의 포상금을 지급합니다.' },
+		{ title: '자율출퇴근제', content: '8~10시 출근 시간에 따른 퇴근으로 워라벨을 보장합니다.' },
+		{ title: '실손보험 가입', content: '직원 단체보험 "실손 의료보험"을 제공합니다.' }
 	]
-	const img = [recruit0, recruit1, recruit2, recruit3, recruit4, recruit5, recruit6, recruit7]
+	const img = [recruit0, recruit1, recruit2, recruit3, recruit4, recruit5, recruit6, recruit7,recruit8,recruit9]
 
 	const style: {} = {
 		width: '100%',
@@ -80,7 +84,10 @@ const Menu3 = () => {
 			<div id="listLayout">
 				<div className="menu_title_contain" style={{width:'100%',textAlign:'center'}}>
 					<p className='menu-header2'>인사제도</p>
-					<Grid container style={{ padding: '100px 0', width: '70%', margin: '0 auto' }}>
+					<p className='hr-sub'>Neo BRIX의 다양한 IT분야 전문가들이 당신의 꿈과 함께 합니다.</p>
+					<p className='hr-text'>Neo BRIX는 데이터 사이언스팀, 디지털 트랜스포메이션팀, 모바일 컨버젼팀 등으로 이루어져 팀단위 발전을 통해 기술 및 비지니스 전문
+					역량을 갖춘 인재를 육성합니다.</p>
+					<Grid container style={{ padding: '50px 0', width: '70%', margin: '0 auto' }}>
 						<Grid item lg={4} style={{marginBottom:'50px'}}>
 							d
 						</Grid>
@@ -111,7 +118,7 @@ const Menu3 = () => {
 				<div className="menu_title_contain" style={style}>
 					<p className='menu-header2'>복리후생</p>
 					{/*컨텐츠 div*/}
-					<Grid container style={{ padding: '100px 0', width: '70%', margin: '0 auto' }} id="welfare">
+					<Grid container style={{ padding: '50px 0', width: '70%', margin: '0 auto' }} id="welfare">
 						{data.map((cont, index) => (
 							<Grid item lg={6} md={6} sm={12} key={index} style={{ padding: '30px' }}>
 								<Card variant="outlined" style={{ height: '100%' }}>
