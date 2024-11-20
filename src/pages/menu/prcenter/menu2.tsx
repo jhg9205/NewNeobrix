@@ -9,6 +9,7 @@ import logoBlack from "@images/common/logoN-black2.png";
 import {alert} from "@utils/alert";
 import {ALERT} from "@common/const";
 import {$FileDownLoad} from "@utils/request";
+import {getViewSize} from "@utils/functions";
 
 const Menu2 = () => {
 	const navigate = useNavigate();
@@ -16,7 +17,7 @@ const Menu2 = () => {
 		width: '100%',
 		minHeight: '600px',
 		textAlign: 'left',
-		padding:'50px'
+		padding:getViewSize()=='lg'?'50px':'0'
 	}
 
 	const handleClick = (event: React.MouseEvent, cName:String) => {
@@ -41,19 +42,37 @@ const Menu2 = () => {
 	return (
 		<Layout>
 			<div id="companyLayout">
-				<div className='menu-header'>
-					<div style={{fontSize:'60px', fontWeight:'600'}}>
-						CI
-					</div>
-					<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-						<span>네오브릭스 CI</span>
-					</div>
-				</div>
-				<Divider/>
-				<div className='menu-flow'>
-					<HomeIcon onClick={()=>{navigate('/')}}/>
-					<p>&gt; 홍보 &gt; </p><span>CI</span>
-				</div>
+				{getViewSize()=='lg'?
+					<>
+						<div className='menu-header'>
+							<div style={{fontSize:'60px', fontWeight:'600'}}>
+								CI
+							</div>
+							<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
+								<span>네오브릭스 CI</span>
+							</div>
+						</div>
+						<Divider/>
+						<div className='menu-flow'>
+							<HomeIcon onClick={()=>{navigate('/')}}/>
+							<p>&gt; 홍보 &gt; </p><span>CI</span>
+						</div>
+					</>:
+					<Grid container>
+						<Grid item sm={8} className='menu-header-mobile'>
+							<div className='menu-flow-mobile'>
+								<HomeIcon onClick={()=>{navigate('/')}}/>
+								<span> · 홍보 · CI</span>
+							</div>
+							<div className='menu-sub-mobile'>
+								<p>CI</p>
+							</div>
+						</Grid>
+						<Grid item sm={4} className='menu-bg-mobile'>
+
+						</Grid>
+					</Grid>
+				}
 				<Divider/>
 				<div className="menu_title_contain" style={style}>
 					{/*컨텐츠 div*/}

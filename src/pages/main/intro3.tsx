@@ -39,9 +39,9 @@ export const Intro3 = () => {
                 style={{
                     width:`100%`,
                     height:'100%',
-                    borderRadius: '30px',
-                    background: 'linear-gradient(180deg, rgba(255,255,255,1) 30%, rgba(0,144,210,1) 100%)'
+                    borderRadius: '30px'
                 }}
+                className='intro3-main-gradient'
             >
                 <motion.div
                     className='intro-text'

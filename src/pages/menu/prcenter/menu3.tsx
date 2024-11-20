@@ -2,7 +2,7 @@ import Layout from '@components/layouts/layout'
 import React from 'react'
 import {
 	AccordionSummary,
-	AccordionDetails, Pagination, Divider
+	AccordionDetails, Pagination, Divider, Grid
 } from '@mui/material'
 import TableContainer from "@mui/material/TableContainer";
 import Paper from "@mui/material/Paper";
@@ -16,6 +16,7 @@ import qa from "@data/prcenter.json";
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
 import {VITE_APP_IMGS} from "@common/const";
+import {getViewSize} from "@utils/functions";
 
 
 const Menu3 = () => {
@@ -39,19 +40,37 @@ const Menu3 = () => {
 	return (
 		<Layout>
 			<div id="listLayout">
-				<div className='menu-header'>
-					<div style={{fontSize:'60px', fontWeight:'600'}}>
-						FAQ
-					</div>
-					<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-						<span>자주 물어보는 질문</span>
-					</div>
-				</div>
-				<Divider/>
-				<div className='menu-flow'>
-					<HomeIcon onClick={()=>{navigate('/')}}/>
-					<p>&gt; 홍보 &gt; </p><span>FAQ</span>
-				</div>
+				{getViewSize()=='lg'?
+					<>
+						<div className='menu-header'>
+							<div style={{fontSize:'60px', fontWeight:'600'}}>
+								FAQ
+							</div>
+							<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
+								<span>자주 물어보는 질문</span>
+							</div>
+						</div>
+						<Divider/>
+						<div className='menu-flow'>
+							<HomeIcon onClick={()=>{navigate('/')}}/>
+							<p>&gt; 홍보 &gt; </p><span>FAQ</span>
+						</div>
+					</>:
+					<Grid container>
+						<Grid item sm={8} className='menu-header-mobile'>
+							<div className='menu-flow-mobile'>
+								<HomeIcon onClick={()=>{navigate('/')}}/>
+								<span> · 홍보 · FAQ</span>
+							</div>
+							<div className='menu-sub-mobile'>
+								<p>FAQ</p>
+							</div>
+						</Grid>
+						<Grid item sm={4} className='menu-bg-mobile'>
+
+						</Grid>
+					</Grid>
+				}
 				<Divider/>
 				<div className="menu_title_contain" style={style}>
 					{/*컨텐츠 div*/}

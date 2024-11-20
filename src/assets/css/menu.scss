@@ -1427,6 +1427,9 @@
 .news-card:hover{
 	box-shadow: 5px 5px 20px rgba(102, 102, 102, 0.3);
 }
+.MuiCardMedia-img{
+	object-fit: contain !important;
+}
 //특허및 수상실정
 #patentLayout {
 	.menu_title_contain {

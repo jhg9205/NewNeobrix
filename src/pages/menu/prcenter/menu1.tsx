@@ -20,6 +20,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert'
 import {Divider, Grid} from "@mui/material"
 import HomeIcon from "@mui/icons-material/Home"
 import {VITE_APP_IMGS} from "@common/const";
+import {getViewSize} from "@utils/functions";
 
 interface ExpandMoreProps extends IconButtonProps {
 	expand: boolean;
@@ -27,7 +28,7 @@ interface ExpandMoreProps extends IconButtonProps {
 const Menu1 = () => {
 	const navigate = useNavigate();
 	const style: {} = {
-		padding:'100px 250px',
+		padding:getViewSize()=='lg'?'100px 250px':'100px 0',
 		textAlign: 'center',
 		display:'flex',
 		height:'100%'
@@ -36,25 +37,43 @@ const Menu1 = () => {
 
 	return (
 		<Layout>
-			<div className='menu-header'>
-				<div style={{fontSize:'60px', fontWeight:'600'}}>
-					회사소식
-				</div>
-				<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-					<span></span>
-				</div>
-			</div>
-			<Divider/>
-			<div className='menu-flow'>
-				<HomeIcon onClick={()=>{navigate('/')}}/>
-				<p>&gt; 홍보 &gt; </p><span>회사소식</span>
-			</div>
+			{getViewSize()=='lg'?
+				<>
+					<div className='menu-header'>
+						<div style={{fontSize:'60px', fontWeight:'600'}}>
+							회사소식
+						</div>
+						<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
+							<span></span>
+						</div>
+					</div>
+					<Divider/>
+					<div className='menu-flow'>
+						<HomeIcon onClick={()=>{navigate('/')}}/>
+						<p>&gt; 홍보 &gt; </p><span>회사소식</span>
+					</div>
+				</>:
+				<Grid container>
+					<Grid item sm={8} className='menu-header-mobile'>
+						<div className='menu-flow-mobile'>
+							<HomeIcon onClick={()=>{navigate('/')}}/>
+							<span> · 홍보 · 회사소식</span>
+						</div>
+						<div className='menu-sub-mobile'>
+							<p>회사소식</p>
+						</div>
+					</Grid>
+					<Grid item sm={4} className='menu-bg-mobile'>
+
+					</Grid>
+				</Grid>
+			}
 			<Divider/>
 			<div>
 				<div className="menu_title_contain" style={style}>
 					<Grid container>
 					{data.news.map((data,index)=>(
-						<Grid key={index} item lg={4}>
+						<Grid key={index} item lg={4} style={{margin:getViewSize()=='lg'?'0':'0 auto'}}>
 							<motion.div
 								initial={{ opacity: 0, y: 100 }}
 								whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +88,6 @@ const Menu1 = () => {
 							</motion.div>
 						</Grid>
 					))}
-
 					</Grid>
 				</div>
 			</div>
@@ -110,8 +128,8 @@ const NewsCard = (props:{data:any}) => {
 	return (
 		<Card className='news-card' sx={{
 			maxWidth: 500,
-			width:400,
-			margin:'0 30px 30px 0',
+			width:getViewSize()=='lg'?400:360,
+			margin:getViewSize()=='lg'?'0 30px 30px 0':'20px auto',
 			border:'1px solid rgba(237, 237, 237, 0.63)',
 			borderRadius:'20px',
 			cursor:'pointer'

@@ -308,7 +308,7 @@ body {
 			font-weight: normal;
 		}
 		.swiper-main-text{
-			background: linear-gradient(-10deg, #00A6ED 29.34%, #00B780 56.73%);
+			background: linear-gradient(-10deg, $gradientColor1 29.34%, $gradientColor2 56.73%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			font-weight: 700;
@@ -343,7 +343,9 @@ body {
 		}
 	}
 }
-
+.MuiSpeedDial-fab{
+	background-color: $gradientColor2 !important;
+}
 footer {
 	bottom: 0;
 	text-align: center;

@@ -57,9 +57,9 @@ export const Intro = () => {
                 style={{
                     width:scrollYProgress != 100 ?`${scrollYProgress*10+20}%`:`100%`,
                     height:'100%',
-                    borderRadius: '30px',
-                    background: 'linear-gradient(to bottom, #74f8c2, #00e2d3, #00c9de, #00addf, #0090d2, #3f8ed0, #5a8bcd, #6e89c9, #99a4d6, #bec1e3, #e0dff1, #ffffff)'
+                    borderRadius: '30px'
                 }}
+                className='intro-main-gradient'
             >
                 <motion.div
                     className='intro-text'
