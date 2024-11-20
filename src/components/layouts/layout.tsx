@@ -28,7 +28,7 @@ import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 
 const actions = [
-	{ icon: <ConnectWithoutContactIcon />, name: '문의하기' }
+	{ icon: <ConnectWithoutContactIcon style={{color:'#f38225'}}/>, name: '문의하기' }
 ];
 
 const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
@@ -321,7 +321,7 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 								icon={action.icon}
 								tooltipTitle={
 								<span
-									style={{padding:'30px', color:'#8360c3', fontWeight:'400'}}
+									style={{padding:'30px', color:'#f38225', fontWeight:'400'}}
 								>{action.name}</span>
 								}
 								tooltipOpen

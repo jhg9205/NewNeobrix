@@ -199,7 +199,9 @@ body {
 	}
 	.nav .detailMenu ul li:hover {
 		cursor: pointer;
-		color: #1976d2;
+		a{
+			color: $pointColor;
+		}
 	}
 }
 
