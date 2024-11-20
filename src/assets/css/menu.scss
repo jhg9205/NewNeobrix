@@ -134,11 +134,12 @@
 				}
 			}
 			.gra-text{
-				background: linear-gradient(-10deg, #00A6ED 29.34%, #00B780 56.73%);
+				background: linear-gradient(-10deg, $gradientColor1 29.34%, $gradientColor2 56.73%);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 				font-size: 80px;
 				font-weight: 400;
+				width: 600px;
 				@include mobile(){
 					font-size: 30px;
 				}
@@ -294,7 +295,7 @@
 				}
 			}
 			.download-div1:hover{
-				color: #007aff;
+				color: $gradientColor2;
 				cursor: pointer;
 			}
 			.download-div2{
@@ -322,7 +323,7 @@
 				}
 			}
 			.download-div2:hover{
-				color: #007aff;
+				color: $gradientColor2;
 				cursor: pointer;
 			}
 		}
@@ -403,7 +404,7 @@
 		display:inline-block;
 	}
 	.download-div:hover{
-		color: #007aff;
+		color: $gradientColor2;
 		cursor: pointer;
 	}
 }
@@ -562,11 +563,11 @@
 			}
 		}
 		.ci-download1:hover{
-			color: #007aff;
+			color: $gradientColor2;
 			cursor: pointer;
 		}
 		.ci-download2:hover{
-			color: #007aff;
+			color: $gradientColor2;
 			cursor: pointer;
 		}
 	}
