@@ -1,6 +1,5 @@
 import Layout from '@components/layouts/layout'
 import FadeImg from '@components/ui/effect/fadeImg'
-import Transition from '@components/ui/transition/transition'
 
 import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 import introImg from '@images/common/img-intro2.png'
