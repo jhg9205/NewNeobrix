@@ -81,7 +81,7 @@ export const Intro4 = () => {
                     height: '50px',
                     borderRadius: '30px',
                     padding: size=='lg'?'15px 24px 15px 32px':'10px 0',
-                    color:'white'
+                    backgroundColor:'white'
                 }}
                 onClick={()=>{
                     navigate('/customer')

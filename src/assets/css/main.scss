@@ -607,9 +607,7 @@
 .intro3-main-gradient{
   background: linear-gradient(180deg, rgba(255,255,255,1) 30%, $gradientColor2 100%);
 }
-#recruitFile{
-  background-color: $gradientColor2;
-}
+
 .intro4{
   height: 420px;
   width: 100%;
@@ -651,10 +649,10 @@
   .button-text{
     background: linear-gradient(-10deg, $gradientColor1 29.34%, $gradientColor2 56.73%);
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 700;
     font-size: 20px;
     line-height: 104px;
-    color: white;
     @include mobile(){
       font-size: 18px;
     }

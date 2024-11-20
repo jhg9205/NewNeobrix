@@ -342,10 +342,14 @@ body {
 			}
 		}
 	}
+	#recruitFile{
+		background-color: $gradientColor2;
+	}
 }
 .MuiSpeedDial-fab{
 	background-color: $gradientColor2 !important;
 }
+
 footer {
 	bottom: 0;
 	text-align: center;
