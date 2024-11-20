@@ -5,21 +5,14 @@ import React from 'react'
 import MenuListbar from './menuListbar'
 import { PATH } from '@common/domain'
 import {Card, Divider, Grid} from '@mui/material'
-import recruit0 from '@images/menu/recruit0.jpg'
-import recruit1 from '@images/menu/recruit1.jpg'
-import recruit2 from '@images/menu/recruit2.jpg'
-import recruit3 from '@images/menu/recruit3.jpg'
-import recruit4 from '@images/menu/recruit4.jpg'
-import recruit5 from '@images/menu/recruit5.jpg'
-import recruit6 from '@images/menu/recruit1.jpg'
-import recruit7 from '@images/menu/recruit0.jpg'
-import recruit8 from '@images/menu/recruit8.png'
-import recruit9 from '@images/menu/recruit5.jpg'
+import hand from '@images/menu/hand.png'
+import tropy from '@images/menu/tropy.png'
 import recruitMain from '@images/menu/recruit-main.png'
 import recruitMain2 from '@images/menu/recruit-main2.png'
 import { fontStyle } from 'html2canvas/dist/types/css/property-descriptors/font-style'
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
+import {getViewSize} from "@utils/functions";
 
 const Menu3 = () => {
 	const navigate = useNavigate();
@@ -27,19 +20,37 @@ const Menu3 = () => {
 
 	return (
 		<Layout>
-			<div className='menu-header'>
-				<div style={{fontSize:'60px', fontWeight:'600'}}>
-					인사제도
-				</div>
-				<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-					<span>네오브릭스의 인사제도</span>
-				</div>
-			</div>
-			<Divider/>
-			<div className='menu-flow'>
-				<HomeIcon onClick={()=>{navigate('/')}}/>
-				<p>&gt; 인재채용 &gt; </p><span>인사제도</span>
-			</div>
+			{getViewSize()=='lg'?
+				<>
+					<div className='menu-header'>
+						<div style={{fontSize:'60px', fontWeight:'600'}}>
+							인사제도
+						</div>
+						<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
+							<span>네오브릭스의 인사제도</span>
+						</div>
+					</div>
+					<Divider/>
+					<div className='menu-flow'>
+						<HomeIcon onClick={()=>{navigate('/')}}/>
+						<p>&gt; 인재채용 &gt; </p><span>인사제도</span>
+					</div>
+				</>:
+				<Grid container>
+					<Grid item sm={8} className='menu-header-mobile'>
+						<div className='menu-flow-mobile'>
+							<HomeIcon onClick={()=>{navigate('/')}}/>
+							<span> · 인재채용 · 인사제도</span>
+						</div>
+						<div className='menu-sub-mobile'>
+							<p>인사제도</p>
+						</div>
+					</Grid>
+					<Grid item sm={4} className='menu-bg-mobile'>
+
+					</Grid>
+				</Grid>
+			}
 			<Divider/>
 			<div id="listLayout">
 				<motion.div
@@ -54,13 +65,20 @@ const Menu3 = () => {
 					}}
 				>
 					<div className="menu_title_contain" style={{width:'100%',textAlign:'center'}}>
-						<p className='menu-header2'>인사제도</p>
+						{getViewSize()=='lg'?
+							<p className='menu-header2'>인사제도</p>:
+							<></>
+						}
 						<p className='hr-sub'>Neo BRIX의 다양한 IT분야 전문가들이 당신의 꿈과 함께 합니다.</p>
 						<p className='hr-text'>Neo BRIX는 데이터 사이언스팀, 디지털 트랜스포메이션팀, 모바일 컨버젼팀 등으로 이루어져 팀단위 발전을 통해 기술 및 비지니스 전문
 							역량을 갖춘 인재를 육성합니다.</p>
+						{getViewSize()=='lg'?<></>:<Divider style={{marginTop:'30px'}}/>}
 						<Grid container style={{ padding: '50px 0', width: '70%', margin: '0 auto' }}>
-							<Grid item lg={3.5} style={{marginBottom:'50px', textAlign:'left'}}>
-								<img src={recruitMain} className='recruit-main-img'/>
+							<Grid item lg={3.5} style={{marginBottom:'50px', textAlign:getViewSize()=='lg'?'left':'center'}}>
+								{getViewSize()=='lg'?
+									<img src={recruitMain} className='recruit-main-img'/>:
+									<img src={hand} className='recruit-mobile-img'/>
+								}
 							</Grid>
 							<Grid item lg={8.5} style={{marginBottom:'50px'}}>
 								<p className='role-main-text'>인사제도 기본방향</p>
@@ -71,7 +89,8 @@ const Menu3 = () => {
 								<p className='role-sub-text'>공정/객관적인 제도 운영</p>
 								<p className='role-text'>목표 수립 및 합의하는 과정을 포함해 공정성을 최대한 확보</p>
 							</Grid>
-							<Grid item lg={3.5} style={{textAlign:'left'}}>
+							<Grid item lg={3.5} style={{textAlign:getViewSize()=='lg'?'left':'center'}}>
+								{getViewSize()=='lg'?<></>:<Divider style={{margin:'30px 0'}}/>}
 								<motion.div
 									className='intro-text'
 									initial={{ opacity: 0, y: 50}}
@@ -83,7 +102,10 @@ const Menu3 = () => {
 										y: { duration: 0.5 },
 									}}
 								>
-								<img src={recruitMain2} className='recruit-main-img'/>
+									{getViewSize()=='lg'?
+										<img src={recruitMain2} className='recruit-main-img'/>:
+										<img src={tropy} className='recruit-mobile-img'/>
+									}
 								</motion.div>
 							</Grid>
 							<Grid item lg={8.5}>

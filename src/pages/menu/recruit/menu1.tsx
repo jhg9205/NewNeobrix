@@ -87,7 +87,19 @@ const Menu1 = () => {
 						>
 							<img src={talent2} alt="recruit" className="recruit-img" style={{margin:'0 auto'}}/>
 						</motion.div>
+						<motion.div
+							className='intro-text'
+							initial={{ opacity: 0, y: 50}}
+							whileInView={{ opacity: 1, y: 0}}
+							viewport={{ once: false }}
+							transition={{
+								ease: "easeInOut",
+								duration: 0.5,
+								y: { duration: 0.5 },
+							}}
+						>
 						<img src={talent3} alt="recruit" className="recruit-img" />
+						</motion.div>
 						<Button
 							id="recruitFile"
 							onClick={handleClick}

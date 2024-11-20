@@ -14,6 +14,7 @@ import React from "react";
 import {motion} from "framer-motion";
 import Layout from "@components/layouts/layout";
 import {useNavigate} from "react-router-dom";
+import {getViewSize} from "@utils/functions";
 
 const Menu4 = () =>{
     const navigate = useNavigate();
@@ -42,34 +43,55 @@ const Menu4 = () =>{
 
     return (
         <Layout>
-            <div className='menu-header'>
-                <div style={{fontSize:'60px', fontWeight:'600'}}>
-                    복리후생
-                </div>
-                <div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-                    <span>네오브릭스의 복리후생</span>
-                </div>
-            </div>
-            <Divider/>
-            <div className='menu-flow'>
-                <HomeIcon onClick={()=>{navigate('/')}}/>
-                <p>&gt; 인재채용 &gt; </p><span>복리후생</span>
-            </div>
+            {getViewSize()=='lg'?
+                <>
+                    <div className='menu-header'>
+                        <div style={{fontSize:'60px', fontWeight:'600'}}>
+                            복리후생
+                        </div>
+                        <div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
+                            <span>네오브릭스의 복리후생</span>
+                        </div>
+                    </div>
+                    <Divider/>
+                    <div className='menu-flow'>
+                        <HomeIcon onClick={()=>{navigate('/')}}/>
+                        <p>&gt; 인재채용 &gt; </p><span>복리후생</span>
+                    </div>
+                </>:
+                <Grid container>
+                    <Grid item sm={8} className='menu-header-mobile'>
+                        <div className='menu-flow-mobile'>
+                            <HomeIcon onClick={()=>{navigate('/')}}/>
+                            <span> · 인재채용 · 복리후생</span>
+                        </div>
+                        <div className='menu-sub-mobile'>
+                            <p>복리후생</p>
+                        </div>
+                    </Grid>
+                    <Grid item sm={4} className='menu-bg-mobile'>
+
+                    </Grid>
+                </Grid>
+            }
             <Divider/>
             <div className="menu_title_contain" style={style}>
-                <motion.div
-                    className='intro-text'
-                    initial={{ opacity: 0, y: 50}}
-                    whileInView={{ opacity: 1, y: 0}}
-                    viewport={{ once: false }}
-                    transition={{
-                        ease: "easeInOut",
-                        duration: 0.5,
-                        y: { duration: 0.5 },
-                    }}
-                >
-                    <p className='menu-header2'>복리후생</p>
-                </motion.div>
+                {getViewSize()=='lg'?
+                    <motion.div
+                        className='intro-text'
+                        initial={{ opacity: 0, y: 50}}
+                        whileInView={{ opacity: 1, y: 0}}
+                        viewport={{ once: false }}
+                        transition={{
+                            ease: "easeInOut",
+                            duration: 0.5,
+                            y: { duration: 0.5 },
+                        }}
+                    >
+                        <p className='menu-header2'>복리후생</p>
+                    </motion.div>:
+                    <></>
+                }
                 {/*컨텐츠 div*/}
                 <Grid container style={{ padding: '50px 0', width: '70%', margin: '0 auto' }} id="welfare">
                     {data.map((cont, index) => (
