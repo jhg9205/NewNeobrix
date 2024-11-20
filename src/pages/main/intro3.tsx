@@ -66,20 +66,20 @@ export const Intro3 = () => {
                                 id="card10"
                                 style={{
                                     float:size == 'lg'?'left':'right',
-                                    height:size == 'lg'?'400px':'300px',
-                                    transform:size == 'lg'?'none':'translateY(-220px)'
+                                    height:size == 'lg'?'400px':'200px',
+                                    transform:size == 'lg'?'none':'translateY(-220px) translateX(-100px)'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:size == 'lg'?'translateY(-10px)':'translateY(-230px)'
+                                    transform:size == 'lg'?'translateY(-10px)':'translateY(-230px) translateX(-100px)'
                                 }}
                             >
                                 <Button
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
                                         className='intro-card-button'>
-                                        <p>IT Service</p>
-                                        <span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
+                                        <p>인재상</p>
+                                        <span>테스트입니당</span>
                                         <div className='intro-card-arrow'>
                                             <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
                                         </div>
@@ -102,30 +102,41 @@ export const Intro3 = () => {
                                     transform:size == 'lg'?'translateY(-10px)':'translateY(-40px)'
                                 }}
                             >
+                                <Button
+                                    style={{cursor:'pointer',height:'100%', width:'100%'}}>
+                                    <div
+                                        className='intro-card-button'>
+                                        <p>채용전형</p>
+                                        <span>테스트입니당</span>
+                                        <div className='intro-card-arrow'>
+                                            <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
+                                        </div>
+                                    </div>
+                                </Button>
                             </motion.div>
                         </>
                     </Transition>
-                    <Transition threshold={size=='lg'?28:19} direction={'up'} time={500}>
+                    <Transition threshold={size=='lg'?28:17} direction={'up'} time={500}>
                         <>
                             <motion.div
                                 className="card"
                                 id="card12"
                                 style={{
                                     float:size == 'lg'?'left':'right',
-                                    height:size == 'lg'?'400px':'300px',
-                                    transform:size == 'lg'?'translateY(50px)':'translateY(-150px)'
+                                    height:size == 'lg'?'400px':'200px',
+                                    transform:size == 'lg'?'translateY(50px)':'translateY(-150px) translateX(-100px)'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:size == 'lg'?'translateY(40px)':'translateY(-160px)'
+                                    transform:size == 'lg'?'translateY(40px)':'translateY(-160px) translateX(-100px)'
                                 }}
                             >
                                 <Button
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
                                         className='intro-card-button'>
-                                        <p>IT Service</p>
-                                        <span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
+                                        <p>인사제도</p>
+                                        <span>테스트입니당</span>
                                         <div className='intro-card-arrow'>
                                             <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
                                         </div>
