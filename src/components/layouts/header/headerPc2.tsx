@@ -75,6 +75,7 @@ const HeaderPc2 = () => {
 	const subMenuList3 = [
 		{"title":"인재상",		"link":"/talent"},
 		{"title":"인사제도",		"link":"/hr"},
+		{"title":"복리후생",		"link":"/welfare"},
 		{"title":"채용전형",		"link":"/recruit"}
 	];
 	const subMenuList4 = [

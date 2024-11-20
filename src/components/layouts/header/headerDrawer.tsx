@@ -28,12 +28,11 @@ const HeaderDrawer = ({ toggleDrawer }: any) => {
 	const [pr, setPr] = React.useState(false)
 	const [employ, setEmploy] = React.useState(false)
 	const [help, setHelp] = React.useState(false)
-	const companyLink = [PATH.COMPANY00, PATH.COMPANY03]
+	const companyLink = [PATH.COMPANY00, PATH.COMPANY01, PATH.COMPANY02, PATH.COMPANY03]
 	const businessLink = [PATH.BUSINESS00, PATH.BUSINESS01]
-	const researchLink = [PATH.RESEARCH00, PATH.RESEARCH01]
 	const prCenterLink = [PATH.PRCENTER00, PATH.PRCENTER01, PATH.PRCENTER02]
-	const recruitLink = [PATH.RECRUIT00, PATH.RECRUIT03, PATH.RECRUIT01]
-	const customerLink = [PATH.CUSTOMER01]
+	const recruitLink = [PATH.RECRUIT00, PATH.RECRUIT01, PATH.RECRUIT04, PATH.RECRUIT02]
+	const customerLink = [PATH.CUSTOMER00]
 	return (
 		<Box sx={{ width: 200 }} role="presentation" onKeyDown={toggleDrawer(false)}>
 			<List
@@ -48,12 +47,12 @@ const HeaderDrawer = ({ toggleDrawer }: any) => {
 					<ListItemIcon>
 						<BusinessIcon />
 					</ListItemIcon>
-					<ListItemText primary="회사소개" />
+					<ListItemText primary="기업소개" />
 					{intro ? <ExpandLess /> : <ExpandMore />}
 				</ListItemButton>
 				<Collapse in={intro} timeout="auto" unmountOnExit>
 					<List component="div" disablePadding>
-						{['회사소개', '오시는길'].map((text, index) => (
+						{['인사말', '비전 및 이념', '면허 및 특허', '찾아오시는 길'].map((text, index) => (
 							<ListItem key={text} disablePadding>
 								<ListItemButton sx={{ pl: 4 }} component={Link} to={companyLink[index]}>
 									<ListItemIcon>
@@ -80,41 +79,25 @@ const HeaderDrawer = ({ toggleDrawer }: any) => {
 					<ListItemIcon>
 						<EnergySavingsLeafIcon />
 					</ListItemIcon>
-					<ListItemText primary="사업분야" />
+					<ListItemText primary="사업영역" />
 					{business ? <ExpandLess /> : <ExpandMore />}
 				</ListItemButton>
 				<Collapse in={business} timeout="auto" unmountOnExit>
-					<List component="div" disablePadding>
-						<ListItem disablePadding>
-							<ListItemButton sx={{pl:4}} component={"button"} onClick={()=>navigate(`/business?index=${0}`)}>
-								<ListItemIcon>
-									<RecordVoiceOverIcon/>
-								</ListItemIcon>
-								<ListItemText primary={'SI(시스템통합)'}/>
-							</ListItemButton>
-						</ListItem>
-						<ListItem disablePadding>
-							<ListItemButton sx={{pl:4}} component={"button"} onClick={()=>navigate(`/business?index=${1}`)}>
-								<ListItemIcon>
-									<RecordVoiceOverIcon/>
-								</ListItemIcon>
-								<ListItemText primary={'Solution'}/>
-							</ListItemButton>
-						</ListItem>
-					</List>
+
 				</Collapse>
+				<Divider />
 				<ListItemButton onClick={() => setResearch(!research)}>
 					<ListItemIcon>
 						<EnergySavingsLeafIcon />
 					</ListItemIcon>
-					<ListItemText primary="면허/특허" />
+					<ListItemText primary="인재채용" />
 					{research ? <ExpandLess /> : <ExpandMore />}
 				</ListItemButton>
 				<Collapse in={research} timeout="auto" unmountOnExit>
 					<List component="div" disablePadding>
-						{['면허현황','특허현황'].map((text, index) => (
+						{['인재상','인사제도','복리후생','채용전형'].map((text, index) => (
 							<ListItem key={text} disablePadding>
-								<ListItemButton sx={{ pl: 4 }} component={Link} to={researchLink[index]}>
+								<ListItemButton sx={{ pl: 4 }} component={Link} to={recruitLink[index]}>
 									<ListItemIcon>{index === 0 ? <BiotechIcon /> : index === 1 ? <EmojiEventsIcon /> : <SummarizeIcon />}</ListItemIcon>
 									<ListItemText primary={text} />
 								</ListItemButton>
@@ -122,17 +105,16 @@ const HeaderDrawer = ({ toggleDrawer }: any) => {
 						))}
 					</List>
 				</Collapse>
-				<Divider />
 				<ListItemButton onClick={() => setPr(!pr)}>
 					<ListItemIcon>
 						<InterpreterModeIcon />
 					</ListItemIcon>
-					<ListItemText primary="홍보센터" />
+					<ListItemText primary="홍보" />
 					{pr ? <ExpandLess /> : <ExpandMore />}
 				</ListItemButton>
 				<Collapse in={pr} timeout="auto" unmountOnExit>
 					<List component="div" disablePadding>
-						{['News', 'FAQ', 'PR자료'].map((text, index) => (
+						{['회사소식', 'CI', 'FAQ'].map((text, index) => (
 							<ListItem key={text} disablePadding>
 								<ListItemButton sx={{ pl: 4 }} component={Link} to={prCenterLink[index]}>
 									<ListItemIcon>
@@ -145,39 +127,21 @@ const HeaderDrawer = ({ toggleDrawer }: any) => {
 						<Divider />
 					</List>
 				</Collapse>
-				<ListItemButton onClick={() => setEmploy(!employ)}>
-					<ListItemIcon>
-						<GroupAddIcon />
-					</ListItemIcon>
-					<ListItemText primary="인재채용" />
-					{employ ? <ExpandLess /> : <ExpandMore />}
-				</ListItemButton>
-				<Collapse in={employ} timeout="auto" unmountOnExit>
-					<List component="div" disablePadding>
-						{['채용안내', '복리후생', '채용공고'].map((text, index) => (
-							<ListItem key={text} disablePadding>
-								<ListItemButton sx={{ pl: 4 }} component={Link} to={recruitLink[index]}>
-									<ListItemIcon>{index % 2 === 0 ? <BadgeIcon /> : <SummarizeIcon />}</ListItemIcon>
-									<ListItemText primary={text} />
-								</ListItemButton>
-							</ListItem>
-						))}
-						<Divider />
-					</List>
-				</Collapse>
 				<ListItemButton onClick={() => setHelp(!help)}>
 					<ListItemIcon>
-						<HelpIcon />
+						<InterpreterModeIcon />
 					</ListItemIcon>
-					<ListItemText primary="고객지원" />
+					<ListItemText primary="문의하기" />
 					{help ? <ExpandLess /> : <ExpandMore />}
 				</ListItemButton>
 				<Collapse in={help} timeout="auto" unmountOnExit>
 					<List component="div" disablePadding>
-						{['자료실'].map((text, index) => (
+						{['문의하기'].map((text, index) => (
 							<ListItem key={text} disablePadding>
 								<ListItemButton sx={{ pl: 4 }} component={Link} to={customerLink[index]}>
-									<ListItemIcon>{index % 2 === 0 ? <HeadphonesIcon /> : <SummarizeIcon />}</ListItemIcon>
+									<ListItemIcon>
+										{index === 0 ? <NewspaperIcon /> : index === 1 ? <QuestionAnswerIcon /> : <SummarizeIcon />}
+									</ListItemIcon>
 									<ListItemText primary={text} />
 								</ListItemButton>
 							</ListItem>

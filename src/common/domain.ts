@@ -66,6 +66,7 @@ COMPANY00 = '/company',
 	RECRUIT01 = '/hr',
 	RECRUIT02 = '/recruit',
 	RECRUIT03 = '/recruit/detail/:menu/:index',
+	RECRUIT04 = '/welfare',
 
 	CUSTOMER00 = '/customer',
 	CUSTOMER01 = '/customer/util',

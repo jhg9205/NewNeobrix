@@ -5,8 +5,10 @@ import Transition from "@components/ui/transition/transition";
 import {Button} from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import {getViewSize} from "@utils/functions";
+import {useNavigate} from "react-router-dom";
 
 export const Intro3 = () => {
+    const navigate = useNavigate()
     const [scrollYProgress, setScrollYProgress] = useState(0);
     const size = getViewSize()
     const handleScroll = () => {
@@ -75,7 +77,9 @@ export const Intro3 = () => {
                                 }}
                             >
                                 <Button
-                                    style={{cursor:'pointer',height:'100%', width:'100%'}}>
+                                    style={{cursor:'pointer',height:'100%', width:'100%'}}
+                                    onClick={()=>{navigate('/talent')}}
+                                >
                                     <div
                                         className='intro-card-button'>
                                         <p>인재상</p>
@@ -103,7 +107,9 @@ export const Intro3 = () => {
                                 }}
                             >
                                 <Button
-                                    style={{cursor:'pointer',height:'100%', width:'100%'}}>
+                                    style={{cursor:'pointer',height:'100%', width:'100%'}}
+                                    onClick={()=>{navigate('/recruit')}}
+                                >
                                     <div
                                         className='intro-card-button'>
                                         <p>채용전형</p>
@@ -132,7 +138,9 @@ export const Intro3 = () => {
                                 }}
                             >
                                 <Button
-                                    style={{cursor:'pointer',height:'100%', width:'100%'}}>
+                                    style={{cursor:'pointer',height:'100%', width:'100%'}}
+                                    onClick={()=>{navigate('/hr')}}
+                                >
                                     <div
                                         className='intro-card-button'>
                                         <p>인사제도</p>

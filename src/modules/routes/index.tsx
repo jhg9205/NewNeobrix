@@ -30,6 +30,7 @@ import PrCenterDetail from '@pages/menu/prcenter/detail'
 
 import Talent from '@pages/menu/recruit/menu1'
 import Hr from '@pages/menu/recruit/menu3'
+import Welfare from '@pages/menu/recruit/menu4'
 import Recruit from '@pages/menu/recruit/menu2'
 import RecruitDetail from '@pages/menu/recruit/detail'
 
@@ -64,6 +65,7 @@ const Router = () => {
 
 				<Route path={PATH.RECRUIT00} element={<Talent />} />
 				<Route path={PATH.RECRUIT01} element={<Hr />} />
+				<Route path={PATH.RECRUIT04} element={<Welfare />} />
 				<Route path={PATH.RECRUIT02} element={<Recruit />} />
 				<Route path={PATH.RECRUIT03} element={<RecruitDetail />} />
 
