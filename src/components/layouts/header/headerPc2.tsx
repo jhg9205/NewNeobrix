@@ -83,7 +83,7 @@ const HeaderPc2 = () => {
 		{"title":"FAQ",			"link":"/faq"}
 	];
 	const subMenuList5 = [
-		{"title":"문의하기",		"link":"/"}
+		{"title":"문의하기",		"link":"/customer"}
 	];
 
 	const [hide, setHide]:any = useState({

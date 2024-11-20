@@ -85,11 +85,11 @@ export const Intro = () => {
                                 id="card1"
                                 style={{
                                     float:size == 'lg'?'left':'right',
-                                    transform : size == 'lg'?'none':'translateY(-220px)'
+                                    transform : size == 'lg'?'none':'translateY(-220px) translateX(-100px)'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:size == 'lg'?'translateY(-10px)':'translateY(-230px)'
+                                    transform:size == 'lg'?'translateY(-10px)':'translateY(-230px) translateX(-100px)'
                                 }}
                             >
                                 <Button
@@ -141,11 +141,11 @@ export const Intro = () => {
                                 id="card3"
                                 style={{
                                     float:size == 'lg'?'left':'right',
-                                    transform : size == 'lg'?'translateY(100px)':'translateY(-100px)'
+                                    transform : size == 'lg'?'translateY(100px)':'translateY(-100px) translateX(-100px)'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:size == 'lg'?'translateY(90px)':'translateY(-110px)'
+                                    transform:size == 'lg'?'translateY(90px)':'translateY(-110px) translateX(-100px)'
                                 }}
                             >
                                 <Button
@@ -204,11 +204,11 @@ export const Intro = () => {
                                 id="card4"
                                 style={{
                                     float:size == 'lg'?'left':'right',
-                                    transform : size == 'lg'?'translateY(200px)':'translateY(0px)'
+                                    transform : size == 'lg'?'translateY(200px)':'translateY(0px) translateX(-100px)'
                                 }}
                                 whileHover={{
                                     boxShadow : '0px 0px 10px #666',
-                                    transform:size == 'lg'?'translateY(190px)':'translateY(-10px)'
+                                    transform:size == 'lg'?'translateY(190px)':'translateY(-10px) translateX(-100px)'
                                 }}
                             >
                                 <Button
@@ -256,7 +256,7 @@ export const Intro = () => {
                 </div>
             </motion.div>
         </div>
-        <div style={{height:size=='lg'?'800px':'200px'}}>
+        <div style={{height:size=='lg'?'800px':'100px'}}>
 
         </div>
         </>

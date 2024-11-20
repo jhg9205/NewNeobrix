@@ -40,7 +40,10 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 	let [scroll, setScroll] = useState(false)
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
-	const handleClose = () => setOpen(false);
+	const handleClose = () => {
+		navigate('/customer')
+		setOpen(false);
+	}
 	const trigger = useScrollTrigger({
 		target: window,
 		disableHysteresis: true,

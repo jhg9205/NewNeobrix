@@ -1,10 +1,10 @@
 import logo2 from '@images/common/logoN-white.png'
-import { Hidden, Tab, Tabs } from '@mui/material'
 import { useState } from 'react'
 import useClasses from '@utils/useClasses'
-import { Link } from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 const Footer = () => {
+	const navigate = useNavigate();
 	const [value, setValue] = useState(0)
 	const defaultTab = {
 		fontSize: '1rem',
@@ -18,11 +18,6 @@ const Footer = () => {
 		customStyleOnTab: Object.assign({ color: '#999999' }, defaultTab)
 	})
 
-	const classes = useClasses(useStyles)
-
-	const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-		setValue(newValue)
-	}
 
 	return (
 		<footer>
@@ -30,28 +25,30 @@ const Footer = () => {
 				<div className='footer-main'>
 					<ul>
 						<li>기업소개</li>
-						<li>인사말</li>
-						<li>비전</li>
-						<li>면허 및 특허</li>
-						<li>오시는 길</li>
+						<li onClick={()=>{navigate('/company')}}>인사말</li>
+						<li onClick={()=>{navigate('/company/vision')}}>비전</li>
+						<li onClick={()=>{navigate('/company/research')}}>면허 및 특허</li>
+						<li onClick={()=>{navigate('/company/location')}}>오시는 길</li>
 					</ul>
 					<ul>
 						<li>사업영역</li>
+						<li onClick={()=>{navigate('/')}}>사업영역</li>
 					</ul>
 					<ul>
 						<li>인재채용</li>
-						<li>인재상</li>
-						<li>인사제도</li>
-						<li>채용전형</li>
+						<li onClick={()=>{navigate('/talent')}}>인재상</li>
+						<li onClick={()=>{navigate('/hr')}}>인사제도</li>
+						<li onClick={()=>{navigate('/recruit')}}>채용전형</li>
 					</ul>
 					<ul>
 						<li>홍보</li>
-						<li>회사소식</li>
-						<li>CI</li>
-						<li>FAQ</li>
+						<li onClick={()=>{navigate('/news')}}>회사소식</li>
+						<li onClick={()=>{navigate('/ci')}}>CI</li>
+						<li onClick={()=>{navigate('/faq')}}>FAQ</li>
 					</ul>
 					<ul>
 						<li>문의하기</li>
+						<li onClick={()=>{navigate('/customer')}}>문의하기</li>
 					</ul>
 				</div>
 				<div className='footer-sub'>

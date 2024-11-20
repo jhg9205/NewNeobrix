@@ -20,9 +20,11 @@ import rawLogo from "@images/main/rawLogo.png"
 import dataLogo from "@images/main/dataLogo.png"
 import kwaterLogo from "@images/main/kwaterLogo.png"
 import energyLogo from "@images/main/energyLogo.png"
+import {getViewSize} from "@utils/functions";
 
 export const Intro2 = () => {
 	const navigate = useNavigate()
+	const size = getViewSize()
 	const swiperRef = useRef<SwiperType>();
 	return (
 		<div className='intro2'>
@@ -83,7 +85,7 @@ export const Intro2 = () => {
 				>
 				<Swiper
 					loop={true}
-					slidesPerView={5}
+					slidesPerView={size=='lg'?5:1}
 					spaceBetween={30}
 					centeredSlides={true}
 					autoplay={{delay:2000}}
@@ -220,7 +222,7 @@ export const Intro2 = () => {
 				>
 					<Swiper
 						loop={true}
-						slidesPerView={9}
+						slidesPerView={size=='lg'?9:3}
 						spaceBetween={100}
 						centeredSlides={true}
 						autoplay={{delay:1000}}
@@ -238,8 +240,8 @@ export const Intro2 = () => {
 						<SwiperSlide><img src={dataLogo}/></SwiperSlide>
 						<SwiperSlide><img src={kwaterLogo}/></SwiperSlide>
 						<SwiperSlide><img src={energyLogo}/></SwiperSlide>
-						<button className="prev-swiper swiper-button-prev swiper-btn" style={{padding:'0 100px'}}></button>
-						<button className="next-swiper swiper-button-next swiper-btn" style={{padding:'0 100px'}}></button>
+						<button className="prev-swiper swiper-button-prev swiper-btn" style={{padding:size=='lg'?'0 100px':'0 20px'}}></button>
+						<button className="next-swiper swiper-button-next swiper-btn" style={{padding:size=='lg'?'0 100px':'0 20px'}}></button>
 					</Swiper>
 				</motion.div>
 			</div>
