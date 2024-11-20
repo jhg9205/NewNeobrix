@@ -1,11 +1,12 @@
 import Layout from '@components/layouts/layout'
 import React from 'react'
-import {Divider} from "@mui/material";
+import {Divider, Grid} from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
 import {useNavigate} from "react-router-dom";
 import dream from '@images/menu/intro-dream.png'
 import vission from '@images/menu/intro-vission.png'
 import { motion } from "framer-motion";
+import {getViewSize} from "@utils/functions";
 
 
 const Menu2 = () => {
@@ -18,19 +19,37 @@ const Menu2 = () => {
 
 	return (
 		<Layout>
-			<div className='menu-header'>
-				<div style={{fontSize:'60px', fontWeight:'600'}}>
-					비전 및 이념
+			{getViewSize()=='lg'?
+			<>
+				<div className='menu-header'>
+					<div style={{fontSize:'60px', fontWeight:'600'}}>
+						비전 및 이념
+					</div>
+					<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
+						<span>네오브릭스 비전 및 핵심가치</span>
+					</div>
 				</div>
-				<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-					<span>네오브릭스 비전 및 핵심가치</span>
+				<Divider/>
+				<div className='menu-flow'>
+					<HomeIcon onClick={()=>{navigate('/')}}/>
+					<p>&gt; 기업소개 &gt; </p><span>비전 및 이념</span>
 				</div>
-			</div>
-			<Divider/>
-			<div className='menu-flow'>
-				<HomeIcon onClick={()=>{navigate('/')}}/>
-				<p>&gt; 기업소개 &gt; </p><span>비전 및 이념</span>
-			</div>
+			</>:
+				<Grid container>
+					<Grid item sm={8} className='menu-header-mobile'>
+						<div className='menu-flow-mobile'>
+							<HomeIcon onClick={()=>{navigate('/')}}/>
+							<span> · 기업소개 · 비전 및 이념</span>
+						</div>
+						<div className='menu-sub-mobile'>
+							<p>비전 및 이념</p>
+						</div>
+					</Grid>
+					<Grid item sm={4} className='menu-bg-mobile'>
+
+					</Grid>
+				</Grid>
+			}
 			<Divider/>
 			<div id="organizationLayout">
 				<motion.div

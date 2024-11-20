@@ -99,6 +99,9 @@
 #companyLayout {
 	.company-slide{
 		height: 800px;
+		@include mobile(){
+			height: 100vh;
+		}
 		.slider-img{
 			background-size: cover;
 			color: white;
@@ -109,17 +112,26 @@
 			flex-direction: column;
 			justify-content: flex-end;
 
-			@include mobile {
-				height: 500px !important;
-			}
 			text-align: left;
+			@include mobile(){
+				text-align: center;
+				justify-content: center;
+			}
 			div{
 				margin : 0 0 100px 100px;
+				@include mobile(){
+					margin: 0 auto;
+					width: 100%;
+				}
 			}
 			.white-text{
 				font-size: 80px;
 				font-weight: 400;
 				line-height: 50px;
+				@include mobile(){
+					font-size: 40px;
+					line-height: 30px;
+				}
 			}
 			.gra-text{
 				background: linear-gradient(-10deg, #00A6ED 29.34%, #00B780 56.73%);
@@ -127,10 +139,16 @@
 				-webkit-text-fill-color: transparent;
 				font-size: 80px;
 				font-weight: 400;
+				@include mobile(){
+					font-size: 30px;
+				}
 			}
 			.small-text{
 				font-size: 30px;
 				margin-top: 50px;
+				@include mobile(){
+					font-size: 20px;
+				}
 			}
 		}
 		#slider1{
@@ -150,10 +168,16 @@
 	}
 	.greeting{
 		padding: 0 200px;
-		height: 600px;
+		height: 100%;
+		@include mobile(){
+			padding: 0 50px;
+		}
 		.greeting-main{
 			font-size: 70px;
 			font-weight: 600;
+			@include mobile(){
+				font-size: 50px;
+			}
 		}
 		.greeting-sub{
 			font-size: 30px;
@@ -165,6 +189,9 @@
 			font-size: 20px;
 			margin-top: 30px;
 			margin-bottom: 30px;
+			@include mobile(){
+				font-size: 15px;
+			}
 		}
 	}
 	.contain {
@@ -215,6 +242,9 @@
 				line-height: 1.5em;
 				letter-spacing: -0.05em;
 				font-weight: bold;
+				@include mobile(){
+					font-size: 1.7em;
+				}
 			}
 
 			.ceo_txt {
@@ -230,6 +260,7 @@
 					word-break: keep-all;
 					@include mobile {
 						word-break: unset;
+						font-size: 1.1em;
 					}
 				}
 
@@ -249,11 +280,17 @@
 				svg{
 					font-size: 30px;
 					vertical-align:middle;
+					@include mobile(){
+						font-size: 25px
+					}
 				}
 				.download{
 					vertical-align:middle;
 					font-size: 20px;
 					font-weight: 600;
+					@include mobile(){
+						font-size: 18px
+					}
 				}
 			}
 			.download-div1:hover{
@@ -265,14 +302,23 @@
 				float: left;
 				margin-top: 50px;
 				margin-left: 50px;
+				@include mobile(){
+					margin-left: 20px;
+				}
 				svg{
 					font-size: 30px;
 					vertical-align:middle;
+					@include mobile(){
+						font-size: 25px
+					}
 				}
 				.download{
 					vertical-align:middle;
 					font-size: 20px;
 					font-weight: 600;
+					@include mobile(){
+						font-size: 18px
+					}
 				}
 			}
 			.download-div2:hover{
@@ -339,6 +385,9 @@
 
 .menu-header{
 	padding: 150px 300px 0 250px;
+	@include mobile(){
+		padding: 100px;
+	}
 	.download-div{
 		position: relative;
 		margin-top: 50px;
@@ -357,6 +406,21 @@
 		color: #007aff;
 		cursor: pointer;
 	}
+}
+
+.menu-header-mobile{
+	height: 200px;
+	padding: 100px 30px;
+	.menu-flow-mobile{
+		color: #5a5a5a;
+	}
+	.menu-sub-mobile{
+		font-size: 30px;
+		font-weight: 600;
+	}
+}
+.menu-bg-mobile{
+
 }
 
 .menu-flow{
@@ -428,7 +492,13 @@
 	.intro-dream, .intro-value{
 		padding:0 300px;
 		margin: 100px 0;
+		@include mobile(){
+			padding: 0;
+			margin: 50px 0;
+			width: 100%;
+		}
 		p{
+			padding: 0 50px;
 			text-align: center;
 		}
 		img{
@@ -440,6 +510,9 @@
 	padding: 0 200px;
 	height: 100%;
 	margin-bottom: 100px;
+	@include mobile(){
+		padding: 0 20px;
+	}
 	.ci-main{
 		// background: url('../images/main/pofo_bg.jpg') no-repeat;
 		background-color: #ffffff;
@@ -448,10 +521,19 @@
 		font-weight: 600;
 		line-height: 70px;
 		margin-bottom: 50px;
+		@include mobile(){
+			font-size: 50px;
+			line-height: 50px;
+			padding: 0 30px;
+		}
 	}
 	.ci-sub{
 		font-size: 20px;
 		margin-bottom: 50px;
+		@include mobile(){
+			line-height: 30px;
+			padding: 0 30px;
+		}
 	}
 	.ci-logo{
 		.ci-download1, .ci-download2{
@@ -460,15 +542,24 @@
 			svg{
 				font-size: 30px;
 				vertical-align:middle;
+				@include mobile(){
+					font-size: 25px
+				}
 			}
 			.download{
 				vertical-align:middle;
 				font-size: 20px;
 				font-weight: 600;
+				@include mobile(){
+					font-size: 18px
+				}
 			}
 		}
 		.ci-download2{
 			margin-left: 50px;
+			@include mobile(){
+				margin-left: 20px;
+			}
 		}
 		.ci-download1:hover{
 			color: #007aff;
@@ -486,6 +577,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	@include mobile(){
+		margin-top: 40px;
+	}
 	img{
 		width: 70%;
 		object-fit: cover;
@@ -1013,7 +1107,7 @@
 	}
 	.recruit-img {
 		@include mobile {
-			width: 90%;
+			width: 100%;
 			margin: 0 auto;
 		}
 		@include tablet {
@@ -1310,7 +1404,10 @@
 		display: flex;
 		margin-top: 50px;
 		justify-content: center;
-
+		@include mobile(){
+			margin-top: 0;
+			padding: 50px 0;
+		}
 		.imagelist_warp {
 			display: flex;
 			justify-content: center;

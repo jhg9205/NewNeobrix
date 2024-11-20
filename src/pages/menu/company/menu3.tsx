@@ -16,7 +16,7 @@ import REQ12 from '@images/menu/REQ12.png'
 import React, {useState} from 'react'
 import MenuListbar from './menuListbar'
 import { PATH } from '@common/domain'
-import {Box, Divider, Fab, Fade, ImageList, ImageListItem, ImageListItemBar} from "@mui/material";
+import {Box, Divider, Fab, Fade, Grid, ImageList, ImageListItem, ImageListItemBar} from "@mui/material";
 import {useDispatch} from "react-redux";
 import {getViewSize} from "@utils/functions";
 import {setPopupShow} from "@modules/reducer/layout";
@@ -153,19 +153,37 @@ const Menu3 = () => {
 	}
 	return (
 		<Layout>
-			<div className='menu-header'>
-				<div style={{fontSize:'60px', fontWeight:'600'}}>
-					면허 및 특허
-				</div>
-				<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-					<span>네오브릭스 면허 및 특허</span>
-				</div>
-			</div>
-			<Divider/>
-			<div className='menu-flow'>
-				<HomeIcon onClick={()=>{navigate('/')}}/>
-				<p>&gt; 기업소개 &gt; </p><span>면허 및 특허</span>
-			</div>
+			{getViewSize()=='lg'?
+				<>
+					<div className='menu-header'>
+						<div style={{fontSize:'60px', fontWeight:'600'}}>
+							면허 및 특허
+						</div>
+						<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
+							<span>네오브릭스 면허 및 특허</span>
+						</div>
+					</div>
+					<Divider/>
+					<div className='menu-flow'>
+						<HomeIcon onClick={()=>{navigate('/')}}/>
+						<p>&gt; 기업소개 &gt; </p><span>면허 및 특허</span>
+					</div>
+				</>:
+				<Grid container>
+					<Grid item sm={8} className='menu-header-mobile'>
+						<div className='menu-flow-mobile'>
+							<HomeIcon onClick={()=>{navigate('/')}}/>
+							<span> · 기업소개 · 면허 및 특허</span>
+						</div>
+						<div className='menu-sub-mobile'>
+							<p>면허 및 특허</p>
+						</div>
+					</Grid>
+					<Grid item sm={4} className='menu-bg-mobile'>
+
+					</Grid>
+				</Grid>
+			}
 			<Divider/>
 			<div id="patentLayout">
 				<div className="menu_title_contain" style={style}>

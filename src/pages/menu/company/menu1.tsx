@@ -6,13 +6,14 @@ import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 import introImg from '@images/common/img-intro2.png'
 import logoBlack from '@images/common/logoN-black2.png'
 import React from 'react'
-import {Button, Fade, Grid} from '@mui/material'
+import {Button, Divider, Fade, Grid} from '@mui/material'
 import {Autoplay, EffectFade, Navigation, Pagination} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import { motion } from 'framer-motion'
 import {alert} from "@utils/alert";
 import {ALERT} from "@common/const";
 import {$FileDownLoad} from "@utils/request";
+import {getViewSize} from "@utils/functions";
 
 const Menu1 = () => {
 	const style = {
@@ -122,7 +123,7 @@ const Menu1 = () => {
 												Neo BRIX의 기술과 서비스는
 												<br />
 												고객의 디지털 트랜스포메이션 실현을 위한
-												<br/>
+												{getViewSize()=='lg'?<br/>:<></>}
 												모든 서비스를 제공합니다.
 											</div>
 											<div className="ceo_txt">
@@ -157,6 +158,7 @@ const Menu1 = () => {
 						</motion.div>
 					</div>
 				</div>
+				<Divider/>
 				<motion.div
 					initial={{ opacity: 0, y: 100 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -172,8 +174,13 @@ const Menu1 = () => {
 						Greetings
 					</div>
 					<div className='greeting-sub'>
-						<p>자율-창조적인 마인드와 지속적인 기술개발을 통해</p>
-						<p>손에 잡히는 IT서비스 제공으로 고객의 성장을 보상하겠습니다.</p>
+						{getViewSize() == 'lg'?
+						<>
+							<p>자율-창조적인 마인드와 지속적인 기술개발을 통해</p>
+							<p>손에 잡히는 IT서비스 제공으로 고객의 성장을 보상하겠습니다.</p>
+						</>:
+							<p>자율-창조적인 마인드와 지속적인 기술개발을 통해 손에 잡히는 IT서비스 제공으로 고객의 성장을 보상하겠습니다.</p>
+						}
 					</div>
 					<div className='greeting-content'>
 						<p>
@@ -209,6 +216,7 @@ const Menu1 = () => {
 					</div>
 				</div>
 				</motion.div>
+				<Divider/>
 				<motion.div
 					initial={{ opacity: 0, y: 100 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -228,8 +236,13 @@ const Menu1 = () => {
 							</div>
 							<div className='ci-sub'>
 								<p>NeoBrix의 심볼마크의 검정 컬러는 믿음을 상징합니다.</p>
-								<p>로고에 NeoBrix의 N이 녹아들어 있으며 위 아래 도형을 연결해주는 역할로서</p>
-								<p>B2B, B2C를 연결해주는 Bridge를 의미합니다.</p>
+								{getViewSize()=='lg'?
+									<>
+										<p>로고에 NeoBrix의 N이 녹아들어 있으며 위 아래 도형을 연결해주는 역할로서</p>
+										<p>B2B, B2C를 연결해주는 Bridge를 의미합니다.</p>
+									</>:
+									<p>로고에 NeoBrix의 N이 녹아들어 있으며 위 아래 도형을 연결해주는 역할로서 B2B, B2C를 연결해주는 Bridge를 의미합니다.</p>
+								}
 							</div>
 							<div className='ci-logo'>
 								<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='ci-download1'>

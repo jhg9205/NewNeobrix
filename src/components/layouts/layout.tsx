@@ -311,8 +311,9 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 						ariaLabel="SpeedDial tooltip example"
 						sx={{ position: 'absolute', bottom: 16, right: 16 }}
 						icon={<SpeedDialIcon />}
-						onClose={handleClose}
 						onOpen={handleOpen}
+						onClick={()=>{setOpen(false)}}
+						onMouseLeave={()=>{setOpen(false)}}
 						open={open}
 					>
 						{actions.map((action) => (

@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 import talent2 from '@images/menu/talent2.png'
 import talent3 from '@images/menu/talent3.png'
 import React from 'react'
-import {Button, Divider} from '@mui/material'
+import {Button, Divider, Grid} from '@mui/material'
 import { alert } from '@utils/alert'
 import { ALERT } from '@common/const'
 import { $FileDownLoad } from '@utils/request'
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
 import Transition from "@components/ui/transition/transition";
+import {getViewSize} from "@utils/functions";
 
 const Menu1 = () => {
 	const [check, setCheck] = React.useState(false)
@@ -37,19 +38,37 @@ const Menu1 = () => {
 
 	return (
 		<Layout>
-			<div className='menu-header'>
-				<div style={{fontSize:'60px', fontWeight:'600'}}>
-					인재상
-				</div>
-				<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-					<span>네오브릭스가 추구하는 인재</span>
-				</div>
-			</div>
-			<Divider/>
-			<div className='menu-flow'>
-				<HomeIcon onClick={()=>{navigate('/')}}/>
-				<p>&gt; 인재채용 &gt; </p><span>인재상</span>
-			</div>
+			{getViewSize()=='lg'?
+				<>
+					<div className='menu-header'>
+						<div style={{fontSize:'60px', fontWeight:'600'}}>
+							인재상
+						</div>
+						<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
+							<span>네오브릭스가 추구하는 인재</span>
+						</div>
+					</div>
+					<Divider/>
+					<div className='menu-flow'>
+						<HomeIcon onClick={()=>{navigate('/')}}/>
+						<p>&gt; 인재채용 &gt; </p><span>인재상</span>
+					</div>
+				</>:
+				<Grid container>
+					<Grid item sm={8} className='menu-header-mobile'>
+						<div className='menu-flow-mobile'>
+							<HomeIcon onClick={()=>{navigate('/')}}/>
+							<span> · 인재채용 · 인재상</span>
+						</div>
+						<div className='menu-sub-mobile'>
+							<p>인재상</p>
+						</div>
+					</Grid>
+					<Grid item sm={4} className='menu-bg-mobile'>
+
+					</Grid>
+				</Grid>
+			}
 			<Divider/>
 			<div id="listLayout">
 				<div className="menu_title_contain" style={style}>
