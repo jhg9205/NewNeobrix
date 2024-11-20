@@ -134,7 +134,7 @@
 				}
 			}
 			.gra-text{
-				background: linear-gradient(-10deg, $gradientColor1 29.34%, $gradientColor2 56.73%);
+				background: linear-gradient(-10deg, #4286f4 29.34%, #373B44 56.73%);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 				font-size: 80px;
@@ -295,7 +295,7 @@
 				}
 			}
 			.download-div1:hover{
-				color: $gradientColor2;
+				color: #007aff;
 				cursor: pointer;
 			}
 			.download-div2{
@@ -323,7 +323,7 @@
 				}
 			}
 			.download-div2:hover{
-				color: $gradientColor2;
+				color: #007aff;
 				cursor: pointer;
 			}
 		}
@@ -404,7 +404,7 @@
 		display:inline-block;
 	}
 	.download-div:hover{
-		color: $gradientColor2;
+		color: #007aff;
 		cursor: pointer;
 	}
 }
@@ -563,11 +563,11 @@
 			}
 		}
 		.ci-download1:hover{
-			color: $gradientColor2;
+			color: #007aff;
 			cursor: pointer;
 		}
 		.ci-download2:hover{
-			color: $gradientColor2;
+			color: #007aff;
 			cursor: pointer;
 		}
 	}
