@@ -56,8 +56,6 @@ export const Intro4 = () => {
                 setRadius(40)
             }
         }
-
-        console.log(latest)
     })
 
 

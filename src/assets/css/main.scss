@@ -89,8 +89,9 @@
       line-height: 42px;
       transition-duration: 500ms;
       @include mobile{
-        font-size: 25px;
-        line-height: 30px;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -1px;
       }
     }
     span{

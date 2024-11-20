@@ -180,14 +180,7 @@ export const Intro = () => {
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
                                         className='intro-card-button'>
-                                        {size=='lg'?
-                                            <p>Land/Facility Management</p>:
-                                            <>
-                                                <p>Land/</p>
-                                                <p>Facility</p>
-                                                <p>Management</p>
-                                            </>
-                                        }
+                                            <p>Land/Facility Management</p>
                                     <span>중대재해 발생 시 법적대응에 활용할 수 있는 솔루션</span>
                                     <div className='intro-card-arrow'>
                                         <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
@@ -215,7 +208,7 @@ export const Intro = () => {
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
                                         className='intro-card-button'>
-                                        <p>Environment</p>
+                                            <p>Environment</p>
                                         <span>중대재해 발생 시 법적대응에 활용할 수 있는 솔루션</span>
                                         <div className='intro-card-arrow'>
                                             <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
@@ -243,7 +236,7 @@ export const Intro = () => {
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
                                         className='intro-card-button'>
-                                        <p>Education</p>
+                                            <p>EDUCATION</p>
                                         <span>중대재해 발생 시 법적대응에 활용할 수 있는 솔루션</span>
                                         <div className='intro-card-arrow'>
                                             <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
