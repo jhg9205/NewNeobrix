@@ -193,7 +193,7 @@ export const Intro = () => {
                         <>
                             <motion.div
                                 className="card"
-                                id="card4"
+                                id="card5"
                                 style={{
                                     float:size == 'lg'?'left':'right',
                                     transform : size == 'lg'?'translateY(200px)':'translateY(0px) translateX(-100px)'
@@ -221,7 +221,7 @@ export const Intro = () => {
                         <>
                             <motion.div
                                 className="card"
-                                id="card4"
+                                id="card6"
                                 style={{
                                     float:size == 'lg'?'right':'left',
                                     transform : size == 'lg'?'translateY(300px)':'translateY(200px)'
