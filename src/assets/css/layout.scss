@@ -98,7 +98,7 @@ body {
 	/* justify-content: end; */
 	align-items: center;
 	width: 100% !important;
-	height: 70px;
+	height: 64px;
 	background: rgb(255, 255, 255);
 	z-index: 3;
 	position: fixed;
@@ -117,7 +117,7 @@ body {
 	}
 
 	.nav {
-		height: 70px;
+		height: 64px;
 		overflow: hidden;
 		transition-duration: 0.2s;
 	}
@@ -129,7 +129,7 @@ body {
 
 	.nav .navContainer {
 		backdrop-filter: saturate(180%) blur(40px);
-		height: 70px;
+		height: 64px;
 		display: flex;
 		margin: auto;
 		justify-content: center;
@@ -149,7 +149,7 @@ body {
 		width: 150px;
 		height: 30px;
 		list-style-type: none;
-		font-size: 19px;
+		font-size: 17px;
 		color: #000000;
 		font-weight: 600;
 		display: inline-block;
@@ -179,7 +179,7 @@ body {
 		justify-content: center;
 		padding: 20px 0;
 		border : 1px solid #c7c7c7;
-		font-size: 17px !important;
+		font-size: 16px !important;
 		position: relative;
 	}
 
@@ -314,8 +314,8 @@ body {
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			font-weight: 700;
-			font-size: 84px;
-			line-height: 104px;
+			font-size: 70px;
+			line-height: 80px;
 			@include mobile {
 				font-size: 35px;
 				line-height: 44px;
@@ -323,8 +323,8 @@ body {
 		}
 		.swiper-main-black{
 			font-weight: 700;
-			font-size: 84px;
-			line-height: 104px;
+			font-size: 70px;
+			line-height: 80px;
 			color: black;
 			@include mobile {
 				font-size: 35px;
@@ -333,8 +333,8 @@ body {
 		}
 		.swiper-main-mini{
 			font-weight: 400;
-			font-size: 30px;
-			line-height: 42px;
+			font-size: 25px;
+			line-height: 32px;
 			letter-spacing: -0.04em;
 			color: #111;
 			opacity: 1;
