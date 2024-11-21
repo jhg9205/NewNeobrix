@@ -1,6 +1,5 @@
 import * as React from 'react'
-import { useNavigate } from 'react-router-dom'
-import {color, motion, useScroll, useTransform, useViewportScroll, Variants} from "framer-motion"
+import {motion, Variants} from "framer-motion"
 import {useEffect, useState} from "react";
 import Transition from '@components/ui/transition/transition'
 import {Button} from "@mui/material";
