@@ -109,7 +109,7 @@ const Menu2 = () => {
 											</div>
 										</div>
 									</Grid>
-									<Grid item lg={6}>
+									<Grid item lg={6} style={{alignContent:'center'}}>
 										<div className='ci-logoBox'>
 											<img src={logoBlack}/>
 										</div>
