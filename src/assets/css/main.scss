@@ -568,6 +568,21 @@
         background: url("../images/main/rawLogoWhite.png") no-repeat;
         background-size: contain;
       }
+      #intro2-card-logo5{
+        transition-duration: 0.3s;
+        background: url("../images/main/airportLogo-white.png") no-repeat;
+        background-size: contain;
+      }
+      #intro2-card-logo6{
+        transition-duration: 0.3s;
+        background: url("../images/main/lhLogo-white.png") no-repeat;
+        background-size: contain;
+      }
+      #intro2-card-logo7{
+        transition-duration: 0.3s;
+        background: url("../images/main/energyLogo-white.png") no-repeat;
+        background-size: contain;
+      }
     }
     .intro2-card-logo{
       height: 70px;
@@ -591,15 +606,15 @@
       background-size: contain;
     }
     #intro2-card-logo5{
-      /*background: url("../images/main/shLogo.png") no-repeat;*/
+      background: url("../images/main/airportLogo.png") no-repeat;
       background-size: contain;
     }
     #intro2-card-logo6{
-      /*background: url("../images/main/shLogo.png") no-repeat;*/
+      background: url("../images/main/lhLogo.png") no-repeat;
       background-size: contain;
     }
     #intro2-card-logo7{
-      /*background: url("../images/main/shLogo.png") no-repeat;*/
+      background: url("../images/main/energyLogo.png") no-repeat;
       background-size: contain;
     }
   }
