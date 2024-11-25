@@ -83,7 +83,6 @@ export const Intro3 = () => {
                                     <div
                                         className='intro-card-button'>
                                         <p>인재상</p>
-                                        <span>테스트입니당</span>
                                         <div className='intro-card-arrow'>
                                             <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
                                         </div>
@@ -112,10 +111,9 @@ export const Intro3 = () => {
                                 >
                                     <div
                                         className='intro-card-button'>
-                                        <p>채용전형</p>
-                                        <span>테스트입니당</span>
+                                        <p style={{color:'black'}}>채용전형</p>
                                         <div className='intro-card-arrow'>
-                                            <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
+                                            <ArrowForwardIcon fontSize='large' sx={{color:'black', fontSize:'50px'}}/>
                                         </div>
                                     </div>
                                 </Button>
@@ -144,7 +142,6 @@ export const Intro3 = () => {
                                     <div
                                         className='intro-card-button'>
                                         <p>인사제도</p>
-                                        <span>테스트입니당</span>
                                         <div className='intro-card-arrow'>
                                             <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
                                         </div>

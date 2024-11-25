@@ -228,7 +228,7 @@
     p{
       width: auto;
       text-align: left;
-      color: #fff;
+      color: white;
       font-weight: 700;
       font-size: 44px;
       line-height: 42px;
@@ -237,19 +237,21 @@
         font-size: 20px;
         line-height: 20px;
       }
+      opacity: 0;
     }
     span{
       display: inline-block;
       text-align: left;
       margin-top: 13px;
       line-height: 140%;
-      color: #fff;
+      color: white;
       font-weight: 400;
       font-size: 24px;
       transition-duration: 500ms;
       @include mobile(){
         font-size: 15px;
       }
+      opacity: 0;
     }
     .intro-card-arrow{
       opacity: 0;
@@ -261,10 +263,12 @@
     p{
       transform: translateY(-20px);
       transition-duration: 500ms;
+      opacity: 1;
     }
     span{
       transform: translateY(-20px);
       transition-duration: 500ms;
+      opacity: 1;
     }
     .intro-card-arrow{
       opacity: 1;
@@ -274,12 +278,17 @@
   }
 
   #card10{
-    background: url("../images/menu/talent3.png") no-repeat white;
+    background: url("../images/main/talent4.png") no-repeat white;
     background-size: cover;
   }
   #card11{
-    background: url("../images/menu/recruit.jpg") no-repeat white;
+    background: url("../images/main/talent5.png") no-repeat white;
     background-size: contain;
+    background-color: #ffffff;
+  }
+  #card12{
+    background: url("../images/main/hr-main.jpg") no-repeat white;
+    background-size: cover;
   }
 }
 
