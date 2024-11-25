@@ -5,7 +5,7 @@ import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 import introImg from '@images/common/img-intro2.png'
 import logoBlack from '@images/common/logoN-black2.png'
 import React from 'react'
-import {Button, Divider, Fade, Grid} from '@mui/material'
+import {Divider, Fade, Grid} from '@mui/material'
 import {Autoplay, EffectFade, Navigation, Pagination} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import { motion } from 'framer-motion'
