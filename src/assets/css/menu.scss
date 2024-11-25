@@ -105,6 +105,10 @@
 		@include mobile(){
 			height: 100vh;
 		}
+		.swiper-slide-active{
+			transform: scale(1.2) !important;
+			transition-duration: 5s;
+		}
 		.slider-img{
 			background-size: cover;
 			color: white;

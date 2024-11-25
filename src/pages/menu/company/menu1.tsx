@@ -53,11 +53,11 @@ const Menu1 = () => {
 					modules={[Navigation, Pagination, Autoplay, EffectFade]}
 					spaceBetween={1}
 					effect="slide"
-					speed={1000}
+					speed={2000}
 					slidesPerView={1}
 					navigation={{ prevEl: '.prev-swiper', nextEl: '.next-swiper' }}
 					pagination={{ clickable: true }}
-					autoplay={{ delay: 3000, disableOnInteraction: false }}
+					autoplay={{ delay: 4000, disableOnInteraction: false }}
 				>
 					<SwiperSlide>
 						<div id="slider1" className="slider-img">
