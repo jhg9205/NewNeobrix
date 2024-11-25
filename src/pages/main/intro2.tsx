@@ -88,7 +88,7 @@ export const Intro2 = () => {
 					slidesPerView={size=='lg'?5:1}
 					spaceBetween={30}
 					centeredSlides={true}
-					autoplay={{delay:2000}}
+					autoplay={{delay:2000,reverseDirection:true}}
 					onSwiper={(swiper)=>{
 						swiperRef.current = swiper;
 					}}
