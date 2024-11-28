@@ -31,7 +31,7 @@ const CustomerDetail = () => {
 				{menu == 'as' ? (
 					<>
 						<p className="menu_title_p1">
-							A/S<span>접수</span>
+							문<span>의하기</span>
 						</p>
 						<p className="menu_title_p2">Industrial Total Solutions</p>
 					</>
@@ -51,7 +51,6 @@ const CustomerDetail = () => {
 		<Layout>
 			<div className="detailLayout">
 				<FadeImg id="fadeImg" pc={subTileImg} delay={-1} mobile={subTileMobile} isContent={false} />
-				{MenuListbar(path!)}
 				<div className="menu_title_contain" style={style}>
 					{subTitleTrans}
 					<div className="contain">

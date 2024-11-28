@@ -27,7 +27,7 @@ const Menu1 = () => {
 			<div className="menu_title_p_fixed_warp">
 				<section>
 					<p className="menu_title_p1">
-						A/S<span>접수</span>
+						문<span>의하기</span>
 					</p>
 					<p className="menu_title_p2">Industrial Total Solutions</p>
 				</section>
@@ -35,21 +35,10 @@ const Menu1 = () => {
 		</Transition>
 	)
 
-	return !check ? (
+	return (
 		<Layout>
 			<div id="listLayout">
 				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
-				{menulist}
-				<div className="menu_title_contain" style={style}>
-					{subTitleTrans}
-				</div>
-			</div>
-		</Layout>
-	) : (
-		<Layout>
-			<div id="listLayout">
-				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
-				{menulist}
 				<div className="menu_title_contain" style={style}>
 					{subTitleTrans}
 					{/*컨텐츠 div*/}
