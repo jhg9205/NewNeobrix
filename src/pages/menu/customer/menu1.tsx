@@ -1,7 +1,4 @@
 import Layout from '@components/layouts/layout'
-import FadeImg from '@components/ui/effect/fadeImg'
-import subTileImg from '@images/menu/bg-customer.png'
-import subTileMobile from '@images/menu/bg-customer-m.png'
 import React, {useRef} from 'react'
 import emailjs from "@emailjs/browser";
 import {InputLabel, Button, TextField, MenuItem, Grid, Divider, TextareaAutosize} from "@mui/material";
@@ -11,42 +8,76 @@ import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
 const root = [
 	{
+		value: '',
+		label: '선택'
+	},
+	{
 		value: '기사/뉴스',
-		label: '기사/뉴스',
+		label: '기사/뉴스'
 	},
 	{
 		value: '학회/세미나',
-		label: '학회/세미나',
+		label: '학회/세미나'
 	},
 	{
 		value: '이메일(eDM,뉴스레터 등)',
-		label: '이메일(eDM,뉴스레터 등)',
+		label: '이메일(eDM,뉴스레터 등)'
 	},
 	{
 		value: 'SNS(블로그,유튜브 등)',
-		label: 'SNS(블로그,유튜브 등)',
+		label: 'SNS(블로그,유튜브 등)'
 	},
 	{
 		value: '포털 검색(구글,네이버 등)',
-		label: '포털 검색(구글,네이버 등)',
+		label: '포털 검색(구글,네이버 등)'
 	},
 	{
 		value: '온라인 광고',
-		label: '온라인 광고',
+		label: '온라인 광고'
 	},
 	{
 		value: '영업대표 소개',
-		label: '영업대표 소개',
+		label: '영업대표 소개'
 	},
 	{
 		value: '지인 소개',
-		label: '지인 소개',
+		label: '지인 소개'
 	},
 	{
 		value: '기타',
-		label: '기타',
+		label: '기타'
 	}
 ];
+const question = [
+	{
+		value:"",
+		label:"선택"
+	},
+	{
+		value:"시스템구축·운영(SI)",
+		label:"시스템구축·운영(SI)"
+	},
+	{
+		value:"기업용 솔루션 도입",
+		label:"기업용 솔루션 도입"
+	},
+	{
+		value:"빅데이터·AI",
+		label:"빅데이터·AI"
+	},
+	{
+		value:"모바일 시스템",
+		label:"모바일 시스템"
+	},
+	{
+		value:"IT 컨설팅",
+		label:"IT 컨설팅"
+	},
+	{
+		value:"기타",
+		label:"기타"
+	}
+]
 const Menu1 = () => {
 	const form = useRef<HTMLFormElement>(null);
 	const navigate = useNavigate();
@@ -144,7 +175,7 @@ const Menu1 = () => {
 										<Divider/>
 										<InputLabel className="file-label">문의내용</InputLabel>
 									</Grid>
-									<Grid item lg={8} md={6}>
+									<Grid item lg={10} md={6}>
 										<TextField
 											className="file-text-box"
 											id="outlined-textarea"
@@ -199,7 +230,7 @@ const Menu1 = () => {
 											select
 											label="방문경로"
 											color="warning"
-											defaultValue="학회/세미나"
+											defaultValue=""
 											variant="outlined"
 											type="text" name="visitRoot">
 											{root.map((option)=>(
@@ -211,11 +242,19 @@ const Menu1 = () => {
 										<Divider/>
 										<TextField
 											className="file-text-box"
-											id="outlined-textarea"
+											id="filled-select-currency-native"
+											select
 											label="문의항목"
-											placeholder="Placeholder"
 											color="warning"
-											type="text" name="contentCode"/>
+											defaultValue=""
+											variant="outlined"
+											type="text" name="visitRoot">
+											{question.map((option)=>(
+												<MenuItem key={option.value} value={option.value}>
+													{option.label}
+												</MenuItem>
+											))}
+										</TextField>
 										<Divider/>
 										<TextareaAutosize
 											style={{
@@ -242,13 +281,13 @@ const Menu1 = () => {
 											type="submit"
 											value="Send"
 										>
-							<span
-								style={{
-									fontWeight: '500',
-									fontSize: '16px',
-									lineHeight: '18px'
-								}}
-							>메일 보내기</span>
+										<span
+											style={{
+												fontWeight: '500',
+												fontSize: '16px',
+												lineHeight: '18px'
+											}}
+										>메일 보내기</span>
 											<ArrowForwardIcon/>
 										</Button>
 									</Grid>
