@@ -16,6 +16,7 @@
 		"sitemap": "babel-node src/sitemapGenerator.js"
 	},
 	"dependencies": {
+		"@emailjs/browser": "^4.4.1",
 		"@emotion/css": "^11.9.0",
 		"@emotion/react": "^11.10.5",
 		"@emotion/styled": "^11.10.5",
@@ -41,6 +42,7 @@
 		"react-slick": "^0.29.0",
 		"redux": "^4.2.0",
 		"redux-thunk": "^2.4.1",
+		"save": "^2.9.0",
 		"slick-carousel": "^1.8.1",
 		"styled-components": "^5.3.5",
 		"sweetalert2": "^11.4.23",

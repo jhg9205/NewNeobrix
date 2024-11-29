@@ -1203,6 +1203,39 @@
 		padding-top: 0;
 		margin-top: 0;
 	}
+	.contain-sub{
+		width: 70%;
+		text-align: left;
+		.contain-sub-title{
+			font-size: 30px;
+			font-weight: 400;
+			color:$pointColor;
+		}
+		.contain-sub-content{
+			font-size: 18px;
+		}
+	}
+	.email-form{
+		text-align: left;
+		width:100%;
+		hr{
+			margin: 15px 0;
+		}
+		.file-label{
+			font-size: 20px;
+			font-weight: 600;
+			display: block;
+			height: 50px;
+			align-content: center;
+		}
+		.file-text-box{
+			display: block;
+			height: 50px;
+		}
+	}
+	.MuiInputBase-root{
+		display: flex !important;
+	}
 }
 .menu-header2{
 	text-align: left;
