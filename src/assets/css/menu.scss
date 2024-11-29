@@ -1210,9 +1210,16 @@
 			font-size: 30px;
 			font-weight: 400;
 			color:$pointColor;
+			@include mobile(){
+				font-size: 20px;
+				font-weight: 600;
+			}
 		}
 		.contain-sub-content{
 			font-size: 18px;
+			@include mobile(){
+				font-size: 15px;
+			}
 		}
 	}
 	.email-form{
@@ -1227,11 +1234,17 @@
 			display: block;
 			height: 50px;
 			align-content: center;
+			@include mobile(){
+				font-size: 15px;
+			}
 		}
 		.file-text-box{
 			display: block;
 			height: 50px;
 			width: 500px;
+			@include mobile(){
+				width: 200px;
+			}
 		}
 	}
 	.MuiInputBase-root{

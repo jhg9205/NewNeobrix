@@ -154,6 +154,7 @@ const Menu1 = () => {
 							<br/>
 							<br/>
 							<br/>
+							<Divider style={{border:'1px solid #ababab',marginBottom:'15px'}}/>
 							<form ref={form} onSubmit={sendEmail} className="email-form">
 								<Grid container>
 									<Grid item lg={2} md={6}>
@@ -178,7 +179,6 @@ const Menu1 = () => {
 									<Grid item lg={10} md={6}>
 										<TextField
 											className="file-text-box"
-											id="outlined-textarea"
 											label="이름"
 											placeholder="ex)홍길동"
 											color="warning"
@@ -186,7 +186,6 @@ const Menu1 = () => {
 										<Divider/>
 										<TextField
 											className="file-text-box"
-											id="outlined-textarea"
 											label="이메일"
 											placeholder="ex)Neobrix@neobrix.co.kr"
 											color="warning"
@@ -194,7 +193,6 @@ const Menu1 = () => {
 										<Divider/>
 										<TextField
 											className="file-text-box"
-											id="outlined-textarea"
 											label="연락처"
 											placeholder="ex)010-xxxx-xxxx"
 											color="warning"
@@ -202,7 +200,6 @@ const Menu1 = () => {
 										<Divider/>
 										<TextField
 											className="file-text-box"
-											id="outlined-textarea"
 											label="회사명"
 											placeholder="ex)네오브릭스"
 											color="warning"
@@ -210,7 +207,6 @@ const Menu1 = () => {
 										<Divider/>
 										<TextField
 											className="file-text-box"
-											id="outlined-textarea"
 											label="부서명"
 											placeholder="ex)전략기획팀"
 											color="warning"
@@ -218,7 +214,6 @@ const Menu1 = () => {
 										<Divider/>
 										<TextField
 											className="file-text-box"
-											id="outlined-textarea"
 											label="직함"
 											placeholder="ex)책임,대표"
 											color="warning"
@@ -226,7 +221,6 @@ const Menu1 = () => {
 										<Divider/>
 										<TextField
 											className="file-text-box"
-											id="filled-select-currency-native"
 											select
 											label="방문경로"
 											color="warning"
@@ -242,7 +236,6 @@ const Menu1 = () => {
 										<Divider/>
 										<TextField
 											className="file-text-box"
-											id="filled-select-currency-native"
 											select
 											label="문의항목"
 											color="warning"
@@ -264,6 +257,7 @@ const Menu1 = () => {
 											}}
 											maxLength={4000}
 											className="file-text-box"
+											placeholder="문의내용을 상세하게 작성해주세요."
 											name="content" color="warning"/>
 										<Button
 											id="recruitFile"
@@ -272,11 +266,9 @@ const Menu1 = () => {
 												width: '180px',
 												height: '50px',
 												borderRadius: '30px',
-												margin: '20px 0px 30px 0',
-												marginTop: '64px',
+												margin:'30px auto',
 												padding: '15px 24px 15px 32px',
 												backgroundColor:'#ff8d00',
-												float:'right'
 											}}
 											type="submit"
 											value="Send"
