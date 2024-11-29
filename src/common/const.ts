@@ -2,6 +2,10 @@
 export const VITE_APP_IMGS =
 	import.meta.env.MODE == 'development' ? import.meta.env.VITE_APP_LOCAL_IMGS : import.meta.env.VITE_APP_IMGS
 
+export const VITE_EMAIL_PUB_KEY = import.meta.env.VITE_EMAIL_PUB_KEY;
+export const VITE_EMAIL_PRI_KEY = import.meta.env.VITE_EMAIL_PRI_KEY;
+export const VITE_EMAIL_SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID;
+export const VITE_EMAIL_TEMP_ID = import.meta.env.VITE_EMAIL_TEMP_ID;
 /* ******************* WAS URL ******************* */
 const ROOT_URL: string = window.location.host
 const HTTP: string = 'http://'

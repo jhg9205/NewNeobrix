@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import { PATH } from '@common/domain'
 import useClasses from '@utils/useClasses'
 import logoBlack from '@images/common/logoN-black2.png'
-import Menu from 'antd'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import {Box} from "@mui/material";
 
@@ -115,6 +114,10 @@ const HeaderPc2 = () => {
 									</Link>
 								</div>
 							</li>
+							<li>
+							</li>
+							<li>
+							</li>
 							{menuLst.map((v, idx) => (
 								<li
 									key={idx}
@@ -125,6 +128,8 @@ const HeaderPc2 = () => {
 							))}
 						</ul>
 						<div className="detailMenu">
+							<ul></ul>
+							<ul></ul>
 							<ul></ul>
 							<ul>
 								{subMenuList1.map((v, idx) => (

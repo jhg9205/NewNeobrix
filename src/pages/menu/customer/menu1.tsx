@@ -7,7 +7,8 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import {getViewSize} from "@utils/functions";
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
-import {ALERT} from "@common/const";
+import {ALERT,VITE_EMAIL_PUB_KEY,VITE_EMAIL_PRI_KEY,VITE_EMAIL_SERVICE_ID,VITE_EMAIL_TEMP_ID} from "@common/const";
+import {$GET} from "@utils/request";
 const root = [
 	{
 		value: '',
@@ -84,30 +85,51 @@ const Menu1 = () => {
 	const form = useRef<HTMLFormElement>(null);
 	const navigate = useNavigate();
 	const sendEmail = (e: React.FormEvent<HTMLFormElement>) =>{
+
 		e.preventDefault();
 		if(!form.current){
 			console.log("환경 변수가 설정되지 않았더나 올바르지 않습니다.")
 			return;
 		}
-		emailjs
-			.sendForm(
-				"service_0npi2za",
-				"template_mlaxjqc",
-				form.current,
-				"KDjYExrvm0bde6hbm"
-			)
-			.then((result)=>{
+		//해당 계정의 현재 월에 사용 가능한 횟수 조회
+		$GET(("https://api.emailjs.com/api/v1.1/history?"+
+			"user_id="+VITE_EMAIL_PUB_KEY+
+			"&accessToken="+VITE_EMAIL_PRI_KEY),(res:any)=>{
+
+			let today = new Date();
+			const formTemp:any = form.current;
+
+			const temp = res.data.rows.filter((data:any)=>data.updated_at.substring(0,7)==
+				today.getFullYear()+"-"+('0' + (today.getMonth() + 1)).slice(-2))
+			//월에 사용 횟수가 200 이상인 경우 API차단
+			if(temp.length >= 200) {
 				alert.icon({
-					type:ALERT.SUCCESS,
-					text:"메일이 성공적으로 보내졌습니다."
+					type: ALERT.WARNING,
+					text: "현재 월에 메일 발신이 가능한 횟수를 초과했습니다. 별도 메일로 보내주세요."
 				})
-			},
-			(error)=>{
-				alert.icon({
-					type:ALERT.WARNING,
-					text:"메일 전송을 실패하였습니다."
-				})
-			})
+				//월에 사용 횟수가 200 이상인 경우 API발송
+			}else{
+				emailjs
+					.sendForm(
+						VITE_EMAIL_SERVICE_ID,
+						VITE_EMAIL_TEMP_ID,
+						formTemp,
+						VITE_EMAIL_PUB_KEY
+					)
+					.then((result)=>{
+							alert.icon({
+								type:ALERT.SUCCESS,
+								text:"메일이 성공적으로 보내졌습니다."
+							})
+						},
+						(error)=>{
+							alert.icon({
+								type:ALERT.WARNING,
+								text:"메일 전송을 실패하였습니다."
+							})
+						})
+			}
+		})
 	}
 	const style: {} = {
 		width: '100%',
