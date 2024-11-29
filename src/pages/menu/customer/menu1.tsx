@@ -1,11 +1,13 @@
 import Layout from '@components/layouts/layout'
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import emailjs from "@emailjs/browser";
+import { alert } from '@utils/alert'
 import {InputLabel, Button, TextField, MenuItem, Grid, Divider, TextareaAutosize} from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import {getViewSize} from "@utils/functions";
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
+import {ALERT} from "@common/const";
 const root = [
 	{
 		value: '',
@@ -95,10 +97,16 @@ const Menu1 = () => {
 				"KDjYExrvm0bde6hbm"
 			)
 			.then((result)=>{
-				console.log(result.text)
+				alert.icon({
+					type:ALERT.SUCCESS,
+					text:"메일이 성공적으로 보내졌습니다."
+				})
 			},
 			(error)=>{
-				console.log(error.text)
+				alert.icon({
+					type:ALERT.WARNING,
+					text:"메일 전송을 실패하였습니다."
+				})
 			})
 	}
 	const style: {} = {
@@ -106,7 +114,6 @@ const Menu1 = () => {
 		minHeight: '800px',
 		textAlign: 'center'
 	}
-
 
 	return (
 		<Layout>
@@ -178,6 +185,7 @@ const Menu1 = () => {
 									</Grid>
 									<Grid item lg={10} md={6}>
 										<TextField
+											required
 											className="file-text-box"
 											label="이름"
 											placeholder="ex)홍길동"
@@ -185,6 +193,7 @@ const Menu1 = () => {
 											type="text" name="name"/>
 										<Divider/>
 										<TextField
+											required
 											className="file-text-box"
 											label="이메일"
 											placeholder="ex)Neobrix@neobrix.co.kr"
@@ -192,6 +201,7 @@ const Menu1 = () => {
 											type="email" name="email"/>
 										<Divider/>
 										<TextField
+											required
 											className="file-text-box"
 											label="연락처"
 											placeholder="ex)010-xxxx-xxxx"
@@ -250,6 +260,7 @@ const Menu1 = () => {
 										</TextField>
 										<Divider/>
 										<TextareaAutosize
+											required
 											style={{
 												width:'100%',
 												height:'400px',
