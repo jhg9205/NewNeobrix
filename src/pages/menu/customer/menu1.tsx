@@ -287,7 +287,8 @@ const Menu1 = () => {
 											style={{
 												width:'100%',
 												height:'400px',
-												fontSize:'15px'
+												fontSize:'15px',
+												maxWidth:'100%'
 											}}
 											maxLength={4000}
 											className="file-text-box"
@@ -297,7 +298,7 @@ const Menu1 = () => {
 											id="recruitFile"
 											variant="contained"
 											sx={{
-												width: '180px',
+												width: '150px',
 												height: '50px',
 												borderRadius: '30px',
 												margin:'30px auto',
@@ -313,7 +314,7 @@ const Menu1 = () => {
 												fontSize: '16px',
 												lineHeight: '18px'
 											}}
-										>메일 보내기</span>
+										>문의하기</span>
 											<ArrowForwardIcon/>
 										</Button>
 									</Grid>

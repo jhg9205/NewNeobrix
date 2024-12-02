@@ -74,11 +74,11 @@ const Menu3 = () => {
 							역량을 갖춘 인재를 육성합니다.</p>
 						{getViewSize()=='lg'?<></>:<Divider style={{marginTop:'30px'}}/>}
 						<Grid container style={{ padding: '50px 0', width: '70%', margin: '0 auto' }}>
-							<Grid item lg={3.5} style={{marginBottom:'50px', textAlign:getViewSize()=='lg'?'left':'center'}}>
-								{getViewSize()=='lg'?
-									<img src={recruitMain} className='recruit-main-img'/>:
+							<Grid item lg={3.5} style={{marginBottom:'50px', textAlign:'center'}}>
+{/*								{getViewSize()=='lg'?
+									<img src={recruitMain} className='recruit-main-img'/>:*/}
 									<img src={hand} className='recruit-mobile-img'/>
-								}
+{/*								}*/}
 							</Grid>
 							<Grid item lg={8.5} style={{marginBottom:'50px'}}>
 								<p className='role-main-text'>인사제도 기본방향</p>
@@ -89,7 +89,7 @@ const Menu3 = () => {
 								<p className='role-sub-text'>공정/객관적인 제도 운영</p>
 								<p className='role-text'>목표 수립 및 합의하는 과정을 포함해 공정성을 최대한 확보</p>
 							</Grid>
-							<Grid item lg={3.5} style={{textAlign:getViewSize()=='lg'?'left':'center'}}>
+							<Grid item lg={3.5} style={{textAlign:'center'}}>
 								{getViewSize()=='lg'?<></>:<Divider style={{margin:'30px 0'}}/>}
 								<motion.div
 									className='intro-text'
@@ -102,10 +102,10 @@ const Menu3 = () => {
 										y: { duration: 0.5 },
 									}}
 								>
-									{getViewSize()=='lg'?
-										<img src={recruitMain2} className='recruit-main-img'/>:
+{/*									{getViewSize()=='lg'?
+										<img src={recruitMain2} className='recruit-main-img'/>:*/}
 										<img src={tropy} className='recruit-mobile-img'/>
-									}
+{/*									}*/}
 								</motion.div>
 							</Grid>
 							<Grid item lg={8.5}>
