@@ -84,7 +84,7 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 				transition={{
 					ease: "easeInOut",
 					duration: 2,
-					y: { duration: 5 },
+					y: { duration: 2 },
 				}}
 			>
 				<div>
@@ -143,7 +143,7 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 					transition={{
 						ease: "easeInOut",
 						duration: 2,
-						y: { duration: 5 },
+						y: { duration: 2 },
 					}}
 				>
 					<div>
@@ -201,7 +201,7 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 				transition={{
 					ease: "easeInOut",
 					duration: 2,
-					y: { duration: 5 },
+					y: { duration: 2 },
 				}}
 			>
 				<div>
@@ -266,7 +266,7 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 						slidesPerView={1}
 						navigation={{ prevEl: '.prev-swiper', nextEl: '.next-swiper' }}
 						pagination={{ clickable: true }}
-						autoplay={{ delay: 3000, disableOnInteraction: false }}
+						autoplay={{ delay: 4000, disableOnInteraction: false }}
 					>
 						<SwiperSlide>
 							<div id="slider1" className="slider-img">
