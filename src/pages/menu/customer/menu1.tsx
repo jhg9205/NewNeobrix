@@ -125,7 +125,8 @@ const Menu1 = () => {
 						(error)=>{
 							alert.icon({
 								type:ALERT.WARNING,
-								text:"메일 전송을 실패하였습니다."
+								text:"메일 전송을 실패하였습니다."+
+									"에러내용 : "+error.text
 							})
 						})
 			}
