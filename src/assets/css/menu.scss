@@ -497,22 +497,6 @@
 			}
 		}
 	}
-	.intro-dream{
-		padding:0 300px;
-		margin: 100px 0;
-		@include mobile(){
-			padding: 0;
-			margin: 50px 0;
-			width: 100%;
-		}
-		p{
-			padding: 0 50px;
-			text-align: center;
-		}
-		img{
-			width:100%;
-		}
-	}
 	.intro-value{
 		background-color: #F7FBFF;
 		height: 700px;
@@ -554,6 +538,34 @@
 				line-height: 20px;
 			}
 		}
+	}
+}
+.intro-dream{
+	padding:0 30px;
+	margin: 100px auto;
+	width: 70%;
+	text-align: left;
+	@include mobile(){
+		padding: 0;
+		margin: 50px 0;
+		width: 100%;
+	}
+	img{
+		width:60%;
+	}
+	.intro-dream-title{
+		font-size: 30px;
+		color: $pointColor;
+		margin-bottom: 20px;
+	}
+	.intro-dream-main{
+		font-size: 28px;
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+	.intro-dream-sub{
+		font-size: 18px;
+		color: rgba(0, 0, 0, 0.65);
 	}
 }
 .ci{
@@ -1205,8 +1217,8 @@
 		color: $pointColor;
 		text-align: left;
 		width: 70%;
-		margin: 0 auto;
-		padding:30px 0 0 30px;
+		margin: 100px auto 20px auto;
+		padding:0 0 0 30px;
 		@include mobile(){
 			font-size: 18px;
 			width: 90%;

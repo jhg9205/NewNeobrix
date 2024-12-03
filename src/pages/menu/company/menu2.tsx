@@ -4,6 +4,9 @@ import {Divider, Grid} from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
 import {useNavigate} from "react-router-dom";
 import dream from '@images/menu/intro-dream.png'
+import target from '@images/menu/target.png'
+import chart from '@images/menu/chart.png'
+import slogen from '@images/menu/slogen.png'
 import shake from '@images/menu/shake.png'
 import check from '@images/menu/check.png'
 import earth from '@images/menu/earth.png'
@@ -35,14 +38,14 @@ const Menu2 = () => {
 				<Divider/>
 				<div className='menu-flow'>
 					<HomeIcon onClick={()=>{navigate('/')}}/>
-					<p>&gt; 기업소개 &gt; </p><span>비전 및 이념</span>
+					<p>&gt; 기업소개 &gt; </p><span>비전</span>
 				</div>
 			</>:
 				<Grid container>
 					<Grid item sm={8} className='menu-header-mobile'>
 						<div className='menu-flow-mobile'>
 							<HomeIcon onClick={()=>{navigate('/')}}/>
-							<span> · 기업소개 · 비전 및 이념</span>
+							<span> · 기업소개 · 비전</span>
 						</div>
 						<div className='menu-sub-mobile'>
 							<p>비전 및 이념</p>
@@ -66,8 +69,43 @@ const Menu2 = () => {
 					}}
 				>
 				<div className='intro-dream'>
-					<img src={dream}/>
+					<p className='intro-dream-title'>Neobrix의 다양한 IT 분야 전문가들이 당신의 꿈과 함께 합니다.</p>
+					<p className='intro-dream-sub'>Neobrix는 사람을 중요하게 생각하고 우수한 조직문화를 바탕으로 변화와 혁신을 주도하고 있습니다.
+						최신 ICT기술을 적용한 신규 솔루션 및 서비스 제공을 위한 지속적인 활동을 하고, 차별화된 고객 서비스 제공을 위해 항상 노력하고 고민하는 기업으로 발전해 가고자 합니다.</p>
 				</div>
+				<div className='intro-dream'>
+					<Grid container>
+						<Grid item lg={2} style={{textAlign:'center'}}>
+							<img src={chart}/>
+						</Grid>
+						<Grid item lg={10}>
+							<p className='intro-dream-main'>비전</p>
+							<p className='intro-dream-sub'>구성원 개개인의 자율적인고 창조적인 마인드로 세상을 이롭게 – 행복을 줄 수 있는 기업</p>
+						</Grid>
+					</Grid>
+				</div>
+					<div className='intro-dream'>
+						<Grid container>
+							<Grid item lg={2} style={{textAlign:'center'}}>
+								<img src={slogen}/>
+							</Grid>
+							<Grid item lg={10}>
+								<p className='intro-dream-main'>슬로건</p>
+								<p className='intro-dream-sub'>AUTOONOMY,  CONFIDENCE AND INTERACTION</p>
+							</Grid>
+						</Grid>
+					</div>
+					<div className='intro-dream'>
+						<Grid container>
+							<Grid item lg={2} style={{textAlign:'center'}}>
+								<img src={target}/>
+							</Grid>
+							<Grid item lg={10}>
+								<p className='intro-dream-main'>경영철학</p>
+								<p className='intro-dream-sub'>행복한 구성원이 행복한 기업을 만든다. 행복한 기업이 행복한 세상을 만든다.</p>
+							</Grid>
+						</Grid>
+					</div>
 				</motion.div>
 				<motion.div
 					initial={{ opacity: 0, y: 100 }}
