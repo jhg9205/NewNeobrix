@@ -202,6 +202,10 @@
 			}
 		}
 	}
+	#recruitFile{
+		float: left;
+		margin-left: 50px;
+	}
 	.contain {
 		padding: 100px 250px 0px 250px;
 		background-size: cover;
@@ -215,10 +219,6 @@
 			width: 100%;
 			padding: 50px;
 			margin: 0 auto;
-		}
-		#recruitFile{
-			float: left;
-			margin-left: 50px;
 		}
 
 		.ceo_img {

@@ -107,8 +107,7 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 								borderRadius: '30px',
 								margin: '20px 0px 30px 0',
 								marginTop: '64px',
-								padding: '15px 24px 15px 32px',
-								backgroundColor:'#74f8c2'
+								padding: '15px 24px 15px 32px'
 							}}
 							onClick={() => {
 								navigate('/company')
@@ -166,8 +165,7 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 									borderRadius: '30px',
 									margin: '20px 0px 30px 0',
 									marginTop: '64px',
-									padding: '15px 24px 15px 32px',
-									backgroundColor:'#74f8c2'
+									padding: '15px 24px 15px 32px'
 								}}
 								onClick={() => {
 									navigate('/company')
