@@ -80,26 +80,26 @@ const Menu1 = () => {
 					<div className="contain" style={{ display: 'grid', overflow: 'hidden' }}>
 						<motion.div
 							className='intro-text'
-							initial={{ opacity: 0, y: 50}}
+							initial={{ opacity: 0, y: 100}}
 							whileInView={{ opacity: 1, y: 0}}
 							viewport={{ once: false }}
 							transition={{
 								ease: "easeInOut",
-								duration: 0.5,
-								y: { duration: 0.5 },
+								duration: 1,
+								y: { duration: 1 },
 							}}
 						>
 							<img src={talent2} alt="recruit" className="recruit-img" style={{margin:'0 auto'}}/>
 						</motion.div>
 						<motion.div
 							className='intro-text'
-							initial={{ opacity: 0, y: 50}}
+							initial={{ opacity: 0, y: 100}}
 							whileInView={{ opacity: 1, y: 0}}
 							viewport={{ once: false }}
 							transition={{
 								ease: "easeInOut",
-								duration: 0.5,
-								y: { duration: 0.5 },
+								duration: 1,
+								y: { duration: 1 },
 							}}
 						>
 						<img src={talent3} alt="recruit" className="recruit-img" style={{width:getViewSize()=='lg'?'80%':'100%',marginTop:'100px'}}/>

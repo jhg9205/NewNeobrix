@@ -59,13 +59,13 @@ const Menu3 = () => {
 			<div id="listLayout">
 				<motion.div
 					className='intro-text'
-					initial={{ opacity: 0, y: 50}}
+					initial={{ opacity: 0, y: 100}}
 					whileInView={{ opacity: 1, y: 0}}
 					viewport={{ once: false }}
 					transition={{
 						ease: "easeInOut",
-						duration: 0.5,
-						y: { duration: 0.5 },
+						duration: 1,
+						y: { duration: 1 },
 					}}
 				>
 					<div className="menu_title_contain" style={{width:'100%',textAlign:'center'}}>
@@ -93,13 +93,13 @@ const Menu3 = () => {
 								{getViewSize()=='lg'?<></>:<Divider style={{margin:'30px 0'}}/>}
 								<motion.div
 									className='intro-text'
-									initial={{ opacity: 0, y: 50}}
+									initial={{ opacity: 0, y: 100}}
 									whileInView={{ opacity: 1, y: 0}}
 									viewport={{ once: false }}
 									transition={{
 										ease: "easeInOut",
-										duration: 0.5,
-										y: { duration: 0.5 },
+										duration: 1,
+										y: { duration: 1 },
 									}}
 								>
 {/*									{getViewSize()=='lg'?
@@ -111,13 +111,13 @@ const Menu3 = () => {
 							<Grid item lg={8.5}>
 								<motion.div
 									className='intro-text'
-									initial={{ opacity: 0, y: 50}}
+									initial={{ opacity: 0, y: 100}}
 									whileInView={{ opacity: 1, y: 0}}
 									viewport={{ once: false }}
 									transition={{
 										ease: "easeInOut",
-										duration: 0.5,
-										y: { duration: 0.5 },
+										duration: 1,
+										y: { duration: 1 },
 									}}
 								>
 									<p className='role-main-text'>보상제도</p>

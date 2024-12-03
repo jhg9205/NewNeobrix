@@ -10,6 +10,7 @@ import {useNavigate} from "react-router-dom";
 import {ALERT,VITE_EMAIL_PUB_KEY,VITE_EMAIL_PRI_KEY,VITE_EMAIL_SERVICE_ID,VITE_EMAIL_TEMP_ID} from "@common/const";
 import {$GET} from "@utils/request";
 import {Helmet} from "react-helmet-async";
+import {motion} from "framer-motion";
 import email from '@images/menu/email3d.png'
 const root = [
 	{
@@ -180,6 +181,17 @@ const Menu1 = () => {
 				<Divider/>
 				<div className="menu_title_contain" style={style}>
 					{/*컨텐츠 div*/}
+					<motion.div
+						className='intro-text'
+						initial={{ opacity: 0, y: 100}}
+						whileInView={{ opacity: 1, y: 0}}
+						viewport={{ once: false }}
+						transition={{
+							ease: "easeInOut",
+							duration: 1,
+							y: { duration: 1 },
+						}}
+					>
 					<div className="contain">
 						<div className="contain-sub">
 							<Grid container>
@@ -334,6 +346,7 @@ const Menu1 = () => {
 							</form>
 						</div>
 					</div>
+					</motion.div>
 				</div>
 			</div>
 		</Layout>

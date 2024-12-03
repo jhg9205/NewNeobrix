@@ -26,13 +26,13 @@ const Menu2 = () => {
 	const subTitleTrans = (
 		<motion.div
 			className='intro-text'
-			initial={{ opacity: 0, y: 50}}
+			initial={{ opacity: 0, y: 100}}
 			whileInView={{ opacity: 1, y: 0}}
 			viewport={{ once: false }}
 			transition={{
 				ease: "easeInOut",
-				duration: 0.5,
-				y: { duration: 0.5 },
+				duration: 1,
+				y: { duration: 1 },
 			}}
 		>
 			<div className="menu_title_p_fixed_warp">
@@ -58,13 +58,13 @@ const Menu2 = () => {
 					{/*컨텐츠 div*/}
 					<motion.div
 						className='intro-text'
-						initial={{ opacity: 0, y: 50}}
+						initial={{ opacity: 0, y: 100}}
 						whileInView={{ opacity: 1, y: 0}}
 						viewport={{ once: false }}
 						transition={{
 							ease: "easeInOut",
-							duration: 0.5,
-							y: { duration: 0.5 },
+							duration: 1,
+							y: { duration: 1 },
 						}}
 					>
 					<div className="contain">
