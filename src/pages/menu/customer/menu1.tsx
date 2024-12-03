@@ -183,13 +183,13 @@ const Menu1 = () => {
 					<div className="contain">
 						<div className="contain-sub">
 							<Grid container>
-								<Grid item lg={10}>
+								<Grid item lg={10} md={12}>
 									<p className="contain-sub-title">NeoBrix에 궁금한 점이 있으시면 문의해주세요.</p>
 									<p className="contain-sub-content">시스템 구축, 솔루션 도입, 컨설팅 문의 등 IT서비스 이용과 관련해 궁금하신 점이 있으신가요?</p>
 									<p className="contain-sub-content">기술 협력, 사업 협력 등 파트너십을 제안하고 싶으신가요?</p>
 									<p className="contain-sub-content">아래 항목에 문의 사항을 작성해주시면 담당자가 빠른 시일 내 연락 드리겠습니다.</p>
 								</Grid>
-								<Grid item lg={2} style={{textAlign:'center'}}>
+								<Grid item lg={2} md={12} style={{textAlign:'center',alignContent:'center',width:'100%'}}>
 									<img src={email} style={{height:'150px'}}/>
 								</Grid>
 							</Grid>
