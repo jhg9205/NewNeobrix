@@ -102,7 +102,7 @@ const Menu1 = () => {
 								y: { duration: 0.5 },
 							}}
 						>
-						<img src={talent3} alt="recruit" className="recruit-img" style={{width:'80%',marginTop:'100px'}}/>
+						<img src={talent3} alt="recruit" className="recruit-img" style={{width:getViewSize()=='lg'?'80%':'100%',marginTop:'100px'}}/>
 						</motion.div>
 						<Button
 							id="recruitFile"
@@ -112,7 +112,7 @@ const Menu1 = () => {
 								width: '200px',
 								height: '70px',
 								borderRadius: '70px',
-								margin: '0 auto',
+								margin: '100px auto',
 								fontSize: '17px',
 								fontWeight: 'bold',
 								backgroundColor:'#f38225'}}
