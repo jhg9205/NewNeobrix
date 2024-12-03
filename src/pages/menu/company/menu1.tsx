@@ -3,6 +3,7 @@ import FadeImg from '@components/ui/effect/fadeImg'
 
 import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 import introImg from '@images/common/img-intro2.png'
+import earth from '@images/main/earth.gif'
 import logoBlack from '@images/common/logoN-black2.png'
 import React from 'react'
 import {Divider, Fade, Grid} from '@mui/material'
@@ -150,7 +151,7 @@ const Menu1 = () => {
 								</Grid>
 								<Grid item lg={6} md={12}>
 									<div className="ceo_img">
-										<FadeImg pc={introImg} delay={1500} isContent={true} />
+										<FadeImg pc={earth} delay={1500} isContent={true} />
 									</div>
 								</Grid>
 							</Grid>

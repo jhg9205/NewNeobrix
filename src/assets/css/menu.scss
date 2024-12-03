@@ -175,7 +175,7 @@
 		color: #6d6d6d;
 	}
 	.greeting{
-		padding: 0 200px;
+		padding: 100px 250px;
 		height: 100%;
 		@include mobile(){
 			padding: 0 50px;
@@ -203,7 +203,7 @@
 		}
 	}
 	.contain {
-		padding: 100px 150px 0px 150px;
+		padding: 100px 250px 0px 250px;
 		background-size: cover;
 		display: flex;
 		@include mobile {
@@ -222,10 +222,10 @@
 		}
 
 		.ceo_img {
-			text-align: right;
+			text-align: center;
 
 			img {
-				max-width: 100%;
+				max-width: 60%;
 				height: auto;
 			}
 		}
@@ -557,7 +557,7 @@
 	}
 }
 .ci{
-	padding: 0 200px;
+	padding: 0 250px;
 	height: 100%;
 	margin-bottom: 100px;
 	@include mobile(){
