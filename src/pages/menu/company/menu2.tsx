@@ -4,7 +4,10 @@ import {Divider, Grid} from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
 import {useNavigate} from "react-router-dom";
 import dream from '@images/menu/intro-dream.png'
-import vission from '@images/menu/intro-vission.png'
+import shake from '@images/menu/shake.png'
+import check from '@images/menu/check.png'
+import earth from '@images/menu/earth.png'
+import baloon from '@images/menu/baloon.png'
 import { motion } from "framer-motion";
 import {getViewSize} from "@utils/functions";
 
@@ -63,18 +66,9 @@ const Menu2 = () => {
 					}}
 				>
 				<div className='intro-dream'>
-						<div className="menu_title_p_fixed_warp">
-							<section>
-								<p className="menu_title_p1">
-									Neo<span>Vission</span>
-								</p>
-								<p className="menu_title_p2">Sustainable Operation & Robust Framework.</p>
-							</section>
-						</div>
 					<img src={dream}/>
 				</div>
 				</motion.div>
-				<Divider/>
 				<motion.div
 					initial={{ opacity: 0, y: 100 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -86,15 +80,32 @@ const Menu2 = () => {
 					}}
 				>
 				<div className='intro-value'>
-					<div className="menu_title_p_fixed_warp">
-						<section>
-							<p className="menu_title_p1">
-								Neo<span>Values</span>
-							</p>
-							<p className="menu_title_p2">Sustainable Operation & Robust Framework.</p>
-						</section>
-					</div>
-					<img src={vission}/>
+					<Grid container>
+						<Grid item lg={3} md={6}>
+							<img src={check}/>
+							<p className='vision-main'>자율=책임</p>
+							<p className='vision-sub'>개인의 자율에 의한</p>
+							<p className='vision-sub'>책임감</p>
+						</Grid>
+						<Grid item lg={3} md={6}>
+							<img src={shake}/>
+							<p className='vision-main'>상호 존중=신뢰</p>
+							<p className='vision-sub'>상호 존중하는 관계에서</p>
+							<p className='vision-sub'>나오는 신뢰성</p>
+						</Grid>
+						<Grid item lg={3} md={6}>
+							<img src={baloon}/>
+							<p className='vision-main'>소통=협업</p>
+							<p className='vision-sub'>소통으로 만드는</p>
+							<p className='vision-sub'>협업</p>
+						</Grid>
+						<Grid item lg={3} md={6}>
+							<img src={earth}/>
+							<p className='vision-main'>행복한 사회</p>
+							<p className='vision-sub'>행복한 사회를 추구하는</p>
+							<p className='vision-sub'>사회적 기업</p>
+						</Grid>
+					</Grid>
 				</div>
 				</motion.div>
 			</div>
