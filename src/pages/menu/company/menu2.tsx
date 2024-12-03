@@ -73,7 +73,7 @@ const Menu2 = () => {
 					}}
 				>
 				<div className='intro-dream'>
-					<p className='intro-dream-title'>Neobrix의 다양한 IT 분야 전문가들이 당신의 꿈과 함께 합니다.</p>
+					<p className='intro-dream-title'>Neo BRIX의 다양한 IT 분야 전문가들이 당신의 꿈과 함께 합니다.</p>
 					<p className='intro-dream-sub'>Neobrix는 사람을 중요하게 생각하고 우수한 조직문화를 바탕으로 변화와 혁신을 주도하고 있습니다.
 						최신 ICT기술을 적용한 신규 솔루션 및 서비스 제공을 위한 지속적인 활동을 하고, 차별화된 고객 서비스 제공을 위해 항상 노력하고 고민하는 기업으로 발전해 가고자 합니다.</p>
 				</div>
