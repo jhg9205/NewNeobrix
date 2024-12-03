@@ -309,7 +309,7 @@ body {
 			font-weight: normal;
 		}
 		.swiper-main-text{
-			background: linear-gradient(-10deg, $gradientColor2 29.34%, $pointColor 56.73%);
+			background: linear-gradient(-10deg, #ff5858 29.34%, $pointColor 56.73%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			font-weight: 700;
@@ -344,7 +344,7 @@ body {
 		}
 	}
 	#recruitFile{
-		background-color: $pointColor;
+		background-image: linear-gradient(-10deg, #ff5858 0%, $pointColor 100%);
 	}
 }
 .MuiSpeedDial-fab{
