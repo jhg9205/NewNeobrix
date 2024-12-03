@@ -28,6 +28,7 @@ import RES2 from "@images/menu/RES2.png";
 import RES3 from "@images/menu/RES3.png";
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
+import {Helmet} from "react-helmet-async";
 const title = [
 	'사업자등록증',
 	'소프트웨어사업자확인서',
@@ -153,6 +154,9 @@ const Menu3 = () => {
 	}
 	return (
 		<Layout>
+			<Helmet>
+				<title>면허및특허 - 네오브릭스</title>
+			</Helmet>
 			{getViewSize()=='lg'?
 				<>
 					<div className='menu-header'>

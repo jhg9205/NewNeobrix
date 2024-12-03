@@ -7,6 +7,7 @@ import React from 'react'
 import { BusinessDetail } from '@pages/menu/business/businessDetail'
 import MenuListbar from './menuListbar'
 import { PATH } from '@common/domain'
+import {Helmet} from "react-helmet-async";
 
 const Menu1 = () => {
 	const [businessInfo, setBusinessInfo] = React.useState(false)
@@ -34,18 +35,11 @@ const Menu1 = () => {
 		</Transition>
 	)
 
-	return !businessInfo ? (
+	return (
 		<Layout>
-			<div id="businessLayout">
-				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
-				{menulist}
-				<div className="menu_title_contain" style={style}>
-					{subTitleTrans}
-				</div>
-			</div>
-		</Layout>
-	) : (
-		<Layout>
+			<Helmet>
+				<title>사업영역 - 네오브릭스</title>
+			</Helmet>
 			<div id="businessLayout">
 				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
 				{menulist}

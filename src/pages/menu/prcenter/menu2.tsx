@@ -10,6 +10,7 @@ import {alert} from "@utils/alert";
 import {ALERT} from "@common/const";
 import {$FileDownLoad} from "@utils/request";
 import {getViewSize} from "@utils/functions";
+import {Helmet} from "react-helmet-async";
 
 const Menu2 = () => {
 	const navigate = useNavigate();
@@ -41,6 +42,9 @@ const Menu2 = () => {
 
 	return (
 		<Layout>
+			<Helmet>
+				<title>CI - 네오브릭스</title>
+			</Helmet>
 			<div id="companyLayout">
 				{getViewSize()=='lg'?
 					<>

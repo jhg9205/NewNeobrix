@@ -21,6 +21,7 @@ import {Divider, Grid} from "@mui/material"
 import HomeIcon from "@mui/icons-material/Home"
 import {VITE_APP_IMGS} from "@common/const";
 import {getViewSize} from "@utils/functions";
+import {Helmet} from "react-helmet-async";
 
 interface ExpandMoreProps extends IconButtonProps {
 	expand: boolean;
@@ -37,6 +38,9 @@ const Menu1 = () => {
 
 	return (
 		<Layout>
+			<Helmet>
+				<title>회사소식 - 네오브릭스</title>
+			</Helmet>
 			{getViewSize()=='lg'?
 				<>
 					<div className='menu-header'>

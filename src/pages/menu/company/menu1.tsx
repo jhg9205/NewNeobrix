@@ -14,6 +14,7 @@ import {alert} from "@utils/alert";
 import {ALERT} from "@common/const";
 import {$FileDownLoad} from "@utils/request";
 import {getViewSize} from "@utils/functions";
+import { Helmet } from 'react-helmet-async';
 
 const Menu1 = () => {
 	const style = {
@@ -47,6 +48,9 @@ const Menu1 = () => {
 
 	return  (
 		<Layout>
+			<Helmet>
+				<title>인사말 - 네오브릭스</title>
+			</Helmet>
 			<div id="companyLayout">
 				<Swiper
 					className='company-slide'

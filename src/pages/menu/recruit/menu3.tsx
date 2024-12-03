@@ -13,6 +13,7 @@ import { fontStyle } from 'html2canvas/dist/types/css/property-descriptors/font-
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
 import {getViewSize} from "@utils/functions";
+import {Helmet} from "react-helmet-async";
 
 const Menu3 = () => {
 	const navigate = useNavigate();
@@ -20,6 +21,9 @@ const Menu3 = () => {
 
 	return (
 		<Layout>
+			<Helmet>
+				<title>인사제도 - 네오브릭스</title>
+			</Helmet>
 			{getViewSize()=='lg'?
 				<>
 					<div className='menu-header'>

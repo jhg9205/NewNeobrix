@@ -5,6 +5,7 @@ import {Divider, Grid} from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
 import {getViewSize} from "@utils/functions";
+import {Helmet} from "react-helmet-async";
 
 const Menu4 = () => {
 	const navigate = useNavigate()
@@ -16,6 +17,9 @@ const Menu4 = () => {
 
 	return (
 		<Layout>
+			<Helmet>
+				<title>오시는길 - 네오브릭스</title>
+			</Helmet>
 			{getViewSize()=='lg'?
 				<>
 					<div className='menu-header'>

@@ -13,6 +13,7 @@ import earth from '@images/menu/earth.png'
 import baloon from '@images/menu/baloon.png'
 import { motion } from "framer-motion";
 import {getViewSize} from "@utils/functions";
+import {Helmet} from "react-helmet-async";
 
 
 const Menu2 = () => {
@@ -25,6 +26,9 @@ const Menu2 = () => {
 
 	return (
 		<Layout>
+			<Helmet>
+				<title>비전 - 네오브릭스</title>
+			</Helmet>
 			{getViewSize()=='lg'?
 			<>
 				<div className='menu-header'>

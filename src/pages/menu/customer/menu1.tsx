@@ -9,6 +9,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
 import {ALERT,VITE_EMAIL_PUB_KEY,VITE_EMAIL_PRI_KEY,VITE_EMAIL_SERVICE_ID,VITE_EMAIL_TEMP_ID} from "@common/const";
 import {$GET} from "@utils/request";
+import {Helmet} from "react-helmet-async";
 const root = [
 	{
 		value: '',
@@ -140,6 +141,9 @@ const Menu1 = () => {
 
 	return (
 		<Layout>
+			<Helmet>
+				<title>문의하기 - 네오브릭스</title>
+			</Helmet>
 			<div id="listLayout">
 				{getViewSize()=='lg'?
 					<>

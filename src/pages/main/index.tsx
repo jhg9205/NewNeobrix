@@ -1,20 +1,18 @@
 import Layout from '@components/layouts/layout'
 
-import { Location } from '@pages/main/location'
-import { IntroCard } from '@pages/main/introCard'
 import { Intro2 } from '@pages/main/intro2'
-import { Contact } from '@pages/main/contact'
-import videoD from '@images/main/FatSneakyIberiannase.mp4';
-import HoverCard from "@pages/main/hoverCard";
-import Skill from "@pages/main/skill";
-import Social from "@pages/main/social";
 import {Intro} from "@pages/main/intro";
 import {Intro3} from "@pages/main/intro3";
 import {Intro4} from "@pages/main/intro4";
+import {Helmet} from "react-helmet-async";
+import React from "react";
 
 const Main = () => {
 	return (
 		<Layout main={true}>
+			<Helmet>
+				<title>네오브릭스 - SI&SOLUTION</title>
+			</Helmet>
 			<section>
 				<Intro />
 			</section>
@@ -27,22 +25,6 @@ const Main = () => {
 			<section>
 				<Intro4/>
 			</section>
-			{/*<section>*/}
-			{/*	<HoverCard/>*/}
-			{/*</section>*/}
-			{/*<section className="intro-card">*/}
-				{/*<IntroCard />*/}
-			{/*</section>*/}
-			{/*<section>*/}
-			{/*	<Social/>*/}
-			{/*</section>*/}
-			{/*<section><Skill/></section>*/}
-			{/*<section>*/}
-				{/*<Location />*/}
-			{/*</section>*/}
-			{/*<section className="contact">*/}
-				{/*<Contact />*/}
-			{/*</section>*/}
 		</Layout>
 	)
 }

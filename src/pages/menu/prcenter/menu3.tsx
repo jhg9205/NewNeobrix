@@ -17,6 +17,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
 import {VITE_APP_IMGS} from "@common/const";
 import {getViewSize} from "@utils/functions";
+import {Helmet} from "react-helmet-async";
 
 
 const Menu3 = () => {
@@ -39,6 +40,9 @@ const Menu3 = () => {
 
 	return (
 		<Layout>
+			<Helmet>
+				<title>FAQ - 네오브릭스</title>
+			</Helmet>
 			<div id="listLayout">
 				{getViewSize()=='lg'?
 					<>

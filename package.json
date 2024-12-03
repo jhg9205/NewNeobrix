@@ -37,6 +37,7 @@
 		"path": "^0.12.7",
 		"prettier": "^2.8.1",
 		"proj4": "^2.8.0",
+		"react-helmet-async": "^2.0.5",
 		"react-image-and-background-image-fade": "^1.0.8",
 		"react-router-sitemap": "^1.2.0",
 		"react-slick": "^0.29.0",

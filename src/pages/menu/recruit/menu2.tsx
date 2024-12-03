@@ -8,6 +8,7 @@ import MenuListbar from './menuListbar'
 import { PATH } from '@common/domain'
 import CustomTable from '@components/ui/table/table'
 import ment from '@data/recruit.json'
+import {Helmet} from "react-helmet-async";
 
 const Menu2 = () => {
 	const [check, setCheck] = React.useState(false)
@@ -47,6 +48,9 @@ const Menu2 = () => {
 
 	return (
 		<Layout>
+			<Helmet>
+				<title>채용전형 - 네오브릭스</title>
+			</Helmet>
 			<div id="listLayout">
 				<FadeImg id="fadeImg" pc={subTileImg} mobile={subTileMobile} isContent={false} />
 				<div className="menu_title_contain" style={style}>

@@ -15,6 +15,7 @@ import {motion} from "framer-motion";
 import Layout from "@components/layouts/layout";
 import {useNavigate} from "react-router-dom";
 import {getViewSize} from "@utils/functions";
+import {Helmet} from "react-helmet-async";
 
 const Menu4 = () =>{
     const navigate = useNavigate();
@@ -43,6 +44,9 @@ const Menu4 = () =>{
 
     return (
         <Layout>
+            <Helmet>
+                <title>복리후생 - 네오브릭스</title>
+            </Helmet>
             {getViewSize()=='lg'?
                 <>
                     <div className='menu-header'>

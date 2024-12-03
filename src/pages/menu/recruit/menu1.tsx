@@ -11,6 +11,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
 import Transition from "@components/ui/transition/transition";
 import {getViewSize} from "@utils/functions";
+import {Helmet} from "react-helmet-async";
 
 const Menu1 = () => {
 	const [check, setCheck] = React.useState(false)
@@ -38,6 +39,9 @@ const Menu1 = () => {
 
 	return (
 		<Layout>
+			<Helmet>
+				<title>인재상 - 네오브릭스</title>
+			</Helmet>
 			{getViewSize()=='lg'?
 				<>
 					<div className='menu-header'>
