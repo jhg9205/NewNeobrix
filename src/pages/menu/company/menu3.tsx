@@ -29,6 +29,8 @@ import RES3 from "@images/menu/RES3.png";
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
 import {Helmet} from "react-helmet-async";
+import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
+import PlagiarismOutlinedIcon from "@mui/icons-material/PlagiarismOutlined";
 const title = [
 	'사업자등록증',
 	'소프트웨어사업자확인서',
@@ -165,6 +167,17 @@ const Menu3 = () => {
 						</div>
 						<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
 							<span>네오브릭스 면허 및 특허</span>
+							<div style={{float:'right',fontSize:'16px'}}>
+								<div className='header-down-left'>
+									<MailOutlineRoundedIcon style={{marginRight:'8px'}}/>
+									고객문의
+								</div>
+								·
+								<div className='header-down-right'>
+									<PlagiarismOutlinedIcon style={{marginRight:'8px'}}/>
+									회사소개서
+								</div>
+							</div>
 						</div>
 					</div>
 					<Divider/>

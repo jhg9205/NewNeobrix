@@ -12,6 +12,8 @@ import {$GET} from "@utils/request";
 import {Helmet} from "react-helmet-async";
 import {motion} from "framer-motion";
 import email from '@images/menu/email3d.png'
+import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
+import PlagiarismOutlinedIcon from "@mui/icons-material/PlagiarismOutlined";
 const root = [
 	{
 		value: '',
@@ -155,6 +157,12 @@ const Menu1 = () => {
 							</div>
 							<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
 								<span>문의 내용을 Neobrix에 보내주세요</span>
+								<div style={{float:'right',fontSize:'16px'}}>
+									<div className='header-down-right'>
+										<PlagiarismOutlinedIcon style={{marginRight:'8px'}}/>
+										회사소개서
+									</div>
+								</div>
 							</div>
 						</div>
 						<Divider/>

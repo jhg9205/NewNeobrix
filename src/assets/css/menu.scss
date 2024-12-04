@@ -414,6 +414,28 @@
 		color: $pointColor;
 		cursor: pointer;
 	}
+	.header-down-left{
+		float: left;
+		align-items: center;
+		display: flex;
+		margin-right: 15px;
+		font-weight: 500;
+	}
+	.header-down-right{
+		float: right;
+		align-items: center;
+		display: flex;
+		margin-left: 15px;
+		font-weight: 500;
+	}
+	.header-down-right:hover{
+		color: $pointColor;
+		cursor: pointer;
+	}
+	.header-down-left:hover{
+		color: $pointColor;
+		cursor: pointer;
+	}
 }
 
 .menu-header-mobile{

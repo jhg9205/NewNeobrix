@@ -1,19 +1,15 @@
 import Layout from '@components/layouts/layout'
-import Transition from '@components/ui/transition/transition'
 import { motion } from "framer-motion";
 import React from 'react'
-import MenuListbar from './menuListbar'
-import { PATH } from '@common/domain'
 import {Card, Divider, Grid} from '@mui/material'
 import hand from '@images/menu/hand.png'
 import tropy from '@images/menu/tropy.png'
-import recruitMain from '@images/menu/recruit-main.png'
-import recruitMain2 from '@images/menu/recruit-main2.png'
-import { fontStyle } from 'html2canvas/dist/types/css/property-descriptors/font-style'
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate} from "react-router-dom";
 import {getViewSize} from "@utils/functions";
 import {Helmet} from "react-helmet-async";
+import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
+import PlagiarismOutlinedIcon from "@mui/icons-material/PlagiarismOutlined";
 
 const Menu3 = () => {
 	const navigate = useNavigate();
@@ -32,6 +28,17 @@ const Menu3 = () => {
 						</div>
 						<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
 							<span>네오브릭스의 인사제도</span>
+							<div style={{float:'right',fontSize:'16px'}}>
+								<div className='header-down-left'>
+									<MailOutlineRoundedIcon style={{marginRight:'8px'}}/>
+									고객문의
+								</div>
+								·
+								<div className='header-down-right'>
+									<PlagiarismOutlinedIcon style={{marginRight:'8px'}}/>
+									회사소개서
+								</div>
+							</div>
 						</div>
 					</div>
 					<Divider/>

@@ -14,6 +14,8 @@ import baloon from '@images/menu/baloon.png'
 import { motion } from "framer-motion";
 import {getViewSize} from "@utils/functions";
 import {Helmet} from "react-helmet-async";
+import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
+import PlagiarismOutlinedIcon from "@mui/icons-material/PlagiarismOutlined";
 
 
 const Menu2 = () => {
@@ -37,6 +39,17 @@ const Menu2 = () => {
 					</div>
 					<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
 						<span>네오브릭스 비전 및 핵심가치</span>
+						<div style={{float:'right',fontSize:'16px'}}>
+							<div className='header-down-left'>
+								<MailOutlineRoundedIcon style={{marginRight:'8px'}}/>
+								고객문의
+							</div>
+							·
+							<div className='header-down-right'>
+								<PlagiarismOutlinedIcon style={{marginRight:'8px'}}/>
+								회사소개서
+							</div>
+						</div>
 					</div>
 				</div>
 				<Divider/>

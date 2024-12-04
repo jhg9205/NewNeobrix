@@ -22,6 +22,8 @@ import HomeIcon from "@mui/icons-material/Home"
 import {VITE_APP_IMGS} from "@common/const";
 import {getViewSize} from "@utils/functions";
 import {Helmet} from "react-helmet-async";
+import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
+import PlagiarismOutlinedIcon from "@mui/icons-material/PlagiarismOutlined";
 
 interface ExpandMoreProps extends IconButtonProps {
 	expand: boolean;
@@ -48,7 +50,18 @@ const Menu1 = () => {
 							회사소식
 						</div>
 						<div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-							<span></span>
+							<span>네오브릭스의 소식을 알려드립니다.</span>
+							<div style={{float:'right',fontSize:'16px'}}>
+								<div className='header-down-left'>
+									<MailOutlineRoundedIcon style={{marginRight:'8px'}}/>
+									고객문의
+								</div>
+								·
+								<div className='header-down-right'>
+									<PlagiarismOutlinedIcon style={{marginRight:'8px'}}/>
+									회사소개서
+								</div>
+							</div>
 						</div>
 					</div>
 					<Divider/>
