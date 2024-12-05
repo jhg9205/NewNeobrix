@@ -18,6 +18,7 @@ import {getViewSize} from "@utils/functions";
 import {Helmet} from "react-helmet-async";
 import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
 import PlagiarismOutlinedIcon from "@mui/icons-material/PlagiarismOutlined";
+import {$FileDownLoad} from "@utils/request";
 
 const Menu4 = () =>{
     const navigate = useNavigate();
@@ -58,12 +59,12 @@ const Menu4 = () =>{
                         <div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
                             <span>네오브릭스의 복리후생</span>
                             <div style={{float:'right',fontSize:'16px'}}>
-                                <div className='header-down-left'>
+                                <div className='header-down-left' onClick={()=>navigate('/customer')}>
                                     <MailOutlineRoundedIcon style={{marginRight:'8px'}}/>
                                     고객문의
                                 </div>
                                 ·
-                                <div className='header-down-right'>
+                                <div className='header-down-right' onClick={()=>$FileDownLoad('/download/NEOBRIX.pdf', 'NEOBRIX_회사소개서', 'pdf')}>
                                     <PlagiarismOutlinedIcon style={{marginRight:'8px'}}/>
                                     회사소개서
                                 </div>
