@@ -14,7 +14,7 @@ const _customAxios: AxiosInstance = axios.create({
  * <PRE>
  * 1. Name : interceptors.request
  * 2. Comment   : 요청 인터셉터 (요청 전에 가로채서 axios 설정을 적용함)
- * 3. Author    : CIK
+ * 3. Author    : JSH
  * <PRE>
  */
 _customAxios.interceptors.request.use(
@@ -42,7 +42,7 @@ _customAxios.interceptors.request.use(
  * <PRE>
  * 1. Name : interceptors.response
  * 2. Comment   : 응답 인터셉터 (응답 직전에 호출)
- * 3. Author    : CIK
+ * 3. Author    : JSH
  * <PRE>
  */
 _customAxios.interceptors.response.use(
@@ -69,7 +69,7 @@ _customAxios.interceptors.response.use(
  * <PRE>
  * 1. Name : callError
  * 2. Comment   : 에러표시로그
- * 3. Author    : CIK
+ * 3. Author    : JSH
  * <PRE>
  */
 const callError = (error: any) => {
@@ -81,7 +81,7 @@ const callError = (error: any) => {
  * <PRE>
  * 1. Name : $GET
  * 2. Comment   : AXIOS GET 방식요청
- * 3. Author    : CIK
+ * 3. Author    : JSH
  * <PRE>
  */
 export const $GET = (url: string, success: Callback) => {
@@ -103,7 +103,7 @@ export const $GET = (url: string, success: Callback) => {
  * <PRE>
  * 1. Name : $POST
  * 2. Comment   : AXIOS POST 방식요청
- * 3. Author    : CIK
+ * 3. Author    : JSH
  * <PRE>
  */
 export const $POST = (url: string, params: {}, success: Callback) => {
@@ -125,7 +125,7 @@ export const $POST = (url: string, params: {}, success: Callback) => {
  * <PRE>
  * 1. Name : $FileDownLoad
  * 2. Comment   : 파일다운로드
- * 3. Author    : CIK
+ * 3. Author    : JSH
  * <PRE>
  */
 export const $FileDownLoad = (url: string, fileName: string, type: string) => {

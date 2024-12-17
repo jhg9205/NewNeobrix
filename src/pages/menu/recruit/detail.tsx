@@ -7,6 +7,8 @@ import MenuListbar from './menuListbar'
 import { PATH } from '@common/domain'
 import { getIndex, getTableData } from '@common/global'
 import DetailTable from '@components/ui/table/detailTable'
+import {Helmet} from "react-helmet-async";
+import React from "react";
 
 const RecruitDetail = () => {
 	const { index } = useParams()
@@ -36,6 +38,9 @@ const RecruitDetail = () => {
 
 	return (
 		<Layout>
+			<Helmet>
+				<title>채용정보 - 네오브릭스</title>
+			</Helmet>
 			<div className="detailLayout">
 				<FadeImg id="fadeImg" pc={subTileImg} delay={-1} mobile={subTileMobile} isContent={false} />
 				<div className="menu_title_contain" style={style}>
