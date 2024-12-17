@@ -38,7 +38,6 @@ const RecruitDetail = () => {
 		<Layout>
 			<div className="detailLayout">
 				<FadeImg id="fadeImg" pc={subTileImg} delay={-1} mobile={subTileMobile} isContent={false} />
-				{MenuListbar(PATH.RECRUIT01)}
 				<div className="menu_title_contain" style={style}>
 					{subTitleTrans}
 					<div className="contain">
