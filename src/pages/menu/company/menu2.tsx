@@ -98,7 +98,7 @@ const Menu2 = () => {
 						</Grid>
 						<Grid item lg={10} md={12}>
 							<p className='intro-dream-main'>비전</p>
-							<p className='intro-dream-sub'>구성원 개개인의 자율적인고 창조적인 마인드로 세상을 이롭게 – 행복을 줄 수 있는 기업</p>
+							<p className='intro-dream-sub2'>구성원 개개인의 자율적인고 창조적인 마인드로 세상을 이롭게 – 행복을 줄 수 있는 기업</p>
 						</Grid>
 					</Grid>
 				</div>
@@ -109,7 +109,7 @@ const Menu2 = () => {
 							</Grid>
 							<Grid item lg={10} md={12}>
 								<p className='intro-dream-main'>슬로건</p>
-								<p className='intro-dream-sub'>AUTOONOMY,  CONFIDENCE AND INTERACTION</p>
+								<p className='intro-dream-sub2'>AUTOONOMY,  CONFIDENCE AND INTERACTION</p>
 							</Grid>
 						</Grid>
 					</div>
@@ -120,7 +120,7 @@ const Menu2 = () => {
 							</Grid>
 							<Grid item lg={10} md={12}>
 								<p className='intro-dream-main'>경영철학</p>
-								<p className='intro-dream-sub'>행복한 구성원이 행복한 기업을 만든다. 행복한 기업이 행복한 세상을 만든다.</p>
+								<p className='intro-dream-sub2'>행복한 구성원이 행복한 기업을 만든다. 행복한 기업이 행복한 세상을 만든다.</p>
 							</Grid>
 						</Grid>
 					</div>
