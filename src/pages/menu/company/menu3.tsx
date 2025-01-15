@@ -137,7 +137,7 @@ const Menu3 = () => {
 	const itemData3 = [
 		{
 			key: '1',
-			img: '',
+			img: RES3,
 			title: 'ISO뭐시기뭐시기'
 		}
 	]
