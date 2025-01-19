@@ -33,10 +33,9 @@ const Business2 = () => {
                     <>
                         <div className='menu-header'>
                             <div style={{fontSize:'60px', fontWeight:'600'}}>
-                                사업영역
+                                DATA MINING
                             </div>
                             <div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-                                <span>네오브릭스 사업영역</span>
                                 <div style={{float:'right',fontSize:'16px'}}>
                                     <div className='header-down-left' onClick={()=>navigate('/customer')}>
                                         <MailOutlineRoundedIcon style={{marginRight:'8px'}}/>
@@ -53,14 +52,14 @@ const Business2 = () => {
                         <Divider/>
                         <div className='menu-flow'>
                             <HomeIcon onClick={()=>{navigate('/')}}/>
-                            <p>&gt; 사업영역 &gt; </p><span>사업영역</span>
+                            <p>&gt; 사업영역 &gt; </p><span>DATA MINING</span>
                         </div>
                     </>:
                     <Grid container>
                         <Grid item sm={8} className='menu-header-mobile'>
                             <div className='menu-flow-mobile'>
                                 <HomeIcon onClick={()=>{navigate('/')}}/>
-                                <span> · 사업영역 · 사업영역</span>
+                                <span> · 사업영역 · DATA MINING</span>
                             </div>
                             <div className='menu-sub-mobile'>
                                 <p>CI</p>

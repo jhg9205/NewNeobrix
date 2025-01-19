@@ -19,6 +19,16 @@ import mobile3 from '@images/menu/mobile3.png'
 import mobile4 from '@images/menu/mobile4.png'
 import mobile5 from '@images/menu/mobile5.png'
 import mobile6 from '@images/menu/mobile6.png'
+import mobile7 from '@images/menu/mobile7.png'
+import mobile8 from '@images/menu/mobile8.png'
+import mobile9 from '@images/menu/mobile9.png'
+import mobile10 from '@images/menu/mobile10.png'
+import mobile11 from '@images/menu/mobile11.png'
+import mobile12 from '@images/menu/mobile12.png'
+import mobile13 from '@images/menu/mobile13.png'
+import mobile14 from '@images/menu/mobile14.png'
+import mobile15 from '@images/menu/mobile15.png'
+import mobile16 from '@images/menu/mobile16.png'
 import bigData2 from "@images/menu/bigData2.png";
 
 const Business3 = () => {
@@ -39,10 +49,9 @@ const Business3 = () => {
                     <>
                         <div className='menu-header'>
                             <div style={{fontSize:'60px', fontWeight:'600'}}>
-                                사업영역
+                                MOBILE
                             </div>
                             <div style={{fontSize:'20px',fontWeight:'400',margin:'20px 0 50px 0'}}>
-                                <span>네오브릭스 사업영역</span>
                                 <div style={{float:'right',fontSize:'16px'}}>
                                     <div className='header-down-left' onClick={()=>navigate('/customer')}>
                                         <MailOutlineRoundedIcon style={{marginRight:'8px'}}/>
@@ -59,14 +68,14 @@ const Business3 = () => {
                         <Divider/>
                         <div className='menu-flow'>
                             <HomeIcon onClick={()=>{navigate('/')}}/>
-                            <p>&gt; 사업영역 &gt; </p><span>사업영역</span>
+                            <p>&gt; 사업영역 &gt; </p><span>MOBILE</span>
                         </div>
                     </>:
                     <Grid container>
                         <Grid item sm={8} className='menu-header-mobile'>
                             <div className='menu-flow-mobile'>
                                 <HomeIcon onClick={()=>{navigate('/')}}/>
-                                <span> · 사업영역 · 사업영역</span>
+                                <span> · 사업영역 · MOBILE</span>
                             </div>
                             <div className='menu-sub-mobile'>
                                 <p>CI</p>
@@ -232,11 +241,11 @@ const Business3 = () => {
                                     <Grid item lg={1.5}></Grid>
                                     <Grid item lg={3}>
                                         <p style={{fontSize:'20px'}}>실태조사 대상 조회</p>
-                                        <img src={mobile4} style={{width:'90%',marginBottom:'100px'}}/>
+                                        <img src={mobile4} style={{width:'80%',marginBottom:'100px'}}/>
                                     </Grid>
                                     <Grid item lg={3}>
                                         <p style={{fontSize:'20px'}}>무단점유 지속</p>
-                                        <img src={mobile5} style={{width:'90%',marginBottom:'100px'}}/>
+                                        <img src={mobile5} style={{width:'80%',marginBottom:'100px'}}/>
                                     </Grid>
                                     <Grid item lg={3}>
                                         <p style={{fontSize:'20px'}}>무단점유 종결</p>
@@ -278,45 +287,45 @@ const Business3 = () => {
                                     <Grid item lg={1}></Grid>
                                     <Grid item lg={2}>
                                         <p style={{fontSize:'20px'}}>요도+위성 중첩</p>
-                                        <img src={mobile4} style={{width:'90%'}}/>
+                                        <img src={mobile7} style={{width:'90%'}}/>
                                     </Grid>
                                     <Grid item lg={2}>
                                         <p style={{fontSize:'20px'}}>요도+일반도 중첩</p>
-                                        <img src={mobile5} style={{width:'90%'}}/>
+                                        <img src={mobile8} style={{width:'90%'}}/>
                                     </Grid>
                                     <Grid item lg={2}>
                                         <p style={{fontSize:'20px'}}>지도범례 설정</p>
-                                        <img src={mobile6} style={{width:'90%'}}/>
+                                        <img src={mobile9} style={{width:'90%'}}/>
                                     </Grid>
                                     <Grid item lg={2}>
                                         <p style={{fontSize:'20px'}}>조사구 이동</p>
-                                        <img src={mobile5} style={{width:'90%'}}/>
+                                        <img src={mobile10} style={{width:'90%'}}/>
                                     </Grid>
                                     <Grid item lg={2}>
                                         <p style={{fontSize:'20px'}}>조사구 할당 (관리)</p>
-                                        <img src={mobile6} style={{width:'90%'}}/>
+                                        <img src={mobile11} style={{width:'90%'}}/>
                                     </Grid>
                                     <Grid item lg={1}></Grid>
                                     <Grid item lg={1}></Grid>
                                     <Grid item lg={2}>
                                         <p style={{fontSize:'20px'}}>mCAPI</p>
-                                        <img src={mobile4} style={{width:'90%',marginBottom:'100px'}}/>
+                                        <img src={mobile12} style={{width:'90%',marginBottom:'100px'}}/>
                                     </Grid>
                                     <Grid item lg={2}>
                                         <p style={{fontSize:'20px'}}>다양한 조사 Biz</p>
-                                        <img src={mobile5} style={{width:'90%',marginBottom:'100px'}}/>
+                                        <img src={mobile13} style={{width:'90%',marginBottom:'100px'}}/>
                                     </Grid>
                                     <Grid item lg={2}>
                                         <p style={{fontSize:'20px'}}>현장정보 취득</p>
-                                        <img src={mobile6} style={{width:'90%',marginBottom:'100px'}}/>
+                                        <img src={mobile14} style={{width:'90%',marginBottom:'100px'}}/>
                                     </Grid>
                                     <Grid item lg={2}>
                                         <p style={{fontSize:'20px'}}>전개도 편집</p>
-                                        <img src={mobile5} style={{width:'90%',marginBottom:'100px'}}/>
+                                        <img src={mobile15} style={{width:'90%',marginBottom:'100px'}}/>
                                     </Grid>
                                     <Grid item lg={2}>
                                         <p style={{fontSize:'20px'}}>진행상태 (관리)</p>
-                                        <img src={mobile6} style={{width:'90%',marginBottom:'100px'}}/>
+                                        <img src={mobile16} style={{width:'90%',marginBottom:'100px'}}/>
                                     </Grid>
                                     <Grid item lg={1}></Grid>
                                 </Grid>
