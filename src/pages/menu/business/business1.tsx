@@ -97,7 +97,7 @@ const Business1 = () => {
                                 <span> · 사업영역 · IT SERVICE</span>
                             </div>
                             <div className='menu-sub-mobile'>
-                                <p>CI</p>
+                                <p>IT SERVICE</p>
                             </div>
                         </Grid>
                         <Grid item sm={4} className='menu-bg-mobile'>

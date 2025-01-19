@@ -62,7 +62,7 @@ const Business2 = () => {
                                 <span> · 사업영역 · DATA MINING</span>
                             </div>
                             <div className='menu-sub-mobile'>
-                                <p>CI</p>
+                                <p>DATA MINING</p>
                             </div>
                         </Grid>
                         <Grid item sm={4} className='menu-bg-mobile'>

@@ -78,7 +78,7 @@ const Business3 = () => {
                                 <span> · 사업영역 · MOBILE</span>
                             </div>
                             <div className='menu-sub-mobile'>
-                                <p>CI</p>
+                                <p>MOBILE</p>
                             </div>
                         </Grid>
                         <Grid item sm={4} className='menu-bg-mobile'>
@@ -220,7 +220,6 @@ const Business3 = () => {
                                 <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}}>
                                     · 국유(공유)재산 관리업무 전반을 시스템화 하여  공유재산 취득, 분할·합병, 실태조사, 대부계약, 대부료 부과·징수,
                                     무단점유 관리, 변상금 부과, 매각, 교환, 이력관리 등을 과학적으로 관리
-
                                 </p>
                                 <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}}>
                                     · 스마트폰을 활용, 공유 재산의 현장 실태조사 업무를 지원할 수 있는 모바일 현장지원시스템 구현
