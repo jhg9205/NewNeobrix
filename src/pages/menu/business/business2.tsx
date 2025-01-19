@@ -8,11 +8,12 @@ import {Button, Divider, Grid} from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import BusinessBar from "@pages/menu/business/businessBar";
 import {motion} from "framer-motion";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import bigData from '@images/menu/bigData.png'
+import bigData2 from '@images/menu/bigData2.png'
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import FadeImg from "@components/ui/effect/fadeImg";
-import application from "@images/menu/application.gif";
+import analytics from "@images/menu/analytics.gif";
 
 const Business2 = () => {
 
@@ -107,16 +108,69 @@ const Business2 = () => {
                             >
                             <Grid container>
                                 <Grid item lg={4} style={{justifyItems:'center'}}>
-                                    <FadeImg pc={application} delay={1500} isContent={true} id={'application'}/>
+                                    <FadeImg pc={analytics} delay={1500} isContent={true} id={'application'}/>
                                 </Grid>
                                 <Grid item lg={8} style={{fontSize:'20px', lineHeight:'30px',marginTop:'50px'}}>
                                     <span>
-                                        급격한 기술 변화 및 혁신이 이루어지는 비즈니스 환경에서 기술 통합 및 협업은 단순한 옵션을 넣어 필수적인 요소입니다.
-                                        복잡하고 다양한 IT시스템과 플랫폼, 고객 업무 및 프로세스에 대한 이해를 바탕으로 맞춤형 IT서비스를 제공합니다.
-                                        IT 컨설팅 부터 시스템 통합-구축-운영 등 풍부한 구축 경험과 및 전문화된 조직을 바탕으로 고객의 비즈니스 환경 변화에 대응하고 성장 할 수 있도록 지원하는 것입니다.
+                                        데이터가 핵심 자산으로 자리 잡은 시대에서 NeoBRIX는 AI 플랫폼을 통하여 첨단 머신러닝 알고리즘과 예측 분석 도구를 기반으로
+                                        고객이 데이터를 활용해 더 스마트한 의사 결정을 내릴 수 있도록 지원합니다. 이 플랫폼은 대규모 데이터를 실시간으로 처리하고,
+                                        자동화된 분석을 통해 패턴을 식별하며, 맞춤형 인사이트를 제공합니다.
+                                        데이터 마이닝 서비스와 통합된 Neo BRIX의 AI 플랫폼은 비즈니스 혁신을 가속화하고, 경쟁력을 강화하는 데 필수적인 파트너입니다.
                                     </span>
                                 </Grid>
                             </Grid>
+                            </motion.div>
+                            <motion.div
+                                className='intro-text'
+                                initial={{ opacity: 0, y: 50}}
+                                whileInView={{ opacity: 1, y: 0}}
+                                viewport={{ once: false }}
+                                transition={{
+                                    ease: "easeInOut",
+                                    duration: 0.5,
+                                    y: { duration: 0.5 },
+                                }}
+                            >
+                                <p style={{fontSize:'30px', fontWeight:'bold', textAlign:'left', padding:'100px 0 50px 100px'}}>Big Data Architecture / Analytics Consulting</p>
+                            </motion.div>
+                            <motion.div
+                                className='intro-text'
+                                initial={{ opacity: 0, y: 50}}
+                                whileInView={{ opacity: 1, y: 0}}
+                                viewport={{ once: false }}
+                                transition={{
+                                    ease: "easeInOut",
+                                    duration: 0.5,
+                                    y: { duration: 0.5 },
+                                }}
+                            >
+                                <img src={bigData} style={{width:'90%'}}/>
+                            </motion.div>
+                            <motion.div
+                                className='intro-text'
+                                initial={{ opacity: 0, y: 50}}
+                                whileInView={{ opacity: 1, y: 0}}
+                                viewport={{ once: false }}
+                                transition={{
+                                    ease: "easeInOut",
+                                    duration: 0.5,
+                                    y: { duration: 0.5 },
+                                }}
+                            >
+                                <p style={{fontSize:'30px', fontWeight:'bold', textAlign:'left', padding:'100px 0 50px 100px'}}>AI분석 플랫폼 Architecture수립, 구축, 컨설팅</p>
+                            </motion.div>
+                            <motion.div
+                                className='intro-text'
+                                initial={{ opacity: 0, y: 50}}
+                                whileInView={{ opacity: 1, y: 0}}
+                                viewport={{ once: false }}
+                                transition={{
+                                    ease: "easeInOut",
+                                    duration: 0.5,
+                                    y: { duration: 0.5 },
+                                }}
+                            >
+                                <img src={bigData2} style={{width:'90%',marginBottom:'100px'}}/>
                             </motion.div>
                         </Grid>
                     </Grid>

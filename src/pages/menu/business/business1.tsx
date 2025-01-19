@@ -4,7 +4,7 @@ import {getViewSize} from "@utils/functions";
 import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
 import {$FileDownLoad} from "@utils/request";
 import PlagiarismOutlinedIcon from "@mui/icons-material/PlagiarismOutlined";
-import {Divider, Grid} from "@mui/material";
+import {Box, Divider, Grid, Tab, Tabs} from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import BusinessBar from "@pages/menu/business/businessBar";
 import React from "react";
@@ -12,18 +12,51 @@ import {useNavigate} from "react-router-dom";
 import {motion} from "framer-motion";
 import application from '@images/menu/application.gif'
 import FadeImg from "@components/ui/effect/fadeImg";
-import check from "@images/menu/check.png";
-import shake from '@images/menu/shake.png'
+import shake from '@images/menu/shaking.png'
 import maintenance from '@images/menu/maintenance.png'
 import efficiently from '@images/menu/efficiently.png'
+interface TabPanelProps {
+    children?: React.ReactNode;
+    index: number;
+    value: number;
+}
+
+function CustomTabPanel(props: TabPanelProps) {
+    const { children, value, index, ...other } = props;
+
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+            className='tab-panel'
+        >
+            {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+        </div>
+    );
+}
+
+function a11yProps(index: number) {
+    return {
+        id: `simple-tab-${index}`,
+        'aria-controls': `simple-tabpanel-${index}`,
+    };
+}
 
 const Business1 = () => {
 
+    const [value, setValue] = React.useState(0);
     const style = {
         width: '100%',
         minHeight: '1000px'
     }
-    const navigate = useNavigate();
+    const navigate = useNavigate()
+
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+        setValue(newValue);
+    }
 
     return (
         <Layout>
@@ -151,6 +184,113 @@ const Business1 = () => {
                                     </Grid>
                                     <Grid item lg={1.5}></Grid>
                                 </Grid>
+                            </motion.div>
+                            <motion.div
+                                className='intro-text'
+                                initial={{ opacity: 0, y: 50}}
+                                whileInView={{ opacity: 1, y: 0}}
+                                viewport={{ once: false }}
+                                transition={{
+                                    ease: "easeInOut",
+                                    duration: 0.5,
+                                    y: { duration: 0.5 },
+                                }}
+                            >
+                                <Box sx={{ width: '100%' }} className='business-tab-container'>
+                                    <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
+                                        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                                            <Tab label="구축" {...a11yProps(0)} />
+                                            <Tab label="운영" {...a11yProps(1)} />
+                                        </Tabs>
+                                    </Box>
+                                    <CustomTabPanel value={value} index={0}>
+                                        <p className='tab-content'>
+                                            고객의 요구사항에 맞춤형 시스템 구축으로 고객 신뢰도를 쌓아가고 있습니다.
+                                        </p>
+                                        <p className='tab-content'>
+                                            특히, 환경-국토-복지-교육 등 정보시스템 신규개발 사업을 수행하고 있으며, 최근 요구되는
+                                            4차 산업혁명 기술에 걸맞는 서비스 제공을 위해 체계적인 방법론을 바탕으로 고객의 정보화 과정을 안정적이고 신속하게 진행합니다.
+                                        </p>
+                                        <Grid container>
+                                            <Grid item lg={6}>
+                                                <p className='tab-underline'>환경 분야</p>
+                                                <Grid container className='tab-sub-container'>
+                                                    <Grid item lg={5}></Grid>
+                                                    <Grid item lg={7} className='tab-sub-text'>
+                                                        <p>· 오염원관리시스템</p>
+                                                        <p>· 스마트 도시침수</p>
+                                                        <p>· 온실가스/에너지 시스템</p>
+                                                        <p>· 상/하수도 관리 시스템</p>
+                                                    </Grid>
+                                                </Grid>
+                                            </Grid>
+                                            <Grid item lg={6}>
+                                                <p className='tab-underline'>국토 분야</p>
+                                                <Grid container className='tab-sub-container'>
+                                                    <Grid item lg={5}></Grid>
+                                                    <Grid item lg={7} className='tab-sub-text'>
+                                                        <p>· 국유재산 관리 시스템</p>
+                                                        <p>· 토지보상 관리 시스템</p>
+                                                        <p>· 주택매입 및 안전관리 시스템</p>
+                                                        <p>· 통합 시설물 관리 시스템</p>
+                                                    </Grid>
+                                                </Grid>
+                                            </Grid>
+                                            <Grid item lg={6}>
+                                                <p className='tab-underline'>복지/교육 분야</p>
+                                                <Grid container className='tab-sub-container'>
+                                                    <Grid item lg={5}></Grid>
+                                                    <Grid item lg={7} className='tab-sub-text'>
+                                                        <p>· 생활보건 시스템</p>
+                                                        <p>· 맞춤형 복지 시스템</p>
+                                                        <p>· 학교행정 시스템</p>
+                                                        <p>· 학교수업지원 시스템</p>
+                                                    </Grid>
+                                                </Grid>
+                                            </Grid>
+                                            <Grid item lg={6}>
+                                                <p className='tab-underline'>기타</p>
+                                                <Grid container className='tab-sub-container'>
+                                                    <Grid item lg={5}></Grid>
+                                                    <Grid item lg={7} className='tab-sub-text'>
+                                                        <p>· 공공데이터 포털</p>
+                                                        <p>· 인구/주택 총 조사</p>
+                                                        <p>· BIG DATA플랫폼 구축</p>
+                                                    </Grid>
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>
+                                    </CustomTabPanel>
+                                    <CustomTabPanel value={value} index={1}>
+                                        <p className='tab-content'>
+                                            IT Application SW에 대한 구축, 정보화 컨설팅, 모바일 등 다양한 IT기반 기술의 시스템 구축과
+                                        </p>
+                                        <p className='tab-content'>
+                                            고객에게 선진 기술 TREND 적용에 대한 컨설팅 및 기술지원 서비스를 상시 제공하고 있습니다.
+                                        </p>
+                                        <Grid item lg={12}>
+                                            <p className='tab-underline'>Application 개발/개선/유지보수</p>
+                                            <Grid container className='tab-sub-container'>
+                                                <Grid item lg={4}></Grid>
+                                                <Grid item lg={8} className='tab-sub-text'>
+                                                    <p>· 분야별 전문가와 개발방법론을 기반으로 고객의 IT 수준을 진단하고 비즈니스 환경에 적합한
+                                                    Application 개발 및 운영</p>
+                                                    <p>· 운영중인 Application의 기능 및 성능 개선 서비스</p>
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>
+                                        <Grid item lg={12}>
+                                            <p className='tab-underline'>서비스관리</p>
+                                            <Grid container className='tab-sub-container'>
+                                                <Grid item lg={4}></Grid>
+                                                <Grid item lg={8} className='tab-sub-text'>
+                                                    <p>· 고객에게 최적화된 정보시스템 관련 설비, 인력 등의 정보 자산 지원 서비스 제공</p>
+                                                    <p>· 비즈니스 환경을 고려하여 체계적인 품질 관리를 통해 운영 최적화 및 신속한 장애 대응</p>
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>
+                                    </CustomTabPanel>
+                                </Box>
                             </motion.div>
                         </Grid>
                     </Grid>
