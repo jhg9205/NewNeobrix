@@ -12,6 +12,8 @@ import {motion} from "framer-motion";
 import {Button} from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import {getViewSize} from "@utils/functions";
+import {useNavigate} from "react-router-dom";
+import {PATH} from "@common/domain";
 
 const Accordion = styled((props: AccordionProps) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -50,14 +52,16 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
     borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-const BusinessBar = () => {
+const BusinessBar = (props:{index:string}) => {
 
-    const [expanded, setExpanded] = React.useState<string | false>('');
+    const [expanded, setExpanded] = React.useState<string | false>(props.index);
 
     const handleChange =
         (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
             setExpanded(newExpanded ? panel : false);
         };
+
+    const navigate = useNavigate()
 
     return (
         <div className='business-bar'>
@@ -75,6 +79,7 @@ const BusinessBar = () => {
                         }}
                     >
                         <Button
+                            onClick={()=>navigate(PATH.BUSINESS01)}
                             style={{cursor:'pointer',height:'100%', width:'100%'}}>
                             <div
                                 className='intro-card-button'>
@@ -102,6 +107,7 @@ const BusinessBar = () => {
                         }}
                     >
                         <Button
+                            onClick={()=>navigate(PATH.BUSINESS02)}
                             style={{cursor:'pointer',height:'100%', width:'100%'}}>
                             <div
                                 className='intro-card-button'>
@@ -129,6 +135,7 @@ const BusinessBar = () => {
                         }}
                     >
                         <Button
+                            onClick={()=>navigate(PATH.BUSINESS03)}
                             style={{cursor:'pointer',height:'100%', width:'100%'}}>
                             <div
                                 className='intro-card-button'>
@@ -156,6 +163,7 @@ const BusinessBar = () => {
                         }}
                     >
                         <Button
+                            onClick={()=>navigate(PATH.BUSINESS04)}
                             style={{cursor:'pointer',height:'100%', width:'100%'}}>
                             <div
                                 className='intro-card-button'>
@@ -183,6 +191,7 @@ const BusinessBar = () => {
                         }}
                     >
                         <Button
+                            onClick={()=>navigate(PATH.BUSINESS05)}
                             style={{cursor:'pointer',height:'100%', width:'100%'}}>
                             <div
                                 className='intro-card-button'>

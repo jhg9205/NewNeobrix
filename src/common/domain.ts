@@ -50,7 +50,12 @@ COMPANY00 = '/company',
 	COMPANY03 = '/company/location',
 
 	BUSINESS00 = '/business',
-	BUSINESS01 = '/business/history',
+	BUSINESS01 = '/business/1',
+	BUSINESS02 = '/business/2',
+	BUSINESS03 = '/business/3',
+	BUSINESS04 = '/business/4',
+	BUSINESS05 = '/business/5',
+	BUSINESS06 = '/business/6',
 
 	RESEARCH00 = '/research',
 	RESEARCH01 = '/research/history',

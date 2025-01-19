@@ -81,7 +81,7 @@ const Menu1 = () => {
 					{/*컨텐츠 div*/}
 					<Grid container>
 						<Grid item lg={2} md={2}>
-							<BusinessBar/>
+							<BusinessBar index={''}/>
 						</Grid>
 						<Grid item lg={10} md={10} className='business-main'>
 							<motion.div
@@ -93,6 +93,7 @@ const Menu1 = () => {
 								}}
 							>
 								<Button
+									onClick={()=>navigate(PATH.BUSINESS01)}
 									style={{cursor:'pointer',height:'100%', width:'100%'}}>
 									<div
 										className='intro-card-button'>
@@ -113,6 +114,7 @@ const Menu1 = () => {
 								}}
 							>
 								<Button
+									onClick={()=>navigate(PATH.BUSINESS02)}
 									style={{cursor:'pointer',height:'100%', width:'100%'}}>
 									<div
 										className='intro-card-button'>
@@ -133,6 +135,7 @@ const Menu1 = () => {
 								}}
 							>
 								<Button
+									onClick={()=>navigate(PATH.BUSINESS03)}
 									style={{cursor:'pointer',height:'100%', width:'100%'}}>
 									<div
 										className='intro-card-button'>
@@ -153,6 +156,7 @@ const Menu1 = () => {
 								}}
 							>
 								<Button
+									onClick={()=>navigate(PATH.BUSINESS04)}
 									style={{cursor:'pointer',height:'100%', width:'100%'}}>
 									<div
 										className='intro-card-button'>
@@ -173,6 +177,7 @@ const Menu1 = () => {
 								}}
 							>
 								<Button
+									onClick={()=>navigate(PATH.BUSINESS05)}
 									style={{cursor:'pointer',height:'100%', width:'100%'}}>
 									<div
 										className='intro-card-button'>
