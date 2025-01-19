@@ -541,6 +541,14 @@
 				margin-top: 30px;
 			}
 		}
+		.new-arrow{
+			width: 50px;
+			box-shadow: none;
+		}
+		.new-arrow-box{
+			justify-items: center;
+			align-content: center;
+		}
 		.vision-main{
 			font-size: 28px;
 			color: $pointColor;

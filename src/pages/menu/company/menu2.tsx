@@ -11,6 +11,7 @@ import shake from '@images/menu/shake.png'
 import check from '@images/menu/check.png'
 import earth from '@images/menu/earth.png'
 import baloon from '@images/menu/baloon.png'
+import arrow from '@images/menu/new-arrow.png'
 import { motion } from "framer-motion";
 import {getViewSize} from "@utils/functions";
 import {Helmet} from "react-helmet-async";
@@ -137,30 +138,63 @@ const Menu2 = () => {
 				>
 				<div className='intro-value'>
 					<Grid container>
-						<Grid item lg={3} md={6}>
+						{getViewSize() == 'lg'?
+							<Grid item lg={0.5} md={0}>
+							</Grid>
+							:
+							<></>
+						}
+						<Grid item lg={2} md={6}>
 							<img src={check}/>
 							<p className='vision-main'>자율=책임</p>
 							<p className='vision-sub'>개인의 자율에 의한</p>
 							<p className='vision-sub'>책임감</p>
 						</Grid>
-						<Grid item lg={3} md={6}>
+						{getViewSize() == 'lg'?
+							<Grid item lg={1} md={0} className='new-arrow-box'>
+								<img src={arrow} className='new-arrow'/>
+							</Grid>
+							:
+							<></>
+						}
+						<Grid item lg={2} md={6}>
 							<img src={shake}/>
 							<p className='vision-main'>상호 존중=신뢰</p>
 							<p className='vision-sub'>상호 존중하는 관계에서</p>
 							<p className='vision-sub'>나오는 신뢰성</p>
 						</Grid>
-						<Grid item lg={3} md={6}>
+						{getViewSize() == 'lg'?
+							<Grid item lg={1} md={0} className='new-arrow-box'>
+								<img src={arrow} className='new-arrow'/>
+							</Grid>
+							:
+							<></>
+						}
+						<Grid item lg={2} md={6}>
 							<img src={baloon}/>
 							<p className='vision-main'>소통=협업</p>
 							<p className='vision-sub'>소통으로 만드는</p>
 							<p className='vision-sub'>협업</p>
 						</Grid>
-						<Grid item lg={3} md={6}>
+						{getViewSize() == 'lg'?
+							<Grid item lg={1} md={0} className='new-arrow-box'>
+								<img src={arrow} className='new-arrow'/>
+							</Grid>
+							:
+							<></>
+						}
+						<Grid item lg={2} md={6}>
 							<img src={earth}/>
 							<p className='vision-main'>행복한 사회</p>
 							<p className='vision-sub'>행복한 사회를 추구하는</p>
 							<p className='vision-sub'>사회적 기업</p>
 						</Grid>
+						{getViewSize() == 'lg'?
+							<Grid item lg={0.5} md={0}>
+							</Grid>
+							:
+							<></>
+						}
 					</Grid>
 				</div>
 				</motion.div>

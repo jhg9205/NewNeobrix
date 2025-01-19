@@ -69,7 +69,7 @@ const HeaderPc2 = () => {
 		{"title":"면허 및 특허",	"link":"/company/research"},
 		{"title":"오시는길",		"link":"/company/location"}];
 	const subMenuList2 = [
-		{"title":"사업영역",		"link":"/"}
+		{"title":"사업영역",		"link":"/business"}
 	];
 	const subMenuList3 = [
 		{"title":"인재상",		"link":"/talent"},
