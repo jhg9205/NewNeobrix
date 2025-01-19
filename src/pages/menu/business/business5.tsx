@@ -201,7 +201,7 @@ const Business5 = () => {
                                     y: { duration: 0.5 },
                                 }}
                             >
-                                <p style={{fontSize:'30px', fontWeight:'bold', textAlign:'left', padding:'100px 0 20px 100px'}}>비점오염원 관리시스템</p>
+                                <p style={{fontSize:'30px', fontWeight:'bold', textAlign:'left', padding:'50px 0 20px 100px'}}>비점오염원 관리시스템</p>
                                 <Divider/>
                                 <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}}>
                                     · 비점 오염물질 측정 데이터 통합 관리 및 비점오염 저감시설 운용 체계 구축
