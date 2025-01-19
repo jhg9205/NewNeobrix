@@ -78,7 +78,7 @@ const Menu3 = () => {
 				>
 					<div className="menu_title_contain" style={{width:'100%',textAlign:'center'}}>
 						<p className='hr-sub'>Neo BRIX의 다양한 IT분야 전문가들이 당신의 꿈과 함께 합니다.</p>
-						<p className='hr-text'>Neo BRIX는 데이터 사이언스팀, 디지털 트랜스포메이션팀, 모바일 컨버젼팀 등으로 이루어져 팀단위 발전을 통해 기술 및 비지니스 전문
+						<p className='hr-text'>Neo BRIX는 구성원 및 팀 단위 발전을 통해 기술 및 비지니스 전문
 							역량을 갖춘 인재를 육성합니다.또한 기술 및 비즈니스 전문역량을 갖춘 인재를 육성하기 위해 교육을 실시하고 있으며 학습조직을 통해 자발적 학습도 지원하고 있습니다.</p>
 						{getViewSize()=='lg'?<></>:<Divider style={{marginTop:'30px'}}/>}
 						<Grid container style={{ padding: '100px 0', width: '70%', margin: '0 auto' }}>

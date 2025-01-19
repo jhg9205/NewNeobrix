@@ -108,7 +108,7 @@ const Menu4 = () =>{
                     >
                         <div className='intro-dream'>
                             <p className='intro-dream-title'>Neo BRIX는 임직원의 업무 효율성과 행복을 위해 노력합니다.</p>
-                            <p className='intro-dream-sub'>Neobrix는 임직원의 업무 효율을 높이고 삼의 질을 향상시키기 위해 다양한 영역에서 복리후생 제도를 운영하고 있습니다.
+                            <p className='intro-dream-sub'>Neobrix는 임직원의 업무 효율을 높이고 삶의 질을 향상시키기 위해 다양한 영역에서 복리후생 제도를 운영하고 있습니다.
                             임직원의 의견을 적극 반영하여 복리후생은 계속하여 발전시켜 나갈 것입니다.</p>
                         </div>
                     </motion.div>:

@@ -370,7 +370,7 @@ footer {
 			width: 150px;
 			li:first-child{
 				font-weight: 500;
-				font-size: 17px;
+				font-size: 20px;
 				cursor: text;
 				@include mobile(){
 					font-size: 15px;
@@ -378,7 +378,7 @@ footer {
 			}
 			li {
 				text-align: center;
-				font-size: 15px;
+				font-size: 17px;
 				list-style-type: none;
 				margin-bottom: 10px;
 				color: rgb(0, 0, 0);

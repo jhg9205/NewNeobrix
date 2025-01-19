@@ -96,8 +96,9 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 							   marginTop:'68px'
 						   }}
 						>환경, 국토, 교육 분야</p>
-						<p className="swiper-main-mini">Neo BRIX의 풍부한 경험과 노하우를 보유한 직원들과 함께</p>
-						<p className="swiper-main-mini">맞춤형 IT서비스로 디지털 트랜스포메이션 성공을</p>
+						<p className="swiper-main-mini">Neo BRIX의 전문가 및 노하우와 함께</p>
+						<p className="swiper-main-mini">분야별 맞춤형 IT서비스로 디지털 트랜스포메이션</p>
+						<p className="swiper-main-mini">성공을 보장합니다.</p>
 						<Button
 							id="recruitFile"
 							variant="contained"
