@@ -17,7 +17,6 @@ import Research from '@pages/menu/company/menu3'
 import Location from '@pages/menu/company/menu4'
 
 import Business from '@pages/menu/business/menu1'
-import History from '@pages/menu/business/menu2'
 
 import History2 from '@pages/menu/research/menu2'
 import List from '@pages/menu/research/menu3'
@@ -51,7 +50,6 @@ const Router = () => {
 				<Route path={PATH.COMPANY03} element={<Location />} />
 
 				<Route path={PATH.BUSINESS00} element={<Business />} />
-				<Route path={PATH.BUSINESS01} element={<History />} />
 
 				<Route path={PATH.RESEARCH00} element={<Research />} />
 				<Route path={PATH.RESEARCH01} element={<History2 />} />
