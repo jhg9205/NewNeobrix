@@ -26,7 +26,7 @@ const Business2 = () => {
     return (
         <Layout>
             <Helmet>
-                <title>사업영역 - 네오브릭스</title>
+                <title>DATA MINING - 네오브릭스</title>
             </Helmet>
             <div id="companyLayout">
                 {getViewSize()=='lg'?
