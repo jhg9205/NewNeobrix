@@ -1748,3 +1748,108 @@
 		}
 	}
 }
+.business-main{
+	.MuiAccordionSummary-root{
+		min-height: 200px !important;
+	}
+	padding:100px;
+	#card1{
+		background: url('../images/main/img_bg_hr.png') no-repeat top center;
+		background-size: cover;
+	}
+	#card2{
+		background: url('../images/main/data-chart.jpg') no-repeat top center;
+		background-size: cover;
+	}
+	#card3{
+		background: url('../images/main/mobile-chart.jpg') no-repeat top center;
+		background-size: cover;
+	}
+	#card4{
+		background: url('../images/main/service-item-4.png') no-repeat top center;
+		background-size: cover;
+	}
+	#card5{
+		background: url('../images/menu/business9.jpg') no-repeat top center;
+		background-size: cover;
+	}
+	.card {
+		float: left;
+		width: 300px;
+		height: 474px;
+		display: flex;
+		position:relative;
+		background: white;
+		border-radius: 40px;
+		margin: 50px;
+		box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075),
+		0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075),
+		0 0 16px hsl(0deg 0% 0% / 0.075);
+		transform-origin: 10% 60%;
+		color: white;
+		@include mobile{
+			width: 150px;
+			height: 300px;
+			border-radius: 30px;
+		}
+		.intro-card-button{
+			position:absolute;
+			bottom:0;
+			vertical-align: bottom;
+			display: table-cell;
+			padding: 0 40px;
+			width: 100%;
+			@include mobile{
+				padding: 0 10px;
+			}
+		}
+		p{
+			width: auto;
+			text-align: left;
+			color: #fff;
+			font-weight: 700;
+			font-size: 25px;
+			line-height: 42px;
+			transition-duration: 500ms;
+			@include mobile{
+				font-size: 20px;
+				line-height: 25px;
+				letter-spacing: -1px;
+			}
+		}
+		span{
+			display: inline-block;
+			text-align: left;
+			margin-top: 13px;
+			line-height: 140%;
+			color: #fff;
+			font-weight: 400;
+			font-size: 18px;
+			transition-duration: 500ms;
+			@include mobile{
+				font-size: 15px;
+				line-height: 120%;
+			}
+		}
+		.intro-card-arrow{
+			opacity: 0;
+			text-align: left;
+			margin-top: 20px;
+		}
+	}
+	.card:hover{
+		p{
+			transform: translateY(-20px);
+			transition-duration: 500ms;
+		}
+		span{
+			transform: translateY(-20px);
+			transition-duration: 500ms;
+		}
+		.intro-card-arrow{
+			opacity: 1;
+			transform: translateY(-20px);
+			transition-duration: 500ms;
+		}
+	}
+}
