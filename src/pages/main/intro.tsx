@@ -5,8 +5,11 @@ import Transition from '@components/ui/transition/transition'
 import {Button} from "@mui/material";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import {getViewSize} from "@utils/functions";
+import {PATH} from "@common/domain";
+import {useNavigate} from "react-router-dom";
 
 export const Intro = () => {
+        const navigate = useNavigate()
         const [scrollYProgress, setScrollYProgress] = useState(7);
         const size = getViewSize()
         const handleScroll = () => {
@@ -92,6 +95,7 @@ export const Intro = () => {
                                 }}
                             >
                                 <Button
+                                    onClick={()=>navigate(PATH.BUSINESS01)}
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
                                         className='intro-card-button'>
@@ -120,6 +124,7 @@ export const Intro = () => {
                                 }}
                             >
                             <Button
+                                onClick={()=>navigate(PATH.BUSINESS02)}
                                 style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                 <div
                                     className='intro-card-button'>
@@ -148,6 +153,7 @@ export const Intro = () => {
                                 }}
                             >
                                 <Button
+                                    onClick={()=>navigate(PATH.BUSINESS03)}
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
                                         className='intro-card-button'>
@@ -176,6 +182,7 @@ export const Intro = () => {
                                 }}
                             >
                                 <Button
+                                    onClick={()=>navigate(PATH.BUSINESS04)}
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
                                         className='intro-card-button'>
@@ -204,6 +211,7 @@ export const Intro = () => {
                                 }}
                             >
                                 <Button
+                                    onClick={()=>navigate(PATH.BUSINESS05)}
                                     style={{cursor:'pointer',height:'100%', width:'100%'}}>
                                     <div
                                         className='intro-card-button'>
