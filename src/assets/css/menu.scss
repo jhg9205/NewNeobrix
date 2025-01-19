@@ -570,6 +570,12 @@
 		}
 	}
 }
+.business-img-container{
+	margin-top: 100px;
+	img{
+		width: 200px;
+	}
+}
 .intro-dream{
 	padding:0 30px;
 	margin: 100px auto;
@@ -1852,4 +1858,8 @@
 			transition-duration: 500ms;
 		}
 	}
+}
+
+#application{
+	width: 250px;
 }
