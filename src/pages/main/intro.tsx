@@ -225,34 +225,6 @@ export const Intro = () => {
                             </motion.div>
                         </>
                     </Transition>
-                    <Transition threshold={size=='lg'?17:9} direction={'up'} time={500}>
-                        <>
-                            <motion.div
-                                className="card"
-                                id="card6"
-                                style={{
-                                    float:size == 'lg'?'right':'left',
-                                    transform : size == 'lg'?'translateY(300px)':'translateY(200px)'
-                                }}
-                                whileHover={{
-                                    boxShadow : '0px 0px 10px #666',
-                                    transform:size == 'lg'?'translateY(290px)':'translateY(190px)'
-                                }}
-                            >
-                                <Button
-                                    style={{cursor:'pointer',height:'100%', width:'100%'}}>
-                                    <div
-                                        className='intro-card-button'>
-                                            <p>EDUCATION</p>
-                                        <span>중대재해 발생 시 법적대응에 활용할 수 있는 솔루션</span>
-                                        <div className='intro-card-arrow'>
-                                            <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
-                                        </div>
-                                    </div>
-                                </Button>
-                            </motion.div>
-                        </>
-                    </Transition>
                 </div>
             </motion.div>
         </div>

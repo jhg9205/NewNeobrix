@@ -12,6 +12,7 @@ import REQ9 from '@images/menu/REQ9.png'
 import REQ10 from '@images/menu/REQ10.png'
 import REQ11 from '@images/menu/REQ11.png'
 import REQ12 from '@images/menu/REQ12.png'
+import REQ13 from '@images/menu/REQ13.png'
 
 import React, {useState} from 'react'
 import MenuListbar from './menuListbar'
@@ -137,8 +138,8 @@ const Menu3 = () => {
 	const itemData3 = [
 		{
 			key: '1',
-			img: RES3,
-			title: 'ISO뭐시기뭐시기'
+			img: REQ13,
+			title: '경영시스템인증서'
 		}
 	]
 	

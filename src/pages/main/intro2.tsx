@@ -20,6 +20,7 @@ import rawLogo from "@images/main/rawLogo.png"
 import dataLogo from "@images/main/dataLogo.png"
 import kwaterLogo from "@images/main/kwaterLogo.png"
 import energyLogo from "@images/main/energyLogo.png"
+import mtData from "@images/main/mtData.png"
 import {getViewSize} from "@utils/functions";
 
 export const Intro2 = () => {
@@ -102,8 +103,10 @@ export const Intro2 = () => {
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
 								<div className='intro2-card-logo' id='intro2-card-logo1' style={{width:'100%'}}></div>
 								<Divider/>
-								<p>전사자원통합관리시스템 구축</p>
-								<span>#주택매입 #보상 #건축물안전관리</span>
+								<p className='intro2-card-main'>전사자원통합관리시스템 구축</p>
+								<p className='intro2-card-sub'>#주택매입</p>
+								<p className='intro2-card-sub'>#보상</p>
+								<p className='intro2-card-sub'>#건축물안전관리</p>
 								<div className='intro2-card-arrow'>
 									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
 								</div>
@@ -118,8 +121,10 @@ export const Intro2 = () => {
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
 								<div className='intro2-card-logo' id='intro2-card-logo2' style={{width:'100%'}}></div>
 								<Divider/>
-								<p>프로젝트1</p>
-								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
+								<p className='intro2-card-main'>토지정보 현장조사시스템</p>
+								<p className='intro2-card-sub'>#실태조사</p>
+								<p className='intro2-card-sub'>#GIS</p>
+								<p className='intro2-card-sub'>#보상/국유재산</p>
 								<div className='intro2-card-arrow'>
 									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
 								</div>
@@ -134,24 +139,10 @@ export const Intro2 = () => {
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
 								<div className='intro2-card-logo' id='intro2-card-logo3' style={{width:'100%'}}></div>
 								<Divider/>
-								<p>프로젝트2</p>
-								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
-								<div className='intro2-card-arrow'>
-									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
-								</div>
-							</div>
-						</Button>
-					</SwiperSlide>
-					<SwiperSlide>
-						<Button
-							style={{cursor:'pointer',height:'400px', width:'378px'}}>
-							<div
-								className='intro2-card-button'
-								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
-								<div className='intro2-card-logo' id='intro2-card-logo4' style={{width:'100%'}}></div>
-								<Divider/>
-								<p>프로젝트3</p>
-								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
+								<p className='intro2-card-main'>비점오염원관리 정보시스템</p>
+								<p className='intro2-card-sub'>#비점오염원 측정망 </p>
+								<p className='intro2-card-sub'>#비점오염원</p>
+								<p className='intro2-card-sub'>#비점오염원 자가점검</p>
 								<div className='intro2-card-arrow'>
 									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
 								</div>
@@ -166,24 +157,10 @@ export const Intro2 = () => {
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
 								<div className='intro2-card-logo' id='intro2-card-logo5' style={{width:'100%'}}></div>
 								<Divider/>
-								<p>프로젝트4</p>
-								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
-								<div className='intro2-card-arrow'>
-									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
-								</div>
-							</div>
-						</Button>
-					</SwiperSlide>
-					<SwiperSlide>
-						<Button
-							style={{cursor:'pointer',height:'400px', width:'378px'}}>
-							<div
-								className='intro2-card-button'
-								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
-								<div className='intro2-card-logo' id='intro2-card-logo6' style={{width:'100%'}}></div>
-								<Divider/>
-								<p>프로젝트5</p>
-								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
+								<p className='intro2-card-main'>통합 시설물관리시스템</p>
+								<p className='intro2-card-sub'>#공간관리</p>
+								<p className='intro2-card-sub'>#BIM</p>
+								<p className='intro2-card-sub'>#GIS</p>
 								<div className='intro2-card-arrow'>
 									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
 								</div>
@@ -198,8 +175,10 @@ export const Intro2 = () => {
 								style={{verticalAlign:'bottom',display:'table-cell', padding:'0 40px',width:'100%'}}>
 								<div className='intro2-card-logo' id='intro2-card-logo7' style={{width:'100%'}}></div>
 								<Divider/>
-								<p>프로젝트6</p>
-								<span>지속적 계발과 안정적인 기술인력을 통해 컨설팅, 시스템 구축, 운영 전반의 최고의 서비스를 제공합니다.</span>
+								<p className='intro2-card-main'>차세대 Census 통합관리시스템</p>
+								<p className='intro2-card-sub'>#인구주택 총조사</p>
+								<p className='intro2-card-sub'>#농림어업 총조사</p>
+								<p className='intro2-card-sub'>#전개도</p>
 								<div className='intro2-card-arrow'>
 									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
 								</div>
@@ -236,10 +215,9 @@ export const Intro2 = () => {
 						<SwiperSlide><img src={ligLogo}/></SwiperSlide>
 						<SwiperSlide><img src={sgaLogo}/></SwiperSlide>
 						<SwiperSlide><img src={airportLogo}/></SwiperSlide>
-						<SwiperSlide><img src={rawLogo}/></SwiperSlide>
+						<SwiperSlide><img src={mtData}/></SwiperSlide>
 						<SwiperSlide><img src={dataLogo}/></SwiperSlide>
 						<SwiperSlide><img src={kwaterLogo}/></SwiperSlide>
-						<SwiperSlide><img src={energyLogo}/></SwiperSlide>
 						<button className="prev-swiper swiper-button-prev swiper-btn" style={{padding:size=='lg'?'0 100px':'0 20px'}}></button>
 						<button className="next-swiper swiper-button-next swiper-btn" style={{padding:size=='lg'?'0 100px':'0 20px'}}></button>
 					</Swiper>

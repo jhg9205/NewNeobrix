@@ -520,10 +520,10 @@
       box-shadow: 0px 5px 5px 0px rgba(142, 142, 142, 0.8);
       color: black;
       text-align: left;
-      p{
+      .intro2-card-main{
         font-size: 20px;
       }
-      span{
+      .intro2-card-sub{
         font-size: 15px;
         color: #6d6d6d;
       }
@@ -544,7 +544,7 @@
       transition-duration: 0.3s;
       background: linear-gradient(321deg, $gradientColor1 30%, $gradientColor2 100%);
       color: white;
-      span{
+      p{
         transition-duration: 0.3s;
         color: #ececec;
       }
@@ -583,7 +583,7 @@
       }
       #intro2-card-logo7{
         transition-duration: 0.3s;
-        background: url("../images/main/energyLogo-white.png") no-repeat;
+        background: url("../images/main/dataLogo-white.png") no-repeat;
         background-size: contain;
       }
     }
@@ -617,8 +617,9 @@
       background-size: contain;
     }
     #intro2-card-logo7{
-      background: url("../images/main/energyLogo.png") no-repeat;
+      background: url("../images/main/dataLogo.png") no-repeat;
       background-size: contain;
+      margin-left: 45px;
     }
   }
   #intro2-main4{
