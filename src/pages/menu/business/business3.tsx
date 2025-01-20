@@ -91,7 +91,7 @@ const Business3 = () => {
                     {/*컨텐츠 div*/}
                     <Grid container>
                         <Grid item lg={2} md={2}>
-                            <BusinessBar index={'panel3'}/>
+                            {getViewSize() == 'lg'?<BusinessBar index={'panel3'}/>:<></>}
                         </Grid>
                         <Grid item lg={8} md={10}>
                                 <motion.div
@@ -122,10 +122,10 @@ const Business3 = () => {
                                 }}
                             >
                             <Grid container>
-                                <Grid item lg={4} style={{justifyItems:'center'}}>
+                                <Grid item lg={4} style={getViewSize()=='lg'?{justifyItems:'center'}:{justifyItems:'center',width:'100%'}}>
                                     <FadeImg pc={smartphone} delay={1500} isContent={true} id={'application'}/>
                                 </Grid>
-                                <Grid item lg={8} style={{fontSize:'20px', lineHeight:'30px',marginTop:'50px'}}>
+                                <Grid item lg={8} style={getViewSize()=='lg'?{fontSize:'20px', lineHeight:'30px',marginTop:'50px'}:{fontSize:'20px', lineHeight:'30px',margin:'50px 50px 0 50px'}}>
                                     <span>
                                         GIS(지리정보시스템)를 기반으로 한 NeoBRIX 모바일 플랫폼은 관리와 운영의 새로운 표준을 제시합니다. 플랫폼은 위치 기반 데이터 분석, 실시간 모니터링,
                                         자동화된 프로세스를 결합하여 정확성과 생산성을 극대화합니다. NeoBRIX의 서비스는 단순한 기술을 넘어 고객의 요구를 충족시키는 맞춤형 솔루션을 제안합니다.
@@ -161,14 +161,14 @@ const Business3 = () => {
                             >
                                 <p style={{fontSize:'30px', fontWeight:'bold', textAlign:'left', padding:'100px 0 20px 100px'}}>MOBILE 공사 현장 업무지원</p>
                                 <Divider/>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}:{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 40px'}}>
                                     · 드론 취득 영상정보와 축적된 공간정보(GIS)를 모바일 기기에 탑재하여 현장에서 후보지·보상·공사·판매·관리 업무 등 현장 지원
                                 </p>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}:{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 40px'}}>
                                     · 업무 레이어 및 업무 데이터와 고해상도 드론영상, 설졔도면을 중첩하여 현장에서 활용
                                     
                                 </p>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}:{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 40px'}}>
                                     · 지도 메모 기능 및 현장사진 촬영 등 현장 조사 및 업무 내역을 저장 / 관리
                                 </p>
                             </motion.div>
@@ -184,20 +184,20 @@ const Business3 = () => {
                                 }}
                             >
                                 <Grid container style={{marginTop:'50px'}}>
-                                    <Grid item lg={1.5}></Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={1.5} md={0} sm={0}></Grid>
+                                    <Grid item lg={3} md={12} sm={12} style={getViewSize()=='lg'?{}:{width:'100%'}}>
                                         <p style={{fontSize:'20px'}}>판매 - 현장점검</p>
                                         <img src={mobile1} style={{width:'90%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={12} sm={12} style={getViewSize()=='lg'?{}:{width:'100%'}}>
                                         <p style={{fontSize:'20px'}}>주택정보 - 공사 진행현황 파악</p>
                                         <img src={mobile2} style={{width:'90%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={12} sm={12} style={getViewSize()=='lg'?{}:{width:'100%'}}>
                                         <p style={{fontSize:'20px'}}>공사 업무지원 - 드론현장 3D</p>
                                         <img src={mobile3} style={{width:'80%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={1.5}></Grid>
+                                    <Grid item lg={1.5} md={0} sm={0}></Grid>
                                 </Grid>
                             </motion.div>
                             <motion.div
@@ -213,15 +213,15 @@ const Business3 = () => {
                             >
                                 <p style={{fontSize:'30px', fontWeight:'bold', textAlign:'left', padding:'0 0 20px 100px'}}>MOBILE 국유(공유)재산관리</p>
                                 <Divider/>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}:{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 40px'}}>
                                     · 국유(공유)재산 관리 표준시스템을 업무에 활용함으로써 업무 표준화 및 절차 간소화를 실현, 재산관리 효율성을 제고하고,
                                     위성사진 및 지적도 등의 필요정보와 다양한 조회기능을 제공하여, 현장 실태조사, DB점검 등에 따른 업무부담을 최소화
                                 </p>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}:{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 40px'}}>
                                     · 국유(공유)재산 관리업무 전반을 시스템화 하여  공유재산 취득, 분할·합병, 실태조사, 대부계약, 대부료 부과·징수,
                                     무단점유 관리, 변상금 부과, 매각, 교환, 이력관리 등을 과학적으로 관리
                                 </p>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}:{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 40px'}}>
                                     · 스마트폰을 활용, 공유 재산의 현장 실태조사 업무를 지원할 수 있는 모바일 현장지원시스템 구현
                                 </p>
                             </motion.div>
@@ -266,7 +266,7 @@ const Business3 = () => {
                             >
                                 <p style={{fontSize:'30px', fontWeight:'bold', textAlign:'left', padding:'0 0 20px 100px'}}>MOBILE 인구주택 및 농림어업 총조사(Census조사)</p>
                                 <Divider/>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}:{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 40px'}}>
                                     · 인구주택 총 조사 및 농림어업 총 조사 시범예행조사 조사구 설정 및 표본 틀을 제공하고, 등록 센서스 공표 항목 확대에 따른
                                     모바일 기반에 행정자료 품질을 현장에서 개선을 지원
                                 </p>

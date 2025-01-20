@@ -110,7 +110,7 @@ const Business1 = () => {
                     {/*컨텐츠 div*/}
                     <Grid container>
                         <Grid item lg={2} md={2}>
-                            <BusinessBar index={'panel1'}/>
+                            {getViewSize() == 'lg'?<BusinessBar index={'panel1'}/>:<></>}
                         </Grid>
                         <Grid item lg={8} md={10}>
                                 <motion.div
@@ -141,10 +141,10 @@ const Business1 = () => {
                                 }}
                             >
                             <Grid container>
-                                <Grid item lg={4} style={{justifyItems:'center'}}>
+                                <Grid item lg={4} style={getViewSize()=='lg'?{justifyItems:'center'}:{justifyItems:'center',width:'100%'}}>
                                     <FadeImg pc={application} delay={1500} isContent={true} id={'application'}/>
                                 </Grid>
-                                <Grid item lg={8} style={{fontSize:'20px', lineHeight:'30px',marginTop:'50px'}}>
+                                <Grid item lg={8} style={getViewSize()=='lg'?{fontSize:'20px', lineHeight:'30px',marginTop:'50px'}:{fontSize:'20px', lineHeight:'30px',margin:'50px 50px 0 50px'}}>
                                     <span>
                                         급격한 기술 변화 및 혁신이 이루어지는 비즈니스 환경에서 기술 통합 및 협업은 단순한 옵션을 넣어 필수적인 요소입니다.
                                         복잡하고 다양한 IT시스템과 플랫폼, 고객 업무 및 프로세스에 대한 이해를 바탕으로 맞춤형 IT서비스를 제공합니다.
@@ -165,23 +165,23 @@ const Business1 = () => {
                                 }}
                             >
                                 <Grid container className='business-img-container'>
-                                    <Grid item lg={1.5}></Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={1.5} md={0} sm={0}></Grid>
+                                    <Grid item lg={3} md={4} sm={4}>
                                         <img src={maintenance}/>
                                         <p className='vision-main'>IT서비스 수준 향상</p>
                                         <p className='vision-sub'>및 유지관리</p>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={4} sm={4}>
                                         <img src={efficiently}/>
                                         <p className='vision-main'>IT서비스 비용절감</p>
                                         <p className='vision-sub'>및 효율화</p>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={4} sm={4}>
                                         <img src={shake}/>
                                         <p className='vision-main'>고객서비스</p>
                                         <p className='vision-sub'>만족 향상</p>
                                     </Grid>
-                                    <Grid item lg={1.5}></Grid>
+                                    <Grid item lg={1.5} md={0} sm={0}></Grid>
                                 </Grid>
                             </motion.div>
                             <motion.div
@@ -211,7 +211,7 @@ const Business1 = () => {
                                             4차 산업혁명 기술에 걸맞는 서비스 제공을 위해 체계적인 방법론을 바탕으로 고객의 정보화 과정을 안정적이고 신속하게 진행합니다.
                                         </p>
                                         <Grid container>
-                                            <Grid item lg={6}>
+                                            <Grid item lg={6} sm={12}>
                                                 <p className='tab-underline'>환경 분야</p>
                                                 <Grid container className='tab-sub-container'>
                                                     <Grid item lg={5}>이미지</Grid>
@@ -223,7 +223,7 @@ const Business1 = () => {
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
-                                            <Grid item lg={6}>
+                                            <Grid item lg={6} sm={12}>
                                                 <p className='tab-underline'>국토 분야</p>
                                                 <Grid container className='tab-sub-container'>
                                                     <Grid item lg={5}>이미지</Grid>
@@ -235,7 +235,7 @@ const Business1 = () => {
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
-                                            <Grid item lg={6}>
+                                            <Grid item lg={6} sm={12}>
                                                 <p className='tab-underline'>복지/교육 분야</p>
                                                 <Grid container className='tab-sub-container'>
                                                     <Grid item lg={5}>이미지</Grid>
@@ -247,7 +247,7 @@ const Business1 = () => {
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
-                                            <Grid item lg={6}>
+                                            <Grid item lg={6} sm={12}>
                                                 <p className='tab-underline'>기타</p>
                                                 <Grid container className='tab-sub-container'>
                                                     <Grid item lg={5}>이미지</Grid>

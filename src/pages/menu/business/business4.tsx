@@ -84,7 +84,7 @@ const Business4 = () => {
                     {/*컨텐츠 div*/}
                     <Grid container>
                         <Grid item lg={2} md={2}>
-                            <BusinessBar index={'panel4'}/>
+                            {getViewSize() == 'lg'?<BusinessBar index={'panel4'}/>:<></>}
                         </Grid>
                         <Grid item lg={8} md={10}>
                                 <motion.div
@@ -117,7 +117,7 @@ const Business4 = () => {
                                 }}
                             >
                             <Grid container>
-                                <Grid item lg={4} style={{justifyItems:'center'}}>
+                                <Grid item lg={4} style={getViewSize()=='lg'?{justifyItems:'center'}:{justifyItems:'center',width:'100%'}}>
                                     <FadeImg pc={maps} delay={1500} isContent={true} id={'application'}/>
                                 </Grid>
                                 <Grid item lg={8} style={{fontSize:'20px', lineHeight:'30px',marginTop:'50px'}}>

@@ -12,10 +12,6 @@ import BiotechIcon from '@mui/icons-material/Biotech'
 import InterpreterModeIcon from '@mui/icons-material/InterpreterMode'
 import NewspaperIcon from '@mui/icons-material/Newspaper'
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer'
-import BadgeIcon from '@mui/icons-material/Badge'
-import HelpIcon from '@mui/icons-material/Help'
-import GroupAddIcon from '@mui/icons-material/GroupAdd'
-import HeadphonesIcon from '@mui/icons-material/Headphones'
 import { ExpandLess, ExpandMore } from '@mui/icons-material'
 import {Link, useNavigate} from 'react-router-dom'
 import { PATH } from '@common/domain'
@@ -29,7 +25,7 @@ const HeaderDrawer = ({ toggleDrawer }: any) => {
 	const [employ, setEmploy] = React.useState(false)
 	const [help, setHelp] = React.useState(false)
 	const companyLink = [PATH.COMPANY00, PATH.COMPANY01, PATH.COMPANY02, PATH.COMPANY03]
-	const businessLink = [PATH.BUSINESS00, PATH.BUSINESS01]
+	const businessLink = [PATH.BUSINESS00]
 	const prCenterLink = [PATH.PRCENTER00, PATH.PRCENTER01, PATH.PRCENTER02]
 	const recruitLink = [PATH.RECRUIT00, PATH.RECRUIT01, PATH.RECRUIT04, PATH.RECRUIT02]
 	const customerLink = [PATH.CUSTOMER00]
@@ -83,7 +79,29 @@ const HeaderDrawer = ({ toggleDrawer }: any) => {
 					{business ? <ExpandLess /> : <ExpandMore />}
 				</ListItemButton>
 				<Collapse in={business} timeout="auto" unmountOnExit>
-
+					<List component="div" disablePadding>
+						{['사업영역'].map((text, index) => (
+							<ListItem key={text} disablePadding>
+								<ListItemButton sx={{ pl: 4 }} component={Link} to={businessLink[index]}>
+									<ListItemIcon>
+										{index === 0 ? (
+											<RecordVoiceOverIcon />
+										) : index === 1 ? (
+											<PeopleAltIcon />
+										) : index === 2 ? (
+											<SummarizeIcon />
+										) : index === 3 ? (
+											<EmojiEventsIcon />
+										) : (
+											<EditRoadIcon />
+										)}
+									</ListItemIcon>
+									<ListItemText primary={text} />
+								</ListItemButton>
+							</ListItem>
+						))}
+						<Divider />
+					</List>
 				</Collapse>
 				<Divider />
 				<ListItemButton onClick={() => setResearch(!research)}>

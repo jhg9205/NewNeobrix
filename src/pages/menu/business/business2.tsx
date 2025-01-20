@@ -75,7 +75,7 @@ const Business2 = () => {
                     {/*컨텐츠 div*/}
                     <Grid container>
                         <Grid item lg={2} md={2}>
-                            <BusinessBar index={'panel2'}/>
+                            {getViewSize() == 'lg'?<BusinessBar index={'panel2'}/>:<></>}
                         </Grid>
                         <Grid item lg={8} md={10}>
                                 <motion.div
@@ -106,10 +106,10 @@ const Business2 = () => {
                                 }}
                             >
                             <Grid container>
-                                <Grid item lg={4} style={{justifyItems:'center'}}>
+                                <Grid item lg={4} style={getViewSize()=='lg'?{justifyItems:'center'}:{justifyItems:'center',width:'100%'}}>
                                     <FadeImg pc={analytics} delay={1500} isContent={true} id={'application'}/>
                                 </Grid>
-                                <Grid item lg={8} style={{fontSize:'20px', lineHeight:'30px',marginTop:'50px'}}>
+                                <Grid item lg={8} style={getViewSize()=='lg'?{fontSize:'20px', lineHeight:'30px',marginTop:'50px'}:{fontSize:'20px', lineHeight:'30px',margin:'50px 50px 0 50px'}}>
                                     <span>
                                         데이터가 핵심 자산으로 자리 잡은 시대에서 NeoBRIX는 AI 플랫폼을 통하여 첨단 머신러닝 알고리즘과 예측 분석 도구를 기반으로
                                         고객이 데이터를 활용해 더 스마트한 의사 결정을 내릴 수 있도록 지원합니다. 이 플랫폼은 대규모 데이터를 실시간으로 처리하고,

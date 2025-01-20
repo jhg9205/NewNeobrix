@@ -68,7 +68,7 @@ const Menu1 = () => {
 								<span> · 사업영역 · 사업영역</span>
 							</div>
 							<div className='menu-sub-mobile'>
-								<p>CI</p>
+								<p>사업영역</p>
 							</div>
 						</Grid>
 						<Grid item sm={4} className='menu-bg-mobile'>
@@ -81,7 +81,7 @@ const Menu1 = () => {
 					{/*컨텐츠 div*/}
 					<Grid container>
 						<Grid item lg={2} md={2}>
-							<BusinessBar index={''}/>
+							{getViewSize() == 'lg'?<BusinessBar index={''}/>:<></>}
 						</Grid>
 						<Grid item lg={10} md={10} className='business-main'>
 							<motion.div
