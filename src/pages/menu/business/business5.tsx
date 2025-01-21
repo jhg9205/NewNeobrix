@@ -225,20 +225,20 @@ const Business5 = () => {
                                 }}
                             >
                                 <Grid container style={{marginTop:'50px'}}>
-                                    <Grid item lg={1.5}></Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={getViewSize()=='lg'?{fontSize:'20px'}:{fontSize:'18px'}}>관리시스템 통합</p>
-                                        <img src={environment3} style={{width:'80%',marginBottom:'100px'}}/>
+                                        <img src={environment3} style={getViewSize()=='lg'?{width:'80%',marginBottom:'100px'}:{width:'80%',marginBottom:'10px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={getViewSize()=='lg'?{fontSize:'20px'}:{fontSize:'18px'}}>자가점검 지원시스템</p>
-                                        <img src={environment4} style={{width:'80%',marginBottom:'100px'}}/>
+                                        <img src={environment4} style={getViewSize()=='lg'?{width:'80%',marginBottom:'100px'}:{width:'80%',marginBottom:'10px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={getViewSize()=='lg'?{fontSize:'20px'}:{fontSize:'18px'}}>생태하천복원 관리시스템</p>
                                         <img src={environment5} style={{width:'80%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={1.5}></Grid>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
                                 </Grid>
                             </motion.div>
                             <motion.div
@@ -276,20 +276,20 @@ const Business5 = () => {
                                 }}
                             >
                                 <Grid container style={{marginTop:'50px'}}>
-                                    <Grid item lg={1.5}></Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={getViewSize()=='lg'?{fontSize:'20px'}:{fontSize:'18px'}}>시설 및 수질정보 조회 기능</p>
-                                        <img src={environment6} style={{width:'80%',marginBottom:'100px'}}/>
+                                        <img src={environment6} style={getViewSize()=='lg'?{width:'80%',marginBottom:'100px'}:{width:'80%',marginBottom:'10px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={getViewSize()=='lg'?{fontSize:'20px'}:{fontSize:'18px'}}>정보현행화</p>
-                                        <img src={environment7} style={{width:'80%',marginBottom:'100px'}}/>
+                                        <img src={environment7} style={getViewSize()=='lg'?{width:'80%',marginBottom:'100px'}:{width:'80%',marginBottom:'10px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={getViewSize()=='lg'?{fontSize:'20px'}:{fontSize:'18px'}}>행정지원시스템</p>
                                         <img src={environment8} style={{width:'80%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={1.5}></Grid>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
                                 </Grid>
                             </motion.div>
                         </Grid>

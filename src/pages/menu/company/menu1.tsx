@@ -108,7 +108,7 @@ const Menu1 = () => {
 					</SwiperSlide>
 				</Swiper>
 				<div className="menu_title_contain" style={style}>
-					<div className="contain">
+					<div className="contain" style={getViewSize()=='lg'?{}:{padding:'0 50px'}}>
 						<motion.div
 							initial={{ opacity: 0, y: 100 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -120,7 +120,7 @@ const Menu1 = () => {
 							}}
 						>
 							<Grid container spacing={0}>
-								<Grid item lg={6} md={12}>
+								<Grid item lg={6} md={12} xs={12}>
 									<Fade in={true} timeout={1500}>
 										<div className="ceo_area">
 											<div className="ceo_tit">
@@ -155,7 +155,7 @@ const Menu1 = () => {
 										</div>
 									</Fade>
 								</Grid>
-								<Grid item lg={6} md={12}>
+								<Grid item lg={6} md={12} xs={12}>
 									<div className="ceo_img">
 										<FadeImg pc={earth} delay={1500} isContent={true} />
 									</div>
@@ -235,7 +235,7 @@ const Menu1 = () => {
 				>
 				<div className='ci'>
 					<Grid container spacing={0}>
-						<Grid item lg={6}>
+						<Grid item lg={6} md={12} xs={12}>
 							<div className='ci-main'>
 								<p>Corporate</p>
 								<p>Identity</p>
@@ -260,7 +260,7 @@ const Menu1 = () => {
 								</div>
 							</div>
 						</Grid>
-						<Grid item lg={6} style={{alignContent:'center'}}>
+						<Grid item lg={6} md={12} xs={12} style={{alignContent:'center'}}>
 							<div className='ci-logoBox'>
 								<img src={logoBlack}/>
 							</div>

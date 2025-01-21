@@ -1781,6 +1781,11 @@
 		min-height: 200px !important;
 	}
 	padding:100px;
+	@include mobile(){
+		padding: 0;
+		width: 100%;
+		justify-items: center;
+	}
 	#card1{
 		background: url('../images/main/img_bg_hr.png') no-repeat top center;
 		background-size: cover;
@@ -1816,9 +1821,11 @@
 		transform-origin: 10% 60%;
 		color: white;
 		@include mobile{
-			width: 150px;
+			width: 50%;
 			height: 300px;
 			border-radius: 30px;
+			margin: 20px;
+			float: none;
 		}
 		.intro-card-button{
 			position:absolute;

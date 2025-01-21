@@ -105,7 +105,7 @@ const Menu2 = () => {
 						>
 							<div className='ci'>
 								<Grid container spacing={0}>
-									<Grid item lg={6}>
+									<Grid item lg={6} md={12} xs={12}>
 										<div className='ci-main'>
 											<p>Corporate</p>
 											<p>Identity</p>
@@ -126,7 +126,7 @@ const Menu2 = () => {
 											</div>
 										</div>
 									</Grid>
-									<Grid item lg={6} style={{alignContent:'center'}}>
+									<Grid item lg={6} md={12} xs={12} style={{alignContent:'center'}}>
 										<div className='ci-logoBox'>
 											<img src={logoBlack}/>
 										</div>
