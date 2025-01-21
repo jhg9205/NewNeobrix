@@ -65,7 +65,7 @@ const Business4 = () => {
                         </div>
                     </>:
                     <Grid container>
-                        <Grid item sm={8} className='menu-header-mobile'>
+                        <Grid item xs={8} className='menu-header-mobile'>
                             <div className='menu-flow-mobile'>
                                 <HomeIcon onClick={()=>{navigate('/')}}/>
                                 <span> · 사업영역 · LAND/FACILITY</span>
@@ -74,7 +74,7 @@ const Business4 = () => {
                                 <p>LAND/FACILITY</p>
                             </div>
                         </Grid>
-                        <Grid item sm={4} className='menu-bg-mobile'>
+                        <Grid item xs={4} className='menu-bg-mobile'>
 
                         </Grid>
                     </Grid>
@@ -168,13 +168,13 @@ const Business4 = () => {
                             >
                                 <p style={{fontSize:'30px', fontWeight:'bold', textAlign:'left', padding:'0 0 20px 100px'}}>토지보상 시스템</p>
                                 <Divider/>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}:{color:'#242525',fontSize:'18px', fontWeight:'400', textAlign:'left', padding:'10px 50px 0 50px'}}>
                                     · 최신 ICT 기술을 적용하여 보상업무 지원을 위한 단계별 업무 절차 시스템화(사업정보, 공부자료, 감정평가, 협의, 이의재결, 소송관리)
                                 </p>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}:{color:'#242525',fontSize:'18px', fontWeight:'400', textAlign:'left', padding:'10px 50px 0 50px'}}>
                                     · 각 고객사 내/외부 시스템 연계를 통한 정보공유 체계 및 업무효율성 극대화
                                 </p>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}:{color:'#242525',fontSize:'18px', fontWeight:'400', textAlign:'left', padding:'10px 50px 0 50px'}}>
                                     · 중앙토지수용위원회 시스템 연계를 통한 수용재결 업무의 편의성 증대
                                 </p>
                             </motion.div>
@@ -190,20 +190,20 @@ const Business4 = () => {
                                 }}
                             >
                                 <Grid container style={{marginTop:'50px'}}>
-                                    <Grid item lg={1.5}></Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={{fontSize:'20px'}}>토지조서 작성</p>
-                                        <img src={land3} style={{width:'80%',marginBottom:'100px'}}/>
+                                        <img src={land3} style={getViewSize()=='lg'?{width:'80%',marginBottom:'100px'}:{width:'80%',marginBottom:'10px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={{fontSize:'20px'}}>감정평가 의뢰</p>
-                                        <img src={land4} style={{width:'80%',marginBottom:'100px'}}/>
+                                        <img src={land4} style={getViewSize()=='lg'?{width:'80%',marginBottom:'100px'}:{width:'80%',marginBottom:'10px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={{fontSize:'20px'}}>보상협의 계약</p>
                                         <img src={land5} style={{width:'80%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={1.5}></Grid>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
                                 </Grid>
                             </motion.div>
                             <motion.div
@@ -219,13 +219,13 @@ const Business4 = () => {
                             >
                                 <p style={{fontSize:'30px', fontWeight:'bold', textAlign:'left', padding:'0 0 20px 100px'}}>상수도 시설물관리</p>
                                 <Divider/>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}:{color:'#242525',fontSize:'18px', fontWeight:'400', textAlign:'left', padding:'10px 50px 0 50px'}}>
                                     · 공간정보 기술과 최적화된 웹 기반 기술 적용을 통해 효율적이고 정확하며 안전한 상수도관리시스템 구축
                                 </p>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}:{color:'#242525',fontSize:'18px', fontWeight:'400', textAlign:'left', padding:'10px 50px 0 50px'}}>
                                     · 분산 관리되고 있는 준공도면의 통합관리(도면분실에 대한 대비 및 유사 시 활용)
                                 </p>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}:{color:'#242525',fontSize:'18px', fontWeight:'400', textAlign:'left', padding:'10px 50px 0 50px'}}>
                                     · GIS 분석 기능을 활용한 누수, 단수 업무 기능 개선 및 관제 시스템 강화
                                 </p>
                             </motion.div>
@@ -241,20 +241,20 @@ const Business4 = () => {
                                 }}
                             >
                                 <Grid container style={{marginTop:'50px'}}>
-                                    <Grid item lg={1.5}></Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={{fontSize:'20px'}}>3D 시각분석 - 상수관로 분석</p>
-                                        <img src={land6} style={{width:'80%',marginBottom:'100px'}}/>
+                                        <img src={land6} style={getViewSize()=='lg'?{width:'80%',marginBottom:'100px'}:{width:'80%',marginBottom:'10px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={{fontSize:'20px'}}>상수도 시설물 - 현황 및 통계</p>
-                                        <img src={land7} style={{width:'80%',marginBottom:'100px'}}/>
+                                        <img src={land7} style={getViewSize()=='lg'?{width:'80%',marginBottom:'100px'}:{width:'80%',marginBottom:'10px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={{fontSize:'20px'}}>준공도면 통합관리</p>
                                         <img src={land8} style={{width:'80%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={1.5}></Grid>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
                                 </Grid>
                             </motion.div>
                             <motion.div
@@ -270,13 +270,13 @@ const Business4 = () => {
                             >
                                 <p style={{fontSize:'30px', fontWeight:'bold', textAlign:'left', padding:'0 0 20px 100px'}}>국가(공유)재산 시스템</p>
                                 <Divider/>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'20px 0 0 100px'}:{color:'#242525',fontSize:'18px', fontWeight:'400', textAlign:'left', padding:'10px 50px 0 50px'}}>
                                     · 공유재산 관리업무 전반을 시스템화 하여 공유재산 취득, 분할·합병, 실태조사, 대부, 대부료 부과, 무단점유, 변상금, 매각, 이력관리
                                 </p>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}:{color:'#242525',fontSize:'18px', fontWeight:'400', textAlign:'left', padding:'10px 50px 0 50px'}}>
                                     · 공유 재산의 현장 실태조사 업무를 지원할 수 있는 모바일 현장지원시스템 구현
                                 </p>
-                                <p style={{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}}>
+                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'0 0 0 100px'}:{color:'#242525',fontSize:'18px', fontWeight:'400', textAlign:'left', padding:'10px 50px 0 50px'}}>
                                     · 위성사진 및 지적도 등의 필요정보와 조회기능을 제공하여 현장 실태조사, DB점검 등에 따른 업무부담 최소화
                                 </p>
                             </motion.div>
@@ -292,20 +292,20 @@ const Business4 = () => {
                                 }}
                             >
                                 <Grid container style={{marginTop:'50px'}}>
-                                    <Grid item lg={1.5}></Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={{fontSize:'20px'}}>의사결정지원 시스템</p>
-                                        <img src={land9} style={{width:'80%',marginBottom:'100px'}}/>
+                                        <img src={land9} style={getViewSize()=='lg'?{width:'80%',marginBottom:'100px'}:{width:'80%',marginBottom:'10px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={{fontSize:'20px'}}>DB불일치 검축</p>
-                                        <img src={land10} style={{width:'80%',marginBottom:'100px'}}/>
+                                        <img src={land10} style={getViewSize()=='lg'?{width:'80%',marginBottom:'100px'}:{width:'80%',marginBottom:'10px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={6} xs={6}>
                                         <p style={{fontSize:'20px'}}>3D 지형 렌더링</p>
                                         <img src={land11} style={{width:'80%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={1.5}></Grid>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
                                 </Grid>
                             </motion.div>
                         </Grid>

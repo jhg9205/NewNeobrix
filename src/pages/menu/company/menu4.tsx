@@ -51,7 +51,7 @@ const Menu4 = () => {
 					</div>
 				</>:
 				<Grid container>
-					<Grid item sm={8} className='menu-header-mobile'>
+					<Grid item xs={8} className='menu-header-mobile'>
 						<div className='menu-flow-mobile'>
 							<HomeIcon onClick={()=>{navigate('/')}}/>
 							<span> · 기업소개 · 오시는길</span>
@@ -60,7 +60,7 @@ const Menu4 = () => {
 							<p>오시는길</p>
 						</div>
 					</Grid>
-					<Grid item sm={4} className='menu-bg-mobile'>
+					<Grid item xs={4} className='menu-bg-mobile'>
 
 					</Grid>
 				</Grid>

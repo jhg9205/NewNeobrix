@@ -72,7 +72,7 @@ const Business3 = () => {
                         </div>
                     </>:
                     <Grid container>
-                        <Grid item sm={8} className='menu-header-mobile'>
+                        <Grid item xs={8} className='menu-header-mobile'>
                             <div className='menu-flow-mobile'>
                                 <HomeIcon onClick={()=>{navigate('/')}}/>
                                 <span> · 사업영역 · MOBILE</span>
@@ -81,7 +81,7 @@ const Business3 = () => {
                                 <p>MOBILE</p>
                             </div>
                         </Grid>
-                        <Grid item sm={4} className='menu-bg-mobile'>
+                        <Grid item xs={4} className='menu-bg-mobile'>
 
                         </Grid>
                     </Grid>
@@ -184,20 +184,20 @@ const Business3 = () => {
                                 }}
                             >
                                 <Grid container style={{marginTop:'50px'}}>
-                                    <Grid item lg={1.5} md={0} sm={0}></Grid>
-                                    <Grid item lg={3} md={12} sm={12} style={getViewSize()=='lg'?{}:{width:'100%'}}>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
+                                    <Grid item lg={3} md={6} xs={6} style={getViewSize()=='lg'?{}:{width:'100%'}}>
                                         <p style={{fontSize:'20px'}}>판매 - 현장점검</p>
-                                        <img src={mobile1} style={{width:'90%',marginBottom:'100px'}}/>
+                                        <img src={mobile1} style={getViewSize()=='lg'?{width:'90%',marginBottom:'100px'}:{width:'80%',marginBottom:'10px'}}/>
                                     </Grid>
-                                    <Grid item lg={3} md={12} sm={12} style={getViewSize()=='lg'?{}:{width:'100%'}}>
-                                        <p style={{fontSize:'20px'}}>주택정보 - 공사 진행현황 파악</p>
-                                        <img src={mobile2} style={{width:'90%',marginBottom:'100px'}}/>
+                                    <Grid item lg={3} md={6} xs={6} style={getViewSize()=='lg'?{}:{width:'100%'}}>
+                                        <p style={{fontSize:'20px'}}>주택정보 - 공사진행현황파악</p>
+                                        <img src={mobile2} style={getViewSize()=='lg'?{width:'90%',marginBottom:'100px'}:{width:'80%',marginBottom:'10px'}}/>
                                     </Grid>
-                                    <Grid item lg={3} md={12} sm={12} style={getViewSize()=='lg'?{}:{width:'100%'}}>
+                                    <Grid item lg={3} md={6} xs={6} style={getViewSize()=='lg'?{}:{width:'100%'}}>
                                         <p style={{fontSize:'20px'}}>공사 업무지원 - 드론현장 3D</p>
                                         <img src={mobile3} style={{width:'80%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={1.5} md={0} sm={0}></Grid>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
                                 </Grid>
                             </motion.div>
                             <motion.div
@@ -237,20 +237,20 @@ const Business3 = () => {
                                 }}
                             >
                                 <Grid container style={{marginTop:'50px'}}>
-                                    <Grid item lg={1.5}></Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
+                                    <Grid item lg={3} md={4} xs={4} style={getViewSize()=='lg'?{}:{width:'33%'}}>
                                         <p style={{fontSize:'20px'}}>실태조사 대상 조회</p>
                                         <img src={mobile4} style={{width:'80%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={4} xs={4} style={getViewSize()=='lg'?{}:{width:'33%'}}>
                                         <p style={{fontSize:'20px'}}>무단점유 지속</p>
                                         <img src={mobile5} style={{width:'80%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={3}>
+                                    <Grid item lg={3} md={4} xs={4} style={getViewSize()=='lg'?{}:{width:'33%'}}>
                                         <p style={{fontSize:'20px'}}>무단점유 종결</p>
                                         <img src={mobile6} style={{width:'80%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={1.5}></Grid>
+                                    <Grid item lg={1.5} md={0} xs={0}></Grid>
                                 </Grid>
                             </motion.div>
                             <motion.div
@@ -283,50 +283,50 @@ const Business3 = () => {
                                 }}
                             >
                                 <Grid container style={{marginTop:'50px'}}>
-                                    <Grid item lg={1}></Grid>
-                                    <Grid item lg={2}>
+                                    <Grid item lg={1} md={0} xs={0}></Grid>
+                                    <Grid item lg={2} md={6} xs={6} style={getViewSize()=='lg'?{}:{width:'50%'}}>
                                         <p style={{fontSize:'20px'}}>요도+위성 중첩</p>
                                         <img src={mobile7} style={{width:'90%'}}/>
                                     </Grid>
-                                    <Grid item lg={2}>
+                                    <Grid item lg={2} md={6} xs={6} style={getViewSize()=='lg'?{}:{width:'50%'}}>
                                         <p style={{fontSize:'20px'}}>요도+일반도 중첩</p>
                                         <img src={mobile8} style={{width:'90%'}}/>
                                     </Grid>
-                                    <Grid item lg={2}>
+                                    <Grid item lg={2} md={6} xs={6} style={getViewSize()=='lg'?{}:{width:'50%'}}>
                                         <p style={{fontSize:'20px'}}>지도범례 설정</p>
                                         <img src={mobile9} style={{width:'90%'}}/>
                                     </Grid>
-                                    <Grid item lg={2}>
+                                    <Grid item lg={2} md={6} xs={6} style={getViewSize()=='lg'?{}:{width:'50%'}}>
                                         <p style={{fontSize:'20px'}}>조사구 이동</p>
                                         <img src={mobile10} style={{width:'90%'}}/>
                                     </Grid>
-                                    <Grid item lg={2}>
+                                    <Grid item lg={2} md={6} xs={6} style={getViewSize()=='lg'?{}:{width:'50%'}}>
                                         <p style={{fontSize:'20px'}}>조사구 할당 (관리)</p>
                                         <img src={mobile11} style={{width:'90%'}}/>
                                     </Grid>
-                                    <Grid item lg={1}></Grid>
-                                    <Grid item lg={1}></Grid>
-                                    <Grid item lg={2}>
+                                    <Grid item lg={1} md={0} xs={0}></Grid>
+                                    <Grid item lg={1} md={0} xs={0}></Grid>
+                                    <Grid item lg={2} md={6} xs={6} style={getViewSize()=='lg'?{}:{width:'50%'}}>
                                         <p style={{fontSize:'20px'}}>mCAPI</p>
                                         <img src={mobile12} style={{width:'90%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={2}>
+                                    <Grid item lg={2} md={6} xs={6} style={getViewSize()=='lg'?{}:{width:'50%'}}>
                                         <p style={{fontSize:'20px'}}>다양한 조사 Biz</p>
                                         <img src={mobile13} style={{width:'90%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={2}>
+                                    <Grid item lg={2} md={6} xs={6} style={getViewSize()=='lg'?{}:{width:'50%'}}>
                                         <p style={{fontSize:'20px'}}>현장정보 취득</p>
                                         <img src={mobile14} style={{width:'90%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={2}>
+                                    <Grid item lg={2} md={6} xs={6} style={getViewSize()=='lg'?{}:{width:'50%'}}>
                                         <p style={{fontSize:'20px'}}>전개도 편집</p>
                                         <img src={mobile15} style={{width:'90%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={2}>
+                                    <Grid item lg={2} md={6} xs={6} style={getViewSize()=='lg'?{}:{width:'50%'}}>
                                         <p style={{fontSize:'20px'}}>진행상태 (관리)</p>
                                         <img src={mobile16} style={{width:'90%',marginBottom:'100px'}}/>
                                     </Grid>
-                                    <Grid item lg={1}></Grid>
+                                    <Grid item lg={1} md={0} xs={0}></Grid>
                                 </Grid>
                             </motion.div>
                         </Grid>

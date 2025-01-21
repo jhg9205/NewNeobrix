@@ -76,7 +76,7 @@ const Menu2 = () => {
 						</div>
 					</>:
 					<Grid container>
-						<Grid item sm={8} className='menu-header-mobile'>
+						<Grid item xs={8} className='menu-header-mobile'>
 							<div className='menu-flow-mobile'>
 								<HomeIcon onClick={()=>{navigate('/')}}/>
 								<span> · 홍보 · CI</span>
@@ -85,7 +85,7 @@ const Menu2 = () => {
 								<p>CI</p>
 							</div>
 						</Grid>
-						<Grid item sm={4} className='menu-bg-mobile'>
+						<Grid item xs={4} className='menu-bg-mobile'>
 
 						</Grid>
 					</Grid>

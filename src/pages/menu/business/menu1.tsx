@@ -62,7 +62,7 @@ const Menu1 = () => {
 						</div>
 					</>:
 					<Grid container>
-						<Grid item sm={8} className='menu-header-mobile'>
+						<Grid item xs={8} className='menu-header-mobile'>
 							<div className='menu-flow-mobile'>
 								<HomeIcon onClick={()=>{navigate('/')}}/>
 								<span> · 사업영역 · 사업영역</span>
@@ -71,7 +71,7 @@ const Menu1 = () => {
 								<p>사업영역</p>
 							</div>
 						</Grid>
-						<Grid item sm={4} className='menu-bg-mobile'>
+						<Grid item xs={4} className='menu-bg-mobile'>
 
 						</Grid>
 					</Grid>
@@ -89,7 +89,7 @@ const Menu1 = () => {
 								id="card1"
 								whileHover={{
 									boxShadow : '0px 0px 10px #666',
-									transform:getViewSize() == 'lg'?'translateY(-10px)':'translateY(-230px) translateX(-100px)'
+									transform:'translateY(-10px)'
 								}}
 							>
 								<Button
@@ -110,7 +110,7 @@ const Menu1 = () => {
 								id="card2"
 								whileHover={{
 									boxShadow : '0px 0px 10px #666',
-									transform:getViewSize() == 'lg'?'translateY(-10px)':'translateY(-230px) translateX(-100px)'
+									transform:'translateY(-10px)'
 								}}
 							>
 								<Button
@@ -131,7 +131,7 @@ const Menu1 = () => {
 								id="card3"
 								whileHover={{
 									boxShadow : '0px 0px 10px #666',
-									transform:getViewSize() == 'lg'?'translateY(-10px)':'translateY(-230px) translateX(-100px)'
+									transform:'translateY(-10px)'
 								}}
 							>
 								<Button
@@ -152,7 +152,7 @@ const Menu1 = () => {
 								id="card4"
 								whileHover={{
 									boxShadow : '0px 0px 10px #666',
-									transform:getViewSize() == 'lg'?'translateY(-10px)':'translateY(-230px) translateX(-100px)'
+									transform:'translateY(-10px)'
 								}}
 							>
 								<Button
@@ -173,7 +173,7 @@ const Menu1 = () => {
 								id="card5"
 								whileHover={{
 									boxShadow : '0px 0px 10px #666',
-									transform:getViewSize() == 'lg'?'translateY(-10px)':'translateY(-230px) translateX(-100px)'
+									transform:'translateY(-10px)'
 								}}
 							>
 								<Button

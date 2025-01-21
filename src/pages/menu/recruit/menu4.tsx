@@ -78,7 +78,7 @@ const Menu4 = () =>{
                     </div>
                 </>:
                 <Grid container>
-                    <Grid item sm={8} className='menu-header-mobile'>
+                    <Grid item xs={8} className='menu-header-mobile'>
                         <div className='menu-flow-mobile'>
                             <HomeIcon onClick={()=>{navigate('/')}}/>
                             <span> · 인재채용 · 복리후생</span>
@@ -87,7 +87,7 @@ const Menu4 = () =>{
                             <p>복리후생</p>
                         </div>
                     </Grid>
-                    <Grid item sm={4} className='menu-bg-mobile'>
+                    <Grid item xs={4} className='menu-bg-mobile'>
 
                     </Grid>
                 </Grid>
@@ -117,7 +117,7 @@ const Menu4 = () =>{
                 {/*컨텐츠 div*/}
                 <Grid container style={{ paddingBottom: '100px', width: '70%', margin: '0 auto' }} id="welfare">
                     {data.map((cont, index) => (
-                        <Grid item lg={6} md={6} sm={12} key={index} style={{ padding: '30px' }}>
+                        <Grid item lg={6} md={6} xs={12} key={index} style={{ padding: '30px' }}>
                             <motion.div
                                 className='intro-text'
                                 initial={{ opacity: 0, y: 50}}

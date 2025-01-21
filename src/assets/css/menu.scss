@@ -590,6 +590,9 @@
 	}
 	p{
 		font-size: 20px;
+		@include mobile(){
+			font-size: 15px;
+		}
 	}
 }
 .intro-dream{
