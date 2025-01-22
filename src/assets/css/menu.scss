@@ -1919,13 +1919,15 @@
 	}
 	.tab-panel{
 		padding: 50px;
+		@include mobile(){
+			padding: 0;
+		}
 	}
 	.tab-underline{
 		margin-top: 100px;
-		text-decoration: underline;
 		font-size: 40px;
 		@include mobile(){
-			font-size:30px;
+			font-size:25px;
 		}
 	}
 	.tab-sub-text{
@@ -1934,5 +1936,8 @@
 	}
 	.tab-sub-container{
 		margin-top: 50px;
+		@include mobile(){
+			justify-content: center;
+		}
 	}
 }

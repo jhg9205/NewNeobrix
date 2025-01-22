@@ -15,6 +15,12 @@ import FadeImg from "@components/ui/effect/fadeImg";
 import shake from '@images/menu/shaking.png'
 import maintenance from '@images/menu/maintenance.png'
 import efficiently from '@images/menu/efficiently.png'
+import water from '@images/menu/water.png'
+import data from '@images/menu/data.png'
+import education from '@images/menu/education.png'
+import map from '@images/menu/map.png'
+import service from '@images/menu/service.png'
+import application2 from '@images/menu/application.png'
 interface TabPanelProps {
     children?: React.ReactNode;
     index: number;
@@ -50,7 +56,7 @@ const Business1 = () => {
     const [value, setValue] = React.useState(0);
     const style = {
         width: '100%',
-        minHeight: '1000px'
+        minHeight: getViewSize()=='lg'?'2500px':'3000px'
     }
     const navigate = useNavigate()
 
@@ -211,10 +217,12 @@ const Business1 = () => {
                                             4차 산업혁명 기술에 걸맞는 서비스 제공을 위해 체계적인 방법론을 바탕으로 고객의 정보화 과정을 안정적이고 신속하게 진행합니다.
                                         </p>
                                         <Grid container>
-                                            <Grid item lg={6} xs={12}>
+                                            <Grid item lg={6} xs={6}>
                                                 <p className='tab-underline'>환경 분야</p>
                                                 <Grid container className='tab-sub-container'>
-                                                    <Grid item lg={5}>이미지</Grid>
+                                                    <Grid item lg={5}>
+                                                        <img style={getViewSize()=='lg'?{width:'200px'}:{width:'100px'}} src={water}/>
+                                                    </Grid>
                                                     <Grid item lg={7} className='tab-sub-text'>
                                                         <p>· 오염원관리시스템</p>
                                                         <p>· 스마트 도시침수</p>
@@ -223,10 +231,12 @@ const Business1 = () => {
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
-                                            <Grid item lg={6} xs={12}>
+                                            <Grid item lg={6} xs={6}>
                                                 <p className='tab-underline'>국토 분야</p>
                                                 <Grid container className='tab-sub-container'>
-                                                    <Grid item lg={5}>이미지</Grid>
+                                                    <Grid item lg={5}>
+                                                        <img style={getViewSize()=='lg'?{width:'200px'}:{width:'100px'}} src={map}/>
+                                                    </Grid>
                                                     <Grid item lg={7} className='tab-sub-text'>
                                                         <p>· 국유재산 관리 시스템</p>
                                                         <p>· 토지보상 관리 시스템</p>
@@ -235,10 +245,12 @@ const Business1 = () => {
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
-                                            <Grid item lg={6} xs={12}>
+                                            <Grid item lg={6} xs={6}>
                                                 <p className='tab-underline'>복지/교육 분야</p>
                                                 <Grid container className='tab-sub-container'>
-                                                    <Grid item lg={5}>이미지</Grid>
+                                                    <Grid item lg={5}>
+                                                        <img style={getViewSize()=='lg'?{width:'200px'}:{width:'100px'}} src={education}/>
+                                                    </Grid>
                                                     <Grid item lg={7} className='tab-sub-text'>
                                                         <p>· 생활보건 시스템</p>
                                                         <p>· 맞춤형 복지 시스템</p>
@@ -247,10 +259,12 @@ const Business1 = () => {
                                                     </Grid>
                                                 </Grid>
                                             </Grid>
-                                            <Grid item lg={6} xs={12}>
+                                            <Grid item lg={6} xs={6}>
                                                 <p className='tab-underline'>기타</p>
                                                 <Grid container className='tab-sub-container'>
-                                                    <Grid item lg={5}>이미지</Grid>
+                                                    <Grid item lg={5}>
+                                                        <img style={getViewSize()=='lg'?{width:'200px'}:{width:'100px'}} src={data}/>
+                                                    </Grid>
                                                     <Grid item lg={7} className='tab-sub-text'>
                                                         <p>· 공공데이터 포털</p>
                                                         <p>· 인구/주택 총 조사</p>
@@ -270,7 +284,9 @@ const Business1 = () => {
                                         <Grid item lg={12}>
                                             <p className='tab-underline'>Application 개발/개선/유지보수</p>
                                             <Grid container className='tab-sub-container'>
-                                                <Grid item lg={4}>이미지</Grid>
+                                                <Grid item lg={4}>
+                                                    <img style={{width:'200px'}} src={application2}/>
+                                                </Grid>
                                                 <Grid item lg={8} className='tab-sub-text'>
                                                     <p>· 분야별 전문가와 개발방법론을 기반으로 고객의 IT 수준을 진단하고 비즈니스 환경에 적합한
                                                     Application 개발 및 운영</p>
@@ -281,7 +297,9 @@ const Business1 = () => {
                                         <Grid item lg={12}>
                                             <p className='tab-underline'>서비스관리</p>
                                             <Grid container className='tab-sub-container'>
-                                                <Grid item lg={4}>이미지</Grid>
+                                                <Grid item lg={4}>
+                                                    <img style={{width:'200px'}} src={service}/>
+                                                </Grid>
                                                 <Grid item lg={8} className='tab-sub-text'>
                                                     <p>· 고객에게 최적화된 정보시스템 관련 설비, 인력 등의 정보 자산 지원 서비스 제공</p>
                                                     <p>· 비즈니스 환경을 고려하여 체계적인 품질 관리를 통해 운영 최적화 및 신속한 장애 대응</p>
