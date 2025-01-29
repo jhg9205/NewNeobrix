@@ -158,7 +158,7 @@ export const Intro = () => {
                                     <div
                                         className='intro-card-button'>
                                     <p>Mobile in my hand</p>
-                                    <span>HPE Ezmeral AI 플랫폼 (HPE EZMERAL ML OPS Platform)</span>
+                                    <span>GIS와 결합된 스마트한 현장 업무환경 제공</span>
                                     <div className='intro-card-arrow'>
                                         <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
                                     </div>
@@ -187,7 +187,7 @@ export const Intro = () => {
                                     <div
                                         className='intro-card-button'>
                                             <p>Land/Facility Management</p>
-                                    <span>중대재해 발생 시 법적대응에 활용할 수 있는 솔루션</span>
+                                    <span>효율적인 국토 및 시설관리를 위한 GIS와 결합된 관리시스템</span>
                                     <div className='intro-card-arrow'>
                                         <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
                                     </div>
@@ -216,7 +216,7 @@ export const Intro = () => {
                                     <div
                                         className='intro-card-button'>
                                             <p>Environment</p>
-                                        <span>중대재해 발생 시 법적대응에 활용할 수 있는 솔루션</span>
+                                        <span>기후변화에 대응할 수 있는 미래 환경 IT서비스 제공</span>
                                         <div className='intro-card-arrow'>
                                             <ArrowForwardIcon fontSize='large' sx={{color:'white', fontSize:'50px'}}/>
                                         </div>

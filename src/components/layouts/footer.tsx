@@ -38,6 +38,7 @@ const Footer = () => {
 						<li>인재채용</li>
 						<li onClick={()=>{navigate('/talent')}}>인재상</li>
 						<li onClick={()=>{navigate('/hr')}}>인사제도</li>
+						<li onClick={()=>{navigate('/welfare')}}>복리후생</li>
 						<li onClick={()=>{navigate('/recruit')}}>채용전형</li>
 					</ul>
 					<ul>

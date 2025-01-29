@@ -141,7 +141,7 @@ export const Intro2 = () => {
 								<Divider/>
 								<p className='intro2-card-main'>비점오염원관리 정보시스템</p>
 								<p className='intro2-card-sub'>#비점오염원 측정망 </p>
-								<p className='intro2-card-sub'>#비점오염원</p>
+								<p className='intro2-card-sub'>#비점오염원 저감시설</p>
 								<p className='intro2-card-sub'>#비점오염원 자가점검</p>
 								<div className='intro2-card-arrow'>
 									<ArrowForwardIcon fontSize='large' sx={{fontSize:'50px'}}/>
@@ -211,10 +211,10 @@ export const Intro2 = () => {
 						<SwiperSlide><img src={shLogo}/></SwiperSlide>
 						<SwiperSlide><img src={landLogo}/></SwiperSlide>
 						<SwiperSlide><img src={natureLogo}/></SwiperSlide>
+						<SwiperSlide><img src={airportLogo}/></SwiperSlide>
 						<SwiperSlide><img src={trianLogo}/></SwiperSlide>
 						<SwiperSlide><img src={ligLogo}/></SwiperSlide>
 						<SwiperSlide><img src={sgaLogo}/></SwiperSlide>
-						<SwiperSlide><img src={airportLogo}/></SwiperSlide>
 						<SwiperSlide><img src={mtData}/></SwiperSlide>
 						<SwiperSlide><img src={dataLogo}/></SwiperSlide>
 						<SwiperSlide><img src={kwaterLogo}/></SwiperSlide>

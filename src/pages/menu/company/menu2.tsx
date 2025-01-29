@@ -110,7 +110,7 @@ const Menu2 = () => {
 							</Grid>
 							<Grid item lg={10} md={12} xs={12}>
 								<p className='intro-dream-main'>슬로건</p>
-								<p className='intro-dream-sub2'>AUTOONOMY,  CONFIDENCE AND INTERACTION</p>
+								<p className='intro-dream-sub2'>AUTONOMY,  CONFIDENCE AND INTERACTION</p>
 							</Grid>
 						</Grid>
 					</div>
