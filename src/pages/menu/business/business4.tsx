@@ -140,7 +140,7 @@ const Business4 = () => {
                                     y: { duration: 0.5 },
                                 }}
                             >
-                                <img src={land1} style={{width:'70%', margin:'50px 0 0 0'}}/>
+                                <img src={land1} style={getViewSize()=='lg'?{width:'70%', margin:'50px 0 0 0'}:{width:'90%', margin:'50px 0 0 0'}}/>
                             </motion.div>
                             <motion.div
                                 className='intro-text'
@@ -153,7 +153,7 @@ const Business4 = () => {
                                     y: { duration: 0.5 },
                                 }}
                             >
-                                <img src={land2} style={{width:'60%', margin:'100px 0'}}/>
+                                <img src={land2} style={getViewSize()=='lg'?{width:'60%', margin:'100px 0'}:{width:'90%', margin:'100px 0'}}/>
                             </motion.div>
                             <motion.div
                                 className='intro-text'
