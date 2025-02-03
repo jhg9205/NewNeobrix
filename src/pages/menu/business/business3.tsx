@@ -146,7 +146,7 @@ const Business3 = () => {
                                     y: { duration: 0.5 },
                                 }}
                             >
-                                <img src={mobileImg} style={{width:'80%',marginTop:'100px', padding:'20px', border:'1px solid gray', borderRadius:'40px'}}/>
+                                <img src={mobileImg} style={{width:'90%',marginTop:'100px', padding:'20px', border:'1px solid gray', borderRadius:'40px'}}/>
                             </motion.div>
                             <motion.div
                                 className='intro-text'

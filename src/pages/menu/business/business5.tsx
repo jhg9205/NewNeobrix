@@ -127,7 +127,7 @@ const Business5 = () => {
                                             y: { duration: 0.5 },
                                         }}
                                     >
-                                        <p style={{fontSize:'40px', fontWeight:'bold', textAlign:'left', padding:'0 0 50px 0'}}>수질/오염원</p>
+                                        <img src={environment1} style={{width:'100%'}}/>
                                     </motion.div>
                                     <motion.div
                                         className='intro-text'
@@ -140,52 +140,7 @@ const Business5 = () => {
                                             y: { duration: 0.5 },
                                         }}
                                     >
-                                        <img src={environment1} style={{width:'100%',marginBottom:'50px'}}/>
-                                    </motion.div>
-                                    <motion.div
-                                        className='intro-text'
-                                        initial={{ opacity: 0, y: 50}}
-                                        whileInView={{ opacity: 1, y: 0}}
-                                        viewport={{ once: false }}
-                                        transition={{
-                                            ease: "easeInOut",
-                                            duration: 0.5,
-                                            y: { duration: 0.5 },
-                                        }}
-                                    >
-                                        <p style={{fontSize:'40px', fontWeight:'bold', textAlign:'left', padding:'0 0 50px 0'}}>온실가스/대기</p>
-                                    </motion.div>
-                                    <motion.div
-                                        className='intro-text'
-                                        initial={{ opacity: 0, y: 50}}
-                                        whileInView={{ opacity: 1, y: 0}}
-                                        viewport={{ once: false }}
-                                        transition={{
-                                            ease: "easeInOut",
-                                            duration: 0.5,
-                                            y: { duration: 0.5 },
-                                        }}
-                                    >
-                                        <p>NeoBRIX의 IOT, 빅데이터, AI 디지털 기술을 활용하여 대기오염 영향도 분석체계를 제공합니다.</p>
-                                        <Grid container style={getViewSize()=='lg'?{}:{justifyContent:'center'}}>
-                                            <Grid item lg={3} md={12} xs={12} style={getViewSize()=='lg'?{}:{width:'80%',justifyContent:'center'}}>
-                                                <img src={environment2} style={getViewSize()=='lg'?{width:'90%',marginBottom:'100px'}:{width:'90%',marginBottom:'50px'}}/>
-                                            </Grid>
-                                            <Grid item lg={9} md={12} xs={12}>
-                                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'10px 0 0 100px'}:{color:'#242525',fontSize:'18px', fontWeight:'400', textAlign:'left', padding:'10px 0 0 0'}}>
-                                                    · 2013년 부터 기상여건 악화(풍속▲, 강수량▲, 습도▲), 국외 유입 증가, 국내 산업시설 증가 등으로 미세먼지 개선 필요성 증대
-                                                </p>
-                                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'10px 0 0 100px'}:{color:'#242525',fontSize:'18px', fontWeight:'400', textAlign:'left', padding:'10px 0 0 0'}}>
-                                                    · 국내 고농도 미세먼지 발생빈도 증가 및 대기질 악화에 따라 국민 대기오염 정보 수요 중대
-                                                </p>
-                                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'10px 0 0 100px'}:{color:'#242525',fontSize:'18px', fontWeight:'400', textAlign:'left', padding:'10px 0 0 0'}}>
-                                                    · 다양해진 정보유통 경로를 통한 대기오염정보 활용 증대
-                                                </p>
-                                                <p style={getViewSize()=='lg'?{color:'#242525',fontSize:'20px', fontWeight:'400', textAlign:'left', padding:'10px 0 0 100px'}:{color:'#242525',fontSize:'18px', fontWeight:'400', textAlign:'left', padding:'10px 0 0 0'}}>
-                                                    · 급변하는 IT 환경(빅데이터, AI, 클라우드 등) 변화와 다양한 정책 변화 수용
-                                                </p>
-                                            </Grid>
-                                        </Grid>
+                                                <img src={environment2} style={getViewSize()=='lg'?{width:'90%'}:{width:'90%',marginBottom:'50px'}}/>
                                     </motion.div>
                                 </Grid>
                             </Grid>
