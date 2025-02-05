@@ -17,12 +17,12 @@ import land2 from "@images/menu/land2.png";
 import land3 from "@images/menu/land3.png";
 import land4 from "@images/menu/land4.png";
 import land5 from "@images/menu/land5.png";
-import land6 from "@images/menu/land6.png";
-import land7 from "@images/menu/land7.png";
-import land8 from "@images/menu/land8.png";
-import land9 from "@images/menu/land9.png";
-import land10 from "@images/menu/land10.png";
-import land11 from "@images/menu/land11.png";
+import land6 from "@images/menu/land9.png";
+import land7 from "@images/menu/land10.png";
+import land8 from "@images/menu/land11.png";
+import land9 from "@images/menu/land6.png";
+import land10 from "@images/menu/land7.png";
+import land11 from "@images/menu/land8.png";
 
 const Business4 = () => {
 
