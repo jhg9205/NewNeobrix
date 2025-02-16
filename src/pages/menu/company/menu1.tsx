@@ -78,8 +78,8 @@ const Menu1 = () => {
 								}}
 							>
 								<div>
-									<p className='white-text'>What we offer for</p>
-									<p className='gra-text'>new normal era:</p>
+									<p className='white-text'>CONFIDENCE</p>
+									<p className='gra-text'>AND INTERACTION:</p>
 									<p className='small-text'>Neobrix</p>
 								</div>
 							</motion.div>
@@ -88,22 +88,6 @@ const Menu1 = () => {
 					<SwiperSlide>
 						<div id="slider2" className="slider-img">
 
-							<motion.div
-								initial={{ opacity: 0, y: 100 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								viewport={{ once: false }}
-								transition={{
-									ease: "easeInOut",
-									duration: 2,
-									y: { duration: 3 },
-								}}
-							>
-								<div>
-									<p className='white-text'>What we offer for</p>
-									<p className='gra-text'>new normal era:</p>
-									<p className='small-text'>Neobrix</p>
-								</div>
-							</motion.div>
 						</div>
 					</SwiperSlide>
 				</Swiper>
