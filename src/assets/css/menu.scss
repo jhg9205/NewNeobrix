@@ -1772,7 +1772,7 @@
 	@include mobile(){
 		padding: 0;
 		width: 100%;
-		justify-items: center;
+		justify-items: center !important;
 	}
 	#card1{
 		background: url('../images/main/img_bg_hr.png') no-repeat top center;
