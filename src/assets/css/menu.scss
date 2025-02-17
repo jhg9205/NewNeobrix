@@ -288,7 +288,7 @@
 					text-align: center;
 				}
 			}
-			.ci-download1, .ci-download2{
+			.ci-download3, .ci-download4{
 				position: relative;
 				float: left;
 				svg{
@@ -307,17 +307,17 @@
 					}
 				}
 			}
-			.ci-download2{
+			.ci-download4{
 				margin-left: 50px;
 				@include mobile(){
 					margin-left: 20px;
 				}
 			}
-			.ci-download1:hover{
+			.ci-download3:hover{
 				color: $pointColor;
 				cursor: pointer;
 			}
-			.ci-download2:hover{
+			.ci-download4:hover{
 				color: $pointColor;
 				cursor: pointer;
 			}

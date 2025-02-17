@@ -29,12 +29,12 @@ const Menu1 = () => {
 					cName == 'ci-download1'?'/download/ci.png':
 					cName == 'download-div2'?'/download/Poster.pdf'
 						:'/download/ci.ai'
-		let name = cName == 'download-div1'?'NEOBRIX_회사소개서':
-			cName == 'download-div2'? 'NEOBRIX_브로셔'
+		let name = cName == 'ci-download3'?'NEOBRIX_회사소개서':
+			cName == 'ci-download4'? 'NEOBRIX_브로셔'
 						:'NEOBRIX_logo'
-		let type = cName == 'download-div1'?'pdf':
+		let type = cName == 'ci-download3'?'pdf':
 					cName == 'ci-download1'?'png':
-					cName == 'download-div2'?'pdf':
+					cName == 'ci-download4'?'pdf':
 							'ai'
 		alert.confirm({
 			type: ALERT.CONFIRM,
@@ -128,11 +128,11 @@ const Menu1 = () => {
 												</p>
 											</div>
 											<div className='ci-logo'>
-												<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='ci-download1'>
+												<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='ci-download3'>
 													<SystemUpdateAltIcon/>
 													<span className='download'>회사소개서 다운로드</span>
 												</div>
-												<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='ci-download2'>
+												<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='ci-download4'>
 													<SystemUpdateAltIcon/>
 													<span className='download'>브로셔 다운로드</span>
 												</div>
