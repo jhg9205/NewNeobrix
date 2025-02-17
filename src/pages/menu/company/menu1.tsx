@@ -27,7 +27,7 @@ const Menu1 = () => {
 
 		let file = cName == 'download-div1'?'/download/NEOBRIX.pdf':
 					cName == 'ci-download1'?'/download/ci.png':
-					cName == 'download-div2'?'/downliad/Poster.pdf'
+					cName == 'download-div2'?'/download/Poster.pdf'
 						:'/download/ci.ai'
 		let name = cName == 'download-div1'?'NEOBRIX_회사소개서':
 			cName == 'download-div2'? 'NEOBRIX_브로셔'
