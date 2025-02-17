@@ -26,6 +26,7 @@ import { useNavigate } from 'react-router-dom'
 import { Analytics } from "@vercel/analytics/react"
 import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
 import useScrollTrigger from "@mui/material/useScrollTrigger";
+import {getViewSize} from "@utils/functions";
 
 const actions = [
 	{ icon: <ConnectWithoutContactIcon style={{color:'#f38225'}}/>, name: '문의하기' }
@@ -89,12 +90,22 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 			>
 				<div>
 					<div className="slider-text-pc">
-						<p className="swiper-main-text">IT 및 업무 전문가와 함께 하는</p>
-						<p className="swiper-main-black">디지털 트랜스포메이션</p>
+						{getViewSize() == 'lg'?
+								<>
+									<p className="swiper-main-text">IT 및 업무 전문가와 함께 하는</p>
+									<p className="swiper-main-black">디지털 트랜스포메이션</p>
+								</>
+								:
+								<>
+									<p className="swiper-main-text">IT 및 업무 전문가와</p>
+									<p className="swiper-main-text">함께 하는</p>
+									<p className="swiper-main-black">디지털 트랜스포메이션</p>
+								</>
+						}
 						<p className="swiper-main-mini"
-						   style={{
-							   marginTop:'68px'
-						   }}
+							 style={getViewSize()=='lg'?{
+								 marginTop:'68px'
+							 }:{marginTop:'30px'}}
 						>환경, 국토, 교육 분야</p>
 						<p className="swiper-main-mini">Neo BRIX의 전문가 및 노하우와 함께</p>
 						<p className="swiper-main-mini">분야별 맞춤형 IT서비스로 디지털 트랜스포메이션</p>
@@ -148,12 +159,22 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 				>
 					<div>
 						<div className="slider-text-pc">
-							<p className="swiper-main-text">통합-연결-관리-생성-분석-AI</p>
-							<p className="swiper-main-black">무한한 Data Mining 세계로</p>
+							{getViewSize() == 'lg'?
+									<>
+										<p className="swiper-main-text">통합-연결-관리-생성-분석-AI</p>
+										<p className="swiper-main-black">무한한 Data Mining 세계로</p>
+									</>
+									:
+									<>
+										<p className="swiper-main-text">통합-연결-관리</p>
+										<p className="swiper-main-text">생성-분석-AI</p>
+										<p className="swiper-main-black">무한한 Data Mining 세계로</p>
+									</>
+							}
 							<p className="swiper-main-mini"
-							   style={{
+							   style={getViewSize()=='lg'?{
 								   marginTop:'68px'
-							   }}
+							   }:{marginTop:'30px'}}
 							>Neo BRIX의 Big Data 및 AI 플랫폼은</p>
 							<p className="swiper-main-mini">고객이 필요로 하는</p>
 							<p className="swiper-main-mini">Data Mining 서비스를 제공합니다.</p>
@@ -210,9 +231,9 @@ const Layout = (props: { children: React.ReactNode; main?: boolean }) => {
 						>내 손안에 IT솔루션</p>
 						<p className="swiper-main-black">Smarts Mobile</p>
 						<p className="swiper-main-mini"
-							style={{
-								marginTop:'68px'
-							}}
+							 style={getViewSize()=='lg'?{
+								 marginTop:'68px'
+							 }:{marginTop:'30px'}}
 						>Neo BRIX의 Mobile플랫폼은 GIS(지리정보)와</p>
 						<p className="swiper-main-mini">결합하여 스마트한 현장 업무환경을 위한</p>
 						<p className="swiper-main-mini">컨설팅부터 구축, 운영까지</p>

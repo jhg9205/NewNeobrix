@@ -248,7 +248,7 @@ body {
 	display: flex;
 	@include mobile {
 		padding-top: 0 !important;
-		height: 60%;
+		height: 70%;
 	}
 	@include tablet {
 		padding-top: 0 !important;
@@ -265,7 +265,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		@include mobile {
-			height: 500px !important;
+			height: 700px !important;
 		}
 	}
 	#slider3 {
@@ -292,7 +292,7 @@ body {
 			align-items: center;
 		}
 		@include mobile {
-			padding-top: 30%;
+			padding-top: 10%;
 		}
 		span {
 			font-size: 15px;
@@ -318,6 +318,7 @@ body {
 			@include mobile {
 				font-size: 35px;
 				line-height: 44px;
+				padding: 0 50px;
 			}
 		}
 		.swiper-main-black{
@@ -328,6 +329,7 @@ body {
 			@include mobile {
 				font-size: 35px;
 				line-height: 44px;
+				padding: 0 50px;
 			}
 		}
 		.swiper-main-mini{
@@ -338,7 +340,7 @@ body {
 			color: #111;
 			opacity: 1;
 			@include mobile {
-				font-size: 20px;
+				font-size: 17px;
 				line-height: 24px;
 			}
 		}
