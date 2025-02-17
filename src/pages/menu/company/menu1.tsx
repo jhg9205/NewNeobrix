@@ -92,7 +92,7 @@ const Menu1 = () => {
 					</SwiperSlide>
 				</Swiper>
 				<div className="menu_title_contain" style={style}>
-					<div className="contain" style={getViewSize()=='lg'?{}:{padding:'0 50px'}}>
+					<div className="contain" style={getViewSize()=='lg'?{}:{padding:'0 20px'}}>
 						<motion.div
 							initial={{ opacity: 0, y: 100 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ const Menu1 = () => {
 										<div className="ceo_area">
 											<div className="ceo_tit">
 												Neo BRIX의 기술과 서비스는
-												<br />
+												{getViewSize()=='lg'?<br/>:<></>}
 												고객의 디지털 트랜스포메이션 실현을 위한
 												{getViewSize()=='lg'?<br/>:<></>}
 												모든 서비스를 제공합니다.
@@ -117,24 +117,25 @@ const Menu1 = () => {
 											<div className="ceo_txt">
 												<p>
 													고객 비지니스의 모든 영역에 디지털 기술을 통합하기 위해
-													<br />
+													{getViewSize()=='lg'?<br/>:<></>}
 													기업의 전략, 조직, 프로세스, 커뮤니케이션, 문화, 시스템,
-													<br />
+													{getViewSize()=='lg'?<br/>:<></>}
 													가치사슬, 비지니스 모델을 근본적으로 변화시키기 위한
-													<br />
+													{getViewSize()=='lg'?<br/>:<></>}
 													기술과 전문성을 제공합니다.
-													<br />
+													{getViewSize()=='lg'?<br/>:<></>}
 													새로운 경험과 혁신을 Neo BRIX와 함께 합니다.
 												</p>
 											</div>
-
-											<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='download-div1'>
-												<SystemUpdateAltIcon/>
-												<span className='download'>회사소개서 다운로드</span>
-											</div>
-											<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='download-div2'>
-												<SystemUpdateAltIcon/>
-												<span className='download'>브로셔 다운로드</span>
+											<div className='ci-logo'>
+												<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='ci-download1'>
+													<SystemUpdateAltIcon/>
+													<span className='download'>회사소개서 다운로드</span>
+												</div>
+												<div onClick={(e)=>{handleClick(e,e.currentTarget.className)}} className='ci-download2'>
+													<SystemUpdateAltIcon/>
+													<span className='download'>브로셔 다운로드</span>
+												</div>
 											</div>
 										</div>
 									</Fade>
