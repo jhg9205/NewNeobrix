@@ -201,7 +201,7 @@ const Menu1 = () => {
 						}}
 					>
 					<div className="contain">
-						<div className="contain-sub">
+						<div className="contain-sub" style={getViewSize()=='lg'?{}:{width:'90%'}}>
 							<Grid container>
 								<Grid item lg={10} md={12}>
 									<p className="contain-sub-title">Neo BRIX에 궁금한 점이 있으시면 문의해주세요.</p>
@@ -219,7 +219,7 @@ const Menu1 = () => {
 							<Divider style={{border:'1px solid #ababab',marginBottom:'15px'}}/>
 							<form ref={form} onSubmit={sendEmail} className="email-form">
 								<Grid container>
-									<Grid item lg={2} md={6}>
+									<Grid item lg={2} md={6} xs={4}>
 										<InputLabel className="file-label">이름</InputLabel>
 										<Divider/>
 										<InputLabel className="file-label">이메일</InputLabel>
@@ -238,7 +238,7 @@ const Menu1 = () => {
 										<Divider/>
 										<InputLabel className="file-label">문의내용</InputLabel>
 									</Grid>
-									<Grid item lg={10} md={6}>
+									<Grid item lg={10} md={6} xs={8}>
 										<TextField
 											required
 											className="file-text-box"
