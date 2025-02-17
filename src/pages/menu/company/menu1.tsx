@@ -25,9 +25,9 @@ const Menu1 = () => {
 
 	const handleClick = (event: React.MouseEvent, cName:String) => {
 
-		let file = cName == 'download-div1'?'/download/NEOBRIX.pdf':
+		let file = cName == 'ci-download3'?'/download/NEOBRIX.pdf':
 					cName == 'ci-download1'?'/download/ci.png':
-					cName == 'download-div2'?'/download/Poster.pdf'
+					cName == 'ci-download4'?'/download/Poster.pdf'
 						:'/download/ci.ai'
 		let name = cName == 'ci-download3'?'NEOBRIX_회사소개서':
 			cName == 'ci-download4'? 'NEOBRIX_브로셔'
